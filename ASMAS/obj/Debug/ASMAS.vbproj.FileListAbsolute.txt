@@ -1,0 +1,38 @@
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\bin\Debug\ASMAS.exe.config
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\bin\Debug\ASMAS.exe
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\bin\Debug\ASMAS.pdb
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\bin\Debug\ASMAS.xml
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.vbprojResolveAssemblyReference.cache
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.Resources.resources
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.vbproj.GenerateResource.Cache
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.exe
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.xml
+C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.pdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.exe.config
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.exe
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.xml
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.pdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Terse.accdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.exe
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.pdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.xml
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.Resources.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.vbproj.GenerateResource.Cache
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.splash.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.LoginForm1.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.vbprojResolveAssemblyReference.cache
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.HomeForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.SearchForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.viewDatabaseForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addClassForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addUserForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addYearForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addSchoolForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addStudentForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.classDetailsForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.studentDetails.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addStudentToClassForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.myClassesForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.myStudents.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.viewResultsForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.classResults.resources

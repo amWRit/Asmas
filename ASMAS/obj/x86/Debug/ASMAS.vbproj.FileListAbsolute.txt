@@ -1,0 +1,15 @@
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\x86\Debug\ASMAS.exe.config
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\x86\Debug\Terse.accdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\x86\Debug\ASMAS.exe
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\x86\Debug\ASMAS.pdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\x86\Debug\ASMAS.xml
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.splash.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.SearchForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.HomeForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.LoginForm1.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.Resources.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.vbproj.GenerateResource.Cache
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.exe
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.xml
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.pdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\x86\Debug\ASMAS.vbprojResolveAssemblyReference.cache
