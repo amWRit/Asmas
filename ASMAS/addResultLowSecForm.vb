@@ -110,47 +110,32 @@ Public Class addResultLowSecForm
         Dim terminal = termCombo.Text
         Dim class_name = contents(3)
 
+        Dim hashKeys As String() = {"student_id", "school_year", "school_name", "terminal", "eng_th", "eng_th_g", "eng_pr", "eng_pr_g", "eng_total", "eng_total_g", "nep_th", "nep_th_g", "nep_pr",
+            "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
+            "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "obt_th", "obt_th_g", "obt_pr", "obt_pr_g", "obt_total", "obt_total_g", "comp_th", "comp_th_g", "comp_pr", "comp_pr_g", "comp_total", "comp_total_g", "hea_th", "hea_th_g", "hea_pr", "hea_pr_g", "hea_total", "hea_total_g", "mor_th", "mor_th_g", "mor_pr", "mor_pr_g", "mor_total", "mor_total_g", "total_th", "total_pr", "total", "percentage", "grade"}
+
+
+        Dim inputHash = prepareInputHash()
+
+        Dim newInputHash As Hashtable = calculateGrades(inputHash)
+
         Try
-            Dim insertSQL As String = "INSERT INTO results_" & class_name & " ([student_id], [school_year], [school_name], [terminal], [eng_th], [eng_pr], [eng_total], [nep_th], [nep_pr], [nep_total], [math_th], [math_pr], [math_total], [sci_th], [sci_pr], [sci_total],
-[soc_th], [soc_pr], [soc_total], [obt_th], [obt_pr], [obt_total], [comp_th], [comp_pr], [comp_total], [hea_th], [hea_pr], [hea_total], [mor_th], [mor_pr], [mor_total]) 
+            Dim insertSQL As String = "INSERT INTO results_" & class_name & " ([student_id],[school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
+[nep_th],[nep_th_g],[nep_pr],[nep_pr_g],[nep_total],[nep_total_g],[math_th],[math_th_g],[math_pr],[math_pr_g],[math_total],[math_total_g],[sci_th],[sci_th_g],[sci_pr],[sci_pr_g],[sci_total],[sci_total_g],
+[soc_th],[soc_th_g],[soc_pr],[soc_pr_g],[soc_total],[soc_total_g],[obt_th],[obt_th_g],[obt_pr],[obt_pr_g],[obt_total],[obt_total_g],[comp_th],[comp_th_g],[comp_pr],[comp_pr_g],[comp_total],[comp_total_g],
+[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_pr],[total],[percentage],[grade]) 
 VALUES
-(@student_id, @school_year, @school_name, @terminal, @eng_th, @eng_pr, @eng_total, @nep_th, @nep_pr, @nep_total, @math_th, @math_pr, @math_total, @sci_th, @sci_pr, @sci_total,
-@soc_th, @soc_pr, @soc_total, @obt_th, @obt_pr, @obt_total, @comp_th, @comp_pr, @comp_total, @hea_th, @hea_pr, @hea_total, @mor_th, @mor_pr, @mor_total)"
+(@student_id, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
+@nep_total, @nep_total_g, @math_th, @math_th_g, @math_pr, @math_pr_g, @math_total, @math_total_g, @sci_th, @sci_th_g, @sci_pr, @sci_pr_g, @sci_total, @sci_total_g, 
+@soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @obt_th, @obt_th_g, @obt_pr, @obt_pr_g, @obt_total, @obt_total_g, @comp_th, @comp_th_g, @comp_pr, @comp_pr_g, @comp_total, @comp_total_g, 
+@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_pr, @total, @percentage, @grade)"
+
             Con.Open()
             Dim cmd As New OleDbCommand(insertSQL, Con)
-            cmd.Parameters.AddWithValue("@student_id", contents(4))
-            cmd.Parameters.AddWithValue("@school_year", contents(1))
-            cmd.Parameters.AddWithValue("@school_name", contents(2))
-            cmd.Parameters.AddWithValue("@terminal", terminal)
-            cmd.Parameters.AddWithValue("@eng_th", engTh.Text)
-            cmd.Parameters.AddWithValue("@eng_pr", engPr.Text)
-            cmd.Parameters.AddWithValue("@eng_total", CInt(engTh.Text) + CInt(engPr.Text))
-            cmd.Parameters.AddWithValue("@nep_th", nepTh.Text)
-            cmd.Parameters.AddWithValue("@nep_pr", nepPr.Text)
-            cmd.Parameters.AddWithValue("@nep_total", CInt(nepTh.Text) + CInt(nepPr.Text))
-            cmd.Parameters.AddWithValue("@math_th", mathTh.Text)
-            cmd.Parameters.AddWithValue("@math_pr", mathPr.Text)
-            cmd.Parameters.AddWithValue("@math_total", CInt(mathTh.Text) + CInt(mathPr.Text))
-            cmd.Parameters.AddWithValue("@sci_th", sciTh.Text)
-            cmd.Parameters.AddWithValue("@sci_pr", sciPr.Text)
-            cmd.Parameters.AddWithValue("@sci_total", CInt(sciTh.Text) + CInt(sciPr.Text))
-            cmd.Parameters.AddWithValue("@soc_th", socTh.Text)
-            cmd.Parameters.AddWithValue("@soc_pr", socPr.Text)
-            cmd.Parameters.AddWithValue("@soc_total", CInt(socTh.Text) + CInt(socPr.Text))
-            cmd.Parameters.AddWithValue("@obt_th", obtTh.Text)
-            cmd.Parameters.AddWithValue("@obt_pr", obtPr.Text)
-            cmd.Parameters.AddWithValue("@obt_total", CInt(obtTh.Text) + CInt(obtPr.Text))
-            cmd.Parameters.AddWithValue("@comp_th", compTh.Text)
-            cmd.Parameters.AddWithValue("@comp_pr", compPr.Text)
-            cmd.Parameters.AddWithValue("@comp_total", CInt(compTh.Text) + CInt(compPr.Text))
-            cmd.Parameters.AddWithValue("@hea_th", heaTh.Text)
-            cmd.Parameters.AddWithValue("@hea_pr", heaPr.Text)
-            cmd.Parameters.AddWithValue("@hea_total", CInt(heaTh.Text) + CInt(heaPr.Text))
-            cmd.Parameters.AddWithValue("@mor_th", morTh.Text)
-            cmd.Parameters.AddWithValue("@mor_pr", morPr.Text)
-            cmd.Parameters.AddWithValue("@mor_total", CInt(morTh.Text) + CInt(morPr.Text))
 
-
+            For Each key As String In hashKeys
+                cmd.Parameters.AddWithValue("@" & key, newInputHash(key))
+            Next
 
             cmd.ExecuteNonQuery()
 
@@ -172,4 +157,129 @@ VALUES
         Next
         Return True
     End Function
+
+    Public Function prepareInputHash() As Hashtable
+        Dim inputHash As Hashtable = New Hashtable
+        Dim total_th = CDbl(engTh.Text) + CDbl(nepTh.Text) + CDbl(mathTh.Text) + CDbl(sciTh.Text) + CDbl(socTh.Text) + CDbl(obtTh.Text) + CDbl(compTh.Text) + CDbl(heaTh.Text) + CDbl(morTh.Text)
+        Dim total_pr = CDbl(engPr.Text) + CDbl(nepPr.Text) + CDbl(mathPr.Text) + CDbl(sciPr.Text) + CDbl(socPr.Text) + CDbl(obtPr.Text) + CDbl(compPr.Text) + CDbl(heaPr.Text) + CDbl(morPr.Text)
+        Dim total = total_th + total_pr
+        Dim percentage = total / 800 * 100
+
+        inputHash("student_id") = contents(4)
+        inputHash("school_year") = contents(1)
+        inputHash("school_name") = contents(2)
+        inputHash("terminal") = termCombo.Text
+        inputHash("eng_th") = engTh.Text
+        inputHash("eng_pr") = engPr.Text
+        inputHash("eng_total") = CDbl(engTh.Text) + CDbl(engPr.Text)
+        inputHash("nep_th") = nepTh.Text
+        inputHash("nep_pr") = nepPr.Text
+        inputHash("nep_total") = CDbl(nepTh.Text) + CDbl(nepPr.Text)
+        inputHash("math_th") = mathTh.Text
+        inputHash("math_pr") = mathPr.Text
+        inputHash("math_total") = CDbl(mathTh.Text) + CDbl(mathPr.Text)
+        inputHash("sci_th") = sciTh.Text
+        inputHash("sci_pr") = sciPr.Text
+        inputHash("sci_total") = CDbl(sciTh.Text) + CDbl(sciPr.Text)
+        inputHash("soc_th") = socTh.Text
+        inputHash("soc_pr") = socPr.Text
+        inputHash("soc_total") = CDbl(socTh.Text) + CDbl(socPr.Text)
+        inputHash("obt_th") = obtTh.Text
+        inputHash("obt_pr") = obtPr.Text
+        inputHash("obt_total") = CDbl(obtTh.Text) + CDbl(obtPr.Text)
+        inputHash("comp_th") = compTh.Text
+        inputHash("comp_pr") = compPr.Text
+        inputHash("comp_total") = CDbl(compTh.Text) + CDbl(compPr.Text)
+        inputHash("hea_th") = heaTh.Text
+        inputHash("hea_pr") = heaPr.Text
+        inputHash("hea_total") = CDbl(heaTh.Text) + CDbl(heaPr.Text)
+        inputHash("mor_th") = morTh.Text
+        inputHash("mor_pr") = morPr.Text
+        inputHash("mor_total") = CDbl(morTh.Text) + CDbl(morPr.Text)
+        inputHash("total_th") = total_th
+        inputHash("total_pr") = total_pr
+        inputHash("total") = total
+        inputHash("percentage") = percentage
+
+        Return inputHash
+    End Function
+
+    Public Function calculateGrades(inputHash As Hashtable) As Hashtable
+
+        Dim theorySub = {"eng_th", "nep_th", "math_th", "sci_th", "soc_th", "obt_th", "comp_th", "hea_th", "mor_th"}
+        Dim pracSub = {"eng_pr", "nep_pr", "math_pr", "sci_pr", "soc_pr", "obt_pr", "comp_pr", "hea_pr", "mor_pr"}
+        Dim totalSub = {"eng_total", "nep_total", "math_total", "sci_total", "soc_total", "obt_total", "comp_total", "hea_total", "mor_total"}
+        Dim grade As String = ""
+        Dim percentage As Double = 0
+
+        For Each subj As String In theorySub
+            If subj = "hea_th" Then
+                percentage = CDbl(inputHash(subj)) / 30 * 100
+            ElseIf subj = "mor_th" Then
+                percentage = CDbl(inputHash(subj)) / 25 * 100
+            Else
+                percentage = CDbl(inputHash(subj)) / 75 * 100
+            End If
+
+            grade = percentToGrade(percentage)
+            inputHash(subj & "_g") = grade
+        Next
+
+        For Each subj As String In pracSub
+            If subj = "hea_pr" Then
+                percentage = CDbl(inputHash(subj)) / 20 * 100
+            Else
+                percentage = CDbl(inputHash(subj)) / 25 * 100
+            End If
+
+            grade = percentToGrade(percentage)
+            inputHash(subj & "_g") = grade
+        Next
+
+        For Each subj As String In totalSub
+            If subj = "hea_th" Or subj = "mor_th" Then
+                percentage = CDbl(inputHash(subj)) / 50 * 100
+            Else
+                percentage = CDbl(inputHash(subj))
+            End If
+
+            grade = percentToGrade(percentage)
+            inputHash(subj & "_g") = grade
+        Next
+
+        inputHash("total_th_g") = percentToGrade(CDbl(inputHash("total_th")))
+        inputHash("total_pr_g") = percentToGrade(CDbl(inputHash("total_pr")))
+        inputHash("grade") = percentToGrade(CDbl(inputHash("percentage")))
+        Return inputHash
+    End Function
+
+    Public Function percentToGrade(percentage As Double) As String
+        Dim grade As String
+        If percentage >= 90 Then
+            grade = "A+"
+        ElseIf percentage >= 80 Then
+            grade = "A"
+        ElseIf percentage >= 70 Then
+            grade = "B+"
+        ElseIf percentage >= 60 Then
+            grade = "B"
+        ElseIf percentage >= 50 Then
+            grade = "C+"
+        ElseIf percentage >= 40 Then
+            grade = "C"
+        ElseIf percentage >= 30 Then
+            grade = "D+"
+        ElseIf percentage >= 20 Then
+            grade = "D"
+        ElseIf percentage >= 0 Then
+            grade = "E"
+        Else
+            grade = "NG"
+        End If
+        Return grade
+    End Function
+
+    Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click
+        Me.Close()
+    End Sub
 End Class

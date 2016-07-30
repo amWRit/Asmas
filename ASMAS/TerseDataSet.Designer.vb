@@ -3948,6 +3948,64 @@ Partial Public Class TerseDataSet
         
         Private columngrade As Global.System.Data.DataColumn
         
+        Private columneng_th_g As Global.System.Data.DataColumn
+        
+        Private columneng_pr_g As Global.System.Data.DataColumn
+        
+        Private columneng_total_g As Global.System.Data.DataColumn
+        
+        Private columnnep_th_g As Global.System.Data.DataColumn
+        
+        Private columnnep_pr_g As Global.System.Data.DataColumn
+        
+        Private columnnep_total_g As Global.System.Data.DataColumn
+        
+        Private columnmath_th_g As Global.System.Data.DataColumn
+        
+        Private columnmath_pr_g As Global.System.Data.DataColumn
+        
+        Private columnmath_total_g As Global.System.Data.DataColumn
+        
+        Private columnsci_th_g As Global.System.Data.DataColumn
+        
+        Private columnsci_pr_g As Global.System.Data.DataColumn
+        
+        Private columnsci_total_g As Global.System.Data.DataColumn
+        
+        Private columnsoc_th_g As Global.System.Data.DataColumn
+        
+        Private columnsoc_pr_g As Global.System.Data.DataColumn
+        
+        Private columnsoc_total_g As Global.System.Data.DataColumn
+        
+        Private columnobt_th_g As Global.System.Data.DataColumn
+        
+        Private columnobt_pr_g As Global.System.Data.DataColumn
+        
+        Private columnobt_total_g As Global.System.Data.DataColumn
+        
+        Private columncomp_th_g As Global.System.Data.DataColumn
+        
+        Private columncomp_pr_g As Global.System.Data.DataColumn
+        
+        Private columncomp_total_g As Global.System.Data.DataColumn
+        
+        Private columnhea_th_g As Global.System.Data.DataColumn
+        
+        Private columnhea_pr_g As Global.System.Data.DataColumn
+        
+        Private columnhea_total_g As Global.System.Data.DataColumn
+        
+        Private columnmor_th_g As Global.System.Data.DataColumn
+        
+        Private columnmor_pr_g As Global.System.Data.DataColumn
+        
+        Private columnmor_total_g As Global.System.Data.DataColumn
+        
+        Private columntotal_th_g As Global.System.Data.DataColumn
+        
+        Private columntotal_pr_g As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -4280,6 +4338,238 @@ Partial Public Class TerseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property eng_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columneng_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property eng_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columneng_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property eng_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columneng_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property nep_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnep_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property nep_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnep_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property nep_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnep_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property math_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmath_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property math_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmath_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property math_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmath_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property sci_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsci_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property sci_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsci_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property sci_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsci_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property soc_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsoc_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property soc_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsoc_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property soc_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsoc_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property obt_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnobt_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property obt_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnobt_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property obt_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnobt_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property comp_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncomp_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property comp_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncomp_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property comp_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncomp_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property hea_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnhea_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property hea_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnhea_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property hea_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnhea_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property mor_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmor_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property mor_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmor_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property mor_total_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnmor_total_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property total_th_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntotal_th_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property total_pr_gColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntotal_pr_g
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4352,9 +4642,38 @@ Partial Public Class TerseDataSet
                     ByVal total_pr As Double,  _
                     ByVal total As Double,  _
                     ByVal percentage As Double,  _
-                    ByVal grade As String) As results_8ERow
+                    ByVal grade As String,  _
+                    ByVal eng_th_g As String,  _
+                    ByVal eng_pr_g As String,  _
+                    ByVal eng_total_g As String,  _
+                    ByVal nep_th_g As String,  _
+                    ByVal nep_pr_g As String,  _
+                    ByVal nep_total_g As String,  _
+                    ByVal math_th_g As String,  _
+                    ByVal math_pr_g As String,  _
+                    ByVal math_total_g As String,  _
+                    ByVal sci_th_g As String,  _
+                    ByVal sci_pr_g As String,  _
+                    ByVal sci_total_g As String,  _
+                    ByVal soc_th_g As String,  _
+                    ByVal soc_pr_g As String,  _
+                    ByVal soc_total_g As String,  _
+                    ByVal obt_th_g As String,  _
+                    ByVal obt_pr_g As String,  _
+                    ByVal obt_total_g As String,  _
+                    ByVal comp_th_g As String,  _
+                    ByVal comp_pr_g As String,  _
+                    ByVal comp_total_g As String,  _
+                    ByVal hea_th_g As String,  _
+                    ByVal hea_pr_g As String,  _
+                    ByVal hea_total_g As String,  _
+                    ByVal mor_th_g As String,  _
+                    ByVal mor_pr_g As String,  _
+                    ByVal mor_total_g As String,  _
+                    ByVal total_th_g As String,  _
+                    ByVal total_pr_g As String) As results_8ERow
             Dim rowresults_8ERow As results_8ERow = CType(Me.NewRow,results_8ERow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, student_id, school_year, school_name, terminal, eng_th, eng_pr, eng_total, nep_th, nep_pr, nep_total, math_th, math_pr, math_total, sci_th, sci_pr, sci_total, soc_th, soc_pr, soc_total, obt_th, obt_pr, obt_total, comp_th, comp_pr, comp_total, hea_th, hea_pr, hea_total, mor_th, mor_pr, mor_total, total_th, total_pr, total, percentage, grade}
+            Dim columnValuesArray() As Object = New Object() {Nothing, student_id, school_year, school_name, terminal, eng_th, eng_pr, eng_total, nep_th, nep_pr, nep_total, math_th, math_pr, math_total, sci_th, sci_pr, sci_total, soc_th, soc_pr, soc_total, obt_th, obt_pr, obt_total, comp_th, comp_pr, comp_total, hea_th, hea_pr, hea_total, mor_th, mor_pr, mor_total, total_th, total_pr, total, percentage, grade, eng_th_g, eng_pr_g, eng_total_g, nep_th_g, nep_pr_g, nep_total_g, math_th_g, math_pr_g, math_total_g, sci_th_g, sci_pr_g, sci_total_g, soc_th_g, soc_pr_g, soc_total_g, obt_th_g, obt_pr_g, obt_total_g, comp_th_g, comp_pr_g, comp_total_g, hea_th_g, hea_pr_g, hea_total_g, mor_th_g, mor_pr_g, mor_total_g, total_th_g, total_pr_g}
             rowresults_8ERow.ItemArray = columnValuesArray
             Me.Rows.Add(rowresults_8ERow)
             Return rowresults_8ERow
@@ -4420,6 +4739,35 @@ Partial Public Class TerseDataSet
             Me.columntotal = MyBase.Columns("total")
             Me.columnpercentage = MyBase.Columns("percentage")
             Me.columngrade = MyBase.Columns("grade")
+            Me.columneng_th_g = MyBase.Columns("eng_th_g")
+            Me.columneng_pr_g = MyBase.Columns("eng_pr_g")
+            Me.columneng_total_g = MyBase.Columns("eng_total_g")
+            Me.columnnep_th_g = MyBase.Columns("nep_th_g")
+            Me.columnnep_pr_g = MyBase.Columns("nep_pr_g")
+            Me.columnnep_total_g = MyBase.Columns("nep_total_g")
+            Me.columnmath_th_g = MyBase.Columns("math_th_g")
+            Me.columnmath_pr_g = MyBase.Columns("math_pr_g")
+            Me.columnmath_total_g = MyBase.Columns("math_total_g")
+            Me.columnsci_th_g = MyBase.Columns("sci_th_g")
+            Me.columnsci_pr_g = MyBase.Columns("sci_pr_g")
+            Me.columnsci_total_g = MyBase.Columns("sci_total_g")
+            Me.columnsoc_th_g = MyBase.Columns("soc_th_g")
+            Me.columnsoc_pr_g = MyBase.Columns("soc_pr_g")
+            Me.columnsoc_total_g = MyBase.Columns("soc_total_g")
+            Me.columnobt_th_g = MyBase.Columns("obt_th_g")
+            Me.columnobt_pr_g = MyBase.Columns("obt_pr_g")
+            Me.columnobt_total_g = MyBase.Columns("obt_total_g")
+            Me.columncomp_th_g = MyBase.Columns("comp_th_g")
+            Me.columncomp_pr_g = MyBase.Columns("comp_pr_g")
+            Me.columncomp_total_g = MyBase.Columns("comp_total_g")
+            Me.columnhea_th_g = MyBase.Columns("hea_th_g")
+            Me.columnhea_pr_g = MyBase.Columns("hea_pr_g")
+            Me.columnhea_total_g = MyBase.Columns("hea_total_g")
+            Me.columnmor_th_g = MyBase.Columns("mor_th_g")
+            Me.columnmor_pr_g = MyBase.Columns("mor_pr_g")
+            Me.columnmor_total_g = MyBase.Columns("mor_total_g")
+            Me.columntotal_th_g = MyBase.Columns("total_th_g")
+            Me.columntotal_pr_g = MyBase.Columns("total_pr_g")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4499,6 +4847,64 @@ Partial Public Class TerseDataSet
             MyBase.Columns.Add(Me.columnpercentage)
             Me.columngrade = New Global.System.Data.DataColumn("grade", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columngrade)
+            Me.columneng_th_g = New Global.System.Data.DataColumn("eng_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columneng_th_g)
+            Me.columneng_pr_g = New Global.System.Data.DataColumn("eng_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columneng_pr_g)
+            Me.columneng_total_g = New Global.System.Data.DataColumn("eng_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columneng_total_g)
+            Me.columnnep_th_g = New Global.System.Data.DataColumn("nep_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnep_th_g)
+            Me.columnnep_pr_g = New Global.System.Data.DataColumn("nep_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnep_pr_g)
+            Me.columnnep_total_g = New Global.System.Data.DataColumn("nep_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnep_total_g)
+            Me.columnmath_th_g = New Global.System.Data.DataColumn("math_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmath_th_g)
+            Me.columnmath_pr_g = New Global.System.Data.DataColumn("math_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmath_pr_g)
+            Me.columnmath_total_g = New Global.System.Data.DataColumn("math_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmath_total_g)
+            Me.columnsci_th_g = New Global.System.Data.DataColumn("sci_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsci_th_g)
+            Me.columnsci_pr_g = New Global.System.Data.DataColumn("sci_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsci_pr_g)
+            Me.columnsci_total_g = New Global.System.Data.DataColumn("sci_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsci_total_g)
+            Me.columnsoc_th_g = New Global.System.Data.DataColumn("soc_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsoc_th_g)
+            Me.columnsoc_pr_g = New Global.System.Data.DataColumn("soc_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsoc_pr_g)
+            Me.columnsoc_total_g = New Global.System.Data.DataColumn("soc_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsoc_total_g)
+            Me.columnobt_th_g = New Global.System.Data.DataColumn("obt_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnobt_th_g)
+            Me.columnobt_pr_g = New Global.System.Data.DataColumn("obt_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnobt_pr_g)
+            Me.columnobt_total_g = New Global.System.Data.DataColumn("obt_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnobt_total_g)
+            Me.columncomp_th_g = New Global.System.Data.DataColumn("comp_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncomp_th_g)
+            Me.columncomp_pr_g = New Global.System.Data.DataColumn("comp_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncomp_pr_g)
+            Me.columncomp_total_g = New Global.System.Data.DataColumn("comp_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncomp_total_g)
+            Me.columnhea_th_g = New Global.System.Data.DataColumn("hea_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnhea_th_g)
+            Me.columnhea_pr_g = New Global.System.Data.DataColumn("hea_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnhea_pr_g)
+            Me.columnhea_total_g = New Global.System.Data.DataColumn("hea_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnhea_total_g)
+            Me.columnmor_th_g = New Global.System.Data.DataColumn("mor_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmor_th_g)
+            Me.columnmor_pr_g = New Global.System.Data.DataColumn("mor_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmor_pr_g)
+            Me.columnmor_total_g = New Global.System.Data.DataColumn("mor_total_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnmor_total_g)
+            Me.columntotal_th_g = New Global.System.Data.DataColumn("total_th_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntotal_th_g)
+            Me.columntotal_pr_g = New Global.System.Data.DataColumn("total_pr_g", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntotal_pr_g)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -4511,6 +4917,35 @@ Partial Public Class TerseDataSet
             Me.columnmath_th.MaxLength = 255
             Me.columnmath_pr.MaxLength = 255
             Me.columngrade.MaxLength = 255
+            Me.columneng_th_g.MaxLength = 255
+            Me.columneng_pr_g.MaxLength = 255
+            Me.columneng_total_g.MaxLength = 255
+            Me.columnnep_th_g.MaxLength = 255
+            Me.columnnep_pr_g.MaxLength = 255
+            Me.columnnep_total_g.MaxLength = 255
+            Me.columnmath_th_g.MaxLength = 255
+            Me.columnmath_pr_g.MaxLength = 255
+            Me.columnmath_total_g.MaxLength = 255
+            Me.columnsci_th_g.MaxLength = 255
+            Me.columnsci_pr_g.MaxLength = 255
+            Me.columnsci_total_g.MaxLength = 255
+            Me.columnsoc_th_g.MaxLength = 255
+            Me.columnsoc_pr_g.MaxLength = 255
+            Me.columnsoc_total_g.MaxLength = 255
+            Me.columnobt_th_g.MaxLength = 255
+            Me.columnobt_pr_g.MaxLength = 255
+            Me.columnobt_total_g.MaxLength = 255
+            Me.columncomp_th_g.MaxLength = 255
+            Me.columncomp_pr_g.MaxLength = 255
+            Me.columncomp_total_g.MaxLength = 255
+            Me.columnhea_th_g.MaxLength = 255
+            Me.columnhea_pr_g.MaxLength = 255
+            Me.columnhea_total_g.MaxLength = 255
+            Me.columnmor_th_g.MaxLength = 255
+            Me.columnmor_pr_g.MaxLength = 255
+            Me.columnmor_total_g.MaxLength = 255
+            Me.columntotal_th_g.MaxLength = 255
+            Me.columntotal_pr_g.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8123,6 +8558,441 @@ Partial Public Class TerseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property eng_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.eng_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'eng_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.eng_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property eng_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.eng_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'eng_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.eng_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property eng_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.eng_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'eng_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.eng_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property nep_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.nep_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nep_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.nep_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property nep_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.nep_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nep_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.nep_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property nep_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.nep_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nep_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.nep_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property math_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.math_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'math_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.math_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property math_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.math_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'math_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.math_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property math_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.math_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'math_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.math_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property sci_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.sci_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'sci_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.sci_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property sci_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.sci_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'sci_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.sci_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property sci_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.sci_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'sci_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.sci_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property soc_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.soc_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'soc_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.soc_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property soc_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.soc_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'soc_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.soc_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property soc_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.soc_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'soc_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.soc_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property obt_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.obt_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'obt_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.obt_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property obt_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.obt_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'obt_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.obt_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property obt_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.obt_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'obt_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.obt_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property comp_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.comp_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'comp_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.comp_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property comp_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.comp_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'comp_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.comp_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property comp_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.comp_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'comp_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.comp_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property hea_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.hea_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'hea_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.hea_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property hea_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.hea_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'hea_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.hea_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property hea_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.hea_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'hea_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.hea_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property mor_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.mor_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'mor_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.mor_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property mor_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.mor_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'mor_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.mor_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property mor_total_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.mor_total_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'mor_total_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.mor_total_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property total_th_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.total_th_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'total_th_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.total_th_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property total_pr_g() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableresults_8E.total_pr_gColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'total_pr_g' in table 'results_8E' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableresults_8E.total_pr_gColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isstudent_idNull() As Boolean
             Return Me.IsNull(Me.tableresults_8E.student_idColumn)
         End Function
@@ -8551,6 +9421,354 @@ Partial Public Class TerseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetgradeNull()
             Me(Me.tableresults_8E.gradeColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Iseng_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.eng_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Seteng_th_gNull()
+            Me(Me.tableresults_8E.eng_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Iseng_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.eng_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Seteng_pr_gNull()
+            Me(Me.tableresults_8E.eng_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Iseng_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.eng_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Seteng_total_gNull()
+            Me(Me.tableresults_8E.eng_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isnep_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.nep_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setnep_th_gNull()
+            Me(Me.tableresults_8E.nep_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isnep_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.nep_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setnep_pr_gNull()
+            Me(Me.tableresults_8E.nep_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isnep_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.nep_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setnep_total_gNull()
+            Me(Me.tableresults_8E.nep_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismath_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.math_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmath_th_gNull()
+            Me(Me.tableresults_8E.math_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismath_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.math_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmath_pr_gNull()
+            Me(Me.tableresults_8E.math_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismath_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.math_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmath_total_gNull()
+            Me(Me.tableresults_8E.math_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issci_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.sci_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsci_th_gNull()
+            Me(Me.tableresults_8E.sci_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issci_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.sci_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsci_pr_gNull()
+            Me(Me.tableresults_8E.sci_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issci_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.sci_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsci_total_gNull()
+            Me(Me.tableresults_8E.sci_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issoc_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.soc_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsoc_th_gNull()
+            Me(Me.tableresults_8E.soc_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issoc_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.soc_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsoc_pr_gNull()
+            Me(Me.tableresults_8E.soc_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Issoc_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.soc_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setsoc_total_gNull()
+            Me(Me.tableresults_8E.soc_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isobt_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.obt_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setobt_th_gNull()
+            Me(Me.tableresults_8E.obt_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isobt_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.obt_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setobt_pr_gNull()
+            Me(Me.tableresults_8E.obt_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isobt_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.obt_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setobt_total_gNull()
+            Me(Me.tableresults_8E.obt_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Iscomp_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.comp_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setcomp_th_gNull()
+            Me(Me.tableresults_8E.comp_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Iscomp_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.comp_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setcomp_pr_gNull()
+            Me(Me.tableresults_8E.comp_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Iscomp_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.comp_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setcomp_total_gNull()
+            Me(Me.tableresults_8E.comp_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ishea_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.hea_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Sethea_th_gNull()
+            Me(Me.tableresults_8E.hea_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ishea_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.hea_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Sethea_pr_gNull()
+            Me(Me.tableresults_8E.hea_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ishea_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.hea_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Sethea_total_gNull()
+            Me(Me.tableresults_8E.hea_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismor_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.mor_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmor_th_gNull()
+            Me(Me.tableresults_8E.mor_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismor_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.mor_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmor_pr_gNull()
+            Me(Me.tableresults_8E.mor_pr_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Ismor_total_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.mor_total_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setmor_total_gNull()
+            Me(Me.tableresults_8E.mor_total_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istotal_th_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.total_th_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settotal_th_gNull()
+            Me(Me.tableresults_8E.total_th_gColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Istotal_pr_gNull() As Boolean
+            Return Me.IsNull(Me.tableresults_8E.total_pr_gColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Settotal_pr_gNull()
+            Me(Me.tableresults_8E.total_pr_gColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -14173,6 +15391,35 @@ Namespace TerseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("total", "total")
             tableMapping.ColumnMappings.Add("percentage", "percentage")
             tableMapping.ColumnMappings.Add("grade", "grade")
+            tableMapping.ColumnMappings.Add("eng_th_g", "eng_th_g")
+            tableMapping.ColumnMappings.Add("eng_pr_g", "eng_pr_g")
+            tableMapping.ColumnMappings.Add("eng_total_g", "eng_total_g")
+            tableMapping.ColumnMappings.Add("nep_th_g", "nep_th_g")
+            tableMapping.ColumnMappings.Add("nep_pr_g", "nep_pr_g")
+            tableMapping.ColumnMappings.Add("nep_total_g", "nep_total_g")
+            tableMapping.ColumnMappings.Add("math_th_g", "math_th_g")
+            tableMapping.ColumnMappings.Add("math_pr_g", "math_pr_g")
+            tableMapping.ColumnMappings.Add("math_total_g", "math_total_g")
+            tableMapping.ColumnMappings.Add("sci_th_g", "sci_th_g")
+            tableMapping.ColumnMappings.Add("sci_pr_g", "sci_pr_g")
+            tableMapping.ColumnMappings.Add("sci_total_g", "sci_total_g")
+            tableMapping.ColumnMappings.Add("soc_th_g", "soc_th_g")
+            tableMapping.ColumnMappings.Add("soc_pr_g", "soc_pr_g")
+            tableMapping.ColumnMappings.Add("soc_total_g", "soc_total_g")
+            tableMapping.ColumnMappings.Add("obt_th_g", "obt_th_g")
+            tableMapping.ColumnMappings.Add("obt_pr_g", "obt_pr_g")
+            tableMapping.ColumnMappings.Add("obt_total_g", "obt_total_g")
+            tableMapping.ColumnMappings.Add("comp_th_g", "comp_th_g")
+            tableMapping.ColumnMappings.Add("comp_pr_g", "comp_pr_g")
+            tableMapping.ColumnMappings.Add("comp_total_g", "comp_total_g")
+            tableMapping.ColumnMappings.Add("hea_th_g", "hea_th_g")
+            tableMapping.ColumnMappings.Add("hea_pr_g", "hea_pr_g")
+            tableMapping.ColumnMappings.Add("hea_total_g", "hea_total_g")
+            tableMapping.ColumnMappings.Add("mor_th_g", "mor_th_g")
+            tableMapping.ColumnMappings.Add("mor_pr_g", "mor_pr_g")
+            tableMapping.ColumnMappings.Add("mor_total_g", "mor_total_g")
+            tableMapping.ColumnMappings.Add("total_th_g", "total_th_g")
+            tableMapping.ColumnMappings.Add("total_pr_g", "total_pr_g")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -14201,13 +15448,35 @@ Namespace TerseDataSetTableAdapters
                 " OR (`mor_total` = ?)) AND ((? = 1 AND `total_th` IS NULL) OR (`total_th` = ?)) "& _ 
                 "AND ((? = 1 AND `total_pr` IS NULL) OR (`total_pr` = ?)) AND ((? = 1 AND `total`"& _ 
                 " IS NULL) OR (`total` = ?)) AND ((? = 1 AND `percentage` IS NULL) OR (`percentag"& _ 
-                "e` = ?)) AND ((? = 1 AND `grade` IS NULL) OR (`grade` = ?)))"
+                "e` = ?)) AND ((? = 1 AND `grade` IS NULL) OR (`grade` = ?)) AND ((? = 1 AND `com"& _ 
+                "p_pr_g` IS NULL) OR (`comp_pr_g` = ?)) AND ((? = 1 AND `comp_th_g` IS NULL) OR ("& _ 
+                "`comp_th_g` = ?)) AND ((? = 1 AND `comp_total_g` IS NULL) OR (`comp_total_g` = ?"& _ 
+                ")) AND ((? = 1 AND `eng_pr_g` IS NULL) OR (`eng_pr_g` = ?)) AND ((? = 1 AND `eng"& _ 
+                "_th_g` IS NULL) OR (`eng_th_g` = ?)) AND ((? = 1 AND `eng_total_g` IS NULL) OR ("& _ 
+                "`eng_total_g` = ?)) AND ((? = 1 AND `hea_pr_g` IS NULL) OR (`hea_pr_g` = ?)) AND"& _ 
+                " ((? = 1 AND `hea_th_g` IS NULL) OR (`hea_th_g` = ?)) AND ((? = 1 AND `hea_total"& _ 
+                "_g` IS NULL) OR (`hea_total_g` = ?)) AND ((? = 1 AND `math_pr_g` IS NULL) OR (`m"& _ 
+                "ath_pr_g` = ?)) AND ((? = 1 AND `math_th_g` IS NULL) OR (`math_th_g` = ?)) AND ("& _ 
+                "(? = 1 AND `math_total_g` IS NULL) OR (`math_total_g` = ?)) AND ((? = 1 AND `mor"& _ 
+                "_pr_g` IS NULL) OR (`mor_pr_g` = ?)) AND ((? = 1 AND `mor_th_g` IS NULL) OR (`mo"& _ 
+                "r_th_g` = ?)) AND ((? = 1 AND `mor_total_g` IS NULL) OR (`mor_total_g` = ?)) AND"& _ 
+                " ((? = 1 AND `nep_pr_g` IS NULL) OR (`nep_pr_g` = ?)) AND ((? = 1 AND `nep_th_g`"& _ 
+                " IS NULL) OR (`nep_th_g` = ?)) AND ((? = 1 AND `nep_total_g` IS NULL) OR (`nep_t"& _ 
+                "otal_g` = ?)) AND ((? = 1 AND `obt_pr_g` IS NULL) OR (`obt_pr_g` = ?)) AND ((? ="& _ 
+                " 1 AND `obt_th_g` IS NULL) OR (`obt_th_g` = ?)) AND ((? = 1 AND `obt_total_g` IS"& _ 
+                " NULL) OR (`obt_total_g` = ?)) AND ((? = 1 AND `sci_pr_g` IS NULL) OR (`sci_pr_g"& _ 
+                "` = ?)) AND ((? = 1 AND `sci_th_g` IS NULL) OR (`sci_th_g` = ?)) AND ((? = 1 AND"& _ 
+                " `sci_total_g` IS NULL) OR (`sci_total_g` = ?)) AND ((? = 1 AND `soc_pr_g` IS NU"& _ 
+                "LL) OR (`soc_pr_g` = ?)) AND ((? = 1 AND `soc_th_g` IS NULL) OR (`soc_th_g` = ?)"& _ 
+                ") AND ((? = 1 AND `soc_total_g` IS NULL) OR (`soc_total_g` = ?)) AND ((? = 1 AND"& _ 
+                " `total_pr_g` IS NULL) OR (`total_pr_g` = ?)) AND ((? = 1 AND `total_th_g` IS NU"& _ 
+                "LL) OR (`total_th_g` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_student_id", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_year", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_year", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_terminal", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "terminal", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -14276,6 +15545,64 @@ Namespace TerseDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_percentage", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "percentage", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_grade", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "grade", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_grade", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "grade", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_comp_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_comp_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_comp_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_comp_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_comp_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_comp_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_eng_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_eng_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_eng_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_eng_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_eng_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_eng_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_hea_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_hea_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_hea_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_hea_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_hea_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_hea_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_math_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_math_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_math_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_math_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_math_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_math_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mor_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mor_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mor_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mor_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mor_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mor_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nep_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nep_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nep_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nep_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nep_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nep_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_obt_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_obt_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_obt_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_obt_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_obt_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_obt_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_sci_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_sci_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_sci_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_sci_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_sci_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_sci_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_soc_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_soc_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_soc_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_soc_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_soc_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_soc_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_total_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_total_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_total_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_total_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `results_8E` (`student_id`, `school_year`, `school_name`, `terminal`,"& _ 
@@ -14283,11 +15610,17 @@ Namespace TerseDataSetTableAdapters
                 "ath_pr`, `math_total`, `sci_th`, `sci_pr`, `sci_total`, `soc_th`, `soc_pr`, `soc"& _ 
                 "_total`, `obt_th`, `obt_pr`, `obt_total`, `comp_th`, `comp_pr`, `comp_total`, `h"& _ 
                 "ea_th`, `hea_pr`, `hea_total`, `mor_th`, `mor_pr`, `mor_total`, `total_th`, `tot"& _ 
-                "al_pr`, `total`, `percentage`, `grade`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
-                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                "al_pr`, `total`, `percentage`, `grade`, `comp_pr_g`, `comp_th_g`, `comp_total_g`"& _ 
+                ", `eng_pr_g`, `eng_th_g`, `eng_total_g`, `hea_pr_g`, `hea_th_g`, `hea_total_g`, "& _ 
+                "`math_pr_g`, `math_th_g`, `math_total_g`, `mor_pr_g`, `mor_th_g`, `mor_total_g`,"& _ 
+                " `nep_pr_g`, `nep_th_g`, `nep_total_g`, `obt_pr_g`, `obt_th_g`, `obt_total_g`, `"& _ 
+                "sci_pr_g`, `sci_th_g`, `sci_total_g`, `soc_pr_g`, `soc_th_g`, `soc_total_g`, `to"& _ 
+                "tal_pr_g`, `total_th_g`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
+                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_year", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_year", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("terminal", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "terminal", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("eng_th", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_th", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -14322,6 +15655,35 @@ Namespace TerseDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("total", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("percentage", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "percentage", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("grade", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "grade", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("comp_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("comp_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("comp_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("eng_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("eng_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("eng_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("hea_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("hea_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("hea_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("math_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("math_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("math_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mor_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mor_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mor_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nep_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nep_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nep_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("obt_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("obt_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("obt_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("sci_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("sci_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("sci_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("soc_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("soc_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("soc_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("total_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("total_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `results_8E` SET `student_id` = ?, `school_year` = ?, `school_name` = ?, `"& _ 
@@ -14331,35 +15693,63 @@ Namespace TerseDataSetTableAdapters
                 "?, `obt_th` = ?, `obt_pr` = ?, `obt_total` = ?, `comp_th` = ?, `comp_pr` = ?, `c"& _ 
                 "omp_total` = ?, `hea_th` = ?, `hea_pr` = ?, `hea_total` = ?, `mor_th` = ?, `mor_"& _ 
                 "pr` = ?, `mor_total` = ?, `total_th` = ?, `total_pr` = ?, `total` = ?, `percenta"& _ 
-                "ge` = ?, `grade` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `student_id` IS NULL) OR "& _ 
-                "(`student_id` = ?)) AND ((? = 1 AND `school_year` IS NULL) OR (`school_year` = ?"& _ 
-                ")) AND ((? = 1 AND `school_name` IS NULL) OR (`school_name` = ?)) AND ((? = 1 AN"& _ 
-                "D `terminal` IS NULL) OR (`terminal` = ?)) AND ((? = 1 AND `eng_th` IS NULL) OR "& _ 
-                "(`eng_th` = ?)) AND ((? = 1 AND `eng_pr` IS NULL) OR (`eng_pr` = ?)) AND ((? = 1"& _ 
-                " AND `eng_total` IS NULL) OR (`eng_total` = ?)) AND ((? = 1 AND `nep_th` IS NULL"& _ 
-                ") OR (`nep_th` = ?)) AND ((? = 1 AND `nep_pr` IS NULL) OR (`nep_pr` = ?)) AND (("& _ 
-                "? = 1 AND `nep_total` IS NULL) OR (`nep_total` = ?)) AND ((? = 1 AND `math_th` I"& _ 
-                "S NULL) OR (`math_th` = ?)) AND ((? = 1 AND `math_pr` IS NULL) OR (`math_pr` = ?"& _ 
-                ")) AND ((? = 1 AND `math_total` IS NULL) OR (`math_total` = ?)) AND ((? = 1 AND "& _ 
-                "`sci_th` IS NULL) OR (`sci_th` = ?)) AND ((? = 1 AND `sci_pr` IS NULL) OR (`sci_"& _ 
-                "pr` = ?)) AND ((? = 1 AND `sci_total` IS NULL) OR (`sci_total` = ?)) AND ((? = 1"& _ 
-                " AND `soc_th` IS NULL) OR (`soc_th` = ?)) AND ((? = 1 AND `soc_pr` IS NULL) OR ("& _ 
-                "`soc_pr` = ?)) AND ((? = 1 AND `soc_total` IS NULL) OR (`soc_total` = ?)) AND (("& _ 
-                "? = 1 AND `obt_th` IS NULL) OR (`obt_th` = ?)) AND ((? = 1 AND `obt_pr` IS NULL)"& _ 
-                " OR (`obt_pr` = ?)) AND ((? = 1 AND `obt_total` IS NULL) OR (`obt_total` = ?)) A"& _ 
-                "ND ((? = 1 AND `comp_th` IS NULL) OR (`comp_th` = ?)) AND ((? = 1 AND `comp_pr` "& _ 
-                "IS NULL) OR (`comp_pr` = ?)) AND ((? = 1 AND `comp_total` IS NULL) OR (`comp_tot"& _ 
-                "al` = ?)) AND ((? = 1 AND `hea_th` IS NULL) OR (`hea_th` = ?)) AND ((? = 1 AND `"& _ 
-                "hea_pr` IS NULL) OR (`hea_pr` = ?)) AND ((? = 1 AND `hea_total` IS NULL) OR (`he"& _ 
-                "a_total` = ?)) AND ((? = 1 AND `mor_th` IS NULL) OR (`mor_th` = ?)) AND ((? = 1 "& _ 
-                "AND `mor_pr` IS NULL) OR (`mor_pr` = ?)) AND ((? = 1 AND `mor_total` IS NULL) OR"& _ 
-                " (`mor_total` = ?)) AND ((? = 1 AND `total_th` IS NULL) OR (`total_th` = ?)) AND"& _ 
-                " ((? = 1 AND `total_pr` IS NULL) OR (`total_pr` = ?)) AND ((? = 1 AND `total` IS"& _ 
-                " NULL) OR (`total` = ?)) AND ((? = 1 AND `percentage` IS NULL) OR (`percentage` "& _ 
-                "= ?)) AND ((? = 1 AND `grade` IS NULL) OR (`grade` = ?)))"
+                "ge` = ?, `grade` = ?, `comp_pr_g` = ?, `comp_th_g` = ?, `comp_total_g` = ?, `eng"& _ 
+                "_pr_g` = ?, `eng_th_g` = ?, `eng_total_g` = ?, `hea_pr_g` = ?, `hea_th_g` = ?, `"& _ 
+                "hea_total_g` = ?, `math_pr_g` = ?, `math_th_g` = ?, `math_total_g` = ?, `mor_pr_"& _ 
+                "g` = ?, `mor_th_g` = ?, `mor_total_g` = ?, `nep_pr_g` = ?, `nep_th_g` = ?, `nep_"& _ 
+                "total_g` = ?, `obt_pr_g` = ?, `obt_th_g` = ?, `obt_total_g` = ?, `sci_pr_g` = ?,"& _ 
+                " `sci_th_g` = ?, `sci_total_g` = ?, `soc_pr_g` = ?, `soc_th_g` = ?, `soc_total_g"& _ 
+                "` = ?, `total_pr_g` = ?, `total_th_g` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `stu"& _ 
+                "dent_id` IS NULL) OR (`student_id` = ?)) AND ((? = 1 AND `school_year` IS NULL) "& _ 
+                "OR (`school_year` = ?)) AND ((? = 1 AND `school_name` IS NULL) OR (`school_name`"& _ 
+                " = ?)) AND ((? = 1 AND `terminal` IS NULL) OR (`terminal` = ?)) AND ((? = 1 AND "& _ 
+                "`eng_th` IS NULL) OR (`eng_th` = ?)) AND ((? = 1 AND `eng_pr` IS NULL) OR (`eng_"& _ 
+                "pr` = ?)) AND ((? = 1 AND `eng_total` IS NULL) OR (`eng_total` = ?)) AND ((? = 1"& _ 
+                " AND `nep_th` IS NULL) OR (`nep_th` = ?)) AND ((? = 1 AND `nep_pr` IS NULL) OR ("& _ 
+                "`nep_pr` = ?)) AND ((? = 1 AND `nep_total` IS NULL) OR (`nep_total` = ?)) AND (("& _ 
+                "? = 1 AND `math_th` IS NULL) OR (`math_th` = ?)) AND ((? = 1 AND `math_pr` IS NU"& _ 
+                "LL) OR (`math_pr` = ?)) AND ((? = 1 AND `math_total` IS NULL) OR (`math_total` ="& _ 
+                " ?)) AND ((? = 1 AND `sci_th` IS NULL) OR (`sci_th` = ?)) AND ((? = 1 AND `sci_p"& _ 
+                "r` IS NULL) OR (`sci_pr` = ?)) AND ((? = 1 AND `sci_total` IS NULL) OR (`sci_tot"& _ 
+                "al` = ?)) AND ((? = 1 AND `soc_th` IS NULL) OR (`soc_th` = ?)) AND ((? = 1 AND `"& _ 
+                "soc_pr` IS NULL) OR (`soc_pr` = ?)) AND ((? = 1 AND `soc_total` IS NULL) OR (`so"& _ 
+                "c_total` = ?)) AND ((? = 1 AND `obt_th` IS NULL) OR (`obt_th` = ?)) AND ((? = 1 "& _ 
+                "AND `obt_pr` IS NULL) OR (`obt_pr` = ?)) AND ((? = 1 AND `obt_total` IS NULL) OR"& _ 
+                " (`obt_total` = ?)) AND ((? = 1 AND `comp_th` IS NULL) OR (`comp_th` = ?)) AND ("& _ 
+                "(? = 1 AND `comp_pr` IS NULL) OR (`comp_pr` = ?)) AND ((? = 1 AND `comp_total` I"& _ 
+                "S NULL) OR (`comp_total` = ?)) AND ((? = 1 AND `hea_th` IS NULL) OR (`hea_th` = "& _ 
+                "?)) AND ((? = 1 AND `hea_pr` IS NULL) OR (`hea_pr` = ?)) AND ((? = 1 AND `hea_to"& _ 
+                "tal` IS NULL) OR (`hea_total` = ?)) AND ((? = 1 AND `mor_th` IS NULL) OR (`mor_t"& _ 
+                "h` = ?)) AND ((? = 1 AND `mor_pr` IS NULL) OR (`mor_pr` = ?)) AND ((? = 1 AND `m"& _ 
+                "or_total` IS NULL) OR (`mor_total` = ?)) AND ((? = 1 AND `total_th` IS NULL) OR "& _ 
+                "(`total_th` = ?)) AND ((? = 1 AND `total_pr` IS NULL) OR (`total_pr` = ?)) AND ("& _ 
+                "(? = 1 AND `total` IS NULL) OR (`total` = ?)) AND ((? = 1 AND `percentage` IS NU"& _ 
+                "LL) OR (`percentage` = ?)) AND ((? = 1 AND `grade` IS NULL) OR (`grade` = ?)) AN"& _ 
+                "D ((? = 1 AND `comp_pr_g` IS NULL) OR (`comp_pr_g` = ?)) AND ((? = 1 AND `comp_t"& _ 
+                "h_g` IS NULL) OR (`comp_th_g` = ?)) AND ((? = 1 AND `comp_total_g` IS NULL) OR ("& _ 
+                "`comp_total_g` = ?)) AND ((? = 1 AND `eng_pr_g` IS NULL) OR (`eng_pr_g` = ?)) AN"& _ 
+                "D ((? = 1 AND `eng_th_g` IS NULL) OR (`eng_th_g` = ?)) AND ((? = 1 AND `eng_tota"& _ 
+                "l_g` IS NULL) OR (`eng_total_g` = ?)) AND ((? = 1 AND `hea_pr_g` IS NULL) OR (`h"& _ 
+                "ea_pr_g` = ?)) AND ((? = 1 AND `hea_th_g` IS NULL) OR (`hea_th_g` = ?)) AND ((? "& _ 
+                "= 1 AND `hea_total_g` IS NULL) OR (`hea_total_g` = ?)) AND ((? = 1 AND `math_pr_"& _ 
+                "g` IS NULL) OR (`math_pr_g` = ?)) AND ((? = 1 AND `math_th_g` IS NULL) OR (`math"& _ 
+                "_th_g` = ?)) AND ((? = 1 AND `math_total_g` IS NULL) OR (`math_total_g` = ?)) AN"& _ 
+                "D ((? = 1 AND `mor_pr_g` IS NULL) OR (`mor_pr_g` = ?)) AND ((? = 1 AND `mor_th_g"& _ 
+                "` IS NULL) OR (`mor_th_g` = ?)) AND ((? = 1 AND `mor_total_g` IS NULL) OR (`mor_"& _ 
+                "total_g` = ?)) AND ((? = 1 AND `nep_pr_g` IS NULL) OR (`nep_pr_g` = ?)) AND ((? "& _ 
+                "= 1 AND `nep_th_g` IS NULL) OR (`nep_th_g` = ?)) AND ((? = 1 AND `nep_total_g` I"& _ 
+                "S NULL) OR (`nep_total_g` = ?)) AND ((? = 1 AND `obt_pr_g` IS NULL) OR (`obt_pr_"& _ 
+                "g` = ?)) AND ((? = 1 AND `obt_th_g` IS NULL) OR (`obt_th_g` = ?)) AND ((? = 1 AN"& _ 
+                "D `obt_total_g` IS NULL) OR (`obt_total_g` = ?)) AND ((? = 1 AND `sci_pr_g` IS N"& _ 
+                "ULL) OR (`sci_pr_g` = ?)) AND ((? = 1 AND `sci_th_g` IS NULL) OR (`sci_th_g` = ?"& _ 
+                ")) AND ((? = 1 AND `sci_total_g` IS NULL) OR (`sci_total_g` = ?)) AND ((? = 1 AN"& _ 
+                "D `soc_pr_g` IS NULL) OR (`soc_pr_g` = ?)) AND ((? = 1 AND `soc_th_g` IS NULL) O"& _ 
+                "R (`soc_th_g` = ?)) AND ((? = 1 AND `soc_total_g` IS NULL) OR (`soc_total_g` = ?"& _ 
+                ")) AND ((? = 1 AND `total_pr_g` IS NULL) OR (`total_pr_g` = ?)) AND ((? = 1 AND "& _ 
+                "`total_th_g` IS NULL) OR (`total_th_g` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_year", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_year", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("terminal", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "terminal", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("eng_th", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_th", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -14394,11 +15784,40 @@ Namespace TerseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("total", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("percentage", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "percentage", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("grade", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "grade", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("comp_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("comp_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("comp_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("eng_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("eng_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("eng_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("hea_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("hea_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("hea_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("math_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("math_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("math_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mor_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mor_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mor_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nep_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nep_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("nep_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("obt_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("obt_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("obt_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("sci_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("sci_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("sci_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("soc_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("soc_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("soc_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_total_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("total_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_pr_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("total_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_th_g", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_student_id", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_year", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_year", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_year", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_terminal", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "terminal", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -14467,6 +15886,64 @@ Namespace TerseDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_percentage", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "percentage", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_grade", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "grade", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_grade", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "grade", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_comp_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_comp_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_comp_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_comp_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_comp_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_comp_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "comp_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_eng_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_eng_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_eng_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_eng_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_eng_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_eng_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "eng_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_hea_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_hea_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_hea_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_hea_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_hea_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_hea_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "hea_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_math_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_math_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_math_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_math_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_math_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_math_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "math_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mor_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mor_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mor_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mor_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mor_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mor_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mor_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nep_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nep_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nep_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nep_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_nep_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_nep_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "nep_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_obt_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_obt_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_obt_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_obt_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_obt_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_obt_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "obt_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_sci_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_sci_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_sci_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_sci_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_sci_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_sci_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "sci_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_soc_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_soc_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_soc_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_soc_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_soc_total_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_total_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_soc_total_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "soc_total_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_total_pr_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_pr_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_total_pr_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_pr_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_total_th_g", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_th_g", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_total_th_g", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "total_th_g", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14486,7 +15963,11 @@ Namespace TerseDataSetTableAdapters
                 "tal, nep_th, nep_pr, nep_total, math_th, math_pr, math_total, sci_th, sci_pr, sc"& _ 
                 "i_total, soc_th, soc_pr, soc_total, obt_th, obt_pr, obt_total, comp_th, comp_pr,"& _ 
                 " comp_total, hea_th, hea_pr, hea_total, mor_th, mor_pr, mor_total, total_th, tot"& _ 
-                "al_pr, total, percentage, grade FROM results_8E"
+                "al_pr, total, percentage, grade, comp_pr_g, comp_th_g, comp_total_g, eng_pr_g, e"& _ 
+                "ng_th_g, eng_total_g, hea_pr_g, hea_th_g, hea_total_g, math_pr_g, math_th_g, mat"& _ 
+                "h_total_g, mor_pr_g, mor_th_g, mor_total_g, nep_pr_g, nep_th_g, nep_total_g, obt"& _ 
+                "_pr_g, obt_th_g, obt_total_g, sci_pr_g, sci_th_g, sci_total_g, soc_pr_g, soc_th_"& _ 
+                "g, soc_total_g, total_pr_g, total_th_g FROM results_8E"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -14548,8 +16029,8 @@ Namespace TerseDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
         Public Overloads Overridable Function Delete( _
                     ByVal Original_ID As Integer,  _
-                    ByVal Original_student_id As String,  _
-                    ByVal Original_school_year As Global.System.Nullable(Of Double),  _
+                    ByVal Original_student_id As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_school_year As String,  _
                     ByVal Original_school_name As String,  _
                     ByVal Original_terminal As String,  _
                     ByVal Original_eng_th As Global.System.Nullable(Of Double),  _
@@ -14583,21 +16064,50 @@ Namespace TerseDataSetTableAdapters
                     ByVal Original_total_pr As Global.System.Nullable(Of Double),  _
                     ByVal Original_total As Global.System.Nullable(Of Double),  _
                     ByVal Original_percentage As Global.System.Nullable(Of Double),  _
-                    ByVal Original_grade As String) As Integer
+                    ByVal Original_grade As String,  _
+                    ByVal Original_comp_pr_g As String,  _
+                    ByVal Original_comp_th_g As String,  _
+                    ByVal Original_comp_total_g As String,  _
+                    ByVal Original_eng_pr_g As String,  _
+                    ByVal Original_eng_th_g As String,  _
+                    ByVal Original_eng_total_g As String,  _
+                    ByVal Original_hea_pr_g As String,  _
+                    ByVal Original_hea_th_g As String,  _
+                    ByVal Original_hea_total_g As String,  _
+                    ByVal Original_math_pr_g As String,  _
+                    ByVal Original_math_th_g As String,  _
+                    ByVal Original_math_total_g As String,  _
+                    ByVal Original_mor_pr_g As String,  _
+                    ByVal Original_mor_th_g As String,  _
+                    ByVal Original_mor_total_g As String,  _
+                    ByVal Original_nep_pr_g As String,  _
+                    ByVal Original_nep_th_g As String,  _
+                    ByVal Original_nep_total_g As String,  _
+                    ByVal Original_obt_pr_g As String,  _
+                    ByVal Original_obt_th_g As String,  _
+                    ByVal Original_obt_total_g As String,  _
+                    ByVal Original_sci_pr_g As String,  _
+                    ByVal Original_sci_th_g As String,  _
+                    ByVal Original_sci_total_g As String,  _
+                    ByVal Original_soc_pr_g As String,  _
+                    ByVal Original_soc_th_g As String,  _
+                    ByVal Original_soc_total_g As String,  _
+                    ByVal Original_total_pr_g As String,  _
+                    ByVal Original_total_th_g As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
-            If (Original_student_id Is Nothing) Then
+            If (Original_student_id.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_student_id.Value,Integer)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_student_id,String)
             End If
-            If (Original_school_year.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_school_year.Value,Double)
-            Else
+            If (Original_school_year Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_school_year,String)
             End If
             If (Original_school_name Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
@@ -14837,6 +16347,209 @@ Namespace TerseDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(71).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(72).Value = CType(Original_grade,String)
             End If
+            If (Original_comp_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(73).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(74).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(73).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(74).Value = CType(Original_comp_pr_g,String)
+            End If
+            If (Original_comp_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(75).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(76).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(75).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(76).Value = CType(Original_comp_th_g,String)
+            End If
+            If (Original_comp_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(77).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(78).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(77).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(78).Value = CType(Original_comp_total_g,String)
+            End If
+            If (Original_eng_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(79).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(80).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(79).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(80).Value = CType(Original_eng_pr_g,String)
+            End If
+            If (Original_eng_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(81).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(82).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(81).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(82).Value = CType(Original_eng_th_g,String)
+            End If
+            If (Original_eng_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(83).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(84).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(83).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(84).Value = CType(Original_eng_total_g,String)
+            End If
+            If (Original_hea_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(85).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(86).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(85).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(86).Value = CType(Original_hea_pr_g,String)
+            End If
+            If (Original_hea_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(87).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(88).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(87).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(88).Value = CType(Original_hea_th_g,String)
+            End If
+            If (Original_hea_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(89).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(90).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(89).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(90).Value = CType(Original_hea_total_g,String)
+            End If
+            If (Original_math_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(91).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(92).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(91).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(92).Value = CType(Original_math_pr_g,String)
+            End If
+            If (Original_math_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(93).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(94).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(93).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(94).Value = CType(Original_math_th_g,String)
+            End If
+            If (Original_math_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(95).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(96).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(95).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(96).Value = CType(Original_math_total_g,String)
+            End If
+            If (Original_mor_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(97).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(98).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(97).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(98).Value = CType(Original_mor_pr_g,String)
+            End If
+            If (Original_mor_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(99).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(100).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(99).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(100).Value = CType(Original_mor_th_g,String)
+            End If
+            If (Original_mor_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(101).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(102).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(101).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(102).Value = CType(Original_mor_total_g,String)
+            End If
+            If (Original_nep_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(103).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(104).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(103).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(104).Value = CType(Original_nep_pr_g,String)
+            End If
+            If (Original_nep_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(105).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(106).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(105).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(106).Value = CType(Original_nep_th_g,String)
+            End If
+            If (Original_nep_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(107).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(108).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(107).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(108).Value = CType(Original_nep_total_g,String)
+            End If
+            If (Original_obt_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(109).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(110).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(109).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(110).Value = CType(Original_obt_pr_g,String)
+            End If
+            If (Original_obt_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(111).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(112).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(111).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(112).Value = CType(Original_obt_th_g,String)
+            End If
+            If (Original_obt_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(113).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(114).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(113).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(114).Value = CType(Original_obt_total_g,String)
+            End If
+            If (Original_sci_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(115).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(116).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(115).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(116).Value = CType(Original_sci_pr_g,String)
+            End If
+            If (Original_sci_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(117).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(118).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(117).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(118).Value = CType(Original_sci_th_g,String)
+            End If
+            If (Original_sci_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(119).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(120).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(119).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(120).Value = CType(Original_sci_total_g,String)
+            End If
+            If (Original_soc_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(121).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(122).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(121).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(122).Value = CType(Original_soc_pr_g,String)
+            End If
+            If (Original_soc_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(123).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(124).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(123).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(124).Value = CType(Original_soc_th_g,String)
+            End If
+            If (Original_soc_total_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(125).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(126).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(125).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(126).Value = CType(Original_soc_total_g,String)
+            End If
+            If (Original_total_pr_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(127).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(128).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(127).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(128).Value = CType(Original_total_pr_g,String)
+            End If
+            If (Original_total_th_g Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(129).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(130).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(129).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(130).Value = CType(Original_total_th_g,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -14857,8 +16570,8 @@ Namespace TerseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
         Public Overloads Overridable Function Insert( _
-                    ByVal student_id As String,  _
-                    ByVal school_year As Global.System.Nullable(Of Double),  _
+                    ByVal student_id As Global.System.Nullable(Of Integer),  _
+                    ByVal school_year As String,  _
                     ByVal school_name As String,  _
                     ByVal terminal As String,  _
                     ByVal eng_th As Global.System.Nullable(Of Double),  _
@@ -14892,16 +16605,45 @@ Namespace TerseDataSetTableAdapters
                     ByVal total_pr As Global.System.Nullable(Of Double),  _
                     ByVal total As Global.System.Nullable(Of Double),  _
                     ByVal percentage As Global.System.Nullable(Of Double),  _
-                    ByVal grade As String) As Integer
-            If (student_id Is Nothing) Then
+                    ByVal grade As String,  _
+                    ByVal comp_pr_g As String,  _
+                    ByVal comp_th_g As String,  _
+                    ByVal comp_total_g As String,  _
+                    ByVal eng_pr_g As String,  _
+                    ByVal eng_th_g As String,  _
+                    ByVal eng_total_g As String,  _
+                    ByVal hea_pr_g As String,  _
+                    ByVal hea_th_g As String,  _
+                    ByVal hea_total_g As String,  _
+                    ByVal math_pr_g As String,  _
+                    ByVal math_th_g As String,  _
+                    ByVal math_total_g As String,  _
+                    ByVal mor_pr_g As String,  _
+                    ByVal mor_th_g As String,  _
+                    ByVal mor_total_g As String,  _
+                    ByVal nep_pr_g As String,  _
+                    ByVal nep_th_g As String,  _
+                    ByVal nep_total_g As String,  _
+                    ByVal obt_pr_g As String,  _
+                    ByVal obt_th_g As String,  _
+                    ByVal obt_total_g As String,  _
+                    ByVal sci_pr_g As String,  _
+                    ByVal sci_th_g As String,  _
+                    ByVal sci_total_g As String,  _
+                    ByVal soc_pr_g As String,  _
+                    ByVal soc_th_g As String,  _
+                    ByVal soc_total_g As String,  _
+                    ByVal total_pr_g As String,  _
+                    ByVal total_th_g As String) As Integer
+            If (student_id.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(student_id.Value,Integer)
+            Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(student_id,String)
             End If
-            If (school_year.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(school_year.Value,Double)
-            Else
+            If (school_year Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(school_year,String)
             End If
             If (school_name Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
@@ -15073,6 +16815,151 @@ Namespace TerseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(35).Value = CType(grade,String)
             End If
+            If (comp_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(36).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(36).Value = CType(comp_pr_g,String)
+            End If
+            If (comp_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(37).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(37).Value = CType(comp_th_g,String)
+            End If
+            If (comp_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(38).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(38).Value = CType(comp_total_g,String)
+            End If
+            If (eng_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(39).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(39).Value = CType(eng_pr_g,String)
+            End If
+            If (eng_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(40).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(40).Value = CType(eng_th_g,String)
+            End If
+            If (eng_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(41).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(41).Value = CType(eng_total_g,String)
+            End If
+            If (hea_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(42).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(42).Value = CType(hea_pr_g,String)
+            End If
+            If (hea_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(43).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(43).Value = CType(hea_th_g,String)
+            End If
+            If (hea_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(44).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(44).Value = CType(hea_total_g,String)
+            End If
+            If (math_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(45).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(45).Value = CType(math_pr_g,String)
+            End If
+            If (math_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(46).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(46).Value = CType(math_th_g,String)
+            End If
+            If (math_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(47).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(47).Value = CType(math_total_g,String)
+            End If
+            If (mor_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(48).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(48).Value = CType(mor_pr_g,String)
+            End If
+            If (mor_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(49).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(49).Value = CType(mor_th_g,String)
+            End If
+            If (mor_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(50).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(50).Value = CType(mor_total_g,String)
+            End If
+            If (nep_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(51).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(51).Value = CType(nep_pr_g,String)
+            End If
+            If (nep_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(52).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(52).Value = CType(nep_th_g,String)
+            End If
+            If (nep_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(53).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(53).Value = CType(nep_total_g,String)
+            End If
+            If (obt_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(54).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(54).Value = CType(obt_pr_g,String)
+            End If
+            If (obt_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(55).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(55).Value = CType(obt_th_g,String)
+            End If
+            If (obt_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(56).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(56).Value = CType(obt_total_g,String)
+            End If
+            If (sci_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(57).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(57).Value = CType(sci_pr_g,String)
+            End If
+            If (sci_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(58).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(58).Value = CType(sci_th_g,String)
+            End If
+            If (sci_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(59).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(59).Value = CType(sci_total_g,String)
+            End If
+            If (soc_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(60).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(60).Value = CType(soc_pr_g,String)
+            End If
+            If (soc_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(61).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(61).Value = CType(soc_th_g,String)
+            End If
+            If (soc_total_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(62).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(62).Value = CType(soc_total_g,String)
+            End If
+            If (total_pr_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(63).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(63).Value = CType(total_pr_g,String)
+            End If
+            If (total_th_g Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(64).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(64).Value = CType(total_th_g,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -15093,8 +16980,8 @@ Namespace TerseDataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
-                    ByVal student_id As String,  _
-                    ByVal school_year As Global.System.Nullable(Of Double),  _
+                    ByVal student_id As Global.System.Nullable(Of Integer),  _
+                    ByVal school_year As String,  _
                     ByVal school_name As String,  _
                     ByVal terminal As String,  _
                     ByVal eng_th As Global.System.Nullable(Of Double),  _
@@ -15129,9 +17016,38 @@ Namespace TerseDataSetTableAdapters
                     ByVal total As Global.System.Nullable(Of Double),  _
                     ByVal percentage As Global.System.Nullable(Of Double),  _
                     ByVal grade As String,  _
+                    ByVal comp_pr_g As String,  _
+                    ByVal comp_th_g As String,  _
+                    ByVal comp_total_g As String,  _
+                    ByVal eng_pr_g As String,  _
+                    ByVal eng_th_g As String,  _
+                    ByVal eng_total_g As String,  _
+                    ByVal hea_pr_g As String,  _
+                    ByVal hea_th_g As String,  _
+                    ByVal hea_total_g As String,  _
+                    ByVal math_pr_g As String,  _
+                    ByVal math_th_g As String,  _
+                    ByVal math_total_g As String,  _
+                    ByVal mor_pr_g As String,  _
+                    ByVal mor_th_g As String,  _
+                    ByVal mor_total_g As String,  _
+                    ByVal nep_pr_g As String,  _
+                    ByVal nep_th_g As String,  _
+                    ByVal nep_total_g As String,  _
+                    ByVal obt_pr_g As String,  _
+                    ByVal obt_th_g As String,  _
+                    ByVal obt_total_g As String,  _
+                    ByVal sci_pr_g As String,  _
+                    ByVal sci_th_g As String,  _
+                    ByVal sci_total_g As String,  _
+                    ByVal soc_pr_g As String,  _
+                    ByVal soc_th_g As String,  _
+                    ByVal soc_total_g As String,  _
+                    ByVal total_pr_g As String,  _
+                    ByVal total_th_g As String,  _
                     ByVal Original_ID As Integer,  _
-                    ByVal Original_student_id As String,  _
-                    ByVal Original_school_year As Global.System.Nullable(Of Double),  _
+                    ByVal Original_student_id As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_school_year As String,  _
                     ByVal Original_school_name As String,  _
                     ByVal Original_terminal As String,  _
                     ByVal Original_eng_th As Global.System.Nullable(Of Double),  _
@@ -15165,16 +17081,45 @@ Namespace TerseDataSetTableAdapters
                     ByVal Original_total_pr As Global.System.Nullable(Of Double),  _
                     ByVal Original_total As Global.System.Nullable(Of Double),  _
                     ByVal Original_percentage As Global.System.Nullable(Of Double),  _
-                    ByVal Original_grade As String) As Integer
-            If (student_id Is Nothing) Then
+                    ByVal Original_grade As String,  _
+                    ByVal Original_comp_pr_g As String,  _
+                    ByVal Original_comp_th_g As String,  _
+                    ByVal Original_comp_total_g As String,  _
+                    ByVal Original_eng_pr_g As String,  _
+                    ByVal Original_eng_th_g As String,  _
+                    ByVal Original_eng_total_g As String,  _
+                    ByVal Original_hea_pr_g As String,  _
+                    ByVal Original_hea_th_g As String,  _
+                    ByVal Original_hea_total_g As String,  _
+                    ByVal Original_math_pr_g As String,  _
+                    ByVal Original_math_th_g As String,  _
+                    ByVal Original_math_total_g As String,  _
+                    ByVal Original_mor_pr_g As String,  _
+                    ByVal Original_mor_th_g As String,  _
+                    ByVal Original_mor_total_g As String,  _
+                    ByVal Original_nep_pr_g As String,  _
+                    ByVal Original_nep_th_g As String,  _
+                    ByVal Original_nep_total_g As String,  _
+                    ByVal Original_obt_pr_g As String,  _
+                    ByVal Original_obt_th_g As String,  _
+                    ByVal Original_obt_total_g As String,  _
+                    ByVal Original_sci_pr_g As String,  _
+                    ByVal Original_sci_th_g As String,  _
+                    ByVal Original_sci_total_g As String,  _
+                    ByVal Original_soc_pr_g As String,  _
+                    ByVal Original_soc_th_g As String,  _
+                    ByVal Original_soc_total_g As String,  _
+                    ByVal Original_total_pr_g As String,  _
+                    ByVal Original_total_th_g As String) As Integer
+            If (student_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(student_id.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(student_id,String)
             End If
-            If (school_year.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(school_year.Value,Double)
-            Else
+            If (school_year Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(school_year,String)
             End If
             If (school_name Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
@@ -15346,258 +17291,606 @@ Namespace TerseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(35).Value = CType(grade,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_ID,Integer)
-            If (Original_student_id Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+            If (comp_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(comp_pr_g,String)
+            End If
+            If (comp_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(comp_th_g,String)
+            End If
+            If (comp_total_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_student_id,String)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(comp_total_g,String)
             End If
-            If (Original_school_year.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_school_year.Value,Double)
+            If (eng_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(eng_pr_g,String)
             End If
-            If (Original_school_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
+            If (eng_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(eng_th_g,String)
+            End If
+            If (eng_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(eng_total_g,String)
+            End If
+            If (hea_pr_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_school_name,String)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(hea_pr_g,String)
             End If
-            If (Original_terminal Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+            If (hea_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(hea_th_g,String)
+            End If
+            If (hea_total_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_terminal,String)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(hea_total_g,String)
             End If
-            If (Original_eng_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_eng_th.Value,Double)
+            If (math_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(45).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(math_pr_g,String)
+            End If
+            If (math_th_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
-            End If
-            If (Original_eng_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(Original_eng_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(math_th_g,String)
+            End If
+            If (math_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(47).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(47).Value = CType(math_total_g,String)
+            End If
+            If (mor_pr_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(48).Value = Global.System.DBNull.Value
-            End If
-            If (Original_eng_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(Original_eng_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(48).Value = CType(mor_pr_g,String)
+            End If
+            If (mor_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(49).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(49).Value = CType(mor_th_g,String)
+            End If
+            If (mor_total_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(50).Value = Global.System.DBNull.Value
-            End If
-            If (Original_nep_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(Original_nep_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(50).Value = CType(mor_total_g,String)
+            End If
+            If (nep_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(51).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(51).Value = CType(nep_pr_g,String)
+            End If
+            If (nep_th_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(52).Value = Global.System.DBNull.Value
-            End If
-            If (Original_nep_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(Original_nep_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(52).Value = CType(nep_th_g,String)
+            End If
+            If (nep_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(53).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(53).Value = CType(nep_total_g,String)
+            End If
+            If (obt_pr_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(54).Value = Global.System.DBNull.Value
-            End If
-            If (Original_nep_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(Original_nep_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(54).Value = CType(obt_pr_g,String)
             End If
-            If (Original_math_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(1,Object)
+            If (obt_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(55).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(55).Value = CType(obt_th_g,String)
+            End If
+            If (obt_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(56).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(56).Value = CType(obt_total_g,String)
+            End If
+            If (sci_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(57).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(sci_pr_g,String)
+            End If
+            If (sci_th_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(58).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(57).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(Original_math_th,String)
+                Me.Adapter.UpdateCommand.Parameters(58).Value = CType(sci_th_g,String)
             End If
-            If (Original_math_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(1,Object)
+            If (sci_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(59).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(sci_total_g,String)
+            End If
+            If (soc_pr_g Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(60).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(59).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(Original_math_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(60).Value = CType(soc_pr_g,String)
+            End If
+            If (soc_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(61).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(soc_th_g,String)
+            End If
+            If (soc_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(62).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(soc_total_g,String)
+            End If
+            If (total_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(63).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(total_pr_g,String)
+            End If
+            If (total_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(total_th_g,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(65).Value = CType(Original_ID,Integer)
+            If (Original_student_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(Original_student_id.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(67).Value = Global.System.DBNull.Value
+            End If
+            If (Original_school_year Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(69).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_school_year,String)
+            End If
+            If (Original_school_name Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(71).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(Original_school_name,String)
+            End If
+            If (Original_terminal Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(73).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(Original_terminal,String)
+            End If
+            If (Original_eng_th.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(Original_eng_th.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(75).Value = Global.System.DBNull.Value
+            End If
+            If (Original_eng_pr.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(Original_eng_pr.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(77).Value = Global.System.DBNull.Value
+            End If
+            If (Original_eng_total.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(Original_eng_total.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(79).Value = Global.System.DBNull.Value
+            End If
+            If (Original_nep_th.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(Original_nep_th.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(81).Value = Global.System.DBNull.Value
+            End If
+            If (Original_nep_pr.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(Original_nep_pr.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(83).Value = Global.System.DBNull.Value
+            End If
+            If (Original_nep_total.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(Original_nep_total.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(85).Value = Global.System.DBNull.Value
+            End If
+            If (Original_math_th Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(87).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(Original_math_th,String)
+            End If
+            If (Original_math_pr Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(89).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(Original_math_pr,String)
             End If
             If (Original_math_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(62).Value = CType(Original_math_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(Original_math_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(61).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(62).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(91).Value = Global.System.DBNull.Value
             End If
             If (Original_sci_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(64).Value = CType(Original_sci_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_sci_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(63).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(64).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = Global.System.DBNull.Value
             End If
             If (Original_sci_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(66).Value = CType(Original_sci_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(Original_sci_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(65).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(66).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(95).Value = Global.System.DBNull.Value
             End If
             If (Original_sci_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(68).Value = CType(Original_sci_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(Original_sci_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(67).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(68).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(97).Value = Global.System.DBNull.Value
             End If
             If (Original_soc_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_soc_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(Original_soc_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(70).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(99).Value = Global.System.DBNull.Value
             End If
             If (Original_soc_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_soc_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(Original_soc_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(72).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(101).Value = Global.System.DBNull.Value
             End If
             If (Original_soc_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_soc_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(Original_soc_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(74).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(103).Value = Global.System.DBNull.Value
             End If
             If (Original_obt_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_obt_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(Original_obt_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(105).Value = Global.System.DBNull.Value
             End If
             If (Original_obt_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_obt_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(Original_obt_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(107).Value = Global.System.DBNull.Value
             End If
             If (Original_obt_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(Original_obt_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(Original_obt_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(80).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(109).Value = Global.System.DBNull.Value
             End If
             If (Original_comp_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(Original_comp_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(Original_comp_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(82).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(111).Value = Global.System.DBNull.Value
             End If
             If (Original_comp_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(Original_comp_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(Original_comp_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(84).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(113).Value = Global.System.DBNull.Value
             End If
             If (Original_comp_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(Original_comp_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(Original_comp_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(86).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(115).Value = Global.System.DBNull.Value
             End If
             If (Original_hea_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(Original_hea_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(Original_hea_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(88).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(117).Value = Global.System.DBNull.Value
             End If
             If (Original_hea_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(Original_hea_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(Original_hea_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(90).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(119).Value = Global.System.DBNull.Value
             End If
             If (Original_hea_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(Original_hea_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(Original_hea_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(92).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(121).Value = Global.System.DBNull.Value
             End If
             If (Original_mor_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(Original_mor_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(Original_mor_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(94).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(123).Value = Global.System.DBNull.Value
             End If
             If (Original_mor_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(Original_mor_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(Original_mor_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(96).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(125).Value = Global.System.DBNull.Value
             End If
             If (Original_mor_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(Original_mor_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(Original_mor_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(98).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(127).Value = Global.System.DBNull.Value
             End If
             If (Original_total_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(Original_total_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(Original_total_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(100).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(129).Value = Global.System.DBNull.Value
             End If
             If (Original_total_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(Original_total_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(Original_total_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(102).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(131).Value = Global.System.DBNull.Value
             End If
             If (Original_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(Original_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(Original_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(104).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(133).Value = Global.System.DBNull.Value
             End If
             If (Original_percentage.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(Original_percentage.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(Original_percentage.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(106).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(135).Value = Global.System.DBNull.Value
             End If
             If (Original_grade Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(108).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(137).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(Original_grade,String)
+                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(Original_grade,String)
+            End If
+            If (Original_comp_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(139).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(Original_comp_pr_g,String)
+            End If
+            If (Original_comp_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(141).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(Original_comp_th_g,String)
+            End If
+            If (Original_comp_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(143).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(Original_comp_total_g,String)
+            End If
+            If (Original_eng_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(145).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(Original_eng_pr_g,String)
+            End If
+            If (Original_eng_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(147).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(Original_eng_th_g,String)
+            End If
+            If (Original_eng_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(149).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(Original_eng_total_g,String)
+            End If
+            If (Original_hea_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(151).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(Original_hea_pr_g,String)
+            End If
+            If (Original_hea_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(153).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(Original_hea_th_g,String)
+            End If
+            If (Original_hea_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(155).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(Original_hea_total_g,String)
+            End If
+            If (Original_math_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(157).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(Original_math_pr_g,String)
+            End If
+            If (Original_math_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(159).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(Original_math_th_g,String)
+            End If
+            If (Original_math_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(161).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(Original_math_total_g,String)
+            End If
+            If (Original_mor_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(163).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(Original_mor_pr_g,String)
+            End If
+            If (Original_mor_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(165).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(Original_mor_th_g,String)
+            End If
+            If (Original_mor_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(167).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(Original_mor_total_g,String)
+            End If
+            If (Original_nep_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(169).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(Original_nep_pr_g,String)
+            End If
+            If (Original_nep_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(171).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(Original_nep_th_g,String)
+            End If
+            If (Original_nep_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(173).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(Original_nep_total_g,String)
+            End If
+            If (Original_obt_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(175).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(Original_obt_pr_g,String)
+            End If
+            If (Original_obt_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(177).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(Original_obt_th_g,String)
+            End If
+            If (Original_obt_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(179).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(Original_obt_total_g,String)
+            End If
+            If (Original_sci_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(181).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(Original_sci_pr_g,String)
+            End If
+            If (Original_sci_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(183).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(Original_sci_th_g,String)
+            End If
+            If (Original_sci_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(185).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(Original_sci_total_g,String)
+            End If
+            If (Original_soc_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(187).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(Original_soc_pr_g,String)
+            End If
+            If (Original_soc_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(189).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(Original_soc_th_g,String)
+            End If
+            If (Original_soc_total_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(191).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(Original_soc_total_g,String)
+            End If
+            If (Original_total_pr_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(193).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(Original_total_pr_g,String)
+            End If
+            If (Original_total_th_g Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(195).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(Original_total_th_g,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
