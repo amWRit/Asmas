@@ -95,6 +95,16 @@ Public Class addResultLowSecForm
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
+        If termCombo.SelectedIndex = -1 Then
+            errorMsg.Text = "Please select a terminal."
+            Exit Sub
+        ElseIf studentRegCombo.SelectedIndex = -1 Then
+            errorMsg.Text = "Please select a student registration number."
+            Exit Sub
+        Else
+            errorMsg.Text = ""
+        End If
+
         Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, socTh, socPr, sciTh, sciPr, obtTh, obtPr, compTh, compPr, heaTh, heaPr, morTh, heaPr}
 
         Dim valid As Boolean = checkNumberValidity(textBoxes)
@@ -112,7 +122,7 @@ Public Class addResultLowSecForm
 
         Dim hashKeys As String() = {"student_id", "school_year", "school_name", "terminal", "eng_th", "eng_th_g", "eng_pr", "eng_pr_g", "eng_total", "eng_total_g", "nep_th", "nep_th_g", "nep_pr",
             "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
-            "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "obt_th", "obt_th_g", "obt_pr", "obt_pr_g", "obt_total", "obt_total_g", "comp_th", "comp_th_g", "comp_pr", "comp_pr_g", "comp_total", "comp_total_g", "hea_th", "hea_th_g", "hea_pr", "hea_pr_g", "hea_total", "hea_total_g", "mor_th", "mor_th_g", "mor_pr", "mor_pr_g", "mor_total", "mor_total_g", "total_th", "total_pr", "total", "percentage", "grade"}
+            "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "obt_th", "obt_th_g", "obt_pr", "obt_pr_g", "obt_total", "obt_total_g", "comp_th", "comp_th_g", "comp_pr", "comp_pr_g", "comp_total", "comp_total_g", "hea_th", "hea_th_g", "hea_pr", "hea_pr_g", "hea_total", "hea_total_g", "mor_th", "mor_th_g", "mor_pr", "mor_pr_g", "mor_total", "mor_total_g", "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade"}
 
 
         Dim inputHash = prepareInputHash()
@@ -123,12 +133,12 @@ Public Class addResultLowSecForm
             Dim insertSQL As String = "INSERT INTO results_" & class_name & " ([student_id],[school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
 [nep_th],[nep_th_g],[nep_pr],[nep_pr_g],[nep_total],[nep_total_g],[math_th],[math_th_g],[math_pr],[math_pr_g],[math_total],[math_total_g],[sci_th],[sci_th_g],[sci_pr],[sci_pr_g],[sci_total],[sci_total_g],
 [soc_th],[soc_th_g],[soc_pr],[soc_pr_g],[soc_total],[soc_total_g],[obt_th],[obt_th_g],[obt_pr],[obt_pr_g],[obt_total],[obt_total_g],[comp_th],[comp_th_g],[comp_pr],[comp_pr_g],[comp_total],[comp_total_g],
-[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_pr],[total],[percentage],[grade]) 
+[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade]) 
 VALUES
 (@student_id, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
 @nep_total, @nep_total_g, @math_th, @math_th_g, @math_pr, @math_pr_g, @math_total, @math_total_g, @sci_th, @sci_th_g, @sci_pr, @sci_pr_g, @sci_total, @sci_total_g, 
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @obt_th, @obt_th_g, @obt_pr, @obt_pr_g, @obt_total, @obt_total_g, @comp_th, @comp_th_g, @comp_pr, @comp_pr_g, @comp_total, @comp_total_g, 
-@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_pr, @total, @percentage, @grade)"
+@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade)"
 
             Con.Open()
             Dim cmd As New OleDbCommand(insertSQL, Con)
@@ -139,7 +149,14 @@ VALUES
 
             cmd.ExecuteNonQuery()
 
-            MsgBox("Insert Successful", MsgBoxStyle.Information, "INSERTED")
+            Dim I As Integer = MsgBox("Insert Successful", MsgBoxStyle.Information, "INSERTED")
+            If I = MsgBoxResult.Ok Then
+                If sequenceCheckBox.Checked Then
+                    'MsgBox("sequence selected")
+                    prepareNext(textBoxes)
+                End If
+            End If
+
             Con.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -161,7 +178,9 @@ VALUES
     Public Function prepareInputHash() As Hashtable
         Dim inputHash As Hashtable = New Hashtable
         Dim total_th = CDbl(engTh.Text) + CDbl(nepTh.Text) + CDbl(mathTh.Text) + CDbl(sciTh.Text) + CDbl(socTh.Text) + CDbl(obtTh.Text) + CDbl(compTh.Text) + CDbl(heaTh.Text) + CDbl(morTh.Text)
+        Dim total_th_perc = total_th / 555 * 100
         Dim total_pr = CDbl(engPr.Text) + CDbl(nepPr.Text) + CDbl(mathPr.Text) + CDbl(sciPr.Text) + CDbl(socPr.Text) + CDbl(obtPr.Text) + CDbl(compPr.Text) + CDbl(heaPr.Text) + CDbl(morPr.Text)
+        Dim total_pr_perc = total_pr / 245 * 100
         Dim total = total_th + total_pr
         Dim percentage = total / 800 * 100
 
@@ -197,7 +216,9 @@ VALUES
         inputHash("mor_pr") = morPr.Text
         inputHash("mor_total") = CDbl(morTh.Text) + CDbl(morPr.Text)
         inputHash("total_th") = total_th
+        inputHash("total_th_perc") = total_th_perc
         inputHash("total_pr") = total_pr
+        inputHash("total_pr_perc") = total_pr_perc
         inputHash("total") = total
         inputHash("percentage") = percentage
 
@@ -217,6 +238,10 @@ VALUES
                 percentage = CDbl(inputHash(subj)) / 30 * 100
             ElseIf subj = "mor_th" Then
                 percentage = CDbl(inputHash(subj)) / 25 * 100
+            ElseIf subj = "math_th" Then
+                percentage = CDbl(inputHash(subj))
+            ElseIf subj = "obt_th" Or subj = "comp_th" Then
+                percentage = CDbl(inputHash(subj)) / 50 * 100
             Else
                 percentage = CDbl(inputHash(subj)) / 75 * 100
             End If
@@ -228,6 +253,8 @@ VALUES
         For Each subj As String In pracSub
             If subj = "hea_pr" Then
                 percentage = CDbl(inputHash(subj)) / 20 * 100
+            ElseIf subj = "obt_th" Or subj = "comp_th" Then
+                percentage = CDbl(inputHash(subj)) / 50 * 100
             Else
                 percentage = CDbl(inputHash(subj)) / 25 * 100
             End If
@@ -247,8 +274,8 @@ VALUES
             inputHash(subj & "_g") = grade
         Next
 
-        inputHash("total_th_g") = percentToGrade(CDbl(inputHash("total_th")))
-        inputHash("total_pr_g") = percentToGrade(CDbl(inputHash("total_pr")))
+        inputHash("total_th_g") = percentToGrade(CDbl(inputHash("total_th_perc")))
+        inputHash("total_pr_g") = percentToGrade(CDbl(inputHash("total_pr_perc")))
         inputHash("grade") = percentToGrade(CDbl(inputHash("percentage")))
         Return inputHash
     End Function
@@ -281,5 +308,11 @@ VALUES
 
     Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click
         Me.Close()
+    End Sub
+
+    Public Sub prepareNext(textboxes As TextBox())
+        For i As Integer = 0 To textboxes.Count - 1
+            textboxes(i).Text = "0"
+        Next
     End Sub
 End Class

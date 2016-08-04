@@ -61,6 +61,26 @@ Partial Class addResultLowSecForm
         Me.studentName = New System.Windows.Forms.TextBox()
         Me.studentRegCombo = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.errorMsg = New System.Windows.Forms.Label()
+        Me.sequenceCheckBox = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -189,6 +209,7 @@ Partial Class addResultLowSecForm
         '
         'mathPr
         '
+        Me.mathPr.Enabled = False
         Me.mathPr.Location = New System.Drawing.Point(329, 208)
         Me.mathPr.Name = "mathPr"
         Me.mathPr.Size = New System.Drawing.Size(100, 20)
@@ -400,11 +421,212 @@ Partial Class addResultLowSecForm
         Me.Label14.TabIndex = 62
         Me.Label14.Text = "Student Name"
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(277, 150)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(24, 13)
+        Me.Label15.TabIndex = 63
+        Me.Label15.Text = "/75"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(277, 180)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(24, 13)
+        Me.Label16.TabIndex = 64
+        Me.Label16.Text = "/75"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(277, 242)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(24, 13)
+        Me.Label17.TabIndex = 66
+        Me.Label17.Text = "/75"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(277, 212)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(30, 13)
+        Me.Label18.TabIndex = 65
+        Me.Label18.Text = "/100"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(277, 404)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(24, 13)
+        Me.Label19.TabIndex = 70
+        Me.Label19.Text = "/25"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(277, 369)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(24, 13)
+        Me.Label20.TabIndex = 69
+        Me.Label20.Text = "/30"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(277, 339)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(24, 13)
+        Me.Label21.TabIndex = 68
+        Me.Label21.Text = "/50"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(277, 307)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(24, 13)
+        Me.Label22.TabIndex = 67
+        Me.Label22.Text = "/50"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(277, 277)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(24, 13)
+        Me.Label23.TabIndex = 71
+        Me.Label23.Text = "/75"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(431, 277)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(24, 13)
+        Me.Label24.TabIndex = 80
+        Me.Label24.Text = "/25"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(431, 404)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(24, 13)
+        Me.Label25.TabIndex = 79
+        Me.Label25.Text = "/25"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(431, 369)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(24, 13)
+        Me.Label26.TabIndex = 78
+        Me.Label26.Text = "/20"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(431, 339)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(24, 13)
+        Me.Label27.TabIndex = 77
+        Me.Label27.Text = "/50"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(431, 307)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(24, 13)
+        Me.Label28.TabIndex = 76
+        Me.Label28.Text = "/50"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Location = New System.Drawing.Point(431, 242)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(24, 13)
+        Me.Label29.TabIndex = 75
+        Me.Label29.Text = "/25"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Location = New System.Drawing.Point(431, 212)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(18, 13)
+        Me.Label30.TabIndex = 74
+        Me.Label30.Text = "/0"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Location = New System.Drawing.Point(431, 150)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(24, 13)
+        Me.Label32.TabIndex = 72
+        Me.Label32.Text = "/25"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Location = New System.Drawing.Point(431, 180)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(24, 13)
+        Me.Label31.TabIndex = 73
+        Me.Label31.Text = "/25"
+        '
+        'errorMsg
+        '
+        Me.errorMsg.AutoSize = True
+        Me.errorMsg.ForeColor = System.Drawing.Color.Red
+        Me.errorMsg.Location = New System.Drawing.Point(277, 44)
+        Me.errorMsg.Name = "errorMsg"
+        Me.errorMsg.Size = New System.Drawing.Size(0, 13)
+        Me.errorMsg.TabIndex = 81
+        '
+        'sequenceCheckBox
+        '
+        Me.sequenceCheckBox.AutoSize = True
+        Me.sequenceCheckBox.Location = New System.Drawing.Point(510, 13)
+        Me.sequenceCheckBox.Name = "sequenceCheckBox"
+        Me.sequenceCheckBox.Size = New System.Drawing.Size(108, 17)
+        Me.sequenceCheckBox.TabIndex = 82
+        Me.sequenceCheckBox.Text = "Add in Sequence"
+        Me.sequenceCheckBox.UseVisualStyleBackColor = True
+        '
         'addResultLowSecForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(670, 439)
+        Me.Controls.Add(Me.sequenceCheckBox)
+        Me.Controls.Add(Me.errorMsg)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.Label27)
+        Me.Controls.Add(Me.Label28)
+        Me.Controls.Add(Me.Label29)
+        Me.Controls.Add(Me.Label30)
+        Me.Controls.Add(Me.Label31)
+        Me.Controls.Add(Me.Label32)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.studentRegCombo)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.studentName)
@@ -491,4 +713,24 @@ Partial Class addResultLowSecForm
     Friend WithEvents studentName As TextBox
     Friend WithEvents studentRegCombo As ComboBox
     Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents errorMsg As Label
+    Friend WithEvents sequenceCheckBox As CheckBox
 End Class
