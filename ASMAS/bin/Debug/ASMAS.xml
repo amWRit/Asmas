@@ -302,6 +302,26 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:ASMAS.TerseDataSet1.MSysCompactErrorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.results_7EDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.results_8EDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.subjectsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:ASMAS.TerseDataSet1.classRow">
 <summary>
 Represents strongly named DataRow class.
@@ -328,6 +348,26 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:ASMAS.TerseDataSet1.userRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.MSysCompactErrorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.results_7ERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.results_8ERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.subjectsRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -362,6 +402,26 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:ASMAS.TerseDataSet1.MSysCompactErrorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.results_7ERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.results_8ERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1.subjectsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:ASMAS.TerseDataSet1TableAdapters.classTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -388,6 +448,26 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:ASMAS.TerseDataSet1TableAdapters.userTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1TableAdapters.MSysCompactErrorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1TableAdapters.results_7ETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1TableAdapters.results_8ETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet1TableAdapters.subjectsTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

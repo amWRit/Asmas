@@ -117,4 +117,30 @@ Public Class myClassesForm
         Dim _classResults As New classResults(itemID)
         _classResults.Show()
     End Sub
+
+    Private Sub AddResultToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddResultToolStripMenuItem.Click
+        Dim primary As String() = {"1", "2", "3", "4", "5"}
+        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
+        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+
+        Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
+        Dim itemID = myClassesListView.Items(ItemIndex).SubItems(0).Text
+        Dim year_num = myClassesListView.Items(ItemIndex).SubItems(1).Text
+        Dim school_name = myClassesListView.Items(ItemIndex).SubItems(2).Text
+        Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
+
+        Dim params As String() = {itemID, year_num, school_name, className}
+
+        If primary.Contains(className) Then
+            'Dim _newClassResult As New addResultPrimaryForm(itemID)
+            '_newClassResult.Show()
+        ElseIf lowSec.Contains(className) Then
+            Dim _newClassResult As New addResultLowSecForm(params)
+            _newClassResult.Show()
+        ElseIf sec.Contains(className) Then
+            'Dim _newClassResult As New addResultSecForm(itemID)
+            '_newClassResult.Show()
+        End If
+
+    End Sub
 End Class

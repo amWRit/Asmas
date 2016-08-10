@@ -108,6 +108,24 @@
     <Compile Include="addClassForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="addResultLowSecForm.Designer.vb">
+      <DependentUpon>addResultLowSecForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addResultLowSecForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addResultPrimaryForm.Designer.vb">
+      <DependentUpon>addResultPrimaryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addResultPrimaryForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addResultSecForm.Designer.vb">
+      <DependentUpon>addResultSecForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="addResultSecForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="addSchoolForm.Designer.vb">
       <DependentUpon>addSchoolForm.vb</DependentUpon>
     </Compile>
@@ -238,6 +256,15 @@
   <ItemGroup>
     <EmbeddedResource Include="addClassForm.resx">
       <DependentUpon>addClassForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addResultLowSecForm.resx">
+      <DependentUpon>addResultLowSecForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addResultPrimaryForm.resx">
+      <DependentUpon>addResultPrimaryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addResultSecForm.resx">
+      <DependentUpon>addResultSecForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addSchoolForm.resx">
       <DependentUpon>addSchoolForm.vb</DependentUpon>
