@@ -35,6 +35,12 @@ Public Class addResultLowSecForm
             Con.Close()
             oData.Fill(DS)
 
+            Dim present = checkIfPresent(DS.Tables(0).Rows(0)(3).ToString, termCombo.Text, contents(3))
+            If present = True Then
+                MessageBox.Show("Record is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
+            End If
+
             Dim Val = DS.Tables(0).Rows(0)(0).ToString & " " & DS.Tables(0).Rows(0)(1).ToString & " " & DS.Tables(0).Rows(0)(2).ToString
 
             studentName.Text = Val
@@ -94,6 +100,38 @@ Public Class addResultLowSecForm
         End Try
     End Sub
 
+    Public Function checkIfPresent(student_id As String, terminal As String, class_name As String) As Boolean
+        Dim present As Boolean = False
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+        Try
+            SQL = "SELECT * from results_" & class_name & " where student_id=" & student_id & " and terminal = '" & terminal & "'"
+
+            Con.Open() 'Open connection
+
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            If rowCount > 0 Then present = True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+
+        Return present
+    End Function
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
         If termCombo.SelectedIndex = -1 Then
             errorMsg.Text = "Please select a terminal."
@@ -154,6 +192,13 @@ VALUES
                 If sequenceCheckBox.Checked Then
                     'MsgBox("sequence selected")
                     prepareNext(textBoxes)
+                Else
+                    For j As Integer = 0 To textBoxes.Count - 1
+                        textBoxes(j).Text = "0"
+                    Next
+                    termCombo.Text = ""
+                    studentRegCombo.Text = ""
+                    studentName.Text = ""
                 End If
             End If
 
@@ -314,5 +359,74 @@ VALUES
         For i As Integer = 0 To textboxes.Count - 1
             textboxes(i).Text = "0"
         Next
+
+        'find next student whose result is not added
+        findNext()
+
+    End Sub
+
+    Public Sub findNext()
+        Dim className = contents(3)
+        Dim terminal = termCombo.Text
+        Dim school_year = contents(1)
+        Dim school_name = contents(2)
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+        Try
+            SQL = "select * from class_student
+where class_id = " & contents(0) & " and student_id not in
+(select r.student_id from 
+results_" & className & " r
+inner join
+(SELECT * from 
+student s
+INNER JOIN
+(SELECT student_id from 
+class c
+INNER JOIN
+class_student cs
+on c.class_id = cs.class_id
+where c.class_id = " & contents(0) & ") tb
+on s.id = tb.student_id) temp
+on r.student_id = temp.student_id
+where r.terminal='" & terminal & "'
+order by r.student_id asc)
+order by student_id"
+
+            Con.Open() 'Open connection
+
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+
+            'find the student reg_number and name
+            SQL = "SELECT  f_name, m_name, l_name, reg_number from student where id = " & DS.Tables(0).Rows(0)(2).ToString & ""
+
+            Con.Open() 'Open connection
+
+            DS.Tables.Clear()
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+            Dim Val = DS.Tables(0).Rows(0)(3).ToString
+            studentRegCombo.Text = Val
+
+            Dim student_name = DS.Tables(0).Rows(0)(0).ToString & " " & DS.Tables(0).Rows(0)(1).ToString & " " & DS.Tables(0).Rows(0)(2).ToString
+            studentName.Text = student_name
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
     End Sub
 End Class
