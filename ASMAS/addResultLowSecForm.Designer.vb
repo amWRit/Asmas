@@ -666,6 +666,7 @@ Partial Class addResultLowSecForm
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.studentRegLabel)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "addResultLowSecForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addResultLowSecForm"
