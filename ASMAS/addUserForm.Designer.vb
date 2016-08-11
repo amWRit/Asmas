@@ -147,6 +147,7 @@ Partial Class addUserForm
         Me.Controls.Add(Me.roleCombo)
         Me.Controls.Add(Me.FNLabel)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "addUserForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addUserForm"

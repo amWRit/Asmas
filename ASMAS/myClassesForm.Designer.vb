@@ -64,42 +64,42 @@ Partial Class myClassesForm
         '
         Me.myClassesContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ViewStudentsToolStripMenuItem, Me.ViewResultsToolStripMenuItem, Me.AddResultToolStripMenuItem})
         Me.myClassesContextMenu.Name = "searchResultContextMenu"
-        Me.myClassesContextMenu.Size = New System.Drawing.Size(153, 158)
+        Me.myClassesContextMenu.Size = New System.Drawing.Size(149, 136)
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ViewStudentsToolStripMenuItem
         '
         Me.ViewStudentsToolStripMenuItem.Name = "ViewStudentsToolStripMenuItem"
-        Me.ViewStudentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewStudentsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.ViewStudentsToolStripMenuItem.Text = "View Students"
         '
         'ViewResultsToolStripMenuItem
         '
         Me.ViewResultsToolStripMenuItem.Name = "ViewResultsToolStripMenuItem"
-        Me.ViewResultsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewResultsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.ViewResultsToolStripMenuItem.Text = "View Results"
         '
         'AddResultToolStripMenuItem
         '
         Me.AddResultToolStripMenuItem.Name = "AddResultToolStripMenuItem"
-        Me.AddResultToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AddResultToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.AddResultToolStripMenuItem.Text = "Add Result"
         '
         'myClassesForm
@@ -108,6 +108,7 @@ Partial Class myClassesForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(636, 392)
         Me.Controls.Add(Me.myClassesListView)
+        Me.MaximizeBox = False
         Me.Name = "myClassesForm"
         Me.Text = "myClassesForm"
         Me.myClassesContextMenu.ResumeLayout(False)

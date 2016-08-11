@@ -105,7 +105,9 @@ Partial Class addYearForm
         Me.Controls.Add(Me.schoolCombo)
         Me.Controls.Add(Me.schoolLabel)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "addYearForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addYearForm"
         Me.ResumeLayout(False)
         Me.PerformLayout()

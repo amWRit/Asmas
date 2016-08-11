@@ -200,6 +200,7 @@ Partial Class addClassForm
         Me.Controls.Add(Me.schoolLabel)
         Me.Controls.Add(Me.schoolNameCombo)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "addClassForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addClassForm"
