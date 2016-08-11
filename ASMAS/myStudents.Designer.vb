@@ -93,6 +93,7 @@ Partial Class myStudents
         Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.titleLabel)
         Me.Controls.Add(Me.myStudentsListView)
+        Me.MaximizeBox = False
         Me.Name = "myStudents"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "myStudents"

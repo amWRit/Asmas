@@ -146,4 +146,12 @@ Public Class viewResultsForm
         End Try
 
     End Sub
+
+    Private Sub viewResultsForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True
+            Me.Hide()
+            HomeForm.Show()
+        End If
+    End Sub
 End Class

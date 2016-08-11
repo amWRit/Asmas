@@ -148,6 +148,7 @@ Partial Class classResults
         Me.Controls.Add(Me.viewBtn)
         Me.Controls.Add(Me.titleLabel)
         Me.Controls.Add(Me.classResultListView)
+        Me.MaximizeBox = False
         Me.Name = "classResults"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "classResults"

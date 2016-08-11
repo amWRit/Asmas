@@ -383,6 +383,7 @@ Partial Class addResultPrimaryForm
         Me.Controls.Add(Me.termCombo)
         Me.Controls.Add(Me.termLabel)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "addResultPrimaryForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addResultPrimaryForm"

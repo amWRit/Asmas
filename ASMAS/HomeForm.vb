@@ -86,6 +86,7 @@
     End Sub
 
     Private Sub viewMyClassesBtn_Click(sender As Object, e As EventArgs) Handles viewMyClassesBtn.Click
+        Me.Hide()
         myClassesForm.Show()
     End Sub
 

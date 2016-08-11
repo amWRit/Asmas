@@ -11,6 +11,14 @@ Public Class addUserForm
         HomeForm.Show()
     End Sub
 
+    Private Sub addUserForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True
+            Me.Hide()
+            HomeForm.Show()
+        End If
+    End Sub
+
     Private Sub addUserForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Con = New OleDbConnection
         'Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"

@@ -201,6 +201,7 @@ Partial Class classDetailsForm
         Me.Controls.Add(Me.shortNameLabel)
         Me.Controls.Add(Me.yearLabel)
         Me.Controls.Add(Me.schoolLabel)
+        Me.MaximizeBox = False
         Me.Name = "classDetailsForm"
         Me.Text = "classDetailsForm"
         Me.ResumeLayout(False)

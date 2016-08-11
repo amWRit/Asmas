@@ -383,6 +383,7 @@ Partial Class addResultSecForm
         Me.Controls.Add(Me.termCombo)
         Me.Controls.Add(Me.termLabel)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
         Me.Name = "addResultSecForm"
         Me.Text = "addResultSecForm"
         Me.ResumeLayout(False)

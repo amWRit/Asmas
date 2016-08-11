@@ -397,6 +397,7 @@ Partial Class studentDetails
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.titleLabel)
         Me.Controls.Add(Me.studentPhoto)
+        Me.MaximizeBox = False
         Me.Name = "studentDetails"
         Me.Text = "studentDetails"
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).EndInit()

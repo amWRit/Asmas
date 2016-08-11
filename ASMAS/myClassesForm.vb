@@ -143,4 +143,12 @@ Public Class myClassesForm
         End If
 
     End Sub
+
+    Private Sub myClassesForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True
+            Me.Hide()
+            HomeForm.Show()
+        End If
+    End Sub
 End Class

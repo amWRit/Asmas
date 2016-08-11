@@ -136,7 +136,7 @@ Partial Class addStudentToClassForm
         'addStudentToolStripMenuItem
         '
         Me.addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem"
-        Me.addStudentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.addStudentToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
         Me.addStudentToolStripMenuItem.Text = "Add"
         '
         'addStudentToClassForm
@@ -152,6 +152,7 @@ Partial Class addStudentToClassForm
         Me.Controls.Add(Me.searchKeyword)
         Me.Controls.Add(Me.searchByLabel)
         Me.Controls.Add(Me.searchKey)
+        Me.MaximizeBox = False
         Me.Name = "addStudentToClassForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addStudentToClassForm"
