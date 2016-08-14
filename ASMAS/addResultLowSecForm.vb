@@ -160,7 +160,9 @@ Public Class addResultLowSecForm
 
         Dim hashKeys As String() = {"student_id", "school_year", "school_name", "terminal", "eng_th", "eng_th_g", "eng_pr", "eng_pr_g", "eng_total", "eng_total_g", "nep_th", "nep_th_g", "nep_pr",
             "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
-            "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "obt_th", "obt_th_g", "obt_pr", "obt_pr_g", "obt_total", "obt_total_g", "comp_th", "comp_th_g", "comp_pr", "comp_pr_g", "comp_total", "comp_total_g", "hea_th", "hea_th_g", "hea_pr", "hea_pr_g", "hea_total", "hea_total_g", "mor_th", "mor_th_g", "mor_pr", "mor_pr_g", "mor_total", "mor_total_g", "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade"}
+            "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "obt_th", "obt_th_g", "obt_pr", "obt_pr_g", "obt_total", "obt_total_g", "comp_th", "comp_th_g", "comp_pr", "comp_pr_g",
+            "comp_total", "comp_total_g", "hea_th", "hea_th_g", "hea_pr", "hea_pr_g", "hea_total", "hea_total_g", "mor_th", "mor_th_g", "mor_pr", "mor_pr_g", "mor_total", "mor_total_g",
+            "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point"}
 
 
         Dim inputHash = prepareInputHash()
@@ -171,12 +173,12 @@ Public Class addResultLowSecForm
             Dim insertSQL As String = "INSERT INTO results_" & class_name & " ([student_id],[school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
 [nep_th],[nep_th_g],[nep_pr],[nep_pr_g],[nep_total],[nep_total_g],[math_th],[math_th_g],[math_pr],[math_pr_g],[math_total],[math_total_g],[sci_th],[sci_th_g],[sci_pr],[sci_pr_g],[sci_total],[sci_total_g],
 [soc_th],[soc_th_g],[soc_pr],[soc_pr_g],[soc_total],[soc_total_g],[obt_th],[obt_th_g],[obt_pr],[obt_pr_g],[obt_total],[obt_total_g],[comp_th],[comp_th_g],[comp_pr],[comp_pr_g],[comp_total],[comp_total_g],
-[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade]) 
+[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point]) 
 VALUES
 (@student_id, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
 @nep_total, @nep_total_g, @math_th, @math_th_g, @math_pr, @math_pr_g, @math_total, @math_total_g, @sci_th, @sci_th_g, @sci_pr, @sci_pr_g, @sci_total, @sci_total_g, 
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @obt_th, @obt_th_g, @obt_pr, @obt_pr_g, @obt_total, @obt_total_g, @comp_th, @comp_th_g, @comp_pr, @comp_pr_g, @comp_total, @comp_total_g, 
-@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade)"
+@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point)"
 
             Con.Open()
             Dim cmd As New OleDbCommand(insertSQL, Con)
@@ -277,6 +279,7 @@ VALUES
         Dim totalSub = {"eng_total", "nep_total", "math_total", "sci_total", "soc_total", "obt_total", "comp_total", "hea_total", "mor_total"}
         Dim grade As String = ""
         Dim percentage As Double = 0
+        Dim grade_point As Double = 0
 
         For Each subj As String In theorySub
             If subj = "hea_th" Then
@@ -309,7 +312,7 @@ VALUES
         Next
 
         For Each subj As String In totalSub
-            If subj = "hea_th" Or subj = "mor_th" Then
+            If subj = "hea_total" Or subj = "mor_total" Then
                 percentage = CDbl(inputHash(subj)) / 50 * 100
             Else
                 percentage = CDbl(inputHash(subj))
@@ -317,11 +320,14 @@ VALUES
 
             grade = percentToGrade(percentage)
             inputHash(subj & "_g") = grade
+            grade_point = percentToGradePoint(percentage)
+            inputHash(subj & "_gp") = grade_point
         Next
 
         inputHash("total_th_g") = percentToGrade(CDbl(inputHash("total_th_perc")))
         inputHash("total_pr_g") = percentToGrade(CDbl(inputHash("total_pr_perc")))
-        inputHash("grade") = percentToGrade(CDbl(inputHash("percentage")))
+        inputHash("grade_point") = calculateGradePoint(inputHash)
+        inputHash("grade") = gradePointToGrade(CDbl(inputHash("grade_point")))
         Return inputHash
     End Function
 
@@ -343,13 +349,78 @@ VALUES
             grade = "D+"
         ElseIf percentage >= 20 Then
             grade = "D"
-        ElseIf percentage >= 0 Then
+        ElseIf percentage > 0 Then
             grade = "E"
         Else
             grade = "NG"
         End If
         Return grade
     End Function
+
+    Public Function percentToGradePoint(percentage As Double) As Double
+        Dim gradePoint As Double
+        If percentage >= 90 Then
+            gradePoint = 4
+        ElseIf percentage >= 80 Then
+            gradePoint = 3.6
+        ElseIf percentage >= 70 Then
+            gradePoint = 3.2
+        ElseIf percentage >= 60 Then
+            gradePoint = 2.8
+        ElseIf percentage >= 50 Then
+            gradePoint = 2.4
+        ElseIf percentage >= 40 Then
+            gradePoint = 2
+        ElseIf percentage >= 30 Then
+            gradePoint = 1.6
+        ElseIf percentage >= 20 Then
+            gradePoint = 1.2
+        ElseIf percentage >= 0 Then
+            gradePoint = 0.8
+        Else
+            gradePoint = 0
+        End If
+        Return gradePoint
+    End Function
+
+    Public Function gradePointToGrade(gradePoint As Double) As String
+        Dim grade As String
+        If gradePoint = 4 Then
+            grade = "A+"
+        ElseIf gradePoint >= 3.6 Then
+            grade = "A"
+        ElseIf gradePoint >= 3.2 Then
+            grade = "B+"
+        ElseIf gradePoint >= 2.8 Then
+            grade = "B"
+        ElseIf gradePoint >= 2.4 Then
+            grade = "C+"
+        ElseIf gradePoint >= 2 Then
+            grade = "C"
+        ElseIf gradePoint >= 1.6 Then
+            grade = "D+"
+        ElseIf gradePoint >= 1.2 Then
+            grade = "D"
+        ElseIf gradePoint >= 0.8 Then
+            grade = "E"
+        Else
+            grade = "NG"
+        End If
+        Return grade
+    End Function
+
+    Function calculateGradePoint(inputHash As Hashtable) As Double
+        Dim totalGradePoint As Double = 0
+        Dim avgGP As Double = 0
+        Dim totalSub = {"eng_total", "nep_total", "math_total", "sci_total", "soc_total", "obt_total", "comp_total", "hea_total", "mor_total"}
+
+        For Each key As String In totalSub
+            totalGradePoint = totalGradePoint + CDbl(inputHash(key & "_gp"))
+        Next
+        avgGP = totalGradePoint / totalSub.Count
+        Return avgGP
+    End Function
+
 
     Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click
         Me.Close()
@@ -428,5 +499,9 @@ order by student_id"
             'This ensures that you close the Database and avoid corrupted data
             Con.Close()
         End Try
+    End Sub
+
+    Private Sub addResultLowSecForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

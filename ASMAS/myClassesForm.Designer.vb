@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class myClassesForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class myClassesForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.myClassesListView = New System.Windows.Forms.ListView()
@@ -44,10 +44,10 @@ Partial Class myClassesForm
         Me.myClassesListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
         Me.myClassesListView.FullRowSelect = True
         Me.myClassesListView.GridLines = True
-        Me.myClassesListView.Location = New System.Drawing.Point(1, 22)
+        Me.myClassesListView.Location = New System.Drawing.Point(1, 44)
         Me.myClassesListView.MultiSelect = False
         Me.myClassesListView.Name = "myClassesListView"
-        Me.myClassesListView.Size = New System.Drawing.Size(635, 377)
+        Me.myClassesListView.Size = New System.Drawing.Size(635, 355)
         Me.myClassesListView.TabIndex = 165
         Me.myClassesListView.UseCompatibleStateImageBehavior = False
         Me.myClassesListView.View = System.Windows.Forms.View.Details
@@ -64,42 +64,42 @@ Partial Class myClassesForm
         '
         Me.myClassesContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ViewStudentsToolStripMenuItem, Me.ViewResultsToolStripMenuItem, Me.AddResultToolStripMenuItem})
         Me.myClassesContextMenu.Name = "searchResultContextMenu"
-        Me.myClassesContextMenu.Size = New System.Drawing.Size(149, 136)
+        Me.myClassesContextMenu.Size = New System.Drawing.Size(153, 158)
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'ViewStudentsToolStripMenuItem
         '
         Me.ViewStudentsToolStripMenuItem.Name = "ViewStudentsToolStripMenuItem"
-        Me.ViewStudentsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.ViewStudentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ViewStudentsToolStripMenuItem.Text = "View Students"
         '
         'ViewResultsToolStripMenuItem
         '
         Me.ViewResultsToolStripMenuItem.Name = "ViewResultsToolStripMenuItem"
-        Me.ViewResultsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.ViewResultsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ViewResultsToolStripMenuItem.Text = "View Results"
         '
         'AddResultToolStripMenuItem
         '
         Me.AddResultToolStripMenuItem.Name = "AddResultToolStripMenuItem"
-        Me.AddResultToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.AddResultToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AddResultToolStripMenuItem.Text = "Add Result"
         '
         'myClassesForm

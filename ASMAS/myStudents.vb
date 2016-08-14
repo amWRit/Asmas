@@ -74,8 +74,10 @@ Public Class myStudents
     Private Sub ViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem.Click
         Dim ItemIndex As Integer = myStudentsListView.SelectedIndices(0) 'Grab the selected Index
         Dim itemID = myStudentsListView.Items(ItemIndex).SubItems(1).Text
-        Dim _addStudentForm As New addStudentForm(itemID)
-        _addStudentForm.Show()
+        'Dim _addStudentForm As New addStudentForm(itemID)
+        '_addStudentForm.Show()
+        Dim _studentDetails As New studentDetails(itemID)
+        _studentDetails.Show()
     End Sub
 
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
@@ -87,5 +89,12 @@ Public Class myStudents
 
     Private Sub myStudents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
+        Dim ItemIndex As Integer = myStudentsListView.SelectedIndices(0) 'Grab the selected Index
+        Dim itemID = myStudentsListView.Items(ItemIndex).SubItems(1).Text
+        Dim _addStudentForm As New addStudentForm(itemID)
+        _addStudentForm.Show()
     End Sub
 End Class

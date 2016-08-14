@@ -81,6 +81,12 @@ Public Class viewResultsForm
     End Sub
 
     Private Sub viewBtn_Click(sender As Object, e As EventArgs) Handles viewBtn.Click
+
+        If schoolName.SelectedIndex = -1 Or yearName.SelectedIndex = -1 Or termCombo.SelectedIndex = -1 Or className.SelectedIndex = -1 Then
+            MessageBox.Show("One of the fields is not selected. Please check.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -90,20 +96,8 @@ Public Class viewResultsForm
 
         Dim SQL As String = ""
         Dim school_name = schoolName.Text
-        If schoolName.SelectedIndex = -1 Then
-            school_name = "TerseHSS"
-        End If
-
         Dim year_num = yearName.Text
-        If yearName.SelectedIndex = -1 Then
-            year_num = "2073"
-        End If
-
         Dim class_name = className.Text
-        If className.SelectedIndex = -1 Then
-            class_name = "%%"
-        End If
-
         Dim term = termCombo.Text
 
         SQL = "SELECT * from" &

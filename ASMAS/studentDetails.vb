@@ -5,6 +5,7 @@ Public Class studentDetails
     Private pwd As String
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
 
+    Public class_id As String
     Private Sub studentDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -29,6 +30,7 @@ Public Class studentDetails
             Con.Close()
             oData.Fill(DS)
 
+            Dim student_id = DS.Tables(0).Rows(0)(0).ToString
             Dim reg_number = DS.Tables(0).Rows(0)(1).ToString
             Dim school_id As Integer = CInt(DS.Tables(0).Rows(0)(2))
             Dim f_name = DS.Tables(0).Rows(0)(3)
@@ -80,7 +82,26 @@ Public Class studentDetails
             If photoPath = "" Then photoPath = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\photo_not_available.png"
             studentPhoto.Image = Image.FromFile(photoPath)
 
+            'find current class
+            Dim currentClassSQL As String = "SELECT
+                                            c.class_id, short_name from class c
+                                            inner join
+                                            (select class_id
+                                            from class_student
+                                            where student_id = " & student_id & ") tb
+                                            on c.class_id = tb.class_id
+                                            where year_id = " & Year.currentYearID
+            DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+            Con.Open() 'Open connection
+            Dim classData As OleDbDataAdapter
+            DS.Tables.Clear()
+            classData = New OleDbDataAdapter(currentClassSQL, Con)
+            Con.Close()
+            classData.Fill(DS)
+            class_id = DS.Tables(0).Rows(0)(0).ToString
+            classLabel.Text = DS.Tables(0).Rows(0)(1).ToString
 
+            If User.userRole = "Viewer" Then classLabel.Enabled = False
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -91,5 +112,9 @@ Public Class studentDetails
             'This ensures that you close the Database and avoid corrupted data
             Con.Close()
         End Try
+    End Sub
+
+    Private Sub classLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles classLabel.LinkClicked
+        myClassesForm.viewDetails(class_id)
     End Sub
 End Class

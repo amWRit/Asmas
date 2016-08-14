@@ -5,13 +5,15 @@ Public Class classResults
     Private pwd As String
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
 
-    Public classID As String
+    Public contents As String()
 
-    Public Sub New(ByVal itemID As String)
+    '{itemID, yearnum, schoolname, classname}
+    Public Sub New(ByVal params As String())
         MyBase.New
         ' This call is required by the designer.
         InitializeComponent()
-        classID = itemID
+        contents = params
+        Dim classID = params(0)
         refreshLV(classID, "")
 
     End Sub
@@ -29,31 +31,25 @@ Public Class classResults
         'dim _classresults as new classresults(classid)
         '_classresults.show()
         Dim terminal = termCombo.Text
-        refreshLV(classID, terminal)
+        refreshLV(contents(0), terminal)
     End Sub
 
     Public Sub refreshLV(classID As String, terminal As String)
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
+        Dim className = contents(3)
         Dim DS = New DataSet
         Dim SQL As String = ""
         Dim classSQL As String = "Select distinct short_name from class where class_id=" & classID
         Dim oData As OleDbDataAdapter
-        Con.Open()
-        oData = New OleDbDataAdapter(classSQL, Con)
-        Con.Close()
-        oData.Fill(DS)
-        Dim className As String = DS.Tables(0).Rows(0)(0).ToString
 
         titleLabel.Text = "Class Results: " & className & " - " & terminal
 
         Try
-            SQL = "SELECT * from 
-                    results_" & className & ""
+            SQL = "SELECT * from results_" & className & " where school_name='" & contents(2) & "' and school_year ='" & contents(1) & "'"
             If terminal <> "" Then
-                SQL = "SELECT * from 
-                    results_" & className & " where terminal = '" & terminal & "'"
+                SQL = SQL & " and terminal = '" & terminal & "'"
             End If
 
             DS.Tables.Clear()
@@ -89,5 +85,54 @@ Public Class classResults
             'This ensures that you close the Database and avoid corrupted data
             Con.Close()
         End Try
+    End Sub
+
+    Private Sub updateRankBtn_Click(sender As Object, e As EventArgs) Handles updateRankBtn.Click
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        If termCombo.SelectedIndex = -1 Then
+            MessageBox.Show("Please select a terminal to update rank.", "Incomplete input.", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Else
+
+            Dim DS = New DataSet
+            Dim SQL As String = ""
+            Dim oData As OleDbDataAdapter
+
+            Dim terminal = termCombo.Text
+            Dim className = contents(3)
+            Dim rankSQL As String = "SELECT id, student_id, grade_point from results_" & className & " where school_name='" & contents(2) & "' and school_year ='" & contents(1) &
+            "' and terminal = '" & terminal & "' order by grade_point DESC"
+
+            Try
+                Con.Open()
+                oData = New OleDbDataAdapter(rankSQL, Con)
+                Con.Close()
+                oData.Fill(DS)
+
+                Dim rowCount = DS.Tables(0).Rows.Count
+                Dim insertSQL = ""
+                Dim rowID As Integer
+                For i As Integer = 0 To rowCount - 1
+                    rowID = CInt(DS.Tables(0).Rows(i)(0))
+                    insertSQL = "UPDATE results_" & className & " set rank = @rank where id=" & rowID
+                    Con.Open()
+                    Dim cmd As New OleDbCommand(insertSQL, Con)
+
+                    cmd.Parameters.AddWithValue("@rank", i + 1)
+
+                    cmd.ExecuteNonQuery()
+                    Con.Close()
+                Next
+                MsgBox("Rank updated successfully. Please make sure of it.", MsgBoxStyle.Information, "Updated")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+
+            Finally
+                'This code gets called regardless of there being errors
+                'This ensures that you close the Database and avoid corrupted data
+                Con.Close()
+            End Try
+        End If
     End Sub
 End Class

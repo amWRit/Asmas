@@ -39,3 +39,16 @@ C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMA
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addResultLowSecForm.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addResultPrimaryForm.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addResultSecForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.ReportCard.resources

@@ -83,7 +83,7 @@ Public Class myClassesForm
         viewDetails(itemID)
     End Sub
 
-    Private Sub viewDetails(itemID As String)
+    Public Sub viewDetails(itemID As String)
 
         Dim aclassDetailsForm As New classDetailsForm(itemID)
         aclassDetailsForm.Show()
@@ -114,7 +114,13 @@ Public Class myClassesForm
     Private Sub ViewResultsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewResultsToolStripMenuItem.Click
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
         Dim itemID = myClassesListView.Items(ItemIndex).SubItems(0).Text
-        Dim _classResults As New classResults(itemID)
+        Dim year_num = myClassesListView.Items(ItemIndex).SubItems(1).Text
+        Dim school_name = myClassesListView.Items(ItemIndex).SubItems(2).Text
+        Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
+
+        Dim params As String() = {itemID, year_num, school_name, className}
+
+        Dim _classResults As New classResults(params)
         _classResults.Show()
     End Sub
 
@@ -132,14 +138,14 @@ Public Class myClassesForm
         Dim params As String() = {itemID, year_num, school_name, className}
 
         If primary.Contains(className) Then
-            'Dim _newClassResult As New addResultPrimaryForm(itemID)
-            '_newClassResult.Show()
+            Dim _newClassResult As New addResultPrimaryForm(params)
+            _newClassResult.Show()
         ElseIf lowSec.Contains(className) Then
             Dim _newClassResult As New addResultLowSecForm(params)
             _newClassResult.Show()
         ElseIf sec.Contains(className) Then
-            'Dim _newClassResult As New addResultSecForm(itemID)
-            '_newClassResult.Show()
+            Dim _newClassResult As New addResultSecForm(params)
+            _newClassResult.Show()
         End If
 
     End Sub
@@ -150,5 +156,9 @@ Public Class myClassesForm
             Me.Hide()
             HomeForm.Show()
         End If
+    End Sub
+
+    Private Sub updateRankBtn_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

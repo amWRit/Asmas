@@ -77,10 +77,13 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -187,6 +190,12 @@
     <Compile Include="myStudents.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReportCard.Designer.vb">
+      <DependentUpon>ReportCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SearchForm.Designer.vb">
       <DependentUpon>SearchForm.vb</DependentUpon>
     </Compile>
@@ -239,6 +248,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TerseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TerseDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TerseDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="User.vb" />
     <Compile Include="viewDatabaseForm.Designer.vb">
       <DependentUpon>viewDatabaseForm.vb</DependentUpon>
@@ -252,6 +266,7 @@
     <Compile Include="viewResultsForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Year.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="addClassForm.resx">
@@ -295,6 +310,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="myStudents.resx">
       <DependentUpon>myStudents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCard.resx">
+      <DependentUpon>ReportCard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.vb</DependentUpon>
@@ -353,6 +371,17 @@
     </None>
     <None Include="TerseDataSet1.xss">
       <DependentUpon>TerseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TerseDataSet2.xsc">
+      <DependentUpon>TerseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TerseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TerseDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TerseDataSet2.xss">
+      <DependentUpon>TerseDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

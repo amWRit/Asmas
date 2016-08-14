@@ -151,7 +151,7 @@ Public Class addStudentForm
         Dim reg_number As Integer
         Integer.TryParse(result(0), reg_number)
         reg_number += 1
-        regString = "THSS00" & reg_number
+        regString = "THSS" & reg_number
         Try
             Dim insertSQL As String = "INSERT INTO student ([reg_number], [school_id], [f_name], [m_name], [l_name], [gender], [admission_year], [father_name], [mother_name], [guardian_name], [dob], [p_address], [temp_address], [phone], [email], [photo], [info]) 
                                         VALUES

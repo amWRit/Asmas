@@ -54,6 +54,8 @@ Partial Class studentDetails
         Me.Label2 = New System.Windows.Forms.Label()
         Me.titleLabel = New System.Windows.Forms.Label()
         Me.studentPhoto = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.classLabel = New System.Windows.Forms.LinkLabel()
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -360,11 +362,32 @@ Partial Class studentDetails
         Me.studentPhoto.TabIndex = 137
         Me.studentPhoto.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(564, 13)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(92, 13)
+        Me.Label1.TabIndex = 169
+        Me.Label1.Text = "Currently in class: "
+        '
+        'classLabel
+        '
+        Me.classLabel.AutoSize = True
+        Me.classLabel.Location = New System.Drawing.Point(663, 12)
+        Me.classLabel.Name = "classLabel"
+        Me.classLabel.Size = New System.Drawing.Size(59, 13)
+        Me.classLabel.TabIndex = 170
+        Me.classLabel.TabStop = True
+        Me.classLabel.Text = "LinkLabel1"
+        '
         'studentDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(780, 400)
+        Me.Controls.Add(Me.classLabel)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me._email)
         Me.Controls.Add(Me._phone)
         Me.Controls.Add(Me.permAdd)
@@ -438,4 +461,6 @@ Partial Class studentDetails
     Friend WithEvents Label2 As Label
     Friend WithEvents titleLabel As Label
     Friend WithEvents studentPhoto As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents classLabel As LinkLabel
 End Class

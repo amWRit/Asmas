@@ -22,21 +22,14 @@ Partial Class classResults
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.classResultListView = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.classResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewStudentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AddResultsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.titleLabel = New System.Windows.Forms.Label()
         Me.termCombo = New System.Windows.Forms.ComboBox()
         Me.termLabel = New System.Windows.Forms.Label()
         Me.viewBtn = New System.Windows.Forms.Button()
-        Me.classResultsContextMenu.SuspendLayout()
+        Me.updateRankBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'classResultListView
@@ -63,42 +56,6 @@ Partial Class classResults
         'ColumnHeader2
         '
         Me.ColumnHeader2.Width = 294
-        '
-        'classResultsContextMenu
-        '
-        Me.classResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ViewStudentsToolStripMenuItem, Me.AddResultsToolStripMenuItem})
-        Me.classResultsContextMenu.Name = "searchResultContextMenu"
-        Me.classResultsContextMenu.Size = New System.Drawing.Size(149, 114)
-        '
-        'ViewToolStripMenuItem
-        '
-        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.ViewToolStripMenuItem.Text = "View"
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.EditToolStripMenuItem.Text = "Edit"
-        '
-        'DeleteToolStripMenuItem
-        '
-        Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.DeleteToolStripMenuItem.Text = "Delete"
-        '
-        'ViewStudentsToolStripMenuItem
-        '
-        Me.ViewStudentsToolStripMenuItem.Name = "ViewStudentsToolStripMenuItem"
-        Me.ViewStudentsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.ViewStudentsToolStripMenuItem.Text = "View Students"
-        '
-        'AddResultsToolStripMenuItem
-        '
-        Me.AddResultsToolStripMenuItem.Name = "AddResultsToolStripMenuItem"
-        Me.AddResultsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
-        Me.AddResultsToolStripMenuItem.Text = "Add Results"
         '
         'titleLabel
         '
@@ -138,11 +95,21 @@ Partial Class classResults
         Me.viewBtn.Text = "View"
         Me.viewBtn.UseVisualStyleBackColor = True
         '
+        'updateRankBtn
+        '
+        Me.updateRankBtn.Location = New System.Drawing.Point(884, 9)
+        Me.updateRankBtn.Name = "updateRankBtn"
+        Me.updateRankBtn.Size = New System.Drawing.Size(99, 23)
+        Me.updateRankBtn.TabIndex = 173
+        Me.updateRankBtn.Text = "Update Rank"
+        Me.updateRankBtn.UseVisualStyleBackColor = True
+        '
         'classResults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.updateRankBtn)
         Me.Controls.Add(Me.termCombo)
         Me.Controls.Add(Me.termLabel)
         Me.Controls.Add(Me.viewBtn)
@@ -153,7 +120,6 @@ Partial Class classResults
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "classResults"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.classResultsContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -162,14 +128,9 @@ Partial Class classResults
     Friend WithEvents classResultListView As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents classResultsContextMenu As ContextMenuStrip
-    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ViewStudentsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AddResultsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents titleLabel As Label
     Friend WithEvents termCombo As ComboBox
     Friend WithEvents termLabel As Label
     Friend WithEvents viewBtn As Button
+    Friend WithEvents updateRankBtn As Button
 End Class

@@ -46,7 +46,7 @@ Public Class LoginForm1
 
         Try
             If dr.Read = False Then
-                MessageBox.Show("Authentication failed...")
+                MessageBox.Show("Authentication failed! Please try again.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Else
                 'MessageBox.Show("Login successfully...")
                 Me.Hide()
@@ -69,7 +69,14 @@ Public Class LoginForm1
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-        Me.Close()
+        Application.Exit()
     End Sub
 
+    Private Sub LoginForm1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True
+            Me.Hide()
+            Application.Exit()
+        End If
+    End Sub
 End Class
