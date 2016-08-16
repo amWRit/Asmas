@@ -96,18 +96,26 @@ Public Class addClassForm
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
+        Dim present As Boolean
+        Dim school_name = schoolNameCombo.Text
+        Dim year_num = yearNameCombo.Text
+
+        present = checkIfPresent(shortnameTextBox.Text, school_name, year_num)
+
+        If present = True Then
+            MessageBox.Show("A class with same short_name is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
 
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
         Dim strSQL As String = "SELECT top 1 * from class"
 
         Dim SQL As String = ""
-        Dim school_name = schoolNameCombo.Text
         If schoolNameCombo.SelectedIndex = -1 Then
             school_name = "TerseHSS"
         End If
 
-        Dim year_num = yearNameCombo.Text
         If yearNameCombo.SelectedIndex = -1 Then
             year_num = "2073"
         End If
@@ -160,6 +168,58 @@ Public Class addClassForm
         End Try
 
     End Sub
+
+    Public Function checkIfPresent(className As String, school_name As String, year_num As String) As Boolean
+        Dim present As Boolean = False
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+        Dim school_id As String
+        Dim year_id As String
+
+        Try
+            'find school_id
+            SQL = "SELECT school_id from school where short_name='" & school_name & "'"
+            Con.Open() 'Open connection
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+            school_id = DS.Tables(0).Rows(0)(0).ToString
+
+            'find year_id
+            SQL = "SELECT year_id from school_year where year_num='" & year_num & "'"
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            DS.Tables.Clear()
+            oData.Fill(DS)
+            year_id = DS.Tables(0).Rows(0)(0).ToString
+
+            SQL = "SELECT * from class where school_id=" & school_id & " and year_id=" & year_id & " and short_name='" & className & "'"
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            DS.Tables.Clear()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            If rowCount > 0 Then present = True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+
+        Return present
+    End Function
 
     Private Sub addClassForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         currentUserLabel.Text = currentUserLabel.Text & User.userName

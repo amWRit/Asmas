@@ -135,7 +135,7 @@ Public Class myClassesForm
         Dim school_name = myClassesListView.Items(ItemIndex).SubItems(2).Text
         Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
 
-        Dim params As String() = {itemID, year_num, school_name, className}
+        Dim params As String() = {itemID, year_num, school_name, className, "", "FALSE"}
 
         If primary.Contains(className) Then
             Dim _newClassResult As New addResultPrimaryForm(params)
@@ -158,7 +158,4 @@ Public Class myClassesForm
         End If
     End Sub
 
-    Private Sub updateRankBtn_Click(sender As Object, e As EventArgs)
-
-    End Sub
 End Class

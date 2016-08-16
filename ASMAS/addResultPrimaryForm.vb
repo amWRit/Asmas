@@ -10,26 +10,45 @@ Public Class addResultPrimaryForm
     Public lowPrimary As String() = {"1", "2", "3"}
     Public highPrimary As String() = {"4", "5"}
 
+    'if edit - {student_id, year, school_name, className, terminal, edit=TRUE}
+    '{class_id, year, school_name, className, terminal="", edit=FALSE}
     Public Sub New(params As String())
         MyBase.New
         ' This call is required by the designer.
         InitializeComponent()
 
-        ' Add any initialization after the Initializegk_convonent() call.
+        ' Add any initialization after the InitializeComponent() call.
         contents = params
-        loadRegNumber(params)
+        Dim edit = params(5)
+        If edit = "FALSE" Then
+            loadRegNumber(params)
+        Else
+            findStudentName()
+            studentRegCombo.Enabled = False
+            termCombo.Text = contents(4)
+            loadResult(params)
+        End If
     End Sub
 
 
     Private Sub studentRegCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles studentRegCombo.SelectedIndexChanged
+        findStudentName()
+    End Sub
+
+    Public Sub findStudentName()
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
+        Dim SQL As String = ""
+        SQL = "SELECT f_name, m_name, l_name, id from student where reg_number = '" & studentRegCombo.Text & "'"
+
+        Dim edit = contents(5)
+        If edit = "TRUE" Then
+            SQL = "SELECT f_name, m_name, l_name, reg_number from student where id = " & contents(0)
+        End If
 
         Dim DS = New DataSet
-        Dim SQL As String = ""
         Try
-            SQL = "SELECT f_name, m_name, l_name, id from student where reg_number = '" & studentRegCombo.Text & "'"
 
             Con.Open() 'Open connection
 
@@ -38,18 +57,27 @@ Public Class addResultPrimaryForm
             Con.Close()
             oData.Fill(DS)
 
-            Dim present = checkIfPresent(DS.Tables(0).Rows(0)(3).ToString, termCombo.Text, contents(3))
-            If present = True Then
-                MessageBox.Show("Record is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Exit Sub
+            Dim present As Boolean
+            If edit <> "TRUE" Then
+                present = checkIfPresent(DS.Tables(0).Rows(0)(3).ToString, termCombo.Text, contents(3))
+
+                If present = True Then
+                    MessageBox.Show("Record is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Exit Sub
+                End If
+                'save student_id
+                ReDim Preserve contents(7)
+                contents(7) = DS.Tables(0).Rows(0)(3).ToString
+            Else
+                ReDim Preserve contents(7)
+                contents(7) = contents(0)
+                studentRegCombo.Text = DS.Tables(0).Rows(0)(3).ToString
             End If
 
             Dim Val = DS.Tables(0).Rows(0)(0).ToString & " " & DS.Tables(0).Rows(0)(1).ToString & " " & DS.Tables(0).Rows(0)(2).ToString
 
             studentName.Text = Val
 
-            ReDim Preserve contents(4)
-            contents(4) = DS.Tables(0).Rows(0)(3).ToString
         Catch ex As Exception
             MsgBox(ex.Message)
 
@@ -59,6 +87,7 @@ Public Class addResultPrimaryForm
             Con.Close()
         End Try
     End Sub
+
 
     Public Sub loadRegNumber(params As String())
         Con = New OleDbConnection
@@ -103,6 +132,45 @@ Public Class addResultPrimaryForm
         End Try
     End Sub
 
+    'if edit - {student_id, year, school_name, className, terminal, TRUE}
+    Public Sub loadResult(params As String())
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, sciTh, sciPr, socTh, socPr, optEngTh, optEngPr, gkConvTh, gkConvPr}
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+        Dim className = contents(3)
+        Dim student_id = contents(0)
+        Dim terminal = contents(4)
+        Try
+            SQL = "SELECT eng_th, eng_pr, nep_th, nep_pr, math_th, math_pr, sci_th, sci_pr, soc_th, soc_pr, opt_eng_th, opt_eng_pr, gk_conv_th, gk_conv_pr
+                    FROM 
+                    results_" & className & " where student_id=" & student_id & " and terminal = '" & terminal & "'"
+
+            Con.Open() 'Open connection
+
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+
+            For i As Integer = 0 To textBoxes.Count - 1
+                textBoxes(i).Text = DS.Tables(0).Rows(0)(i).ToString
+            Next
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+    End Sub
+
+
     Public Function checkIfPresent(student_id As String, terminal As String, class_name As String) As Boolean
         Dim present As Boolean = False
 
@@ -139,14 +207,14 @@ Public Class addResultPrimaryForm
         If termCombo.SelectedIndex = -1 Then
             errorMsg.Text = "Please select a terminal."
             Exit Sub
-        ElseIf studentRegCombo.SelectedIndex = -1 Then
+        ElseIf contents(5) = "FALSE" And studentRegCombo.SelectedIndex = -1 Then
             errorMsg.Text = "Please select a student registration number."
             Exit Sub
         Else
             errorMsg.Text = ""
         End If
 
-        Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, socTh, socPr, sciTh, sciPr, optEngTh, optEngPr, gkConvTh, gkConvPr}
+        Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, sciTh, sciPr, socTh, socPr, optEngTh, optEngPr, gkConvTh, gkConvPr}
 
         Dim valid As Boolean = checkNumberValidity(textBoxes)
 
@@ -190,6 +258,9 @@ VALUES
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @opt_eng_th, @opt_eng_th_g, @opt_eng_pr, @opt_eng_pr_g, @opt_eng_total, @opt_eng_total_g, @gk_conv_th, @gk_conv_th_g, @gk_conv_pr, @gk_conv_pr_g, @gk_conv_total, @gk_conv_total_g, 
 @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point)"
 
+            Dim edit = contents(5)
+            If edit = "TRUE" Then insertSQL = buildUpdateResultSQL(Con)
+
             Con.Open()
             Dim cmd As New OleDbCommand(insertSQL, Con)
 
@@ -204,6 +275,8 @@ VALUES
                 If sequenceCheckBox.Checked Then
                     'MsgBox("sequence selected")
                     prepareNext(textBoxes)
+                ElseIf edit = "TRUE" Then
+                    Me.Close()
                 Else
                     For j As Integer = 0 To textBoxes.Count - 1
                         textBoxes(j).Text = "0"
@@ -222,6 +295,34 @@ VALUES
             'AddTable()
         End Try
     End Sub
+
+    Public Function buildUpdateResultSQL(con As OleDbConnection) As String
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+        Dim oData As OleDbDataAdapter
+        Dim insertSQL = ""
+
+        Dim rankSQL As String = "SELECT id from results_" & contents(3) & " where school_name='" & contents(2) & "' and school_year ='" & contents(1) &
+    "' and terminal = '" & termCombo.Text & "' and student_id=" & contents(0)
+
+
+        con.Open()
+        oData = New OleDbDataAdapter(rankSQL, con)
+        con.Close()
+        oData.Fill(DS)
+        Dim rowID = CInt(DS.Tables(0).Rows(0)(0))
+
+        insertSQL = "UPDATE results_" & contents(3) & "
+                     SET 
+                     student_id = @student_id, school_year = @school_year, school_name = @school_name, terminal = @terminal, eng_th = @eng_th, eng_th_g = @eng_th_g, eng_pr = @eng_pr, eng_pr_g = @eng_pr_g, eng_total = @eng_total, eng_total_g = @eng_total_g, 
+                    nep_th = @nep_th, nep_th_g = @nep_th_g, nep_pr = @nep_pr, nep_pr_g = @nep_pr_g, nep_total = @nep_total, nep_total_g = @nep_total_g, math_th = @math_th, math_th_g = @math_th_g, math_pr = @math_pr, math_pr_g = @math_pr_g, math_total = @math_total, math_total_g = @math_total_g, 
+                    sci_th = @sci_th, sci_th_g = @sci_th_g, sci_pr = @sci_pr, sci_pr_g = @sci_pr_g, sci_total = @sci_total, sci_total_g = @sci_total_g, soc_th = @soc_th, soc_th_g = @soc_th_g, soc_pr = @soc_pr, soc_pr_g = @soc_pr_g, soc_total = @soc_total, soc_total_g = @soc_total_g, 
+                    opt_eng_th = @opt_eng_th, opt_eng_th_g = @opt_eng_th_g, opt_eng_pr = @opt_eng_pr, opt_eng_pr_g = @opt_eng_pr_g, opt_eng_total = @opt_eng_total, opt_eng_total_g = @opt_eng_total_g, gk_conv_th = @gk_conv_th, gk_conv_th_g = @gk_conv_th_g, gk_conv_pr = @gk_conv_pr, gk_conv_pr_g = @gk_conv_pr_g, gk_conv_total = @gk_conv_total, gk_conv_total_g = @gk_conv_total_g, 
+                    total_th = @total_th, total_th_g = @total_th_g, total_pr = @total_pr, total_pr_g = @total_pr_g, total = @total, percentage = @percentage, grade = @grade, grade_point = @grade_point 
+                    WHERE id=" & rowID
+
+        Return insertSQL
+    End Function
 
     Public Function checkNumberValidity(textboxes As TextBox()) As Boolean
         For i As Integer = 0 To textboxes.Count - 1
@@ -257,7 +358,7 @@ VALUES
         Dim total = total_th + total_pr
         Dim percentage = total / 700 * 100
 
-        inputHash("student_id") = contents(4)
+        inputHash("student_id") = contents(7)
         inputHash("school_year") = contents(1)
         inputHash("school_name") = contents(2)
         inputHash("terminal") = termCombo.Text

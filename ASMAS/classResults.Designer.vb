@@ -22,6 +22,7 @@ Partial Class classResults
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.classResultListView = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -30,6 +31,9 @@ Partial Class classResults
         Me.termLabel = New System.Windows.Forms.Label()
         Me.viewBtn = New System.Windows.Forms.Button()
         Me.updateRankBtn = New System.Windows.Forms.Button()
+        Me.classResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.classResultsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'classResultListView
@@ -104,6 +108,18 @@ Partial Class classResults
         Me.updateRankBtn.Text = "Update Rank"
         Me.updateRankBtn.UseVisualStyleBackColor = True
         '
+        'classResultsContextMenu
+        '
+        Me.classResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem})
+        Me.classResultsContextMenu.Name = "searchResultContextMenu"
+        Me.classResultsContextMenu.Size = New System.Drawing.Size(153, 48)
+        '
+        'EditToolStripMenuItem
+        '
+        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem.Text = "Edit"
+        '
         'classResults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -120,6 +136,7 @@ Partial Class classResults
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "classResults"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.classResultsContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -133,4 +150,6 @@ Partial Class classResults
     Friend WithEvents termLabel As Label
     Friend WithEvents viewBtn As Button
     Friend WithEvents updateRankBtn As Button
+    Friend WithEvents classResultsContextMenu As ContextMenuStrip
+    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
 End Class

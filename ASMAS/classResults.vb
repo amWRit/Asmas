@@ -18,9 +18,6 @@ Public Class classResults
 
     End Sub
 
-    Private Sub classResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub viewBtn_Click(sender As Object, e As EventArgs) Handles viewBtn.Click
         'dim openforms = application.openforms.oftype(of classresults)
@@ -133,6 +130,43 @@ Public Class classResults
                 'This ensures that you close the Database and avoid corrupted data
                 Con.Close()
             End Try
+        End If
+    End Sub
+
+    Private Sub classResultListView_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles classResultListView.MouseUp
+        If e.Button = MouseButtons.Right Then
+            If classResultListView.GetItemAt(e.X, e.Y) IsNot Nothing Then
+                classResultListView.GetItemAt(e.X, e.Y).Selected = True
+                classResultsContextMenu.Show(classResultListView, New Point(e.X, e.Y))
+            End If
+        End If
+    End Sub
+
+    Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
+        Dim ItemIndex As Integer = classResultListView.SelectedIndices(0) 'Grab the selected Index
+        Dim studentID = classResultListView.Items(ItemIndex).SubItems(1).Text
+
+        Dim primary As String() = {"1", "2", "3", "4", "5"}
+        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
+        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+
+        Dim className = contents(3)
+        Dim year_num = classResultListView.Items(ItemIndex).SubItems(2).Text
+        Dim school_name = classResultListView.Items(ItemIndex).SubItems(3).Text
+        Dim terminal = classResultListView.Items(ItemIndex).SubItems(4).Text
+        Dim edit = "TRUE"
+
+        Dim params As String() = {studentID, year_num, school_name, className, terminal, edit}
+
+        If primary.Contains(className) Then
+            Dim _newClassResult As New addResultPrimaryForm(params)
+            _newClassResult.Show()
+        ElseIf lowSec.Contains(className) Then
+            Dim _newClassResult As New addResultLowSecForm(params)
+            _newClassResult.Show()
+        ElseIf sec.Contains(className) Then
+            Dim _newClassResult As New addResultSecForm(params)
+            _newClassResult.Show()
         End If
     End Sub
 End Class
