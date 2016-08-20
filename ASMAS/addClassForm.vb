@@ -5,12 +5,17 @@ Public Class addClassForm
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Public contents As String() = {}
+    Public edit As String = ""
 
-    Public Sub New(ByVal itemID As String)
+    Public Sub New(ByVal params As String())
         MyBase.New
         ' This call is required by the designer.
         InitializeComponent()
 
+        contents = params
+        Dim itemID = params(0)
+        Dim edit = params(1)
         ' Add any initialization after the InitializeComponent() call.
         If itemID IsNot "" Then
             Con = New OleDbConnection
@@ -99,8 +104,11 @@ Public Class addClassForm
         Dim present As Boolean
         Dim school_name = schoolNameCombo.Text
         Dim year_num = yearNameCombo.Text
+        Dim edit = contents(1)
 
-        present = checkIfPresent(shortnameTextBox.Text, school_name, year_num)
+        If edit = "FALSE" Then
+            present = checkIfPresent(shortnameTextBox.Text, school_name, year_num)
+        End If
 
         If present = True Then
             MessageBox.Show("A class with same short_name is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -148,6 +156,10 @@ Public Class addClassForm
         Try
             Dim insertSQL As String = "INSERT INTO class ([school_id], [year_id], [short_name], [full_name], [size], [class_teacher]) 
                                         VALUES (@school_id, @year_id, @short_name, @full_name, @size, @class_teacher)"
+
+            If edit = "TRUE" Then
+                insertSQL = "UPDATE class SET [school_id] = @school_id, [year_id] = @year_id, [short_name] = @short_name, [full_name] = @full_name, [size] = @size, [class_teacher] = @class_teacher  where class_id=" & contents(0)
+            End If
             Con.Open()
             Dim cmd As New OleDbCommand(insertSQL, Con)
             cmd.Parameters.AddWithValue("@school_id", school_id)
@@ -159,6 +171,9 @@ Public Class addClassForm
             cmd.ExecuteNonQuery()
 
             MsgBox("Successful", MsgBoxStyle.Information, "INSERTED")
+            If edit = "TRUE" Then
+                Me.Close()
+            End If
             Con.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -232,7 +247,7 @@ Public Class addClassForm
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
         Dim schoolSQL As String = "SELECT short_name from SCHOOL"
         Dim yearSQL As String = "SELECT distinct year_num from school_year"
-        Dim ctSQL As String = "SELECT [full_name] from [user]"
+        Dim ctSQL As String = "SELECT [full_name] from [user] ORDER BY full_name"
 
         'SCHOOL COMBOBOX
         Con.Open() 'Open connection

@@ -140,12 +140,12 @@ Public Class SearchForm
         Dim itemID = searchResultListView.Items(ItemIndex).SubItems(0).Text
 
         If search_Type = "Class" Then
-            Dim _addClassForm As New addClassForm(itemID)
+            Dim _addClassForm As New addClassForm({itemID, "TRUE"})
             _addClassForm.Show()
         End If
 
         If search_Type = "Student" Then
-            Dim _addStudentForm As New addStudentForm(itemID)
+            Dim _addStudentForm As New addStudentForm({itemID, "TRUE"})
             _addStudentForm.Show()
         End If
 

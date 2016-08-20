@@ -311,6 +311,7 @@
     <EmbeddedResource Include="myStudents.resx">
       <DependentUpon>myStudents.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReportCard.resx">
       <DependentUpon>ReportCard.vb</DependentUpon>
     </EmbeddedResource>

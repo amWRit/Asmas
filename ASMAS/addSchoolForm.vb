@@ -18,6 +18,14 @@ Public Class addSchoolForm
         Dim website = websiteTextBox.Text
         Dim desc = descTextBox.Text
 
+        Dim present As Boolean
+        present = checkIfPresent(shortName)
+
+        If present = True Then
+            MessageBox.Show("A school with same short_name is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
         Dim DS = New DataSet
 
         Try
@@ -43,6 +51,39 @@ Public Class addSchoolForm
             Con.Close()
         End Try
     End Sub
+
+    Public Function checkIfPresent(shortName As String) As Boolean
+        Dim present As Boolean = False
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            Dim oData As OleDbDataAdapter
+            SQL = "SELECT * from school where short_name='" & shortName & "'"
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            DS.Tables.Clear()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            If rowCount > 0 Then present = True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+
+        Return present
+    End Function
 
     Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click
         Me.Close()
