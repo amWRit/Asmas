@@ -93,7 +93,9 @@ Public Class myClassesForm
     Private Sub EditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditToolStripMenuItem.Click
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
         Dim itemID = myClassesListView.Items(ItemIndex).SubItems(0).Text
-        Dim _addClassForm As New addClassForm(itemID)
+        Dim edit As String = "FALSE"
+        Dim params As String() = {itemID, edit}
+        Dim _addClassForm As New addClassForm(params)
         _addClassForm.Show()
     End Sub
 
@@ -158,4 +160,10 @@ Public Class myClassesForm
         End If
     End Sub
 
+    Private Sub AddStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddStudentToolStripMenuItem.Click
+        Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
+        Dim _addStudentToClassForm As New addStudentToClassForm(class_id)
+        _addStudentToClassForm.Show()
+    End Sub
 End Class

@@ -98,8 +98,8 @@ Public Class classResults
 
             Dim terminal = termCombo.Text
             Dim className = contents(3)
-            Dim rankSQL As String = "SELECT id, student_id, grade_point from results_" & className & " where school_name='" & contents(2) & "' and school_year ='" & contents(1) &
-            "' and terminal = '" & terminal & "' order by grade_point DESC"
+            Dim rankSQL As String = "SELECT id, student_id, percentage from results_" & className & " where school_name='" & contents(2) & "' and school_year ='" & contents(1) &
+            "' and terminal = '" & terminal & "' order by percentage DESC"
 
             Try
                 Con.Open()

@@ -14,7 +14,7 @@ Public Class viewDatabaseForm
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
         Dim schoolSQL As String = "SELECT short_name from SCHOOL"
         Dim yearSQL As String = "SELECT distinct year_num from school_year"
-        Dim classSQL As String = "SELECT distinct short_name from CLASS"
+        Dim classSQL As String = "SELECT distinct short_name from CLASS ORDER BY short_name"
 
         'SCHOOL COMBOBOX
         Con.Open() 'Open connection

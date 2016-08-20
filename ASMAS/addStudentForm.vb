@@ -6,6 +6,7 @@ Public Class addStudentForm
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Public contents As String() = {}
 
     Private Sub addStudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Con = New OleDbConnection
@@ -30,10 +31,12 @@ Public Class addStudentForm
         Next
     End Sub
 
-    Public Sub New(ByVal itemID As String)
+    Public Sub New(ByVal params As String())
         MyBase.New
         ' This call is required by the designer.
         InitializeComponent()
+        contents = params
+        Dim itemID = params(0)
 
         If itemID IsNot "" Then
             ' Add any initialization after the InitializeComponent() call.
@@ -119,9 +122,21 @@ Public Class addStudentForm
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
-
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+
+        'Dim present As Boolean
+        Dim f_name = fnameTextBox.Text
+        Dim m_name = mnameTextBox.Text
+        Dim l_name = lnameTextBox.Text
+        Dim regNumber = ""
+
+        'present = checkIfPresent(f_name, m_name, l_name)
+
+        'If present = True Then
+        '    MessageBox.Show("A student with same same name is already present. Please check. (Hint: Use A, B as suffix))", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        '    Exit Sub
+        'End If
 
         Dim schoolName = schoolCombo.Text
         Dim schoolSQL As String = "SELECT distinct school_id from SCHOOL where short_name='" & schoolName & "'"
@@ -133,6 +148,63 @@ Public Class addStudentForm
         oData.Fill(DS)
 
         Dim school_id As Integer = CInt(DS.Tables(0).Rows(0)(0))
+
+        Dim edit = contents(1)
+        If edit = "FALSE" Then
+            regNumber = buildNewRegNumber()
+        Else
+            regNumber = contents(0)
+        End If
+
+        Try
+            Dim insertSQL As String = "INSERT INTO student ([reg_number], [school_id], [f_name], [m_name], [l_name], [gender], [admission_year], [father_name], [mother_name], [guardian_name], [dob], [p_address], [temp_address], [phone], [email], [photo], [info]) 
+                                        VALUES
+                                        (@reg_number, @school_id, @f_name, @m_name, @l_name, @gender, @admission_year, @father_name, @mother_name, @guardian_name, @dob, @p_address, @temp_address, @phone, @email, @photo, @info)"
+
+            If edit = "TRUE" Then
+                insertSQL = "UPDATE student SET [school_id] = @school_id, [f_name] = @f_name, [m_name] = @m_name, [l_name] = @l_name, [gender] = @gender, [admission_year] = @admission_year, [father_name] = @father_name, 
+                            [mother_name] = @mother_name, [guardian_name] = @guardian_name, [dob] = @dob, [p_address] = @p_address, [temp_address] = @temp_address, [phone] = @phone, [email] = @email, [photo] = @photo, [info] = @info where reg_number='" & regNumber & "'"
+            End If
+            Con.Open()
+            Dim cmd As New OleDbCommand(insertSQL, Con)
+            If edit = "FALSE" Then cmd.Parameters.AddWithValue("@reg_number", regNumber)
+            cmd.Parameters.AddWithValue("@school_id", school_id)
+            cmd.Parameters.AddWithValue("@f_name", fnameTextBox.Text)
+            cmd.Parameters.AddWithValue("@m_name", mnameTextBox.Text)
+            cmd.Parameters.AddWithValue("@l_name", lnameTextBox.Text)
+            cmd.Parameters.AddWithValue("@gender", genderCombo.Text)
+            cmd.Parameters.AddWithValue("@admission_year", yearTextBox.Text)
+            cmd.Parameters.AddWithValue("@father_name", fatherTextBox.Text)
+            cmd.Parameters.AddWithValue("@mother_name", motherTextBox.Text)
+            cmd.Parameters.AddWithValue("@guardian_name", guardianTextBox.Text)
+            cmd.Parameters.AddWithValue("@dob", dobTextBox.Text)
+            cmd.Parameters.AddWithValue("@p_address", pAddTextBox.Text)
+            cmd.Parameters.AddWithValue("@temp_address", tAddTextBox.Text)
+            cmd.Parameters.AddWithValue("@phone", phoneTextBox.Text)
+            cmd.Parameters.AddWithValue("@email", emailTextBox.Text)
+            cmd.Parameters.AddWithValue("@photo", filepathTextBox.Text)
+            cmd.Parameters.AddWithValue("@info", infoTextBox.Text)
+
+            cmd.ExecuteNonQuery()
+
+            MsgBox("Insert Successful", MsgBoxStyle.Information, "INSERTED")
+            If edit = "TRUE" Then Me.Close()
+            Con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            Con.Close()
+            'AddTable()
+        End Try
+
+    End Sub
+
+    Public Function buildNewRegNumber() As String
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS As DataSet 'Object to store data in
+        DS = New DataSet 'Declare a new instance, or we get Null Reference Error
 
         Dim regNumberSQL As String = "SELECT last(reg_number) from student"
 
@@ -152,44 +224,41 @@ Public Class addStudentForm
         Integer.TryParse(result(0), reg_number)
         reg_number += 1
         regString = "THSS" & reg_number
-        Try
-            Dim insertSQL As String = "INSERT INTO student ([reg_number], [school_id], [f_name], [m_name], [l_name], [gender], [admission_year], [father_name], [mother_name], [guardian_name], [dob], [p_address], [temp_address], [phone], [email], [photo], [info]) 
-                                        VALUES
-                                        (@reg_number, @school_id, @f_name, @m_name, @l_name, @gender, @admission_year, @father_name, @mother_name, @guardian_name, @dob, @p_address, @temp_address, @phone, @email, @photo, @info)"
-            Con.Open()
-            Dim cmd As New OleDbCommand(insertSQL, Con)
-            cmd.Parameters.AddWithValue("@reg_number", regString)
-            cmd.Parameters.AddWithValue("@school_id", school_id)
-            cmd.Parameters.AddWithValue("@f_name", fnameTextBox.Text)
-            cmd.Parameters.AddWithValue("@m_name", mnameTextBox.Text)
-            cmd.Parameters.AddWithValue("@l_name", lnameTextBox.Text)
-            cmd.Parameters.AddWithValue("@gender", genderCombo.Text)
-            cmd.Parameters.AddWithValue("@admission_year", yearTextBox.Text)
-            cmd.Parameters.AddWithValue("@father_name", fatherTextBox.Text)
-            cmd.Parameters.AddWithValue("@mother_name", motherTextBox.Text)
-            cmd.Parameters.AddWithValue("@guardian_name", guardianTextBox.Text)
-            cmd.Parameters.AddWithValue("@dob", dobTextBox.Text)
-            cmd.Parameters.AddWithValue("@p_address", pAddTextBox.Text)
-            cmd.Parameters.AddWithValue("@temp_address", tAddTextBox.Text)
-            cmd.Parameters.AddWithValue("@phone", phoneTextBox.Text)
-            cmd.Parameters.AddWithValue("@email", emailTextBox.Text)
-            cmd.Parameters.AddWithValue("@photo", filepathTextBox.Text)
-            cmd.Parameters.AddWithValue("@info", infoTextBox.Text)
+        Return regString
+    End Function
 
+    'Public Function checkIfPresent(f_name As String, m_name As String, l_name As String) As Boolean
+    '    Dim present As Boolean = False
 
+    '    Con = New OleDbConnection
+    '    Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
-            cmd.ExecuteNonQuery()
+    '    Dim DS = New DataSet
+    '    Dim SQL As String = ""
 
-            MsgBox("Insert Successful", MsgBoxStyle.Information, "INSERTED")
-            Con.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        Finally
-            Con.Close()
-            'AddTable()
-        End Try
+    '    Try
+    '        Dim oData As OleDbDataAdapter
 
-    End Sub
+    '        SQL = "SELECT * from student where f_name=" & f_name & " and m_name=" & m_name & " and l_name='" & l_name & "'"
+    '        Con.Open() 'Open connection
+    '        oData = New OleDbDataAdapter(SQL, Con)
+    '        Con.Close()
+    '        DS.Tables.Clear()
+    '        oData.Fill(DS)
+
+    '        Dim rowCount = DS.Tables(0).Rows.Count
+    '        If rowCount > 0 Then present = True
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+
+    '    Finally
+    '        'This code gets called regardless of there being errors
+    '        'This ensures that you close the Database and avoid corrupted data
+    '        Con.Close()
+    '    End Try
+
+    '    Return present
+    'End Function
 
     Dim bytImage() As Byte
     Private Sub browsePhotoBtn_Click(sender As Object, e As EventArgs) Handles browsePhotoBtn.Click

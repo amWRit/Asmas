@@ -21,6 +21,7 @@ Public Class addStudentToClassForm
         InitializeComponent()
 
         classIDLabel.Text = class_id
+        classIDLabel.Visible = False
     End Sub
 
     Private Sub searchBtn_Click(sender As Object, e As EventArgs) Handles searchBtn.Click
@@ -29,7 +30,7 @@ Public Class addStudentToClassForm
 
         Dim search_key As String = searchKey.Text
         Dim search_keyword As String = searchKeyword.Text
-        Dim student_query As String = "id, reg_number, f_name, m_name, l_name, photo FROM STUDENT"
+        Dim student_query As String = "id, reg_number, f_name, m_name, l_name, photo, father_name, mother_name FROM STUDENT"
         Dim query As String = ""
         Dim SQL As String = ""
 
@@ -79,24 +80,28 @@ Public Class addStudentToClassForm
     End Sub
 
     Private Sub searchResultListView_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles searchResultListView.MouseUp
-        If e.Button = MouseButtons.Right Then
-            If searchResultListView.GetItemAt(e.X, e.Y) IsNot Nothing Then
-                searchResultListView.GetItemAt(e.X, e.Y).Selected = True
-                searchResultContextMenu.Show(searchResultListView, New Point(e.X, e.Y))
+        Dim rowCount = searchResultListView.Items.Count
+        If rowCount > 0 Then
+            If e.Button = MouseButtons.Right Then
+                If searchResultListView.GetItemAt(e.X, e.Y) IsNot Nothing Then
+                    searchResultListView.GetItemAt(e.X, e.Y).Selected = True
+                    searchResultContextMenu.Show(searchResultListView, New Point(e.X, e.Y))
+                End If
+
+            ElseIf e.Button = MouseButtons.Left Then
+                Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
+                Dim photoPath = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
+
+                If photoPath = "" Then photoPath = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\photo_not_available.png"
+                studentPhoto.Image = Image.FromFile(photoPath)
+
+                Dim f_name = searchResultListView.Items(ItemIndex).SubItems(2).Text.ToString
+                Dim m_name = searchResultListView.Items(ItemIndex).SubItems(3).Text.ToString
+                Dim l_name = searchResultListView.Items(ItemIndex).SubItems(4).Text.ToString
+                fullnameLabel.Text = f_name & " " & m_name & " " & l_name
             End If
-
-        ElseIf e.Button = MouseButtons.Left Then
-            Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
-            Dim photoPath = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
-
-            If photoPath = "" Then photoPath = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\photo_not_available.png"
-            studentPhoto.Image = Image.FromFile(photoPath)
-
-            Dim f_name = searchResultListView.Items(ItemIndex).SubItems(2).Text.ToString
-            Dim m_name = searchResultListView.Items(ItemIndex).SubItems(3).Text.ToString
-            Dim l_name = searchResultListView.Items(ItemIndex).SubItems(4).Text.ToString
-            fullnameLabel.Text = f_name & " " & m_name & " " & l_name
         End If
+
     End Sub
 
     Private Sub addStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles addStudentToolStripMenuItem.Click
@@ -109,11 +114,19 @@ Public Class addStudentToClassForm
         addStudentToClass(class_id, student_id)
     End Sub
 
-    Private Sub addStudentToClass(class_id As String, student_id As String)
+    Public Sub addStudentToClass(class_id As String, student_id As String)
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+
+        Dim present As Boolean
+        present = checkIfPresent(class_id, student_id)
+
+        If present = True Then
+            MessageBox.Show("This student is already assigned to your class. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
 
         Try
             Dim insertSQL As String = "INSERT INTO class_student ([class_id], [student_id]) 
@@ -136,6 +149,40 @@ Public Class addStudentToClassForm
 
     End Sub
 
+    Public Function checkIfPresent(class_id As String, student_id As String) As Boolean
+        Dim present As Boolean = False
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            Dim oData As OleDbDataAdapter
+            SQL = "SELECT * from class_student WHERE class_id=" & class_id & " and student_id = " & student_id
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            DS.Tables.Clear()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            If rowCount > 0 Then present = True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+
+        Return present
+    End Function
+
+
     Private Sub addStudentToClassForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
@@ -143,4 +190,5 @@ Public Class addStudentToClassForm
             HomeForm.Show()
         End If
     End Sub
+
 End Class

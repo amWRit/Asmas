@@ -131,12 +131,12 @@ Partial Class addStudentToClassForm
         '
         Me.searchResultContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.addStudentToolStripMenuItem})
         Me.searchResultContextMenu.Name = "searchResultContextMenu"
-        Me.searchResultContextMenu.Size = New System.Drawing.Size(97, 26)
+        Me.searchResultContextMenu.Size = New System.Drawing.Size(153, 48)
         '
         'addStudentToolStripMenuItem
         '
         Me.addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem"
-        Me.addStudentToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
+        Me.addStudentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.addStudentToolStripMenuItem.Text = "Add"
         '
         'addStudentToClassForm

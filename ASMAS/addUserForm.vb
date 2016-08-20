@@ -52,6 +52,14 @@ Public Class addUserForm
         Dim userRole = roleCombo.Text
         Dim userPassword = pwdTextBox.Text
         Dim DS = New DataSet
+        Dim present As Boolean
+
+        present = checkIfPresent(userName)
+
+        If present = True Then
+            MessageBox.Show("Username already exists. Please choose a different username.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
 
         Try
             Dim roleSQL = "INSERT INTO [user] ([full_name],[user_name],[user_password],[role]) VALUES (@fullName, @userName, @userPwd, @role)"
@@ -71,4 +79,39 @@ Public Class addUserForm
             Con.Close()
         End Try
     End Sub
+
+    Public Function checkIfPresent(user_name As String) As Boolean
+        Dim present As Boolean = False
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            Dim oData As OleDbDataAdapter
+
+            SQL = "SELECT * from [user] where [user_name]='" & user_name & "'"
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            DS.Tables.Clear()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            If rowCount > 0 Then present = True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+
+        Return present
+    End Function
+
+
 End Class

@@ -70,7 +70,7 @@
 
     Private Sub addStudentBtn_Click(sender As Object, e As EventArgs) Handles addStudentBtn.Click
         Me.Hide()
-        Dim _addStudentForm As New addStudentForm("")
+        Dim _addStudentForm As New addStudentForm({"", "FALSE"})
         _addStudentForm.Show()
     End Sub
 
@@ -81,7 +81,7 @@
 
     Private Sub addClassBtn_Click(sender As Object, e As EventArgs) Handles addClassBtn.Click
         Me.Hide()
-        Dim _addClassForm As New addClassForm("")
+        Dim _addClassForm As New addClassForm({"", "FALSE"})
         _addClassForm.Show()
     End Sub
 
