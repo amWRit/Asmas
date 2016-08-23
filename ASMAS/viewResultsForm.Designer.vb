@@ -23,6 +23,7 @@ Partial Class viewResultsForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(viewResultsForm))
         Me.databaseResultListView = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -37,6 +38,8 @@ Partial Class viewResultsForm
         Me.yearName = New System.Windows.Forms.ComboBox()
         Me.termCombo = New System.Windows.Forms.ComboBox()
         Me.termLabel = New System.Windows.Forms.Label()
+        Me.exportBtn = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -158,11 +161,33 @@ Partial Class viewResultsForm
         Me.termLabel.TabIndex = 24
         Me.termLabel.Text = "Term"
         '
+        'exportBtn
+        '
+        Me.exportBtn.BackgroundImage = CType(resources.GetObject("exportBtn.BackgroundImage"), System.Drawing.Image)
+        Me.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.exportBtn.Enabled = False
+        Me.exportBtn.Location = New System.Drawing.Point(940, 14)
+        Me.exportBtn.Name = "exportBtn"
+        Me.exportBtn.Size = New System.Drawing.Size(27, 23)
+        Me.exportBtn.TabIndex = 25
+        Me.exportBtn.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(931, 40)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
+        Me.Label1.TabIndex = 26
+        Me.Label1.Text = "Export to excel"
+        '
         'viewResultsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.exportBtn)
         Me.Controls.Add(Me.termCombo)
         Me.Controls.Add(Me.termLabel)
         Me.Controls.Add(Me.databaseResultListView)
@@ -200,4 +225,6 @@ Partial Class viewResultsForm
     Friend WithEvents yearName As ComboBox
     Friend WithEvents termCombo As ComboBox
     Friend WithEvents termLabel As Label
+    Friend WithEvents exportBtn As Button
+    Friend WithEvents Label1 As Label
 End Class
