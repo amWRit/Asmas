@@ -32,6 +32,7 @@ Partial Class HomeForm
         Me.addClassBtn = New System.Windows.Forms.Button()
         Me.viewMyClassesBtn = New System.Windows.Forms.Button()
         Me.viewResultBtn = New System.Windows.Forms.Button()
+        Me.printResultsBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'currentUserLabel
@@ -125,12 +126,22 @@ Partial Class HomeForm
         Me.viewResultBtn.Text = "View Results"
         Me.viewResultBtn.UseVisualStyleBackColor = True
         '
+        'printResultsBtn
+        '
+        Me.printResultsBtn.Location = New System.Drawing.Point(76, 507)
+        Me.printResultsBtn.Name = "printResultsBtn"
+        Me.printResultsBtn.Size = New System.Drawing.Size(195, 43)
+        Me.printResultsBtn.TabIndex = 10
+        Me.printResultsBtn.Text = "Print Results"
+        Me.printResultsBtn.UseVisualStyleBackColor = True
+        '
         'HomeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(340, 528)
+        Me.ClientSize = New System.Drawing.Size(340, 558)
+        Me.Controls.Add(Me.printResultsBtn)
         Me.Controls.Add(Me.viewResultBtn)
         Me.Controls.Add(Me.viewMyClassesBtn)
         Me.Controls.Add(Me.addClassBtn)
@@ -160,4 +171,5 @@ Partial Class HomeForm
     Friend WithEvents addClassBtn As Button
     Friend WithEvents viewMyClassesBtn As Button
     Friend WithEvents viewResultBtn As Button
+    Friend WithEvents printResultsBtn As Button
 End Class

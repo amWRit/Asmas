@@ -102,4 +102,8 @@
         Me.Hide()
         viewResultsForm.Show()
     End Sub
+
+    Private Sub printResultsBtn_Click(sender As Object, e As EventArgs) Handles printResultsBtn.Click
+        ReportCard.Show()
+    End Sub
 End Class

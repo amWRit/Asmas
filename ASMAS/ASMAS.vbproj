@@ -190,10 +190,10 @@
     <Compile Include="myStudents.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportCard.Designer.vb">
-      <DependentUpon>ReportCard.vb</DependentUpon>
+    <Compile Include="Print\Report.Designer.vb">
+      <DependentUpon>Report.vb</DependentUpon>
     </Compile>
-    <Compile Include="ReportCard.vb">
+    <Compile Include="Print\Report.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SearchForm.Designer.vb">
@@ -311,9 +311,9 @@
     <EmbeddedResource Include="myStudents.resx">
       <DependentUpon>myStudents.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="ReportCard.resx">
-      <DependentUpon>ReportCard.vb</DependentUpon>
+    <EmbeddedResource Include="Print\Report.rdlc" />
+    <EmbeddedResource Include="Print\Report.resx">
+      <DependentUpon>Report.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.vb</DependentUpon>
@@ -356,7 +356,6 @@
     </None>
     <None Include="TerseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TerseDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="TerseDataSet.xss">
