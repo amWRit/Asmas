@@ -7,6 +7,7 @@ Public Class viewResultsForm
     Private pwd As String
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
     Public tempDS As New DataSet
+    Public filePath As String
 
     Private Sub viewResultsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -102,7 +103,7 @@ Public Class viewResultsForm
         Dim year_num = yearName.Text
         Dim class_name = className.Text
         Dim term = termCombo.Text
-
+        filePath = school_name & "_" & year_num & "_" & class_name & "_" & term & "Term"
         SQL = "SELECT * from" &
                 " (select id, reg_number, f_name, l_name from student) s" &
                 " inner join results_" & class_name & " r on s.id = r.student_id" &
@@ -162,6 +163,7 @@ Public Class viewResultsForm
         Dim objDlg As New SaveFileDialog
         objDlg.Filter = "Excel File|*.xlsx"
         objDlg.OverwritePrompt = False
+        objDlg.FileName = filePath
         If objDlg.ShowDialog = DialogResult.OK Then
             Dim filepath As String = objDlg.FileName
             FileHandler.ExportToExcel(GetDatatable(), filepath)
