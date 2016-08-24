@@ -1,9 +1,13 @@
 ﻿Imports System.Data.OleDb
+Imports Microsoft.ReportingServices.Rendering.ExcelRenderer
+
 
 Public Class viewResultsForm
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Public tempDS As New DataSet
+    Public filePath As String
 
     Private Sub viewResultsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -99,7 +103,7 @@ Public Class viewResultsForm
         Dim year_num = yearName.Text
         Dim class_name = className.Text
         Dim term = termCombo.Text
-
+        filePath = school_name & "_" & year_num & "_" & class_name & "_" & term & "Term"
         SQL = "SELECT * from" &
                 " (select id, reg_number, f_name, l_name from student) s" &
                 " inner join results_" & class_name & " r on s.id = r.student_id" &
@@ -110,6 +114,7 @@ Public Class viewResultsForm
             oData = New OleDbDataAdapter(SQL, Con)
             Con.Close()
             oData.Fill(DS)
+            tempDS = DS
 
             databaseResultListView.Items.Clear() 'prep Listview by clearing it
             databaseResultListView.Columns.Clear() 'remove columns in LV
@@ -128,6 +133,10 @@ Public Class viewResultsForm
                 databaseResultListView.Items.Add(xItem)
             Next
 
+            'Enable export button
+            If DS.Tables(0).Rows.Count > 0 Then
+                exportBtn.Enabled = True
+            End If
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -148,4 +157,25 @@ Public Class viewResultsForm
             HomeForm.Show()
         End If
     End Sub
+
+    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
+        'Using save file dialog that allow you to chosse the file name.
+        Dim objDlg As New SaveFileDialog
+        objDlg.Filter = "Excel File|*.xlsx"
+        objDlg.OverwritePrompt = False
+        objDlg.FileName = filePath
+        If objDlg.ShowDialog = DialogResult.OK Then
+            Dim filepath As String = objDlg.FileName
+            FileHandler.ExportToExcel(GetDatatable(), filepath)
+        End If
+
+    End Sub
+
+    Private Function GetDatatable() As DataTable
+        'Create the data table at runtime
+        Dim DT As New DataTable
+        DT = tempDS.Tables(0)
+        Return DT
+    End Function
+
 End Class
