@@ -98,6 +98,12 @@ Public Class addClassForm
     End Sub
 
     Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
+
+        If schoolNameCombo.SelectedIndex = -1 Or yearNameCombo.SelectedIndex = -1 Or shortnameTextBox.Text = "" Or fullnameTextBox.Text = "" Or sizeTextBox.Text = "" Or ctCombo.SelectedIndex = -1 Then
+            MessageBox.Show("One of the fields is empty.Please check!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 

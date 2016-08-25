@@ -89,6 +89,8 @@ Public Class addStudentToClassForm
                 End If
 
             ElseIf e.Button = MouseButtons.Left Then
+                If searchResultListView.SelectedIndices.Count = 0 Then Exit Sub
+
                 Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
                 Dim photoPath = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
 

@@ -35,7 +35,6 @@ Partial Class classDetailsForm
         Me.shortName = New System.Windows.Forms.Label()
         Me.yearNum = New System.Windows.Forms.Label()
         Me.schoolName = New System.Windows.Forms.Label()
-        Me.editBtn = New System.Windows.Forms.Button()
         Me.addStudentBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -163,17 +162,9 @@ Partial Class classDetailsForm
         Me.schoolName.TabIndex = 29
         Me.schoolName.Text = ":"
         '
-        'editBtn
-        '
-        Me.editBtn.Location = New System.Drawing.Point(259, 242)
-        Me.editBtn.Name = "editBtn"
-        Me.editBtn.Size = New System.Drawing.Size(75, 23)
-        Me.editBtn.TabIndex = 35
-        Me.editBtn.Text = "Edit"
-        Me.editBtn.UseVisualStyleBackColor = True
-        '
         'addStudentBtn
         '
+        Me.addStudentBtn.Enabled = False
         Me.addStudentBtn.Location = New System.Drawing.Point(352, 242)
         Me.addStudentBtn.Name = "addStudentBtn"
         Me.addStudentBtn.Size = New System.Drawing.Size(75, 23)
@@ -187,7 +178,6 @@ Partial Class classDetailsForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(440, 277)
         Me.Controls.Add(Me.addStudentBtn)
-        Me.Controls.Add(Me.editBtn)
         Me.Controls.Add(Me.ct)
         Me.Controls.Add(Me.sizeOfClass)
         Me.Controls.Add(Me.fullname)
@@ -222,6 +212,5 @@ Partial Class classDetailsForm
     Friend WithEvents shortName As Label
     Friend WithEvents yearNum As Label
     Friend WithEvents schoolName As Label
-    Friend WithEvents editBtn As Button
     Friend WithEvents addStudentBtn As Button
 End Class

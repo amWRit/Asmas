@@ -14,6 +14,11 @@ Public Class SearchForm
         Dim search_key As String = searchKey.Text
         Dim search_keyword As String = searchKeyword.Text
 
+        If searchType.SelectedIndex = -1 Then
+            MessageBox.Show("Please choose a search type.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
         Dim student_query As String = "reg_number,f_name, l_name FROM STUDENT"
         Dim class_query As String = "* FROM CLASS"
         Con = New OleDbConnection

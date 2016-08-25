@@ -30,6 +30,13 @@ Public Class addYearForm
     End Sub
 
     Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
+        If schoolCombo.SelectedIndex = -1 Then
+            MessageBox.Show("Please select a school.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        ElseIf yearTextBox.Text = "" Then
+            MessageBox.Show("Please enter a year.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 

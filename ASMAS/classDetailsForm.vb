@@ -6,9 +6,6 @@ Public Class classDetailsForm
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
 
     Private class_id As String
-    Private Sub classDetailsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Public Sub New(ByVal itemID As String)
 
@@ -86,7 +83,32 @@ Public Class classDetailsForm
         _addStudentToClassForm.Show()
     End Sub
 
-    Private Sub editBtn_Click(sender As Object, e As EventArgs) Handles editBtn.Click
+    Private Sub classDetailsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim currentUserFullName = User.fullName
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+        Try
+            Dim SQL As String = "SELECT class_teacher from CLASS where class_id=" & class_id
+            Dim DS As DataSet 'Object to store data in
+            DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+            Con.Open() 'Open connection
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
 
+            Dim classTeacherName = DS.Tables(0).Rows(0)(0).ToString
+            If currentUserFullName = classTeacherName Or User.userRole = "Admin" Then
+                addStudentBtn.Enabled = True
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            'searchResultListView.Items.Clear()
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
     End Sub
 End Class
