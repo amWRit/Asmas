@@ -44,6 +44,12 @@ Public Class addUserForm
     End Sub
 
     Private Sub saveBtn_Click_1(sender As Object, e As EventArgs) Handles saveBtn.Click
+
+        If fullnameTextBox.Text = "" Or usernameTextBox.Text = "" Or pwdTextBox.Text = "" Or roleCombo.SelectedIndex = -1 Then
+            MessageBox.Show("One of the fields is empty. Please check!.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 

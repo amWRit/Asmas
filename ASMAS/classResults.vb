@@ -20,13 +20,7 @@ Public Class classResults
 
 
     Private Sub viewBtn_Click(sender As Object, e As EventArgs) Handles viewBtn.Click
-        'dim openforms = application.openforms.oftype(of classresults)
-        'while openforms.any()
-        '    openforms.first.close()
-        'end while
 
-        'dim _classresults as new classresults(classid)
-        '_classresults.show()
         Dim terminal = termCombo.Text
         refreshLV(contents(0), terminal)
     End Sub

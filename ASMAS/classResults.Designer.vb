@@ -75,7 +75,7 @@ Partial Class classResults
         '
         Me.termCombo.FormattingEnabled = True
         Me.termCombo.Items.AddRange(New Object() {"First", "Second", "Third", "SendUp"})
-        Me.termCombo.Location = New System.Drawing.Point(188, 7)
+        Me.termCombo.Location = New System.Drawing.Point(375, 9)
         Me.termCombo.Name = "termCombo"
         Me.termCombo.Size = New System.Drawing.Size(121, 21)
         Me.termCombo.TabIndex = 168
@@ -84,7 +84,7 @@ Partial Class classResults
         'termLabel
         '
         Me.termLabel.AutoSize = True
-        Me.termLabel.Location = New System.Drawing.Point(150, 12)
+        Me.termLabel.Location = New System.Drawing.Point(337, 14)
         Me.termLabel.Name = "termLabel"
         Me.termLabel.Size = New System.Drawing.Size(31, 13)
         Me.termLabel.TabIndex = 172
@@ -92,7 +92,7 @@ Partial Class classResults
         '
         'viewBtn
         '
-        Me.viewBtn.Location = New System.Drawing.Point(315, 7)
+        Me.viewBtn.Location = New System.Drawing.Point(502, 9)
         Me.viewBtn.Name = "viewBtn"
         Me.viewBtn.Size = New System.Drawing.Size(75, 23)
         Me.viewBtn.TabIndex = 170
@@ -112,12 +112,12 @@ Partial Class classResults
         '
         Me.classResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem})
         Me.classResultsContextMenu.Name = "searchResultContextMenu"
-        Me.classResultsContextMenu.Size = New System.Drawing.Size(153, 48)
+        Me.classResultsContextMenu.Size = New System.Drawing.Size(95, 26)
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(94, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'classResults
