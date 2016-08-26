@@ -184,6 +184,7 @@ Partial Class viewResultsForm
         '
         'printBtn
         '
+        Me.printBtn.Enabled = False
         Me.printBtn.Location = New System.Drawing.Point(838, 19)
         Me.printBtn.Name = "printBtn"
         Me.printBtn.Size = New System.Drawing.Size(75, 23)

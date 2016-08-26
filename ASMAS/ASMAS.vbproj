@@ -185,6 +185,7 @@
     <Compile Include="myClassesForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MyExtensions.vb" />
     <Compile Include="myStudents.Designer.vb">
       <DependentUpon>myStudents.vb</DependentUpon>
     </Compile>
