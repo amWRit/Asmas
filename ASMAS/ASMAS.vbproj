@@ -191,6 +191,12 @@
     <Compile Include="myStudents.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Print\printForm.Designer.vb">
+      <DependentUpon>printForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print\printForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ReportCard.Designer.vb">
       <DependentUpon>ReportCard.vb</DependentUpon>
     </Compile>
@@ -312,6 +318,10 @@
     <EmbeddedResource Include="myStudents.resx">
       <DependentUpon>myStudents.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Print\printForm.resx">
+      <DependentUpon>printForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\resultLowSec.rdlc" />
     <EmbeddedResource Include="ReportCard.resx">
       <DependentUpon>ReportCard.vb</DependentUpon>
     </EmbeddedResource>
@@ -429,6 +439,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

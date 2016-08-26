@@ -178,4 +178,7 @@ Public Class viewResultsForm
         Return DT
     End Function
 
+    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        printForm.Show()
+    End Sub
 End Class
