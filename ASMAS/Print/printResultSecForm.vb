@@ -23,6 +23,7 @@ Public Class printResultSecForm
         _index = index
         _class_name = class_name
         myFunctions.prepareTempTable(resultDS, _index, class_name)
+        If resultDS.Tables(0).Rows.Count = 1 Then nextBtn.Enabled = False
         prepareReport()
     End Sub
 
