@@ -145,9 +145,9 @@ Public Class classResults
         Dim sec As String() = {"9E", "9N", "10E", "10A"}
 
         Dim className = contents(3)
-        Dim year_num = classResultListView.Items(ItemIndex).SubItems(2).Text
-        Dim school_name = classResultListView.Items(ItemIndex).SubItems(3).Text
-        Dim terminal = classResultListView.Items(ItemIndex).SubItems(4).Text
+        Dim year_num = classResultListView.Items(ItemIndex).SubItems(4).Text
+        Dim school_name = classResultListView.Items(ItemIndex).SubItems(5).Text
+        Dim terminal = classResultListView.Items(ItemIndex).SubItems(6).Text
         Dim edit = "TRUE"
 
         Dim params As String() = {studentID, year_num, school_name, className, terminal, edit}

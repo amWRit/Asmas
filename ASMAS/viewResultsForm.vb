@@ -107,8 +107,7 @@ Public Class viewResultsForm
         Dim term = termCombo.Text
         filePath = school_name & "_" & year_num & "_" & class_name & "_" & term & "Term"
         SQL = "SELECT * from" &
-                " (select id, reg_number, f_name, l_name from student) s" &
-                " inner join results_" & class_name & " r on s.id = r.student_id" &
+                "  results_" & class_name &
                 " where school_name ='" & school_name & "' and school_year='" & year_num & "' and terminal='" & term & "';"
         Try
             Con.Open() 'Open connection
@@ -141,7 +140,7 @@ Public Class viewResultsForm
                 printBtn.Enabled = True
             End If
             'prepare table for print
-            myFunctions.prepareTempTable(tempDS, 0, class_name)
+            'myFunctions.prepareTempTable(tempDS, 0, class_name)
 
         Catch ex As Exception
             MsgBox(ex.Message)
