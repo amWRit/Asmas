@@ -20,7 +20,8 @@ Public Class addResultSecForm
         If edit = "FALSE" Then
             loadRegNumber(params)
         Else
-            findStudentName()
+            ReDim Preserve contents(7)
+            contents(7) = contents(0)
             studentRegCombo.Enabled = False
             termCombo.Text = contents(4)
             loadResult(params)
@@ -39,14 +40,8 @@ Public Class addResultSecForm
         Dim SQL As String = ""
         SQL = "SELECT f_name, m_name, l_name, id from student where reg_number = '" & studentRegCombo.Text & "'"
 
-        Dim edit = contents(5)
-        If edit = "TRUE" Then
-            SQL = "SELECT f_name, m_name, l_name, reg_number from student where id = " & contents(0)
-        End If
-
         Dim DS = New DataSet
         Try
-
             Con.Open() 'Open connection
 
             Dim oData As OleDbDataAdapter
@@ -55,24 +50,17 @@ Public Class addResultSecForm
             oData.Fill(DS)
 
             Dim present As Boolean
-            If edit <> "TRUE" Then
-                present = checkIfPresent(DS.Tables(0).Rows(0)(3).ToString, termCombo.Text, contents(3))
+            present = checkIfPresent(DS.Tables(0).Rows(0)(3).ToString, termCombo.Text, contents(3))
 
-                If present = True Then
-                    MessageBox.Show("Record is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Exit Sub
-                End If
-                'save student_id
-                ReDim Preserve contents(7)
-                contents(7) = DS.Tables(0).Rows(0)(3).ToString
-            Else
-                ReDim Preserve contents(7)
-                contents(7) = contents(0)
-                studentRegCombo.Text = DS.Tables(0).Rows(0)(3).ToString
+            If present = True Then
+                MessageBox.Show("Record is already present. please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Exit Sub
             End If
+            'save student_id
+            ReDim Preserve contents(7)
+            contents(7) = DS.Tables(0).Rows(0)(3).ToString
 
             Dim Val = DS.Tables(0).Rows(0)(0).ToString & " " & DS.Tables(0).Rows(0)(1).ToString & " " & DS.Tables(0).Rows(0)(2).ToString
-
             studentName.Text = Val
 
         Catch ex As Exception
@@ -133,7 +121,7 @@ Public Class addResultSecForm
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
-        Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, sciTh, sciPr, socTh, socPr, ephTh, ephPr, opt1Th, opt1Pr, opt2Th, opt2Pr, attendance}
+        Dim textBoxes As TextBox() = {studentName, engTh, engPr, nepTh, nepPr, mathTh, mathPr, sciTh, sciPr, socTh, socPr, ephTh, ephPr, opt1Th, opt1Pr, opt2Th, opt2Pr, attendance}
 
         Dim DS = New DataSet
         Dim SQL As String = ""
@@ -141,7 +129,7 @@ Public Class addResultSecForm
         Dim student_id = contents(0)
         Dim terminal = contents(4)
         Try
-            SQL = "SELECT eng_th, eng_pr, nep_th, nep_pr, math_th, math_pr, sci_th, sci_pr, soc_th, soc_pr, eph_th, eph_pr, opt1_th, opt1_pr, opt2_th, opt2_pr, opt1, opt2, attendance
+            SQL = "SELECT reg_number, full_name, eng_th, eng_pr, nep_th, nep_pr, math_th, math_pr, sci_th, sci_pr, soc_th, soc_pr, eph_th, eph_pr, opt1_th, opt1_pr, opt2_th, opt2_pr, opt1, opt2, attendance
                     FROM 
                     results_" & className & " where student_id=" & student_id & " and terminal = '" & terminal & "'"
 
@@ -152,12 +140,14 @@ Public Class addResultSecForm
             Con.Close()
             oData.Fill(DS)
 
-            For i As Integer = 0 To textBoxes.Count - 1
-                textBoxes(i).Text = DS.Tables(0).Rows(0)(i).ToString
+            For i As Integer = 1 To textBoxes.Count
+                textBoxes(i - 1).Text = DS.Tables(0).Rows(0)(i).ToString
             Next
 
-            opt1Combo.Text = DS.Tables(0).Rows(0)(16).ToString
-            opt2Combo.Text = DS.Tables(0).Rows(0)(17).ToString
+            studentRegCombo.Text = DS.Tables(0).Rows(0)(0).ToString
+
+            opt1Combo.Text = DS.Tables(0).Rows(0)(19).ToString
+            opt2Combo.Text = DS.Tables(0).Rows(0)(20).ToString
         Catch ex As Exception
             MsgBox(ex.Message)
 
@@ -240,7 +230,7 @@ Public Class addResultSecForm
         Dim terminal = termCombo.Text
         Dim class_name = contents(3)
 
-        Dim hashKeys As String() = {"student_id", "school_year", "school_name", "terminal", "eng_th", "eng_th_g", "eng_pr", "eng_pr_g", "eng_total", "eng_total_g", "nep_th", "nep_th_g", "nep_pr",
+        Dim hashKeys As String() = {"student_id", "reg_number", "full_name", "school_year", "school_name", "terminal", "eng_th", "eng_th_g", "eng_pr", "eng_pr_g", "eng_total", "eng_total_g", "nep_th", "nep_th_g", "nep_pr",
             "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
             "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "eph_th", "eph_th_g", "eph_pr", "eph_pr_g", "eph_total", "eph_total_g", "opt1_th", "opt1_th_g", "opt1_pr", "opt1_pr_g",
             "opt1_total", "opt1_total_g", "opt2_th", "opt2_th_g", "opt2_pr", "opt2_pr_g", "opt2_total", "opt2_total_g",
@@ -252,12 +242,12 @@ Public Class addResultSecForm
         Dim newInputHash As Hashtable = calculateGrades(inputHash)
 
         Try
-            Dim insertSQL As String = "INSERT INTO results_" & class_name & " ([student_id],[school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
+            Dim insertSQL As String = "INSERT INTO results_" & class_name & " ([student_id], [reg_number], [full_name], [school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
 [nep_th],[nep_th_g],[nep_pr],[nep_pr_g],[nep_total],[nep_total_g],[math_th],[math_th_g],[math_pr],[math_pr_g],[math_total],[math_total_g],[sci_th],[sci_th_g],[sci_pr],[sci_pr_g],[sci_total],[sci_total_g],
 [soc_th],[soc_th_g],[soc_pr],[soc_pr_g],[soc_total],[soc_total_g],[eph_th],[eph_th_g],[eph_pr],[eph_pr_g],[eph_total],[eph_total_g],[opt1_th],[opt1_th_g],[opt1_pr],[opt1_pr_g],[opt1_total],[opt1_total_g],
 [opt2_th],[opt2_th_g],[opt2_pr],[opt2_pr_g],[opt2_total],[opt2_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point], [opt1], [opt2], [attendance]) 
 VALUES
-(@student_id, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
+(@student_id, @reg_number, @full_name, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
 @nep_total, @nep_total_g, @math_th, @math_th_g, @math_pr, @math_pr_g, @math_total, @math_total_g, @sci_th, @sci_th_g, @sci_pr, @sci_pr_g, @sci_total, @sci_total_g, 
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @eph_th, @eph_th_g, @eph_pr, @eph_pr_g, @eph_total, @eph_total_g, @opt1_th, @opt1_th_g, @opt1_pr, @opt1_pr_g, @opt1_total, @opt1_total_g, 
 @opt2_th, @opt2_th_g, @opt2_pr, @opt2_pr_g, @opt2_total, @opt2_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @opt1, @opt2, @attendance)"
@@ -321,7 +311,7 @@ VALUES
 
         insertSQL = "UPDATE results_" & contents(3) & "
                      SET 
-                    student_id = @student_id, school_year = @school_year, school_name = @school_name, terminal = @terminal, eng_th = @eng_th, eng_th_g = @eng_th_g, eng_pr = @eng_pr, eng_pr_g = @eng_pr_g, eng_total = @eng_total, eng_total_g = @eng_total_g, 
+                    student_id = @student_id, reg_number = @reg_number, full_name = @full_name, school_year = @school_year, school_name = @school_name, terminal = @terminal, eng_th = @eng_th, eng_th_g = @eng_th_g, eng_pr = @eng_pr, eng_pr_g = @eng_pr_g, eng_total = @eng_total, eng_total_g = @eng_total_g, 
                     nep_th = @nep_th, nep_th_g = @nep_th_g, nep_pr = @nep_pr, nep_pr_g = @nep_pr_g, nep_total = @nep_total, nep_total_g = @nep_total_g, math_th = @math_th, math_th_g = @math_th_g, math_pr = @math_pr, math_pr_g = @math_pr_g, math_total = @math_total, math_total_g = @math_total_g, 
                     sci_th = @sci_th, sci_th_g = @sci_th_g, sci_pr = @sci_pr, sci_pr_g = @sci_pr_g, sci_total = @sci_total, sci_total_g = @sci_total_g, soc_th = @soc_th, soc_th_g = @soc_th_g, soc_pr = @soc_pr, soc_pr_g = @soc_pr_g, soc_total = @soc_total, soc_total_g = @soc_total_g,
                     eph_th = @eph_th, eph_th_g = @eph_th_g, eph_pr = @eph_pr, eph_pr_g = @eph_pr_g, eph_total = @eph_total, eph_total_g = @eph_total_g, opt1_th = @opt1_th, opt1_th_g = @opt1_th_g, opt1_pr = @opt1_pr, opt1_pr_g = @opt1_pr_g, opt1_total = @opt1_total, opt1_total_g = @opt1_total_g, 
@@ -364,6 +354,8 @@ VALUES
         Dim percentage = total / 800 * 100
 
         inputHash("student_id") = contents(7)
+        inputHash("reg_number") = studentRegCombo.Text
+        inputHash("full_name") = studentName.Text
         inputHash("school_year") = contents(1)
         inputHash("school_name") = contents(2)
         inputHash("terminal") = termCombo.Text

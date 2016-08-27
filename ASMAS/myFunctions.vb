@@ -3,10 +3,11 @@ Imports System.Data.OleDb
 Imports Microsoft.Reporting.WinForms
 
 Public Class myFunctions
+    Public Shared data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+
     'prepare temp table for printing results - three different tables for three levels
     Public Shared Sub prepareTempTable(ByVal DS As DataSet, ByVal index As Integer, ByVal class_name As String)
         Dim Con As System.Data.OleDb.OleDbConnection
-        Dim data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
 
         'add current class results' first row to tempTable
         Con = New OleDbConnection
@@ -25,11 +26,7 @@ Public Class myFunctions
         Dim insertSQL As String = ""
         Dim inputHash As Hashtable = New Hashtable
         For Each key As String In hashKeys
-            If key = "full_name" Then
-                inputHash(key) = DS.Tables(0).Rows(index)("f_name").ToString & " " & DS.Tables(0).Rows(index)("l_name").ToString
-            Else
-                inputHash(key) = DS.Tables(0).Rows(index)(key).ToString
-            End If
+            inputHash(key) = DS.Tables(0).Rows(index)(key).ToString
         Next
 
         Try
@@ -69,7 +66,6 @@ Public Class myFunctions
     End Function
 
     Public Shared Function getResultDataTable(ByVal _class_name As String) As DataTable
-        Dim data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
         Dim Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -158,8 +154,9 @@ VALUES
         ElseIf lowSec.Contains(className) Then
             SQL = lowSecSQL
         ElseIf sec.Contains(className) Then
-            SQL = SecSQL
+            SQL = secSQL
         End If
         Return SQL
     End Function
+
 End Class
