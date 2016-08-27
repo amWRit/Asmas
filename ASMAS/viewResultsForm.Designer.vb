@@ -40,6 +40,7 @@ Partial Class viewResultsForm
         Me.termLabel = New System.Windows.Forms.Label()
         Me.exportBtn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.printBtn = New System.Windows.Forms.Button()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -181,11 +182,22 @@ Partial Class viewResultsForm
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "Export to excel"
         '
+        'printBtn
+        '
+        Me.printBtn.Enabled = False
+        Me.printBtn.Location = New System.Drawing.Point(838, 19)
+        Me.printBtn.Name = "printBtn"
+        Me.printBtn.Size = New System.Drawing.Size(75, 23)
+        Me.printBtn.TabIndex = 27
+        Me.printBtn.Text = "Print"
+        Me.printBtn.UseVisualStyleBackColor = True
+        '
         'viewResultsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.exportBtn)
         Me.Controls.Add(Me.termCombo)
@@ -227,4 +239,5 @@ Partial Class viewResultsForm
     Friend WithEvents termLabel As Label
     Friend WithEvents exportBtn As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents printBtn As Button
 End Class
