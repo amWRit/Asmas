@@ -192,10 +192,23 @@
     <Compile Include="myStudents.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Print\printForm.Designer.vb">
-      <DependentUpon>printForm.vb</DependentUpon>
+    <Compile Include="myFunctions.vb" />
+    <Compile Include="Print\printResultLowSecForm.Designer.vb">
+      <DependentUpon>printResultLowSecForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Print\printForm.vb">
+    <Compile Include="Print\printResultLowSecForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print\printResultSecForm.Designer.vb">
+      <DependentUpon>printResultSecForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print\printResultSecForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print\printResultsPrimaryForm.Designer.vb">
+      <DependentUpon>printResultsPrimaryForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print\printResultsPrimaryForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportCard.Designer.vb">
@@ -319,9 +332,17 @@
     <EmbeddedResource Include="myStudents.resx">
       <DependentUpon>myStudents.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\printForm.resx">
-      <DependentUpon>printForm.vb</DependentUpon>
+    <EmbeddedResource Include="Print\printResultLowSecForm.resx">
+      <DependentUpon>printResultLowSecForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Print\printResultSecForm.resx">
+      <DependentUpon>printResultSecForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\printResultsPrimaryForm.resx">
+      <DependentUpon>printResultsPrimaryForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\resultSec.rdlc" />
+    <EmbeddedResource Include="Print\resultPrimary.rdlc" />
     <EmbeddedResource Include="Print\resultLowSec.rdlc" />
     <EmbeddedResource Include="ReportCard.resx">
       <DependentUpon>ReportCard.vb</DependentUpon>

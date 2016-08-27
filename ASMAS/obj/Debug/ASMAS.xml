@@ -152,6 +152,16 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:ASMAS.TerseDataSet.printResultsPrimaryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsSecDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:ASMAS.TerseDataSet.classRow">
 <summary>
 Represents strongly named DataRow class.
@@ -273,6 +283,16 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:ASMAS.TerseDataSet.results_9NRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsPrimaryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsSecRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -402,6 +422,16 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:ASMAS.TerseDataSet.printResultsPrimaryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsSecRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:ASMAS.TerseDataSetTableAdapters.classTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -523,6 +553,16 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:ASMAS.TerseDataSetTableAdapters.results_9NTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.printResultsPrimaryTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.printResultsSecTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

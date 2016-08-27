@@ -78,6 +78,13 @@ Partial Class addResultSecForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.opt1Combo = New System.Windows.Forms.ComboBox()
         Me.opt2Combo = New System.Windows.Forms.ComboBox()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.presentDays = New System.Windows.Forms.TextBox()
+        Me.totalDays = New System.Windows.Forms.TextBox()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.attendance = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'sequenceCheckBox
@@ -577,11 +584,80 @@ Partial Class addResultSecForm
         Me.opt2Combo.TabIndex = 144
         Me.opt2Combo.Text = "Choose..."
         '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Location = New System.Drawing.Point(490, 175)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(68, 13)
+        Me.Label33.TabIndex = 149
+        Me.Label33.Text = "Present days"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Location = New System.Drawing.Point(490, 145)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(56, 13)
+        Me.Label34.TabIndex = 148
+        Me.Label34.Text = "Total days"
+        '
+        'presentDays
+        '
+        Me.presentDays.Location = New System.Drawing.Point(574, 172)
+        Me.presentDays.Name = "presentDays"
+        Me.presentDays.Size = New System.Drawing.Size(45, 20)
+        Me.presentDays.TabIndex = 147
+        Me.presentDays.Text = "0"
+        '
+        'totalDays
+        '
+        Me.totalDays.Location = New System.Drawing.Point(574, 142)
+        Me.totalDays.Name = "totalDays"
+        Me.totalDays.Size = New System.Drawing.Size(45, 20)
+        Me.totalDays.TabIndex = 146
+        Me.totalDays.Text = "0"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Adobe Heiti Std R", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(238, Byte))
+        Me.Label35.Location = New System.Drawing.Point(490, 111)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(79, 16)
+        Me.Label35.TabIndex = 145
+        Me.Label35.Text = "Attendance"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(543, 209)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(21, 16)
+        Me.Label13.TabIndex = 151
+        Me.Label13.Text = "%"
+        '
+        'attendance
+        '
+        Me.attendance.Location = New System.Drawing.Point(574, 205)
+        Me.attendance.Name = "attendance"
+        Me.attendance.Size = New System.Drawing.Size(45, 20)
+        Me.attendance.TabIndex = 150
+        Me.attendance.Text = "0"
+        '
         'addResultSecForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(663, 435)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.attendance)
+        Me.Controls.Add(Me.Label33)
+        Me.Controls.Add(Me.Label34)
+        Me.Controls.Add(Me.presentDays)
+        Me.Controls.Add(Me.totalDays)
+        Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.opt2Combo)
         Me.Controls.Add(Me.opt1Combo)
         Me.Controls.Add(Me.sequenceCheckBox)
@@ -702,4 +778,11 @@ Partial Class addResultSecForm
     Friend WithEvents Label1 As Label
     Friend WithEvents opt1Combo As ComboBox
     Friend WithEvents opt2Combo As ComboBox
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents presentDays As TextBox
+    Friend WithEvents totalDays As TextBox
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents attendance As TextBox
 End Class
