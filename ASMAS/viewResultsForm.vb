@@ -8,6 +8,8 @@ Public Class viewResultsForm
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
     Public tempDS As New DataSet
     Public filePath As String
+    Public index As Integer
+    Public class_name As String = ""
 
     Private Sub viewResultsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -101,7 +103,7 @@ Public Class viewResultsForm
         Dim SQL As String = ""
         Dim school_name = schoolName.Text
         Dim year_num = yearName.Text
-        Dim class_name = className.Text
+        class_name = className.Text
         Dim term = termCombo.Text
         filePath = school_name & "_" & year_num & "_" & class_name & "_" & term & "Term"
         SQL = "SELECT * from" &
@@ -136,7 +138,10 @@ Public Class viewResultsForm
             'Enable export button
             If DS.Tables(0).Rows.Count > 0 Then
                 exportBtn.Enabled = True
+                printBtn.Enabled = True
             End If
+            'prepare table for print
+            myFunctions.prepareTempTable(tempDS, 0, class_name)
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -177,5 +182,22 @@ Public Class viewResultsForm
         DT = tempDS.Tables(0)
         Return DT
     End Function
+
+    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        Dim primary As String() = {"1", "2", "3", "4", "5"}
+        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
+        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+
+        If primary.Contains(class_name) Then
+            Dim printForm As New printResultsPrimaryForm(tempDS, 0, class_name)
+            printForm.Show()
+        ElseIf lowSec.Contains(class_name) Then
+            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name)
+            printForm.Show()
+        ElseIf sec.Contains(class_name) Then
+            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name)
+            printForm.Show()
+        End If
+    End Sub
 
 End Class

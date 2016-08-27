@@ -53,3 +53,8 @@ C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\zh-H
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.ReportCard.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.vbproj.ResolveComReference.cache
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\RdlCompile.cache
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\RdlCompile.compiled
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.printResultLowSecForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.printResultsPrimaryForm.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.printResultSecForm.resources

@@ -77,6 +77,91 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:ASMAS.TerseDataSet.Paste_ErrorsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsLowSecDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_10ADataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_10EDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_2DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_3DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_4DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_5DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_6EDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_6NDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_7NDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_8NDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_9EDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_9NDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsPrimaryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsSecDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:ASMAS.TerseDataSet.classRow">
 <summary>
 Represents strongly named DataRow class.
@@ -123,6 +208,91 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:ASMAS.TerseDataSet.subjectsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.Paste_ErrorsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsLowSecRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_1Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_10ARow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_10ERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_2Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_3Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_4Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_5Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_6ERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_6NRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_7NRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_8NRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_9ERow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_9NRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsPrimaryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsSecRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -177,6 +347,91 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:ASMAS.TerseDataSet.Paste_ErrorsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsLowSecRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_10ARowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_10ERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_2RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_3RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_4RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_5RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_6ERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_6NRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_7NRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_8NRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_9ERowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.results_9NRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsPrimaryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSet.printResultsSecRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:ASMAS.TerseDataSetTableAdapters.classTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -223,6 +478,91 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:ASMAS.TerseDataSetTableAdapters.subjectsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.Paste_ErrorsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.printResultsLowSecTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_1TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_10ATableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_10ETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_2TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_3TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_4TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_5TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_6ETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_6NTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_7NTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_8NTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_9ETableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.results_9NTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.printResultsPrimaryTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.TerseDataSetTableAdapters.printResultsSecTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

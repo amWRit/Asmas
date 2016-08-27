@@ -135,7 +135,7 @@ Public Class addResultLowSecForm
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
-        Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, sciTh, sciPr, socTh, socPr, obtTh, obtPr, compTh, compPr, heaTh, heaPr, morTh, morPr}
+        Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, sciTh, sciPr, socTh, socPr, obtTh, obtPr, compTh, compPr, heaTh, heaPr, morTh, morPr, attendance}
 
         Dim DS = New DataSet
         Dim SQL As String = ""
@@ -143,7 +143,7 @@ Public Class addResultLowSecForm
         Dim student_id = contents(0)
         Dim terminal = contents(4)
         Try
-            SQL = "SELECT eng_th, eng_pr, nep_th, nep_pr, math_th, math_pr, sci_th, sci_pr, soc_th, soc_pr, obt_th, obt_pr, comp_th, comp_pr, hea_th, hea_pr, mor_th, mor_pr
+            SQL = "SELECT eng_th, eng_pr, nep_th, nep_pr, math_th, math_pr, sci_th, sci_pr, soc_th, soc_pr, obt_th, obt_pr, comp_th, comp_pr, hea_th, hea_pr, mor_th, mor_pr, attendance
                     FROM 
                     results_" & className & " where student_id=" & student_id & " and terminal = '" & terminal & "'"
 
@@ -230,7 +230,7 @@ Public Class addResultLowSecForm
             "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
             "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "obt_th", "obt_th_g", "obt_pr", "obt_pr_g", "obt_total", "obt_total_g", "comp_th", "comp_th_g", "comp_pr", "comp_pr_g",
             "comp_total", "comp_total_g", "hea_th", "hea_th_g", "hea_pr", "hea_pr_g", "hea_total", "hea_total_g", "mor_th", "mor_th_g", "mor_pr", "mor_pr_g", "mor_total", "mor_total_g",
-            "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point"}
+            "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point", "attendance"}
 
 
         Dim inputHash = prepareInputHash()
@@ -241,12 +241,12 @@ Public Class addResultLowSecForm
             insertSQL = "INSERT INTO results_" & class_name & " ([student_id],[school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
 [nep_th],[nep_th_g],[nep_pr],[nep_pr_g],[nep_total],[nep_total_g],[math_th],[math_th_g],[math_pr],[math_pr_g],[math_total],[math_total_g],[sci_th],[sci_th_g],[sci_pr],[sci_pr_g],[sci_total],[sci_total_g],
 [soc_th],[soc_th_g],[soc_pr],[soc_pr_g],[soc_total],[soc_total_g],[obt_th],[obt_th_g],[obt_pr],[obt_pr_g],[obt_total],[obt_total_g],[comp_th],[comp_th_g],[comp_pr],[comp_pr_g],[comp_total],[comp_total_g],
-[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point]) 
+[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point], [attendance]) 
 VALUES
 (@student_id, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
 @nep_total, @nep_total_g, @math_th, @math_th_g, @math_pr, @math_pr_g, @math_total, @math_total_g, @sci_th, @sci_th_g, @sci_pr, @sci_pr_g, @sci_total, @sci_total_g, 
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @obt_th, @obt_th_g, @obt_pr, @obt_pr_g, @obt_total, @obt_total_g, @comp_th, @comp_th_g, @comp_pr, @comp_pr_g, @comp_total, @comp_total_g, 
-@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point)"
+@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @attendance)"
 
 
             Dim edit = contents(5)
@@ -310,7 +310,7 @@ VALUES
                             sci_th = @sci_th, sci_th_g = @sci_th_g, sci_pr = @sci_pr, sci_pr_g = @sci_pr_g, sci_total = @sci_total, sci_total_g = @sci_total_g, soc_th = @soc_th, soc_th_g = @soc_th_g, soc_pr = @soc_pr, soc_pr_g = @soc_pr_g, soc_total = @soc_total, soc_total_g = @soc_total_g, 
                             obt_th = @obt_th, obt_th_g = @obt_th_g, obt_pr = @obt_pr, obt_pr_g = @obt_pr_g, obt_total = @obt_total, obt_total_g = @obt_total_g, comp_th = @comp_th, comp_th_g = @comp_th_g, comp_pr = @comp_pr, comp_pr_g = @comp_pr_g, comp_total = @comp_total, comp_total_g = @comp_total_g, 
                             hea_th = @hea_th, hea_th_g = @hea_th_g, hea_pr = @hea_pr, hea_pr_g = @hea_pr_g, hea_total = @hea_total, hea_total_g = @hea_total_g, mor_th = @mor_th, mor_th_g = @mor_th_g, mor_pr = @mor_pr, mor_pr_g = @mor_pr_g, mor_total = @mor_total, mor_total_g = @mor_total_g, 
-                            total_th = @total_th, total_th_g = @total_th_g, total_pr = @total_pr, total_pr_g = @total_pr_g, total = @total, percentage = @percentage, grade = @grade, grade_point = @grade_point 
+                            total_th = @total_th, total_th_g = @total_th_g, total_pr = @total_pr, total_pr_g = @total_pr_g, total = @total, percentage = @percentage, grade = @grade, grade_point = @grade_point, attendance= @attendance 
                              WHERE id=" & rowID
 
         Return insertSQL
@@ -371,8 +371,25 @@ VALUES
         inputHash("total_pr_perc") = total_pr_perc
         inputHash("total") = total
         inputHash("percentage") = percentage
+        inputHash("attendance") = calculateAttendancePerc()
 
         Return inputHash
+    End Function
+
+    Private Sub attenPercTextBox_Focus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles attendance.Enter
+        Me.attendance.Text = calculateAttendancePerc().ToString
+    End Sub
+
+    Private Sub attenPercTextBox_MouseClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles attendance.MouseClick
+        Me.attendance.Text = calculateAttendancePerc().ToString
+    End Sub
+
+    Public Function calculateAttendancePerc() As Double
+        Dim total_days As Double
+        Dim attend_perc As Double
+        If totalDays.Text = "0" Then total_days = 1 Else total_days = CDbl(totalDays.Text)
+        attend_perc = CDbl(presentDays.Text) / total_days * 100
+        Return attend_perc
     End Function
 
     Public Function calculateGrades(inputHash As Hashtable) As Hashtable
@@ -604,7 +621,4 @@ order by student_id"
         End Try
     End Sub
 
-    Private Sub addResultLowSecForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
