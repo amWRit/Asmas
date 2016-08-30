@@ -33,6 +33,7 @@ Partial Class classResults
         Me.updateRankBtn = New System.Windows.Forms.Button()
         Me.classResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.printBtn = New System.Windows.Forms.Button()
         Me.classResultsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -120,11 +121,22 @@ Partial Class classResults
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(94, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
+        'printBtn
+        '
+        Me.printBtn.Enabled = False
+        Me.printBtn.Location = New System.Drawing.Point(764, 9)
+        Me.printBtn.Name = "printBtn"
+        Me.printBtn.Size = New System.Drawing.Size(101, 23)
+        Me.printBtn.TabIndex = 174
+        Me.printBtn.Text = "Print Report Card"
+        Me.printBtn.UseVisualStyleBackColor = True
+        '
         'classResults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.updateRankBtn)
         Me.Controls.Add(Me.termCombo)
         Me.Controls.Add(Me.termLabel)
@@ -152,4 +164,5 @@ Partial Class classResults
     Friend WithEvents updateRankBtn As Button
     Friend WithEvents classResultsContextMenu As ContextMenuStrip
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents printBtn As Button
 End Class

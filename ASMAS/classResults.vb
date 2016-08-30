@@ -6,6 +6,7 @@ Public Class classResults
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
 
     Public contents As String()
+    Public tempDS As DataSet
 
     '{itemID, yearnum, schoolname, classname}
     Public Sub New(ByVal params As String())
@@ -20,7 +21,6 @@ Public Class classResults
 
 
     Private Sub viewBtn_Click(sender As Object, e As EventArgs) Handles viewBtn.Click
-
         Dim terminal = termCombo.Text
         refreshLV(contents(0), terminal)
     End Sub
@@ -49,13 +49,14 @@ Public Class classResults
             oData = New OleDbDataAdapter(SQL, Con)
             Con.Close()
             oData.Fill(DS)
+            tempDS = DS
 
             classResultListView.Items.Clear() 'prep Listview by clearing it
             classResultListView.Columns.Clear() 'remove columns in LV
 
             'create columns on listview
             For i As Integer = 0 To DS.Tables(0).Columns.Count - 1
-                classResultListView.Columns.Add(DS.Tables(0).Columns(i).Caption, 247, HorizontalAlignment.Left)
+                classResultListView.Columns.Add(DS.Tables(0).Columns(i).Caption, 100, HorizontalAlignment.Left)
             Next
 
             'Parse and add data to the listview
@@ -67,7 +68,7 @@ Public Class classResults
                 classResultListView.Items.Add(xItem)
             Next
 
-
+            If DS.Tables(0).Rows.Count > 0 Then printBtn.Enabled = True
         Catch ex As Exception
             MsgBox(ex.Message)
 
@@ -163,4 +164,33 @@ Public Class classResults
             _newClassResult.Show()
         End If
     End Sub
+
+    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        Dim primary As String() = {"1", "2", "3", "4", "5"}
+        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
+        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+
+        Dim class_name = contents(3)
+        Dim year_num = contents(1)
+        Dim school_name = contents(2)
+
+        Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
+
+        If primary.Contains(class_name) Then
+            Dim printForm As New printResultsPrimaryForm(tempDS, 0, class_name, class_teacher)
+            printForm.Show()
+        ElseIf lowSec.Contains(class_name) Then
+            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name, class_teacher)
+            printForm.Show()
+        ElseIf sec.Contains(class_name) Then
+            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name, class_teacher)
+            printForm.Show()
+        End If
+    End Sub
+
+    Private Function getClassTeacherName() As String
+        Dim class_teacher = "Test"
+
+        Return class_teacher
+    End Function
 End Class

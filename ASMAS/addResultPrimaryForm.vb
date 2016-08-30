@@ -379,7 +379,7 @@ VALUES
         inputHash("total_pr") = total_pr
         inputHash("total_pr_perc") = total_pr_perc
         inputHash("total") = total
-        inputHash("percentage") = percentage
+        inputHash("percentage") = Math.Round(percentage, 2)
         inputHash("attendance") = calculateAttendancePerc()
 
         Return inputHash
@@ -398,7 +398,7 @@ VALUES
         Dim attend_perc As Double
         If totalDays.Text = "0" Then total_days = 1 Else total_days = CDbl(totalDays.Text)
         attend_perc = CDbl(presentDays.Text) / total_days * 100
-        Return attend_perc
+        Return Math.Round(attend_perc, 2)
     End Function
 
     Public Function calculateGrades(inputHash As Hashtable) As Hashtable
@@ -442,7 +442,8 @@ VALUES
 
         inputHash("total_th_g") = percentToGrade(CDbl(inputHash("total_th_perc")))
         inputHash("total_pr_g") = percentToGrade(CDbl(inputHash("total_pr_perc")))
-        inputHash("grade_point") = calculateGradePoint(inputHash)
+        Dim avg_grade_point As Double = calculateGradePoint(inputHash)
+        inputHash("grade_point") = Math.Round(avg_grade_point, 2)
         inputHash("grade") = gradePointToGrade(CDbl(inputHash("grade_point")))
         Return inputHash
     End Function
@@ -501,23 +502,23 @@ VALUES
 
     Public Function gradePointToGrade(gradePoint As Double) As String
         Dim grade As String
-        If gradePoint = 4 Then
+        If gradePoint >= 3.6 Then
             grade = "A+"
-        ElseIf gradePoint >= 3.6 Then
-            grade = "A"
         ElseIf gradePoint >= 3.2 Then
-            grade = "B+"
+            grade = "A"
         ElseIf gradePoint >= 2.8 Then
-            grade = "B"
+            grade = "B+"
         ElseIf gradePoint >= 2.4 Then
-            grade = "C+"
+            grade = "B"
         ElseIf gradePoint >= 2 Then
-            grade = "C"
+            grade = "C+"
         ElseIf gradePoint >= 1.6 Then
-            grade = "D+"
+            grade = "C"
         ElseIf gradePoint >= 1.2 Then
-            grade = "D"
+            grade = "D+"
         ElseIf gradePoint >= 0.8 Then
+            grade = "D"
+        ElseIf gradePoint > 0 And gradePoint < 0.8 Then
             grade = "E"
         Else
             grade = "NG"
@@ -591,6 +592,13 @@ order by student_id"
             oData = New OleDbDataAdapter(SQL, Con)
             Con.Close()
             oData.Fill(DS)
+
+            If DS.Tables(0).Rows.Count = 0 Then
+                Dim I As Integer = MessageBox.Show("Yay!! You have successfully entered result of every student.", "Congratulations!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If I = MsgBoxResult.Ok Then
+                    Me.Close()
+                End If
+            End If
 
             'find the student reg_number and name
             SQL = "SELECT  f_name, m_name, l_name, reg_number from student where id = " & DS.Tables(0).Rows(0)(2).ToString & ""

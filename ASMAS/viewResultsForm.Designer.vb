@@ -167,7 +167,7 @@ Partial Class viewResultsForm
         Me.exportBtn.BackgroundImage = CType(resources.GetObject("exportBtn.BackgroundImage"), System.Drawing.Image)
         Me.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.exportBtn.Enabled = False
-        Me.exportBtn.Location = New System.Drawing.Point(940, 14)
+        Me.exportBtn.Location = New System.Drawing.Point(944, 19)
         Me.exportBtn.Name = "exportBtn"
         Me.exportBtn.Size = New System.Drawing.Size(27, 23)
         Me.exportBtn.TabIndex = 25
@@ -176,7 +176,7 @@ Partial Class viewResultsForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(931, 40)
+        Me.Label1.Location = New System.Drawing.Point(941, 45)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 13)
         Me.Label1.TabIndex = 26
@@ -185,11 +185,11 @@ Partial Class viewResultsForm
         'printBtn
         '
         Me.printBtn.Enabled = False
-        Me.printBtn.Location = New System.Drawing.Point(838, 19)
+        Me.printBtn.Location = New System.Drawing.Point(837, 19)
         Me.printBtn.Name = "printBtn"
-        Me.printBtn.Size = New System.Drawing.Size(75, 23)
+        Me.printBtn.Size = New System.Drawing.Size(101, 23)
         Me.printBtn.TabIndex = 27
-        Me.printBtn.Text = "Print"
+        Me.printBtn.Text = "Print Report Card"
         Me.printBtn.UseVisualStyleBackColor = True
         '
         'viewResultsForm

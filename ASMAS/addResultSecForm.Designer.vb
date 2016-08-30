@@ -567,7 +567,7 @@ Partial Class addResultSecForm
         'opt1Combo
         '
         Me.opt1Combo.FormattingEnabled = True
-        Me.opt1Combo.Items.AddRange(New Object() {"Math", "Account"})
+        Me.opt1Combo.Items.AddRange(New Object() {"Opt. Math", "Economics"})
         Me.opt1Combo.Location = New System.Drawing.Point(86, 331)
         Me.opt1Combo.Name = "opt1Combo"
         Me.opt1Combo.Size = New System.Drawing.Size(75, 21)
@@ -577,7 +577,7 @@ Partial Class addResultSecForm
         'opt2Combo
         '
         Me.opt2Combo.FormattingEnabled = True
-        Me.opt2Combo.Items.AddRange(New Object() {"Education", "Economics", "Computer"})
+        Me.opt2Combo.Items.AddRange(New Object() {"Education", "Account", "Computer"})
         Me.opt2Combo.Location = New System.Drawing.Point(86, 361)
         Me.opt2Combo.Name = "opt2Combo"
         Me.opt2Combo.Size = New System.Drawing.Size(75, 21)
