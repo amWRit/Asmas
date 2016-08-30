@@ -56,7 +56,7 @@ Public Class addStudentToClassForm
 
             'create columns on listview
             For i As Integer = 0 To DS.Tables(0).Columns.Count - 1
-                searchResultListView.Columns.Add(DS.Tables(0).Columns(i).Caption, 247, HorizontalAlignment.Left)
+                searchResultListView.Columns.Add(DS.Tables(0).Columns(i).Caption, 100, HorizontalAlignment.Left)
             Next
 
             'Parse and add data to the listview

@@ -24,15 +24,25 @@ Partial Class printResultsPrimaryForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.printResultsPrimaryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.primaryReportViewer = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.nextBtn = New System.Windows.Forms.Button()
         Me.previousBtn = New System.Windows.Forms.Button()
-        Me.TerseDataSet = New ASMAS.TerseDataSet()
-        Me.printResultsPrimaryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.printResultsPrimaryTableAdapter = New ASMAS.TerseDataSetTableAdapters.printResultsPrimaryTableAdapter()
-        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.printResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'printResultsPrimaryBindingSource
+        '
+        Me.printResultsPrimaryBindingSource.DataMember = "printResultsPrimary"
+        Me.printResultsPrimaryBindingSource.DataSource = Me.TerseDataSet
+        '
+        'TerseDataSet
+        '
+        Me.TerseDataSet.DataSetName = "TerseDataSet"
+        Me.TerseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'primaryReportViewer
         '
@@ -65,16 +75,6 @@ Partial Class printResultsPrimaryForm
         Me.previousBtn.Text = "Previous"
         Me.previousBtn.UseVisualStyleBackColor = True
         '
-        'TerseDataSet
-        '
-        Me.TerseDataSet.DataSetName = "TerseDataSet"
-        Me.TerseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'printResultsPrimaryBindingSource
-        '
-        Me.printResultsPrimaryBindingSource.DataMember = "printResultsPrimary"
-        Me.printResultsPrimaryBindingSource.DataSource = Me.TerseDataSet
-        '
         'printResultsPrimaryTableAdapter
         '
         Me.printResultsPrimaryTableAdapter.ClearBeforeFill = True
@@ -91,8 +91,8 @@ Partial Class printResultsPrimaryForm
         Me.Name = "printResultsPrimaryForm"
         Me.Text = "printResultsPrimaryForm"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.printResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

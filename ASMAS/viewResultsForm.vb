@@ -122,7 +122,7 @@ Public Class viewResultsForm
 
             'create columns on listview
             For i As Integer = 0 To DS.Tables(0).Columns.Count - 1
-                databaseResultListView.Columns.Add(DS.Tables(0).Columns(i).Caption, 247, HorizontalAlignment.Left)
+                databaseResultListView.Columns.Add(DS.Tables(0).Columns(i).Caption, 100, HorizontalAlignment.Left)
             Next
 
             'Parse and add data to the listview
@@ -187,14 +187,18 @@ Public Class viewResultsForm
         Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
         Dim sec As String() = {"9E", "9N", "10E", "10A"}
 
+        Dim school_name = schoolName.Text
+        Dim year_num = yearName.Text
+        Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
+
         If primary.Contains(class_name) Then
-            Dim printForm As New printResultsPrimaryForm(tempDS, 0, class_name)
+            Dim printForm As New printResultsPrimaryForm(tempDS, 0, class_name, class_teacher)
             printForm.Show()
         ElseIf lowSec.Contains(class_name) Then
-            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name)
+            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name, class_teacher)
             printForm.Show()
         ElseIf sec.Contains(class_name) Then
-            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name)
+            Dim printForm As New printResultSecForm(tempDS, 0, class_name, class_teacher)
             printForm.Show()
         End If
     End Sub

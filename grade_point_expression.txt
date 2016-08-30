@@ -1,0 +1,5 @@
+=IIf(Fields!YearlyIncome.Value >= 60000,"High","Low")
+
+=First(Fields!grade.Value, "resultPrimary")
+
+=IIf(First(Fields!grade.Value, "resultPrimary")="A+",4,IIf(First(Fields!grade.Value, "resultPrimary")="A",3.6,IIf(First(Fields!grade.Value, "resultPrimary")="B+",3.2,IIf(First(Fields!grade.Value, "resultPrimary")="B",2.8,IIf(First(Fields!grade.Value, "resultPrimary")="C+",2.4,IIf(First(Fields!grade.Value, "resultPrimary")="C",2,IIf(First(Fields!grade.Value, "resultPrimary")="D+",1.6,IIf(First(Fields!grade.Value, "resultPrimary")="D",1.2,IIf(First(Fields!grade.Value, "resultPrimary")="E",0.88,"NG")))))))))
