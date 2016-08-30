@@ -52,7 +52,7 @@ Public Class FileHandler
         ' some time Office application does not quit after automation: so i am calling GC.Collect method.
         GC.Collect()
 
-        MessageBox.Show("File Export Successfully!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        MessageBox.Show("File Exported Successfully!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
     Public Shared Sub ReleaseObject(ByVal o As Object)
         Try

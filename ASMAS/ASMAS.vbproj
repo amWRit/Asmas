@@ -264,16 +264,6 @@
     <Compile Include="TerseDataSet.vb">
       <DependentUpon>TerseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TerseDataSet1.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TerseDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="TerseDataSet2.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TerseDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="User.vb" />
     <Compile Include="viewDatabaseForm.Designer.vb">
       <DependentUpon>viewDatabaseForm.vb</DependentUpon>
@@ -341,6 +331,7 @@
     <EmbeddedResource Include="Print\printResultsPrimaryForm.resx">
       <DependentUpon>printResultsPrimaryForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Print\Report1.rdlc" />
     <EmbeddedResource Include="Print\resultSec.rdlc" />
     <EmbeddedResource Include="Print\resultPrimary.rdlc" />
     <EmbeddedResource Include="Print\resultLowSec.rdlc" />
@@ -388,38 +379,18 @@
     </None>
     <None Include="TerseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TerseDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="TerseDataSet.xss">
       <DependentUpon>TerseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="TerseDataSet1.xsc">
-      <DependentUpon>TerseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="TerseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TerseDataSet1.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TerseDataSet1.xss">
-      <DependentUpon>TerseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="TerseDataSet2.xsc">
-      <DependentUpon>TerseDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="TerseDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>TerseDataSet2.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TerseDataSet2.xss">
-      <DependentUpon>TerseDataSet2.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="asmas_CiZ_icon.ico" />
     <Content Include="Terse.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Terse1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

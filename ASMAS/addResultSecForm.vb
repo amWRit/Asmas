@@ -215,7 +215,7 @@ Public Class addResultSecForm
             Exit Sub
         End If
 
-        Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, sciTh, sciPr, socTh, socPr, ephTh, ephPr, opt1Th, opt1Pr, opt2Th, opt2Pr, attendance}
+        Dim textBoxes As TextBox() = {engTh, engPr, nepTh, nepPr, mathTh, mathPr, sciTh, sciPr, socTh, socPr, ephTh, ephPr, opt1Th, opt1Pr, opt2Th, opt2Pr, presentDays, totalDays, attendance}
 
         Dim valid As Boolean = checkNumberValidity(textBoxes)
 
@@ -234,7 +234,7 @@ Public Class addResultSecForm
             "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
             "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "eph_th", "eph_th_g", "eph_pr", "eph_pr_g", "eph_total", "eph_total_g", "opt1_th", "opt1_th_g", "opt1_pr", "opt1_pr_g",
             "opt1_total", "opt1_total_g", "opt2_th", "opt2_th_g", "opt2_pr", "opt2_pr_g", "opt2_total", "opt2_total_g",
-            "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point", "attendance"}
+            "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point", "opt1", "opt2", "attendance"}
 
 
         Dim inputHash = prepareInputHash()
@@ -259,12 +259,12 @@ VALUES
             Con.Open()
             Dim cmd As New OleDbCommand(insertSQL, Con)
 
-            For Each key As String In hashKeys
-                cmd.Parameters.AddWithValue("@" & key, newInputHash(key))
-            Next
-            cmd.Parameters.AddWithValue("@opt1", inputHash("opt1"))
-            cmd.Parameters.AddWithValue("@opt2", inputHash("opt2"))
 
+            For Each key As String In hashKeys
+                cmd.Parameters.AddWithValue("@" & key, newInputHash(key).ToString)
+            Next
+            'cmd.Parameters.AddWithValue("@opt1", opt1Combo.Text)
+            'cmd.Parameters.AddWithValue("@opt2", opt2Combo.Text)
             cmd.ExecuteNonQuery()
 
             Dim I As Integer = MsgBox("Insert Successful", MsgBoxStyle.Information, "INSERTED")
@@ -281,6 +281,8 @@ VALUES
                     termCombo.Text = ""
                     studentRegCombo.Text = ""
                     studentName.Text = ""
+                    opt1Combo.Text = ""
+                    opt2Combo.Text = ""
                 End If
             End If
 
@@ -388,7 +390,7 @@ VALUES
         inputHash("total_pr") = total_pr
         inputHash("total_pr_perc") = total_pr_perc
         inputHash("total") = total
-        inputHash("percentage") = percentage
+        inputHash("percentage") = Math.Round(percentage, 2)
         inputHash("attendance") = calculateAttendancePerc()
 
         Return inputHash
@@ -407,7 +409,7 @@ VALUES
         Dim attend_perc As Double
         If totalDays.Text = "0" Then total_days = 1 Else total_days = CDbl(totalDays.Text)
         attend_perc = CDbl(presentDays.Text) / total_days * 100
-        Return attend_perc
+        Return Math.Round(attend_perc, 2)
     End Function
 
     Public Function calculateGrades(inputHash As Hashtable) As Hashtable
@@ -456,7 +458,8 @@ VALUES
 
         inputHash("total_th_g") = percentToGrade(CDbl(inputHash("total_th_perc")))
         inputHash("total_pr_g") = percentToGrade(CDbl(inputHash("total_pr_perc")))
-        inputHash("grade_point") = calculateGradePoint(inputHash)
+        Dim avg_grade_point As Double = calculateGradePoint(inputHash)
+        inputHash("grade_point") = Math.Round(avg_grade_point, 2)
         inputHash("grade") = gradePointToGrade(CDbl(inputHash("grade_point")))
         Return inputHash
     End Function
@@ -515,23 +518,23 @@ VALUES
 
     Public Function gradePointToGrade(gradePoint As Double) As String
         Dim grade As String
-        If gradePoint = 4 Then
+        If gradePoint >= 3.6 Then
             grade = "A+"
-        ElseIf gradePoint >= 3.6 Then
-            grade = "A"
         ElseIf gradePoint >= 3.2 Then
-            grade = "B+"
+            grade = "A"
         ElseIf gradePoint >= 2.8 Then
-            grade = "B"
+            grade = "B+"
         ElseIf gradePoint >= 2.4 Then
-            grade = "C+"
+            grade = "B"
         ElseIf gradePoint >= 2 Then
-            grade = "C"
+            grade = "C+"
         ElseIf gradePoint >= 1.6 Then
-            grade = "D+"
+            grade = "C"
         ElseIf gradePoint >= 1.2 Then
-            grade = "D"
+            grade = "D+"
         ElseIf gradePoint >= 0.8 Then
+            grade = "D"
+        ElseIf gradePoint > 0 And gradePoint < 0.8 Then
             grade = "E"
         Else
             grade = "NG"
@@ -560,6 +563,8 @@ VALUES
         For i As Integer = 0 To textboxes.Count - 1
             textboxes(i).Text = "0"
         Next
+        opt1Combo.Text = ""
+        opt2Combo.Text = ""
 
         'find next student whose result is not added
         findNext()
@@ -605,6 +610,13 @@ order by student_id"
             oData = New OleDbDataAdapter(SQL, Con)
             Con.Close()
             oData.Fill(DS)
+
+            If DS.Tables(0).Rows.Count = 0 Then
+                Dim I As Integer = MessageBox.Show("Yay!! You have successfully entered result of every student.", "Congratulations!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                If I = MsgBoxResult.Ok Then
+                    Me.Close()
+                End If
+            End If
 
             'find the student reg_number and name
             SQL = "SELECT  f_name, m_name, l_name, reg_number from student where id = " & DS.Tables(0).Rows(0)(2).ToString & ""

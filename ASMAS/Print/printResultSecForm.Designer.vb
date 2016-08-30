@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class printResultSecForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,26 +20,36 @@ Partial Class printResultSecForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.printResultsSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.secReportViewer = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.nextBtn = New System.Windows.Forms.Button()
         Me.previousBtn = New System.Windows.Forms.Button()
-        Me.TerseDataSet = New ASMAS.TerseDataSet()
-        Me.printResultsSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.printResultsSecTableAdapter = New ASMAS.TerseDataSetTableAdapters.printResultsSecTableAdapter()
-        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.printResultsSecBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'printResultsSecBindingSource
+        '
+        Me.printResultsSecBindingSource.DataMember = "printResultsSec"
+        Me.printResultsSecBindingSource.DataSource = Me.TerseDataSet
+        '
+        'TerseDataSet
+        '
+        Me.TerseDataSet.DataSetName = "TerseDataSet"
+        Me.TerseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'secReportViewer
         '
         Me.secReportViewer.Dock = System.Windows.Forms.DockStyle.Bottom
-        ReportDataSource2.Name = "resultsSec"
-        ReportDataSource2.Value = Me.printResultsSecBindingSource
-        Me.secReportViewer.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "resultsSec"
+        ReportDataSource1.Value = Me.printResultsSecBindingSource
+        Me.secReportViewer.LocalReport.DataSources.Add(ReportDataSource1)
         Me.secReportViewer.LocalReport.ReportEmbeddedResource = "ASMAS.resultSec.rdlc"
         Me.secReportViewer.Location = New System.Drawing.Point(0, 36)
         Me.secReportViewer.Name = "secReportViewer"
@@ -65,16 +75,6 @@ Partial Class printResultSecForm
         Me.previousBtn.Text = "Previous"
         Me.previousBtn.UseVisualStyleBackColor = True
         '
-        'TerseDataSet
-        '
-        Me.TerseDataSet.DataSetName = "TerseDataSet"
-        Me.TerseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'printResultsSecBindingSource
-        '
-        Me.printResultsSecBindingSource.DataMember = "printResultsSec"
-        Me.printResultsSecBindingSource.DataSource = Me.TerseDataSet
-        '
         'printResultsSecTableAdapter
         '
         Me.printResultsSecTableAdapter.ClearBeforeFill = True
@@ -91,8 +91,8 @@ Partial Class printResultSecForm
         Me.Name = "printResultSecForm"
         Me.Text = "printResultSecForm"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.printResultsSecBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
