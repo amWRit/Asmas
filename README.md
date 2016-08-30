@@ -1,5 +1,6 @@
 # __Asmas__
 ##Student Information System 
+### Windows Desktop Software (Vb.net)
 
 Three roles: 
 * Admin
@@ -32,8 +33,7 @@ __Class Teacher__ can:
   * class, by ID/name; only his/her assigned classes are available
   * student, by ID/name
 
-___Viewer__ can:
+__Viewer__ can:
 * Search the database
   * class, by ID/name; only his/her assigned classes are available
   * student, by ID/name
-
