@@ -59,3 +59,4 @@ C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMA
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.printResultsPrimaryForm.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.printResultSecForm.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Terse1.accdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.subjectWiseResultForm.resources
