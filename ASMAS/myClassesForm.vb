@@ -177,12 +177,12 @@ Public Class myClassesForm
         Dim sec As String() = {"9E", "9N", "10E", "10A"}
 
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
-        Dim itemID = myClassesListView.Items(ItemIndex).SubItems(0).Text
+        Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
         Dim year_num = myClassesListView.Items(ItemIndex).SubItems(1).Text
         Dim school_name = myClassesListView.Items(ItemIndex).SubItems(2).Text
         Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
 
-        Dim params As String() = {itemID, year_num, school_name, className, "", "FALSE"}
+        Dim params As String() = {class_id, year_num, school_name, className}
 
         Dim subjectResult As New subjectWiseResultForm(params)
         subjectResult.Show()

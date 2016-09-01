@@ -24,12 +24,10 @@ Partial Class subjectWiseResultForm
     Private Sub InitializeComponent()
         Me.subjectCombo = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.engThLabel = New System.Windows.Forms.Label()
         Me.subjPr = New System.Windows.Forms.TextBox()
         Me.subjTh = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.engPrLabel = New System.Windows.Forms.Label()
         Me.studentRegLabel = New System.Windows.Forms.Label()
         Me.regNumberTextBox = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
@@ -49,6 +47,7 @@ Partial Class subjectWiseResultForm
         Me.subjectCombo.Name = "subjectCombo"
         Me.subjectCombo.Size = New System.Drawing.Size(98, 21)
         Me.subjectCombo.TabIndex = 0
+        Me.subjectCombo.Text = "Choose subject..."
         '
         'Label1
         '
@@ -58,15 +57,6 @@ Partial Class subjectWiseResultForm
         Me.Label1.Size = New System.Drawing.Size(82, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Choose Subject"
-        '
-        'engThLabel
-        '
-        Me.engThLabel.AutoSize = True
-        Me.engThLabel.Location = New System.Drawing.Point(207, 52)
-        Me.engThLabel.Name = "engThLabel"
-        Me.engThLabel.Size = New System.Drawing.Size(24, 13)
-        Me.engThLabel.TabIndex = 196
-        Me.engThLabel.Text = "/60"
         '
         'subjPr
         '
@@ -103,15 +93,6 @@ Partial Class subjectWiseResultForm
         Me.Label3.Size = New System.Drawing.Size(50, 16)
         Me.Label3.TabIndex = 191
         Me.Label3.Text = "Theory"
-        '
-        'engPrLabel
-        '
-        Me.engPrLabel.AutoSize = True
-        Me.engPrLabel.Location = New System.Drawing.Point(365, 55)
-        Me.engPrLabel.Name = "engPrLabel"
-        Me.engPrLabel.Size = New System.Drawing.Size(24, 13)
-        Me.engPrLabel.TabIndex = 197
-        Me.engPrLabel.Text = "/40"
         '
         'studentRegLabel
         '
@@ -171,8 +152,6 @@ Partial Class subjectWiseResultForm
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.subjTh)
         Me.GroupBox1.Controls.Add(Me.subjPr)
-        Me.GroupBox1.Controls.Add(Me.engThLabel)
-        Me.GroupBox1.Controls.Add(Me.engPrLabel)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 104)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(476, 85)
@@ -192,10 +171,12 @@ Partial Class subjectWiseResultForm
         'termCombo
         '
         Me.termCombo.FormattingEnabled = True
+        Me.termCombo.Items.AddRange(New Object() {"First", "Second", "Third", "SendUp"})
         Me.termCombo.Location = New System.Drawing.Point(304, 49)
         Me.termCombo.Name = "termCombo"
         Me.termCombo.Size = New System.Drawing.Size(98, 21)
         Me.termCombo.TabIndex = 1
+        Me.termCombo.Text = "Choose terminal..."
         '
         'subjectWiseResultForm
         '

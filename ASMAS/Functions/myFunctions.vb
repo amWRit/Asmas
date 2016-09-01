@@ -4,6 +4,7 @@ Imports Microsoft.Reporting.WinForms
 
 Public Class myFunctions
     Public Shared data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Public Shared Con As System.Data.OleDb.OleDbConnection
 
     'prepare temp table for printing results - three different tables for three levels
     Public Shared Sub prepareTempTable(ByVal DS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String)
@@ -193,4 +194,100 @@ VALUES
         Return class_teacher
     End Function
 
+    Public Shared Function getStudentIdsOf(class_id As String) As Integer()
+        Dim student_ids As Integer() = {}
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            SQL = "SELECT student_id FROM class_student where class_id=" & class_id
+            Con.Open() 'Open connection
+
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            ReDim Preserve student_ids(rowCount - 1)
+
+            For i As Integer = 0 To rowCount - 1
+                student_ids(i) = CInt(DS.Tables(0).Rows(i)(0))
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+        Return student_ids
+    End Function
+
+    Public Shared Function getStudentInfoOf(student_id As Integer) As String()
+        Dim studentInfo As String() = {}
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            'find the student reg_number and name
+            SQL = "SELECT  f_name, m_name, l_name, reg_number from student where id = " & student_id
+            Con.Open() 'Open connection
+
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+
+            Dim reg_number = DS.Tables(0).Rows(0)(3).ToString
+            Dim student_name = DS.Tables(0).Rows(0)(0).ToString & " " & DS.Tables(0).Rows(0)(1).ToString & " " & DS.Tables(0).Rows(0)(2).ToString
+            studentInfo = {reg_number, student_name}
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+
+        Return studentInfo
+    End Function
+
+    Public Shared Function getClassSubjectsOf(class_id As String) As String()
+        Dim subjects As String() = {}
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            'find the student reg_number and name
+            SQL = "SELECT subject_name from subject_teacher where class_id = " & class_id
+            Con.Open() 'Open connection
+
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            ReDim Preserve subjects(rowCount - 1)
+
+            For i As Integer = 0 To rowCount - 1
+                subjects(i) = DS.Tables(0).Rows(i)(0).ToString
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+
+        Return subjects
+    End Function
 End Class

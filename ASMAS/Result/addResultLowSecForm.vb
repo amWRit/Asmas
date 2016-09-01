@@ -55,7 +55,7 @@ Public Class addResultLowSecForm
             Dim terminal = termCombo.Text
             Dim class_name = contents(3)
 
-            Dim val As String() = resultFunctions.findStudentName(terminal, class_name, reg_number)
+            Dim val As String() = resultFunctions.findStudentName(terminal, class_name, reg_number) '{studentName, student_id}
             If val Is Nothing Then Exit Sub
             studentName.Text = val(0)
             ReDim Preserve contents(7)

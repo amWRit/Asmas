@@ -82,6 +82,7 @@ Public Class resultFunctions
 
             If present = True Then
                 MessageBox.Show("Record is already present. please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                'Return {"", ""}
                 Exit Function
             End If
             'save student_id
@@ -399,8 +400,10 @@ Public Class resultFunctions
         Dim className = params(3)
         Dim student_id = params(0)
         Dim terminal = params(4)
+        Dim school_year = params(1)
+        Dim school_name = params(2)
         Try
-            SQL = getLoadResultSQL(className, student_id, terminal)
+            SQL = getLoadResultSQL(school_year, school_name, className, student_id, terminal)
             Con.Open() 'Open connection
 
             Dim oData As OleDbDataAdapter
@@ -428,18 +431,18 @@ Public Class resultFunctions
         End Try
     End Sub
 
-    Public Shared Function getLoadResultSQL(className As String, student_id As String, terminal As String) As String
+    Public Shared Function getLoadResultSQL(school_year As String, school_name As String, className As String, student_id As String, terminal As String) As String
         Dim loadSQL_primary = "SELECT reg_number, full_name, eng_th, eng_pr, nep_th, nep_pr, math_th, math_pr, sci_th, sci_pr, soc_th, soc_pr, opt_eng_th, opt_eng_pr, gk_conv_th, gk_conv_pr, attendance
                     FROM 
-                    results_" & className & " where student_id=" & student_id & " and terminal = '" & terminal & "'"
+                    results_" & className & " where student_id=" & student_id & " and school_name='" & school_name & "' and school_year= '" & school_year & "' and terminal = '" & terminal & "'"
 
         Dim loadSQL_lowSec = "SELECT reg_number, full_name, eng_th, eng_pr, nep_th, nep_pr, math_th, math_pr, sci_th, sci_pr, soc_th, soc_pr, obt_th, obt_pr, comp_th, comp_pr, hea_th, hea_pr, mor_th, mor_pr, attendance
                     FROM 
-                    results_" & className & " where student_id=" & student_id & " and terminal = '" & terminal & "'"
+                    results_" & className & " where student_id=" & student_id & " and school_name='" & school_name & "' and school_year= '" & school_year & "' and terminal = '" & terminal & "'"
 
         Dim loadSQL_sec = "SELECT reg_number, full_name, eng_th, eng_pr, nep_th, nep_pr, math_th, math_pr, sci_th, sci_pr, soc_th, soc_pr, eph_th, eph_pr, opt1_th, opt1_pr, opt2_th, opt2_pr, attendance, opt1, opt2
                     FROM 
-                    results_" & className & " where student_id=" & student_id & " and terminal = '" & terminal & "'"
+                    results_" & className & " where student_id=" & student_id & " and school_name='" & school_name & "' and school_year= '" & school_year & "' and terminal = '" & terminal & "'"
 
         If primary.Contains(className) Then
             Return loadSQL_primary
@@ -514,6 +517,97 @@ order by student_id"
             Dim student_name = DS.Tables(0).Rows(0)(0).ToString & " " & DS.Tables(0).Rows(0)(1).ToString & " " & DS.Tables(0).Rows(0)(2).ToString
             studentNameTextBox.Text = student_name
 
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+    End Sub
+
+    Public Shared Function getSubjKey(subject As String, class_name As String) As String
+        Dim key As String = ""
+        If subject = "English" Then
+            key = "eng"
+        ElseIf subject = "Nepali" Then
+            key = "nep"
+        ElseIf subject = "Maths" Then
+            key = "math"
+        ElseIf subject = "Science" Then
+            key = "sci"
+        ElseIf subject = "Social" Then
+            key = "soc"
+        ElseIf subject = "OBT" Then
+            key = "obt"
+        ElseIf subject = "Health" Then
+            key = "hea"
+        ElseIf subject = "Moral" Then
+            key = "mor"
+        ElseIf subject = "Computer" And sec.Contains(class_name) Then
+            key = "opt2"
+        ElseIf subject = "Opt English" Then
+            key = "opt_eng"
+        ElseIf subject = "GK/Conv" Then
+            key = "gk_conv"
+        ElseIf subject = "EPH" Then
+            key = "eph"
+        ElseIf subject = "Opt. Maths" Then
+            key = "opt1"
+        ElseIf subject = "Account" Then
+            key = "opt1"
+        ElseIf subject = "Economics" Then
+            key = "opt2"
+        ElseIf subject = "Education" Then
+            key = "opt2"
+        ElseIf subject = "Computer" Then
+            key = "comp"
+        End If
+        Return key
+    End Function
+
+    Public Shared Function getStudentResultRowID(school_year As String, school_name As String, terminal As String, class_name As String, student_id As String) As Integer
+        Dim SQL = ""
+        Dim DS = New DataSet
+        Dim oData As OleDbDataAdapter
+
+        Dim rowSQL As String = "SELECT id from results_" & class_name & " where school_name='" & school_name & "' and school_year ='" & school_year &
+    "' and terminal = '" & terminal & "' and student_id=" & student_id
+
+        Con.Open()
+        oData = New OleDbDataAdapter(rowSQL, Con)
+        Con.Close()
+        oData.Fill(DS)
+        Dim rowID = CInt(DS.Tables(0).Rows(0)(0))
+        Return rowID
+    End Function
+
+    'params = {school_year, school_name, class_name, terminal, current_student_id, subjkey}
+    Public Shared Sub loadSubjMarks(params As String(), subjTh As TextBox, subjPr As TextBox)
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+        Dim school_year = params(0)
+        Dim school_name = params(1)
+        Dim class_name = params(2)
+        Dim terminal = params(3)
+        Dim student_id = params(4)
+        Dim subjKey = params(5)
+        Try
+            SQL = "SELECT " & subjKey & "_th, " & subjKey & "_pr " &
+                    "FROM results_" & class_name & " where student_id=" & student_id & " and school_name='" & school_name & "' and school_year= '" & school_year & "' and terminal = '" & terminal & "'"
+
+            Con.Open() 'Open connection
+
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+
+            subjTh.Text = DS.Tables(0).Rows(0)(0).ToString 'theory marks
+            subjPr.Text = DS.Tables(0).Rows(0)(1).ToString 'practical marks        
         Catch ex As Exception
             MsgBox(ex.Message)
 
