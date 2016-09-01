@@ -90,8 +90,11 @@ WHERE school_year='" & school_year & "' and school_name='" & school_name & "' an
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
         Dim ItemIndex As Integer = subjectTeacherListView.SelectedIndices(0) 'Grab the selected Index
         Dim itemID = subjectTeacherListView.Items(ItemIndex).SubItems(0).Text 'rowID
-        deleteFromDatabase(itemID)
-        subjectTeacherListView.Items(ItemIndex).Remove()
+        Dim I As Integer = MsgBox("Are you sure you want to delete?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Are you sure?")
+        If I = MsgBoxResult.Yes Then
+            deleteFromDatabase(itemID)
+            subjectTeacherListView.Items(ItemIndex).Remove()
+        End If
     End Sub
 
     Public Sub deleteFromDatabase(itemID As String)
@@ -102,18 +105,10 @@ WHERE school_year='" & school_year & "' and school_name='" & school_name & "' an
         SQL = "DELETE * from subject_teacher where ID=" & itemID
 
         Try
-            Dim I As Integer = MsgBox("Are you sure you want to delete?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Are you sure?")
-            If I = MsgBoxResult.Yes Then
-                Con.Open()
-                'DELETE FROM TableName WHERE PrimaryKey = ID
-                Dim cmd2 As New OleDb.OleDbCommand(SQL, Con)
-                cmd2.ExecuteNonQuery()
-                MsgBox("Record removed successfully.Please check.", MsgBoxStyle.Information, "REMOVED")
-            Else
-                'They didn't really want to delete, so exit
-                Return 'This exits the sub
-            End If
-
+            'DELETE FROM TableName WHERE PrimaryKey = ID
+            Dim cmd2 As New OleDb.OleDbCommand(SQL, Con)
+            cmd2.ExecuteNonQuery()
+            MsgBox("Record removed successfully.Please check.", MsgBoxStyle.Information, "REMOVED")
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally

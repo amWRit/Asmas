@@ -102,8 +102,11 @@ Public Class myClassesForm
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
         Dim itemID = myClassesListView.Items(ItemIndex).SubItems(0).Text
-        SearchForm.deleteFromDatabase(itemID, "Class")
-        myClassesListView.Items(ItemIndex).Remove()
+        Dim I As Integer = MsgBox("Are you sure you want to delete?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Are you sure?")
+        If I = MsgBoxResult.Yes Then
+            SearchForm.deleteFromDatabase(itemID, "Class")
+            myClassesListView.Items(ItemIndex).Remove()
+        End If
     End Sub
 
     Private Sub ViewStudentsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewStudentsToolStripMenuItem.Click

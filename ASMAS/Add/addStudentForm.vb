@@ -38,7 +38,7 @@ Public Class addStudentForm
         contents = params
         Dim itemID = params(0)
 
-        If itemID IsNot "" Then
+        If itemID IsNot "" Then 'edit is true
             ' Add any initialization after the InitializeComponent() call.
             Con = New OleDbConnection
             Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
@@ -119,8 +119,8 @@ Public Class addStudentForm
     End Sub
 
     Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
-
-        If schoolCombo.SelectedIndex = -1 Then
+        Dim edit = contents(1)
+        If edit = "FALSE" And schoolCombo.SelectedIndex = -1 Then
             MessageBox.Show("Please select a school.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
@@ -137,13 +137,6 @@ Public Class addStudentForm
         Dim l_name = lnameTextBox.Text
         Dim regNumber = ""
 
-        'present = checkIfPresent(f_name, m_name, l_name)
-
-        'If present = True Then
-        '    MessageBox.Show("A student with same same name is already present. Please check. (Hint: Use A, B as suffix))", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        '    Exit Sub
-        'End If
-
         Dim schoolName = schoolCombo.Text
         Dim schoolSQL As String = "SELECT distinct school_id from SCHOOL where short_name='" & schoolName & "'"
 
@@ -155,7 +148,6 @@ Public Class addStudentForm
 
         Dim school_id As Integer = CInt(DS.Tables(0).Rows(0)(0))
 
-        Dim edit = contents(1)
         If edit = "FALSE" Then
             regNumber = buildNewRegNumber()
         Else
@@ -298,14 +290,14 @@ Public Class addStudentForm
 
     Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click
         Me.Close()
-        HomeForm.Show()
+        myClassesForm.Show()
     End Sub
 
     Private Sub addStudentForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
             Me.Hide()
-            HomeForm.Show()
+            myClassesForm.Show()
         End If
     End Sub
 End Class

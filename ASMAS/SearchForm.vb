@@ -132,7 +132,7 @@ Public Class SearchForm
     Private Sub SearchForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
-            Me.Hide()
+            Me.Close()
             HomeForm.Show()
         End If
     End Sub
@@ -161,8 +161,12 @@ Public Class SearchForm
         Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
         Dim search_Type = searchType.Text
         Dim itemID = searchResultListView.Items(ItemIndex).SubItems(0).Text
-        deleteFromDatabase(itemID, search_Type)
-        searchResultListView.Items(ItemIndex).Remove()
+        Dim I As Integer = MsgBox("Are you sure you want to delete?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Are you sure?")
+        If I = MsgBoxResult.Yes Then
+            deleteFromDatabase(itemID, search_Type)
+            searchResultListView.Items(ItemIndex).Remove()
+        End If
+
     End Sub
 
     Public Sub deleteFromDatabase(ByVal itemID As String, ByVal search_Type As String)
@@ -177,22 +181,11 @@ Public Class SearchForm
         End If
 
         Try
-            Dim I As Integer = MsgBox("Are you sure you want to delete?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Are you sure?")
-            If I = MsgBoxResult.Yes Then
-                Con.Open()
-
-                'DELETE FROM TableName WHERE PrimaryKey = ID
-                Dim cmd2 As New OleDb.OleDbCommand(SQL, Con)
-
-                cmd2.ExecuteNonQuery()
-
-                MsgBox("Record Removed Successfully", MsgBoxStyle.Information, "REMOVED")
-
-            Else
-                'They didn't really want to delete, so exit
-                Return 'This exits the sub
-            End If
-
+            Con.Open()
+            'DELETE FROM TableName WHERE PrimaryKey = ID
+            Dim cmd2 As New OleDb.OleDbCommand(SQL, Con)
+            cmd2.ExecuteNonQuery()
+            MsgBox("Record Removed Successfully", MsgBoxStyle.Information, "REMOVED")
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
