@@ -111,6 +111,12 @@
     <Compile Include="Add\addClassForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="assignSubjectTeacherForm.Designer.vb">
+      <DependentUpon>assignSubjectTeacherForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="assignSubjectTeacherForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Result\addResultLowSecForm.Designer.vb">
       <DependentUpon>addResultLowSecForm.vb</DependentUpon>
     </Compile>
@@ -263,6 +269,12 @@
     <Compile Include="Result\subjectWiseResultForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="subjectTeachersDetails.Designer.vb">
+      <DependentUpon>subjectTeachersDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="subjectTeachersDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TerseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,6 +301,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Add\addClassForm.resx">
       <DependentUpon>addClassForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assignSubjectTeacherForm.resx">
+      <DependentUpon>assignSubjectTeacherForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Result\addResultLowSecForm.resx">
       <DependentUpon>addResultLowSecForm.vb</DependentUpon>
@@ -365,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Result\subjectWiseResultForm.resx">
       <DependentUpon>subjectWiseResultForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subjectTeachersDetails.resx">
+      <DependentUpon>subjectTeachersDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewDatabaseForm.resx">
       <DependentUpon>viewDatabaseForm.vb</DependentUpon>

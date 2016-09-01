@@ -187,4 +187,25 @@ Public Class myClassesForm
         Dim subjectResult As New subjectWiseResultForm(params)
         subjectResult.Show()
     End Sub
+
+    Private Sub AssignToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AssignToolStripMenuItem.Click
+        SubjectTeacherToolStripMenuItem.Visible = True
+        Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
+
+        Dim _assignSubjectTeacherForm As New assignSubjectTeacherForm(class_id)
+        _assignSubjectTeacherForm.Show()
+    End Sub
+
+    Private Sub ViewToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem1.Click
+        Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
+        Dim year_num = myClassesListView.Items(ItemIndex).SubItems(1).Text
+        Dim school_name = myClassesListView.Items(ItemIndex).SubItems(2).Text
+        Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
+        Dim params As String() = {class_id, year_num, school_name}
+
+        Dim _subjectTeachersDetails As New subjectTeachersDetails(params)
+        _subjectTeachersDetails.Show()
+    End Sub
 End Class

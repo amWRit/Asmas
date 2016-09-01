@@ -139,8 +139,8 @@ Public Class subjectWiseResultForm
             If present = True Then
                 resultFunctions.loadSubjMarks(params, subjTh, subjPr)
             Else
-                subjTh.Text = ""
-                subjPr.Text = ""
+                subjTh.Text = "0"
+                subjPr.Text = "0"
             End If
         End If
     End Sub
@@ -175,8 +175,8 @@ Public Class subjectWiseResultForm
         If present = True Then
             resultFunctions.loadSubjMarks(params, subjTh, subjPr)
         Else
-            subjTh.Text = ""
-            subjPr.Text = ""
+            subjTh.Text = "0"
+            subjPr.Text = "0"
         End If
 
     End Sub

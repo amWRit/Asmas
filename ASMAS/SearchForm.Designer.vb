@@ -38,6 +38,9 @@ Partial Class SearchForm
         Me.ViewDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubjectTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AssignToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.searchResultContextMenu.SuspendLayout()
@@ -58,7 +61,7 @@ Partial Class SearchForm
         Me.searchLabel.Location = New System.Drawing.Point(12, 23)
         Me.searchLabel.Name = "searchLabel"
         Me.searchLabel.Size = New System.Drawing.Size(41, 13)
-        Me.searchLabel.TabIndex = 1
+        Me.searchLabel.TabIndex = 8
         Me.searchLabel.Text = "Search"
         '
         'searchByLabel
@@ -67,7 +70,7 @@ Partial Class SearchForm
         Me.searchByLabel.Location = New System.Drawing.Point(199, 23)
         Me.searchByLabel.Name = "searchByLabel"
         Me.searchByLabel.Size = New System.Drawing.Size(55, 13)
-        Me.searchByLabel.TabIndex = 3
+        Me.searchByLabel.TabIndex = 7
         Me.searchByLabel.Text = "Search by"
         '
         'searchKey
@@ -85,7 +88,7 @@ Partial Class SearchForm
         Me.searchKeyword.Location = New System.Drawing.Point(403, 20)
         Me.searchKeyword.Name = "searchKeyword"
         Me.searchKeyword.Size = New System.Drawing.Size(250, 20)
-        Me.searchKeyword.TabIndex = 4
+        Me.searchKeyword.TabIndex = 3
         '
         'searchBtn
         '
@@ -133,30 +136,51 @@ Partial Class SearchForm
         '
         'searchResultContextMenu
         '
-        Me.searchResultContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewDetailsToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem})
+        Me.searchResultContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewDetailsToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.SubjectTeacherToolStripMenuItem})
         Me.searchResultContextMenu.Name = "searchResultContextMenu"
-        Me.searchResultContextMenu.Size = New System.Drawing.Size(137, 70)
+        Me.searchResultContextMenu.Size = New System.Drawing.Size(158, 92)
         '
         'ViewDetailsToolStripMenuItem
         '
         Me.ViewDetailsToolStripMenuItem.Name = "ViewDetailsToolStripMenuItem"
-        Me.ViewDetailsToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.ViewDetailsToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.ViewDetailsToolStripMenuItem.Text = "View details"
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
+        '
+        'SubjectTeacherToolStripMenuItem
+        '
+        Me.SubjectTeacherToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AssignToolStripMenuItem, Me.ViewToolStripMenuItem})
+        Me.SubjectTeacherToolStripMenuItem.Name = "SubjectTeacherToolStripMenuItem"
+        Me.SubjectTeacherToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.SubjectTeacherToolStripMenuItem.Text = "Subject Teacher"
+        Me.SubjectTeacherToolStripMenuItem.Visible = False
+        '
+        'AssignToolStripMenuItem
+        '
+        Me.AssignToolStripMenuItem.Name = "AssignToolStripMenuItem"
+        Me.AssignToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.AssignToolStripMenuItem.Text = "Assign"
+        '
+        'ViewToolStripMenuItem
+        '
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.ViewToolStripMenuItem.Text = "View"
         '
         'SearchForm
         '
+        Me.AcceptButton = Me.searchBtn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
@@ -198,4 +222,7 @@ Partial Class SearchForm
     Friend WithEvents ViewDetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SubjectTeacherToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AssignToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
 End Class

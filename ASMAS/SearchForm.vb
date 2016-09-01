@@ -43,7 +43,7 @@ Public Class SearchForm
                     query = " where (full_name LIKE '%" & search_keyword & "%')"
                 End If
                 SQL = "SELECT " & class_query & query
-
+                If User.userRole = "Admin" Then SubjectTeacherToolStripMenuItem.Visible = True
             End If
 
 
@@ -206,5 +206,25 @@ Public Class SearchForm
             EditToolStripMenuItem.Visible = False
             DeleteToolStripMenuItem.Visible = False
         End If
+    End Sub
+
+    Private Sub AssignToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AssignToolStripMenuItem.Click
+        Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = searchResultListView.Items(ItemIndex).SubItems(0).Text
+
+        Dim _assignSubjectTeacherForm As New assignSubjectTeacherForm(class_id)
+        _assignSubjectTeacherForm.Show()
+    End Sub
+
+    Private Sub ViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem.Click
+        Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = searchResultListView.Items(ItemIndex).SubItems(0).Text
+
+        Dim form = New assignSubjectTeacherForm("")
+        Dim class_info = form.getClassInfo(class_id) '{school_name, school_year}
+
+        Dim params As String() = {class_id, class_info(1), class_info(0)}
+        Dim _subjectTeachersDetails As New subjectTeachersDetails(params)
+        _subjectTeachersDetails.Show()
     End Sub
 End Class

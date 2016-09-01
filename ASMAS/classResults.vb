@@ -193,4 +193,8 @@ Public Class classResults
 
         Return class_teacher
     End Function
+
+    Private Sub classResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
