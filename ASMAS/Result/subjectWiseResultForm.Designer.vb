@@ -35,8 +35,14 @@ Partial Class subjectWiseResultForm
         Me.cancelBtn = New System.Windows.Forms.Button()
         Me.saveBtn = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.remainingCount = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.termCombo = New System.Windows.Forms.ComboBox()
+        Me.nextBtn = New System.Windows.Forms.Button()
+        Me.prevBtn = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.presentCheckLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -130,7 +136,7 @@ Partial Class subjectWiseResultForm
         '
         'cancelBtn
         '
-        Me.cancelBtn.Location = New System.Drawing.Point(418, 196)
+        Me.cancelBtn.Location = New System.Drawing.Point(418, 221)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
         Me.cancelBtn.TabIndex = 204
@@ -139,7 +145,7 @@ Partial Class subjectWiseResultForm
         '
         'saveBtn
         '
-        Me.saveBtn.Location = New System.Drawing.Point(337, 196)
+        Me.saveBtn.Location = New System.Drawing.Point(337, 221)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
         Me.saveBtn.TabIndex = 203
@@ -148,16 +154,36 @@ Partial Class subjectWiseResultForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.remainingCount)
+        Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.subjTh)
         Me.GroupBox1.Controls.Add(Me.subjPr)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 104)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 129)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(476, 85)
         Me.GroupBox1.TabIndex = 205
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Enter Marks"
+        '
+        'remainingCount
+        '
+        Me.remainingCount.AutoSize = True
+        Me.remainingCount.Location = New System.Drawing.Point(449, 0)
+        Me.remainingCount.Name = "remainingCount"
+        Me.remainingCount.Size = New System.Drawing.Size(22, 13)
+        Me.remainingCount.TabIndex = 194
+        Me.remainingCount.Text = "cnt"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(387, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 13)
+        Me.Label5.TabIndex = 193
+        Me.Label5.Text = "Remaining: "
         '
         'Label2
         '
@@ -178,12 +204,54 @@ Partial Class subjectWiseResultForm
         Me.termCombo.TabIndex = 1
         Me.termCombo.Text = "Choose terminal..."
         '
+        'nextBtn
+        '
+        Me.nextBtn.Location = New System.Drawing.Point(99, 220)
+        Me.nextBtn.Name = "nextBtn"
+        Me.nextBtn.Size = New System.Drawing.Size(75, 23)
+        Me.nextBtn.TabIndex = 208
+        Me.nextBtn.Text = "Next"
+        Me.nextBtn.UseVisualStyleBackColor = True
+        '
+        'prevBtn
+        '
+        Me.prevBtn.Location = New System.Drawing.Point(18, 220)
+        Me.prevBtn.Name = "prevBtn"
+        Me.prevBtn.Size = New System.Drawing.Size(75, 23)
+        Me.prevBtn.TabIndex = 209
+        Me.prevBtn.Text = "Previous"
+        Me.prevBtn.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.4!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(174, 106)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(112, 15)
+        Me.Label6.TabIndex = 210
+        Me.Label6.Text = "Marks Entered? "
+        '
+        'presentCheckLabel
+        '
+        Me.presentCheckLabel.AutoSize = True
+        Me.presentCheckLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.4!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.presentCheckLabel.ForeColor = System.Drawing.Color.ForestGreen
+        Me.presentCheckLabel.Location = New System.Drawing.Point(282, 106)
+        Me.presentCheckLabel.Name = "presentCheckLabel"
+        Me.presentCheckLabel.Size = New System.Drawing.Size(0, 15)
+        Me.presentCheckLabel.TabIndex = 211
+        '
         'subjectWiseResultForm
         '
         Me.AcceptButton = Me.saveBtn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(500, 235)
+        Me.ClientSize = New System.Drawing.Size(500, 256)
+        Me.Controls.Add(Me.presentCheckLabel)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.prevBtn)
+        Me.Controls.Add(Me.nextBtn)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.termCombo)
         Me.Controls.Add(Me.GroupBox1)
@@ -221,4 +289,10 @@ Partial Class subjectWiseResultForm
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents termCombo As ComboBox
+    Friend WithEvents remainingCount As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents nextBtn As Button
+    Friend WithEvents prevBtn As Button
+    Friend WithEvents Label6 As Label
+    Friend WithEvents presentCheckLabel As Label
 End Class

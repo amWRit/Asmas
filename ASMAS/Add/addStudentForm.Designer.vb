@@ -58,7 +58,9 @@ Partial Class addStudentForm
         Me.Label6 = New System.Windows.Forms.Label()
         Me.infoTextBox = New System.Windows.Forms.RichTextBox()
         Me.filepathTextBox = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'studentPhoto
@@ -102,13 +104,13 @@ Partial Class addStudentForm
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(420, 50)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 13)
+        Me.Label3.Size = New System.Drawing.Size(54, 13)
         Me.Label3.TabIndex = 58
-        Me.Label3.Text = "Admission year"
+        Me.Label3.Text = "Adm. year"
         '
         'yearTextBox
         '
-        Me.yearTextBox.Location = New System.Drawing.Point(512, 42)
+        Me.yearTextBox.Location = New System.Drawing.Point(479, 44)
         Me.yearTextBox.Name = "yearTextBox"
         Me.yearTextBox.Size = New System.Drawing.Size(100, 20)
         Me.yearTextBox.TabIndex = 59
@@ -131,7 +133,7 @@ Partial Class addStudentForm
         '
         'mnameTextBox
         '
-        Me.mnameTextBox.Location = New System.Drawing.Point(474, 83)
+        Me.mnameTextBox.Location = New System.Drawing.Point(479, 83)
         Me.mnameTextBox.Name = "mnameTextBox"
         Me.mnameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.mnameTextBox.TabIndex = 63
@@ -213,7 +215,7 @@ Partial Class addStudentForm
         '
         'motherTextBox
         '
-        Me.motherTextBox.Location = New System.Drawing.Point(472, 162)
+        Me.motherTextBox.Location = New System.Drawing.Point(479, 162)
         Me.motherTextBox.Name = "motherTextBox"
         Me.motherTextBox.Size = New System.Drawing.Size(100, 20)
         Me.motherTextBox.TabIndex = 73
@@ -245,7 +247,7 @@ Partial Class addStudentForm
         '
         'pAddTextBox
         '
-        Me.pAddTextBox.Location = New System.Drawing.Point(549, 205)
+        Me.pAddTextBox.Location = New System.Drawing.Point(229, 28)
         Me.pAddTextBox.Name = "pAddTextBox"
         Me.pAddTextBox.Size = New System.Drawing.Size(100, 20)
         Me.pAddTextBox.TabIndex = 79
@@ -253,15 +255,15 @@ Partial Class addStudentForm
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(469, 212)
+        Me.Label12.Location = New System.Drawing.Point(170, 35)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(74, 13)
+        Me.Label12.Size = New System.Drawing.Size(34, 13)
         Me.Label12.TabIndex = 78
-        Me.Label12.Text = "Perm. address"
+        Me.Label12.Text = "Perm."
         '
         'tAddTextBox
         '
-        Me.tAddTextBox.Location = New System.Drawing.Point(328, 205)
+        Me.tAddTextBox.Location = New System.Drawing.Point(50, 28)
         Me.tAddTextBox.Name = "tAddTextBox"
         Me.tAddTextBox.Size = New System.Drawing.Size(100, 20)
         Me.tAddTextBox.TabIndex = 77
@@ -269,15 +271,15 @@ Partial Class addStudentForm
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(244, 212)
+        Me.Label13.Location = New System.Drawing.Point(6, 35)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(78, 13)
+        Me.Label13.Size = New System.Drawing.Size(37, 13)
         Me.Label13.TabIndex = 76
-        Me.Label13.Text = "Temp. Address"
+        Me.Label13.Text = "Temp."
         '
         'emailTextBox
         '
-        Me.emailTextBox.Location = New System.Drawing.Point(472, 246)
+        Me.emailTextBox.Location = New System.Drawing.Point(476, 283)
         Me.emailTextBox.Name = "emailTextBox"
         Me.emailTextBox.Size = New System.Drawing.Size(100, 20)
         Me.emailTextBox.TabIndex = 83
@@ -285,7 +287,7 @@ Partial Class addStudentForm
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(420, 253)
+        Me.Label14.Location = New System.Drawing.Point(420, 290)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(32, 13)
         Me.Label14.TabIndex = 82
@@ -293,7 +295,7 @@ Partial Class addStudentForm
         '
         'phoneTextBox
         '
-        Me.phoneTextBox.Location = New System.Drawing.Point(300, 246)
+        Me.phoneTextBox.Location = New System.Drawing.Point(300, 283)
         Me.phoneTextBox.Name = "phoneTextBox"
         Me.phoneTextBox.Size = New System.Drawing.Size(100, 20)
         Me.phoneTextBox.TabIndex = 81
@@ -301,7 +303,7 @@ Partial Class addStudentForm
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(244, 253)
+        Me.Label15.Location = New System.Drawing.Point(244, 290)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(38, 13)
         Me.Label15.TabIndex = 80
@@ -318,7 +320,7 @@ Partial Class addStudentForm
         '
         'saveBtn
         '
-        Me.saveBtn.Location = New System.Drawing.Point(574, 385)
+        Me.saveBtn.Location = New System.Drawing.Point(574, 425)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
         Me.saveBtn.TabIndex = 85
@@ -327,7 +329,7 @@ Partial Class addStudentForm
         '
         'cancelBtn
         '
-        Me.cancelBtn.Location = New System.Drawing.Point(668, 385)
+        Me.cancelBtn.Location = New System.Drawing.Point(668, 425)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
         Me.cancelBtn.TabIndex = 86
@@ -337,7 +339,7 @@ Partial Class addStudentForm
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(247, 290)
+        Me.Label6.Location = New System.Drawing.Point(244, 327)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(88, 13)
         Me.Label6.TabIndex = 87
@@ -346,9 +348,9 @@ Partial Class addStudentForm
         'infoTextBox
         '
         Me.infoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.infoTextBox.Location = New System.Drawing.Point(341, 290)
+        Me.infoTextBox.Location = New System.Drawing.Point(247, 343)
         Me.infoTextBox.Name = "infoTextBox"
-        Me.infoTextBox.Size = New System.Drawing.Size(402, 71)
+        Me.infoTextBox.Size = New System.Drawing.Size(496, 71)
         Me.infoTextBox.TabIndex = 88
         Me.infoTextBox.Text = ""
         '
@@ -359,11 +361,25 @@ Partial Class addStudentForm
         Me.filepathTextBox.Size = New System.Drawing.Size(198, 20)
         Me.filepathTextBox.TabIndex = 89
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.tAddTextBox)
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.pAddTextBox)
+        Me.GroupBox1.Location = New System.Drawing.Point(247, 209)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(496, 60)
+        Me.GroupBox1.TabIndex = 90
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Address"
+        '
         'addStudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(760, 420)
+        Me.ClientSize = New System.Drawing.Size(760, 463)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.filepathTextBox)
         Me.Controls.Add(Me.infoTextBox)
         Me.Controls.Add(Me.Label6)
@@ -374,10 +390,6 @@ Partial Class addStudentForm
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.phoneTextBox)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.pAddTextBox)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.tAddTextBox)
-        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.guardianTextBox)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.motherTextBox)
@@ -405,6 +417,8 @@ Partial Class addStudentForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "addStudentForm"
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -446,4 +460,5 @@ Partial Class addStudentForm
     Friend WithEvents Label6 As Label
     Friend WithEvents infoTextBox As RichTextBox
     Friend WithEvents filepathTextBox As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

@@ -192,8 +192,8 @@ Public Class myClassesForm
         SubjectTeacherToolStripMenuItem.Visible = True
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
         Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
-
-        Dim _assignSubjectTeacherForm As New assignSubjectTeacherForm(class_id)
+        Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
+        Dim _assignSubjectTeacherForm As New assignSubjectTeacherForm(class_id, className)
         _assignSubjectTeacherForm.Show()
     End Sub
 

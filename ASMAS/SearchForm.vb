@@ -211,8 +211,9 @@ Public Class SearchForm
     Private Sub AssignToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AssignToolStripMenuItem.Click
         Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
         Dim class_id = searchResultListView.Items(ItemIndex).SubItems(0).Text
+        Dim class_name = searchResultListView.Items(ItemIndex).SubItems(3).Text
 
-        Dim _assignSubjectTeacherForm As New assignSubjectTeacherForm(class_id)
+        Dim _assignSubjectTeacherForm As New assignSubjectTeacherForm(class_id, class_name)
         _assignSubjectTeacherForm.Show()
     End Sub
 
@@ -220,7 +221,7 @@ Public Class SearchForm
         Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
         Dim class_id = searchResultListView.Items(ItemIndex).SubItems(0).Text
 
-        Dim form = New assignSubjectTeacherForm("")
+        Dim form = New assignSubjectTeacherForm("", "")
         Dim class_info = form.getClassInfo(class_id) '{school_name, school_year}
 
         Dim params As String() = {class_id, class_info(1), class_info(0)}

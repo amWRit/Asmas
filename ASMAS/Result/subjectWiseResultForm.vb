@@ -12,10 +12,6 @@ Public Class subjectWiseResultForm
     Public class_params As String() = {}
     Public present As Boolean = False
 
-    Private Sub subjectWiseResultForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub subjectWiseResultForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
@@ -38,6 +34,7 @@ Public Class subjectWiseResultForm
         Dim class_id = params(0)
         'find student ids
         student_ids = myFunctions.getStudentIdsOf(class_id)
+        remainingCount.Text = student_ids.Count.ToString
         'load first student to the form
         current_student_id = student_ids.First.ToString
         loadStudentInfo(CInt(current_student_id))
@@ -50,7 +47,6 @@ Public Class subjectWiseResultForm
     End Sub
 
     Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
-
         If subjectCombo.SelectedIndex = -1 Or termCombo.SelectedIndex = -1 Then
             MessageBox.Show("One of the fields is not selected. Please check.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
@@ -88,7 +84,7 @@ Public Class subjectWiseResultForm
                 cmd.Parameters.AddWithValue("@reg_number", regNumberTextBox.Text)
                 cmd.Parameters.AddWithValue("@full_name", studentNameTextBox.Text)
                 cmd.Parameters.AddWithValue("@school_year", school_year)
-                cmd.Parameters.AddWithValue("@school_name", school_year)
+                cmd.Parameters.AddWithValue("@school_name", school_name)
                 cmd.Parameters.AddWithValue("@terminal", terminal)
             End If
 
@@ -109,6 +105,11 @@ Public Class subjectWiseResultForm
     End Sub
 
     Private Sub subjectCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles subjectCombo.SelectedIndexChanged
+        Dim optSub As String() = {"Opt. Maths", "Account", "Education", "Economics", "EPH"}
+        If optSub.Contains(subjectCombo.Text) Then
+            MessageBox.Show("Please input marks of Optional subjects student wise.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+
         If termCombo.SelectedIndex <> -1 Then
             Dim terminal = termCombo.Text
             Dim class_name = class_params(3)
@@ -118,8 +119,12 @@ Public Class subjectWiseResultForm
             Dim params As String() = {school_year, school_name, class_name, terminal, current_student_id, subjKey}
             present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
             If present = True Then
+                presentCheckLabel.Text = "Yes"
+                presentCheckLabel.ForeColor = Color.ForestGreen
                 resultFunctions.loadSubjMarks(params, subjTh, subjPr)
             Else
+                presentCheckLabel.Text = "No"
+                presentCheckLabel.ForeColor = Color.Red
                 subjTh.Text = ""
                 subjPr.Text = ""
             End If
@@ -137,8 +142,12 @@ Public Class subjectWiseResultForm
             Dim subjKey As String = resultFunctions.getSubjKey(subjectCombo.Text, class_name)
             Dim params As String() = {school_year, school_name, class_name, terminal, current_student_id, subjKey}
             If present = True Then
+                presentCheckLabel.Text = "Yes"
+                presentCheckLabel.ForeColor = Color.ForestGreen
                 resultFunctions.loadSubjMarks(params, subjTh, subjPr)
             Else
+                presentCheckLabel.Text = "No"
+                presentCheckLabel.ForeColor = Color.Red
                 subjTh.Text = "0"
                 subjPr.Text = "0"
             End If
@@ -153,13 +162,15 @@ Public Class subjectWiseResultForm
         studentNameTextBox.Text = student_name
     End Sub
 
-    Public Sub prepareNext()
+
+    Public Sub prepareData()
         termCombo.Enabled = False
         subjectCombo.Enabled = False
 
-        current_student_index += 1
-        If current_student_index > student_ids.Count Then
+        If current_student_index > student_ids.Count - 1 Then
             MessageBox.Show("Yay! You have entered marks of all the students for this subject.", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            saveBtn.Enabled = False
+            Exit Sub
         End If
 
         current_student_id = student_ids(current_student_index).ToString
@@ -173,11 +184,39 @@ Public Class subjectWiseResultForm
         Dim params As String() = {school_year, school_name, class_name, terminal, current_student_id, subjKey}
         present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
         If present = True Then
+            presentCheckLabel.Text = "Yes"
+            presentCheckLabel.ForeColor = Color.ForestGreen
             resultFunctions.loadSubjMarks(params, subjTh, subjPr)
         Else
+            presentCheckLabel.Text = "No"
+            presentCheckLabel.ForeColor = Color.Red
             subjTh.Text = "0"
             subjPr.Text = "0"
         End If
 
+    End Sub
+
+    Public Sub prepareNext()
+        If prevBtn.Enabled = False Then prevBtn.Enabled = True
+        remainingCount.Text = (student_ids.Count - current_student_index - 1).ToString
+        current_student_index += 1
+        If current_student_index = student_ids.Count - 1 Then nextBtn.Enabled = False
+        prepareData()
+    End Sub
+
+    Public Sub preparePrevious()
+        If nextBtn.Enabled = False Then nextBtn.Enabled = True
+        remainingCount.Text = (CInt(remainingCount.Text) + 1).ToString
+        current_student_index -= 1
+        If current_student_index = 0 Then prevBtn.Enabled = False
+        prepareData()
+    End Sub
+
+    Private Sub nextBtn_Click(sender As Object, e As EventArgs) Handles nextBtn.Click
+        prepareNext()
+    End Sub
+
+    Private Sub prevBtn_Click(sender As Object, e As EventArgs) Handles prevBtn.Click
+        preparePrevious()
     End Sub
 End Class

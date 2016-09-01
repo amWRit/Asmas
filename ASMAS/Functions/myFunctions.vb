@@ -27,7 +27,9 @@ Public Class myFunctions
         Dim insertSQL As String = ""
         Dim inputHash As Hashtable = New Hashtable
         For Each key As String In hashKeys
-            inputHash(key) = DS.Tables(0).Rows(index)(key).ToString
+            Dim val = DS.Tables(0).Rows(index)(key).ToString
+            If val = "" Then val = "0"
+            inputHash(key) = val
         Next
 
         Try

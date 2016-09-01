@@ -7,12 +7,13 @@ Public Class assignSubjectTeacherForm
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
 
     Public class_id As String = ""
-    Public Sub New(classID As String)
+    Public Sub New(classID As String, className As String)
         MyBase.New
         If classID = "" Then Exit Sub
         ' This call is required by the designer.
         class_id = classID
         InitializeComponent()
+        titleLabel.Text = titleLabel.Text & " " & className
     End Sub
     Private Sub assignSubjectTeacherForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadSubjects()
@@ -25,7 +26,7 @@ Public Class assignSubjectTeacherForm
 
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
-        Dim ctSQL As String = "SELECT [full_name] from [user] ORDER BY full_name"
+        Dim ctSQL As String = "SELECT [full_name] from [user] where role='Teacher' ORDER BY full_name"
         Con.Open() 'Open connection
         Dim ctData As OleDbDataAdapter
         ctData = New OleDbDataAdapter(ctSQL, Con)

@@ -81,7 +81,7 @@ Public Class resultFunctions
             present = checkIfPresent(DS.Tables(0).Rows(0)(3).ToString, terminal, class_name)
 
             If present = True Then
-                MessageBox.Show("Record is already present. please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Record is already present. Please try editing the result instead.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 'Return {"", ""}
                 Exit Function
             End If
