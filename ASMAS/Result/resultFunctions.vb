@@ -134,6 +134,38 @@ Public Class resultFunctions
         Return present
     End Function
 
+    Public Shared Function getResultTableHashKeys(ByVal className As String) As String()
+        Dim lowSecHashKeys As String() = {"student_id", "reg_number", "full_name", "school_year", "school_name", "terminal", "eng_th", "eng_th_g", "eng_pr", "eng_pr_g", "eng_total", "eng_total_g", "nep_th", "nep_th_g", "nep_pr",
+            "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
+            "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "obt_th", "obt_th_g", "obt_pr", "obt_pr_g", "obt_total", "obt_total_g", "comp_th", "comp_th_g", "comp_pr", "comp_pr_g",
+            "comp_total", "comp_total_g", "hea_th", "hea_th_g", "hea_pr", "hea_pr_g", "hea_total", "hea_total_g", "mor_th", "mor_th_g", "mor_pr", "mor_pr_g", "mor_total", "mor_total_g",
+            "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point", "rank", "attendance"}
+        Dim primaryHashKeys As String() = {"student_id", "reg_number", "full_name", "school_year", "school_name", "terminal", "eng_th", "eng_th_g", "eng_pr", "eng_pr_g", "eng_total", "eng_total_g", "nep_th", "nep_th_g", "nep_pr",
+            "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
+            "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "opt_eng_th", "opt_eng_th_g", "opt_eng_pr", "opt_eng_pr_g", "opt_eng_total", "opt_eng_total_g", "gk_conv_th", "gk_conv_th_g", "gk_conv_pr", "gk_conv_pr_g",
+            "gk_conv_total", "gk_conv_total_g", "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point", "rank", "attendance"}
+        Dim SecHashKeys As String() = {"student_id", "reg_number", "full_name", "school_year", "school_name", "terminal", "eng_th", "eng_th_g", "eng_pr", "eng_pr_g", "eng_total", "eng_total_g", "nep_th", "nep_th_g", "nep_pr",
+            "nep_pr_g", "nep_total", "nep_total_g", "math_th", "math_th_g", "math_pr", "math_pr_g", "math_total", "math_total_g", "sci_th", "sci_th_g", "sci_pr", "sci_pr_g", "sci_total", "sci_total_g",
+            "soc_th", "soc_th_g", "soc_pr", "soc_pr_g", "soc_total", "soc_total_g", "eph_th", "eph_th_g", "eph_pr", "eph_pr_g", "eph_total", "eph_total_g", "opt1_th", "opt1_th_g", "opt1_pr", "opt1_pr_g",
+            "opt1_total", "opt1_total_g", "opt2_th", "opt2_th_g", "opt2_pr", "opt2_pr_g", "opt2_total", "opt2_total_g",
+            "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point", "opt1", "opt2", "rank", "attendance"}
+
+        Dim hashKeys As String() = {}
+        Dim primary As String() = {"1", "2", "3", "4", "5"}
+        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
+        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+
+        If primary.Contains(className) Then
+            hashKeys = primaryHashKeys
+        ElseIf lowSec.Contains(className) Then
+            hashKeys = lowSecHashKeys
+        ElseIf sec.Contains(className) Then
+            hashKeys = SecHashKeys
+        End If
+
+        Return hashKeys
+    End Function
+
     Public Shared Function percentToGrade(percentage As Double) As String
         Dim grade As String
         If percentage >= 90 Then
@@ -614,6 +646,164 @@ order by student_id"
         Finally
             'This code gets called regardless of there being errors
             'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+    End Sub
+
+    Public Shared Sub updateCalculations(DS As DataSet, school_name As String, year_num As String, class_name As String)
+        'get studentIDs
+        Dim rowCount = DS.Tables(0).Rows.Count
+        Dim student_ids As String() = {}
+        ReDim Preserve student_ids(rowCount - 1)
+        For i As Integer = 0 To rowCount - 1
+            student_ids(i) = DS.Tables(0).Rows(i).Item("student_id").ToString
+        Next
+
+        Dim hashKeys = getResultTableHashKeys(class_name)
+
+        'for each student_id
+        For i As Integer = 0 To student_ids.Count - 1
+            Dim student_id = student_ids(i)
+            Dim reg_number = DS.Tables(0).Rows(i).Item("reg_number").ToString
+            Dim full_name = DS.Tables(0).Rows(i).Item("full_name").ToString
+            Dim terminal = DS.Tables(0).Rows(i).Item("terminal").ToString
+            Dim params As String() = {student_id, reg_number, full_name, terminal, school_name, year_num, class_name}
+            'prepare input hash
+            Dim inputHash = prepareInputHash(DS.Tables(0).Rows(i), params)
+            Dim newInputHash As Hashtable = resultFunctions.calculateGrades(inputHash, class_name)
+            'update row
+            Dim newParams As String() = {year_num, school_name, terminal, class_name, student_id}
+            updateResultData(newParams, hashKeys, newInputHash)
+        Next
+        MessageBox.Show("All calculations successfully updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+    End Sub
+
+    '{student_id, reg_number, full_name, terminal, school_name, year_num,  class_name}
+    Public Shared Function prepareInputHash(DR As DataRow, params As String()) As Hashtable
+        Dim inputHash As New Hashtable
+        Dim student_id = params(0)
+        Dim reg_number = params(1)
+        Dim full_name = params(2)
+        Dim terminal = params(3)
+        Dim school_name = params(4)
+        Dim school_year = params(5)
+        Dim class_name = params(6)
+
+        inputHash("student_id") = student_id
+        inputHash("reg_number") = reg_number
+        inputHash("full_name") = full_name
+        inputHash("school_year") = school_year
+        inputHash("school_name") = school_name
+        inputHash("terminal") = terminal
+
+        Dim theorySub = getSubjects("theory", class_name)
+        Dim pracSub = getSubjects("prac", class_name)
+        Dim totalSub = getSubjects("total", class_name)
+        Dim total_th As Double = 0
+        Dim total_pr As Double = 0
+
+        For Each key As String In theorySub
+            Dim val = DR.Item(key).ToString
+            If val = "" Then val = "0"
+            inputHash(key) = val
+            total_th += CDbl(val)
+        Next
+        For Each key As String In pracSub
+            Dim val = DR.Item(key).ToString
+            If val = "" Then val = "0"
+            inputHash(key) = val
+            total_pr += CDbl(val)
+        Next
+        For i As Integer = 0 To theorySub.Count - 1
+            Dim th_key As String = theorySub(i)
+            Dim pr_key As String = pracSub(i)
+            Dim total_key As String = totalSub(i)
+            inputHash(total_key) = CDbl(inputHash(th_key)) + CDbl(inputHash(pr_key))
+        Next
+
+        If sec.Contains(class_name) Then
+            inputHash("opt1") = DR.Item("opt1")
+            inputHash("opt2") = DR.Item("opt2")
+        End If
+
+        inputHash("total_th") = total_th
+        inputHash("total_pr") = total_pr
+        inputHash("total") = total_th + total_pr
+        inputHash = addMoreInputs(inputHash, class_name) 'total_th_perc, total_pr_perc, percentage
+        inputHash("attendance") = 0 'dummy - has to be updated manually
+        inputHash("rank") = 0 'dummy - separate method/button for updating rank, which will run at end
+        Return inputHash
+    End Function
+
+    Public Shared Function addMoreInputs(inputHash As Hashtable, class_name As String) As Hashtable
+        Dim total_th_perc As Double = 0
+        Dim total_pr_perc As Double = 0
+        Dim percentage As Double = 0
+
+        If primary.Contains(class_name) Then
+            Dim total_th_marks = 700 '100% CAS in actual
+            Dim total_pr_marks = 1 'just  to avoid 0/0 error
+
+            If highPrimary.Contains(class_name) Then
+                total_th_marks = 60 * 7 '60% written
+                total_pr_marks = 40 * 7 '40% CAS
+            End If
+            Dim total_th = CDbl(inputHash("total_th"))
+            total_th_perc = total_th / total_th_marks * 100
+            Dim total_pr = CDbl(inputHash("total_pr"))
+            total_pr_perc = total_pr / total_pr_marks * 100
+            Dim total = total_th + total_pr
+            percentage = total / 700 * 100
+        ElseIf lowSec.Contains(class_name) Then
+            Dim total_th = CDbl(inputHash("total_th"))
+            total_th_perc = total_th / 555 * 100
+            Dim total_pr = CDbl(inputHash("total_pr"))
+            total_pr_perc = total_pr / 245 * 100
+            Dim total = total_th + total_pr
+            percentage = total / 800 * 100
+        Else
+            Dim total_th = CDbl(inputHash("total_th"))
+            Dim total_pr = CDbl(inputHash("total_pr"))
+            Dim total_th_marks = 625
+            Dim total_pr_marks = 175
+
+            If inputHash("opt2").ToString = "Computer" Then
+                total_th_marks = 600
+                total_pr_marks = 200
+            End If
+            total_th_perc = total_th / total_th_marks * 100
+            total_pr_perc = total_pr / total_pr_marks * 100
+            Dim total = total_th + total_pr
+            percentage = total / 800 * 100
+        End If
+
+        inputHash("total_th_perc") = total_th_perc
+        inputHash("total_pr_perc") = total_pr_perc
+        inputHash("percentage") = Math.Round(percentage, 2)
+
+        Return inputHash
+    End Function
+
+    'params = {year_num, school_name, terminal, class_name, student_id}
+    Public Shared Sub updateResultData(params As String(), hashkeys As String(), newInputHash As Hashtable)
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+        Dim updateSQL = resultFunctions.buildUpdateResultSQL(params, Con)
+        Try
+            Con.Open()
+            Dim cmd As New OleDbCommand(updateSQL, Con)
+
+            For Each key As String In hashkeys
+                cmd.Parameters.AddWithValue("@" & key, newInputHash(key))
+            Next
+
+            cmd.ExecuteNonQuery()
+            'MessageBox.Show("All calculations successfully updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
             Con.Close()
         End Try
     End Sub
