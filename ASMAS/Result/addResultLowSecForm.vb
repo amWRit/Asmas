@@ -240,7 +240,6 @@ VALUES
         Dim class_id = contents(0)
         resultFunctions.findNext({school_year, school_name, terminal, className, class_id}, studentName, studentRegCombo)
 
-
     End Sub
 
     Private Sub addResultLowSecForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
