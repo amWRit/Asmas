@@ -105,58 +105,64 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addClassForm.Designer.vb">
+    <Compile Include="Add\addClassForm.Designer.vb">
       <DependentUpon>addClassForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addClassForm.vb">
+    <Compile Include="Add\addClassForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addResultLowSecForm.Designer.vb">
+    <Compile Include="assignSubjectTeacherForm.Designer.vb">
+      <DependentUpon>assignSubjectTeacherForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="assignSubjectTeacherForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Result\addResultLowSecForm.Designer.vb">
       <DependentUpon>addResultLowSecForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addResultLowSecForm.vb">
+    <Compile Include="Result\addResultLowSecForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addResultPrimaryForm.Designer.vb">
+    <Compile Include="Result\addResultPrimaryForm.Designer.vb">
       <DependentUpon>addResultPrimaryForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addResultPrimaryForm.vb">
+    <Compile Include="Result\addResultPrimaryForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addResultSecForm.Designer.vb">
+    <Compile Include="Result\addResultSecForm.Designer.vb">
       <DependentUpon>addResultSecForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addResultSecForm.vb">
+    <Compile Include="Result\addResultSecForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addSchoolForm.Designer.vb">
+    <Compile Include="Add\addSchoolForm.Designer.vb">
       <DependentUpon>addSchoolForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addSchoolForm.vb">
+    <Compile Include="Add\addSchoolForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addStudentForm.Designer.vb">
+    <Compile Include="Add\addStudentForm.Designer.vb">
       <DependentUpon>addStudentForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addStudentForm.vb">
+    <Compile Include="Add\addStudentForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addStudentToClassForm.Designer.vb">
+    <Compile Include="Add\addStudentToClassForm.Designer.vb">
       <DependentUpon>addStudentToClassForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addStudentToClassForm.vb">
+    <Compile Include="Add\addStudentToClassForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addUserForm.Designer.vb">
+    <Compile Include="Add\addUserForm.Designer.vb">
       <DependentUpon>addUserForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addUserForm.vb">
+    <Compile Include="Add\addUserForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addYearForm.Designer.vb">
+    <Compile Include="Add\addYearForm.Designer.vb">
       <DependentUpon>addYearForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="addYearForm.vb">
+    <Compile Include="Add\addYearForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="classDetailsForm.Designer.vb">
@@ -171,7 +177,7 @@
     <Compile Include="classResults.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FileHandler.vb" />
+    <Compile Include="Functions\FileHandler.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -185,14 +191,14 @@
     <Compile Include="myClassesForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyExtensions.vb" />
+    <Compile Include="Functions\MyExtensions.vb" />
     <Compile Include="myStudents.Designer.vb">
       <DependentUpon>myStudents.vb</DependentUpon>
     </Compile>
     <Compile Include="myStudents.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="myFunctions.vb" />
+    <Compile Include="Functions\myFunctions.vb" />
     <Compile Include="Print\printResultLowSecForm.Designer.vb">
       <DependentUpon>printResultLowSecForm.vb</DependentUpon>
     </Compile>
@@ -217,6 +223,7 @@
     <Compile Include="ReportCard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Result\resultFunctions.vb" />
     <Compile Include="SearchForm.Designer.vb">
       <DependentUpon>SearchForm.vb</DependentUpon>
     </Compile>
@@ -256,6 +263,18 @@
     <Compile Include="studentDetails.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Result\subjectWiseResultForm.Designer.vb">
+      <DependentUpon>subjectWiseResultForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Result\subjectWiseResultForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="subjectTeachersDetails.Designer.vb">
+      <DependentUpon>subjectTeachersDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="subjectTeachersDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TerseDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -264,47 +283,50 @@
     <Compile Include="TerseDataSet.vb">
       <DependentUpon>TerseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="User.vb" />
+    <Compile Include="Models\User.vb" />
     <Compile Include="viewDatabaseForm.Designer.vb">
       <DependentUpon>viewDatabaseForm.vb</DependentUpon>
     </Compile>
     <Compile Include="viewDatabaseForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="viewResultsForm.Designer.vb">
+    <Compile Include="Result\viewResultsForm.Designer.vb">
       <DependentUpon>viewResultsForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="viewResultsForm.vb">
+    <Compile Include="Result\viewResultsForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Year.vb" />
+    <Compile Include="Models\Year.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="addClassForm.resx">
+    <EmbeddedResource Include="Add\addClassForm.resx">
       <DependentUpon>addClassForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addResultLowSecForm.resx">
+    <EmbeddedResource Include="assignSubjectTeacherForm.resx">
+      <DependentUpon>assignSubjectTeacherForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\addResultLowSecForm.resx">
       <DependentUpon>addResultLowSecForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addResultPrimaryForm.resx">
+    <EmbeddedResource Include="Result\addResultPrimaryForm.resx">
       <DependentUpon>addResultPrimaryForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addResultSecForm.resx">
+    <EmbeddedResource Include="Result\addResultSecForm.resx">
       <DependentUpon>addResultSecForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addSchoolForm.resx">
+    <EmbeddedResource Include="Add\addSchoolForm.resx">
       <DependentUpon>addSchoolForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addStudentForm.resx">
+    <EmbeddedResource Include="Add\addStudentForm.resx">
       <DependentUpon>addStudentForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addStudentToClassForm.resx">
+    <EmbeddedResource Include="Add\addStudentToClassForm.resx">
       <DependentUpon>addStudentToClassForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addUserForm.resx">
+    <EmbeddedResource Include="Add\addUserForm.resx">
       <DependentUpon>addUserForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addYearForm.resx">
+    <EmbeddedResource Include="Add\addYearForm.resx">
       <DependentUpon>addYearForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="classDetailsForm.resx">
@@ -356,10 +378,16 @@
     <EmbeddedResource Include="studentDetails.resx">
       <DependentUpon>studentDetails.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Result\subjectWiseResultForm.resx">
+      <DependentUpon>subjectWiseResultForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="subjectTeachersDetails.resx">
+      <DependentUpon>subjectTeachersDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viewDatabaseForm.resx">
       <DependentUpon>viewDatabaseForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="viewResultsForm.resx">
+    <EmbeddedResource Include="Result\viewResultsForm.resx">
       <DependentUpon>viewResultsForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

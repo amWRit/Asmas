@@ -102,8 +102,11 @@ Public Class myClassesForm
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
         Dim itemID = myClassesListView.Items(ItemIndex).SubItems(0).Text
-        SearchForm.deleteFromDatabase(itemID, "Class")
-        myClassesListView.Items(ItemIndex).Remove()
+        Dim I As Integer = MsgBox("Are you sure you want to delete?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Are you sure?")
+        If I = MsgBoxResult.Yes Then
+            SearchForm.deleteFromDatabase(itemID, "Class")
+            myClassesListView.Items(ItemIndex).Remove()
+        End If
     End Sub
 
     Private Sub ViewStudentsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewStudentsToolStripMenuItem.Click
@@ -127,6 +130,26 @@ Public Class myClassesForm
     End Sub
 
     Private Sub AddResultToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddResultToolStripMenuItem.Click
+
+
+    End Sub
+
+    Private Sub myClassesForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If e.CloseReason = CloseReason.UserClosing Then
+            e.Cancel = True
+            Me.Hide()
+            HomeForm.Show()
+        End If
+    End Sub
+
+    Private Sub AddStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddStudentToolStripMenuItem.Click
+        Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
+        Dim _addStudentToClassForm As New addStudentToClassForm(class_id)
+        _addStudentToClassForm.Show()
+    End Sub
+
+    Private Sub StudentWiseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentWiseToolStripMenuItem.Click
         Dim primary As String() = {"1", "2", "3", "4", "5"}
         Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
         Dim sec As String() = {"9E", "9N", "10E", "10A"}
@@ -149,21 +172,43 @@ Public Class myClassesForm
             Dim _newClassResult As New addResultSecForm(params)
             _newClassResult.Show()
         End If
-
     End Sub
 
-    Private Sub myClassesForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        If e.CloseReason = CloseReason.UserClosing Then
-            e.Cancel = True
-            Me.Hide()
-            HomeForm.Show()
-        End If
-    End Sub
+    Private Sub SubjectWiseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubjectWiseToolStripMenuItem.Click
+        Dim primary As String() = {"1", "2", "3", "4", "5"}
+        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
+        Dim sec As String() = {"9E", "9N", "10E", "10A"}
 
-    Private Sub AddStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddStudentToolStripMenuItem.Click
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
         Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
-        Dim _addStudentToClassForm As New addStudentToClassForm(class_id)
-        _addStudentToClassForm.Show()
+        Dim year_num = myClassesListView.Items(ItemIndex).SubItems(1).Text
+        Dim school_name = myClassesListView.Items(ItemIndex).SubItems(2).Text
+        Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
+
+        Dim params As String() = {class_id, year_num, school_name, className}
+
+        Dim subjectResult As New subjectWiseResultForm(params)
+        subjectResult.Show()
+    End Sub
+
+    Private Sub AssignToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AssignToolStripMenuItem.Click
+        SubjectTeacherToolStripMenuItem.Visible = True
+        Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
+        Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
+        Dim _assignSubjectTeacherForm As New assignSubjectTeacherForm(class_id, className)
+        _assignSubjectTeacherForm.Show()
+    End Sub
+
+    Private Sub ViewToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem1.Click
+        Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
+        Dim year_num = myClassesListView.Items(ItemIndex).SubItems(1).Text
+        Dim school_name = myClassesListView.Items(ItemIndex).SubItems(2).Text
+        Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
+        Dim params As String() = {class_id, year_num, school_name}
+
+        Dim _subjectTeachersDetails As New subjectTeachersDetails(params)
+        _subjectTeachersDetails.Show()
     End Sub
 End Class
