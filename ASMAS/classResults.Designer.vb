@@ -34,6 +34,7 @@ Partial Class classResults
         Me.classResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.printBtn = New System.Windows.Forms.Button()
+        Me.updateCalcBtn = New System.Windows.Forms.Button()
         Me.classResultsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -131,11 +132,21 @@ Partial Class classResults
         Me.printBtn.Text = "Print Report Card"
         Me.printBtn.UseVisualStyleBackColor = True
         '
+        'updateCalcBtn
+        '
+        Me.updateCalcBtn.Location = New System.Drawing.Point(630, 8)
+        Me.updateCalcBtn.Name = "updateCalcBtn"
+        Me.updateCalcBtn.Size = New System.Drawing.Size(114, 23)
+        Me.updateCalcBtn.TabIndex = 175
+        Me.updateCalcBtn.Text = "Update Calculations"
+        Me.updateCalcBtn.UseVisualStyleBackColor = True
+        '
         'classResults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.updateCalcBtn)
         Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.updateRankBtn)
         Me.Controls.Add(Me.termCombo)
@@ -146,7 +157,7 @@ Partial Class classResults
         Me.MaximizeBox = False
         Me.Name = "classResults"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "classResults"
+        Me.Text = "Update Calculations"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.classResultsContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -165,4 +176,5 @@ Partial Class classResults
     Friend WithEvents classResultsContextMenu As ContextMenuStrip
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents printBtn As Button
+    Friend WithEvents updateCalcBtn As Button
 End Class

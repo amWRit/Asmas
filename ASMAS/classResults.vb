@@ -188,13 +188,15 @@ Public Class classResults
         End If
     End Sub
 
-    Private Function getClassTeacherName() As String
-        Dim class_teacher = "Test"
 
-        Return class_teacher
-    End Function
-
-    Private Sub classResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub updateCalcBtn_Click(sender As Object, e As EventArgs) Handles updateCalcBtn.Click
+        If termCombo.SelectedIndex = -1 Then
+            MessageBox.Show("Please select a terminal to update calcuations.", "Incomplete input.", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+        Dim class_name = contents(3)
+        Dim year_num = contents(1)
+        Dim school_name = contents(2)
+        resultFunctions.updateCalculations(tempDS, school_name, year_num, class_name)
     End Sub
 End Class
