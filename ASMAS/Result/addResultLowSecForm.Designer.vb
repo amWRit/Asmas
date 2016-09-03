@@ -97,7 +97,7 @@ Partial Class addResultLowSecForm
         Me.Label1.Location = New System.Drawing.Point(13, 13)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(98, 20)
-        Me.Label1.TabIndex = 0
+        Me.Label1.TabIndex = 111
         Me.Label1.Text = "Add Result"
         '
         'studentRegLabel
@@ -153,7 +153,7 @@ Partial Class addResultLowSecForm
         Me.engTh.Location = New System.Drawing.Point(175, 146)
         Me.engTh.Name = "engTh"
         Me.engTh.Size = New System.Drawing.Size(100, 20)
-        Me.engTh.TabIndex = 31
+        Me.engTh.TabIndex = 3
         Me.engTh.Text = "0"
         '
         'engPr
@@ -161,7 +161,7 @@ Partial Class addResultLowSecForm
         Me.engPr.Location = New System.Drawing.Point(329, 146)
         Me.engPr.Name = "engPr"
         Me.engPr.Size = New System.Drawing.Size(100, 20)
-        Me.engPr.TabIndex = 32
+        Me.engPr.TabIndex = 4
         Me.engPr.Text = "0"
         '
         'nepPr
@@ -169,7 +169,7 @@ Partial Class addResultLowSecForm
         Me.nepPr.Location = New System.Drawing.Point(329, 176)
         Me.nepPr.Name = "nepPr"
         Me.nepPr.Size = New System.Drawing.Size(100, 20)
-        Me.nepPr.TabIndex = 35
+        Me.nepPr.TabIndex = 6
         Me.nepPr.Text = "0"
         '
         'nepTh
@@ -177,7 +177,7 @@ Partial Class addResultLowSecForm
         Me.nepTh.Location = New System.Drawing.Point(175, 176)
         Me.nepTh.Name = "nepTh"
         Me.nepTh.Size = New System.Drawing.Size(100, 20)
-        Me.nepTh.TabIndex = 34
+        Me.nepTh.TabIndex = 5
         Me.nepTh.Text = "0"
         '
         'Label6
@@ -194,7 +194,7 @@ Partial Class addResultLowSecForm
         Me.sciPr.Location = New System.Drawing.Point(329, 238)
         Me.sciPr.Name = "sciPr"
         Me.sciPr.Size = New System.Drawing.Size(100, 20)
-        Me.sciPr.TabIndex = 41
+        Me.sciPr.TabIndex = 10
         Me.sciPr.Text = "0"
         '
         'sciTh
@@ -202,7 +202,7 @@ Partial Class addResultLowSecForm
         Me.sciTh.Location = New System.Drawing.Point(175, 238)
         Me.sciTh.Name = "sciTh"
         Me.sciTh.Size = New System.Drawing.Size(100, 20)
-        Me.sciTh.TabIndex = 40
+        Me.sciTh.TabIndex = 9
         Me.sciTh.Text = "0"
         '
         'Label7
@@ -220,7 +220,7 @@ Partial Class addResultLowSecForm
         Me.mathPr.Location = New System.Drawing.Point(329, 208)
         Me.mathPr.Name = "mathPr"
         Me.mathPr.Size = New System.Drawing.Size(100, 20)
-        Me.mathPr.TabIndex = 38
+        Me.mathPr.TabIndex = 8
         Me.mathPr.Text = "0"
         '
         'mathTh
@@ -228,7 +228,7 @@ Partial Class addResultLowSecForm
         Me.mathTh.Location = New System.Drawing.Point(175, 208)
         Me.mathTh.Name = "mathTh"
         Me.mathTh.Size = New System.Drawing.Size(100, 20)
-        Me.mathTh.TabIndex = 37
+        Me.mathTh.TabIndex = 7
         Me.mathTh.Text = "0"
         '
         'Label8
@@ -245,7 +245,7 @@ Partial Class addResultLowSecForm
         Me.heaPr.Location = New System.Drawing.Point(329, 365)
         Me.heaPr.Name = "heaPr"
         Me.heaPr.Size = New System.Drawing.Size(100, 20)
-        Me.heaPr.TabIndex = 53
+        Me.heaPr.TabIndex = 18
         Me.heaPr.Text = "0"
         '
         'heaTh
@@ -253,7 +253,7 @@ Partial Class addResultLowSecForm
         Me.heaTh.Location = New System.Drawing.Point(175, 365)
         Me.heaTh.Name = "heaTh"
         Me.heaTh.Size = New System.Drawing.Size(100, 20)
-        Me.heaTh.TabIndex = 52
+        Me.heaTh.TabIndex = 17
         Me.heaTh.Text = "0"
         '
         'Label9
@@ -270,7 +270,7 @@ Partial Class addResultLowSecForm
         Me.compPr.Location = New System.Drawing.Point(329, 335)
         Me.compPr.Name = "compPr"
         Me.compPr.Size = New System.Drawing.Size(100, 20)
-        Me.compPr.TabIndex = 50
+        Me.compPr.TabIndex = 16
         Me.compPr.Text = "0"
         '
         'compTh
@@ -278,7 +278,7 @@ Partial Class addResultLowSecForm
         Me.compTh.Location = New System.Drawing.Point(175, 335)
         Me.compTh.Name = "compTh"
         Me.compTh.Size = New System.Drawing.Size(100, 20)
-        Me.compTh.TabIndex = 49
+        Me.compTh.TabIndex = 15
         Me.compTh.Text = "0"
         '
         'Label10
@@ -295,7 +295,7 @@ Partial Class addResultLowSecForm
         Me.obtPr.Location = New System.Drawing.Point(329, 303)
         Me.obtPr.Name = "obtPr"
         Me.obtPr.Size = New System.Drawing.Size(100, 20)
-        Me.obtPr.TabIndex = 47
+        Me.obtPr.TabIndex = 14
         Me.obtPr.Text = "0"
         '
         'obtTh
@@ -303,7 +303,7 @@ Partial Class addResultLowSecForm
         Me.obtTh.Location = New System.Drawing.Point(175, 303)
         Me.obtTh.Name = "obtTh"
         Me.obtTh.Size = New System.Drawing.Size(100, 20)
-        Me.obtTh.TabIndex = 46
+        Me.obtTh.TabIndex = 13
         Me.obtTh.Text = "0"
         '
         'Label11
@@ -320,7 +320,7 @@ Partial Class addResultLowSecForm
         Me.socPr.Location = New System.Drawing.Point(329, 273)
         Me.socPr.Name = "socPr"
         Me.socPr.Size = New System.Drawing.Size(100, 20)
-        Me.socPr.TabIndex = 44
+        Me.socPr.TabIndex = 12
         Me.socPr.Text = "0"
         '
         'socTh
@@ -328,7 +328,7 @@ Partial Class addResultLowSecForm
         Me.socTh.Location = New System.Drawing.Point(175, 273)
         Me.socTh.Name = "socTh"
         Me.socTh.Size = New System.Drawing.Size(100, 20)
-        Me.socTh.TabIndex = 43
+        Me.socTh.TabIndex = 11
         Me.socTh.Text = "0"
         '
         'Label12
@@ -345,7 +345,7 @@ Partial Class addResultLowSecForm
         Me.morPr.Location = New System.Drawing.Point(329, 400)
         Me.morPr.Name = "morPr"
         Me.morPr.Size = New System.Drawing.Size(100, 20)
-        Me.morPr.TabIndex = 56
+        Me.morPr.TabIndex = 20
         Me.morPr.Text = "0"
         '
         'morTh
@@ -353,7 +353,7 @@ Partial Class addResultLowSecForm
         Me.morTh.Location = New System.Drawing.Point(175, 400)
         Me.morTh.Name = "morTh"
         Me.morTh.Size = New System.Drawing.Size(100, 20)
-        Me.morTh.TabIndex = 55
+        Me.morTh.TabIndex = 19
         Me.morTh.Text = "0"
         '
         'Label13
@@ -370,7 +370,7 @@ Partial Class addResultLowSecForm
         Me.saveBtn.Location = New System.Drawing.Point(492, 404)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
-        Me.saveBtn.TabIndex = 57
+        Me.saveBtn.TabIndex = 24
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
@@ -379,7 +379,7 @@ Partial Class addResultLowSecForm
         Me.cancelBtn.Location = New System.Drawing.Point(573, 404)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
-        Me.cancelBtn.TabIndex = 58
+        Me.cancelBtn.TabIndex = 25
         Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = True
         '
@@ -390,7 +390,7 @@ Partial Class addResultLowSecForm
         Me.termCombo.Location = New System.Drawing.Point(122, 36)
         Me.termCombo.Name = "termCombo"
         Me.termCombo.Size = New System.Drawing.Size(121, 21)
-        Me.termCombo.TabIndex = 30
+        Me.termCombo.TabIndex = 0
         Me.termCombo.Text = "Choose term..."
         '
         'termLabel
@@ -408,7 +408,7 @@ Partial Class addResultLowSecForm
         Me.studentName.Location = New System.Drawing.Point(375, 62)
         Me.studentName.Name = "studentName"
         Me.studentName.Size = New System.Drawing.Size(170, 20)
-        Me.studentName.TabIndex = 29
+        Me.studentName.TabIndex = 2
         '
         'studentRegCombo
         '
@@ -416,7 +416,7 @@ Partial Class addResultLowSecForm
         Me.studentRegCombo.Location = New System.Drawing.Point(122, 66)
         Me.studentRegCombo.Name = "studentRegCombo"
         Me.studentRegCombo.Size = New System.Drawing.Size(121, 21)
-        Me.studentRegCombo.TabIndex = 61
+        Me.studentRegCombo.TabIndex = 1
         Me.studentRegCombo.Text = "Choose reg number..."
         '
         'Label14
@@ -614,7 +614,7 @@ Partial Class addResultLowSecForm
         Me.presentDays.Location = New System.Drawing.Point(573, 173)
         Me.presentDays.Name = "presentDays"
         Me.presentDays.Size = New System.Drawing.Size(45, 20)
-        Me.presentDays.TabIndex = 85
+        Me.presentDays.TabIndex = 22
         Me.presentDays.Text = "0"
         '
         'totalDays
@@ -622,7 +622,7 @@ Partial Class addResultLowSecForm
         Me.totalDays.Location = New System.Drawing.Point(573, 143)
         Me.totalDays.Name = "totalDays"
         Me.totalDays.Size = New System.Drawing.Size(45, 20)
-        Me.totalDays.TabIndex = 84
+        Me.totalDays.TabIndex = 21
         Me.totalDays.Text = "0"
         '
         'Label35
@@ -659,7 +659,7 @@ Partial Class addResultLowSecForm
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.Location = New System.Drawing.Point(542, 208)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(21, 16)
+        Me.Label36.Size = New System.Drawing.Size(22, 16)
         Me.Label36.TabIndex = 153
         Me.Label36.Text = "%"
         '
@@ -668,7 +668,7 @@ Partial Class addResultLowSecForm
         Me.attendance.Location = New System.Drawing.Point(573, 204)
         Me.attendance.Name = "attendance"
         Me.attendance.Size = New System.Drawing.Size(45, 20)
-        Me.attendance.TabIndex = 152
+        Me.attendance.TabIndex = 23
         Me.attendance.Text = "0"
         '
         'addResultLowSecForm

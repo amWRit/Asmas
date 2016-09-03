@@ -45,7 +45,7 @@ Partial Class addStudentToClassForm
         Me.searchBtn.Location = New System.Drawing.Point(294, 36)
         Me.searchBtn.Name = "searchBtn"
         Me.searchBtn.Size = New System.Drawing.Size(75, 23)
-        Me.searchBtn.TabIndex = 9
+        Me.searchBtn.TabIndex = 2
         Me.searchBtn.Text = "Search"
         Me.searchBtn.UseVisualStyleBackColor = True
         '
@@ -55,7 +55,7 @@ Partial Class addStudentToClassForm
         Me.searchKeyword.Location = New System.Drawing.Point(175, 38)
         Me.searchKeyword.Name = "searchKeyword"
         Me.searchKeyword.Size = New System.Drawing.Size(104, 20)
-        Me.searchKeyword.TabIndex = 8
+        Me.searchKeyword.TabIndex = 1
         '
         'searchByLabel
         '
@@ -73,7 +73,7 @@ Partial Class addStudentToClassForm
         Me.searchKey.Location = New System.Drawing.Point(69, 38)
         Me.searchKey.Name = "searchKey"
         Me.searchKey.Size = New System.Drawing.Size(90, 21)
-        Me.searchKey.TabIndex = 6
+        Me.searchKey.TabIndex = 0
         '
         'studentPhoto
         '
@@ -131,16 +131,17 @@ Partial Class addStudentToClassForm
         '
         Me.searchResultContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.addStudentToolStripMenuItem})
         Me.searchResultContextMenu.Name = "searchResultContextMenu"
-        Me.searchResultContextMenu.Size = New System.Drawing.Size(153, 48)
+        Me.searchResultContextMenu.Size = New System.Drawing.Size(97, 26)
         '
         'addStudentToolStripMenuItem
         '
         Me.addStudentToolStripMenuItem.Name = "addStudentToolStripMenuItem"
-        Me.addStudentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.addStudentToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
         Me.addStudentToolStripMenuItem.Text = "Add"
         '
         'addStudentToClassForm
         '
+        Me.AcceptButton = Me.searchBtn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(792, 470)

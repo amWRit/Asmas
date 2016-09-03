@@ -40,14 +40,14 @@ Partial Class addUserForm
         Me.fullnameTextBox.Location = New System.Drawing.Point(94, 45)
         Me.fullnameTextBox.Name = "fullnameTextBox"
         Me.fullnameTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.fullnameTextBox.TabIndex = 36
+        Me.fullnameTextBox.TabIndex = 0
         '
         'saveBtn
         '
         Me.saveBtn.Location = New System.Drawing.Point(50, 213)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
-        Me.saveBtn.TabIndex = 40
+        Me.saveBtn.TabIndex = 4
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
@@ -56,7 +56,7 @@ Partial Class addUserForm
         Me.cancelBtn.Location = New System.Drawing.Point(140, 213)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
-        Me.cancelBtn.TabIndex = 41
+        Me.cancelBtn.TabIndex = 5
         Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = True
         '
@@ -74,7 +74,7 @@ Partial Class addUserForm
         Me.usernameTextBox.Location = New System.Drawing.Point(94, 80)
         Me.usernameTextBox.Name = "usernameTextBox"
         Me.usernameTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.usernameTextBox.TabIndex = 37
+        Me.usernameTextBox.TabIndex = 1
         '
         'roleLabel
         '
@@ -92,7 +92,7 @@ Partial Class addUserForm
         Me.roleCombo.Location = New System.Drawing.Point(94, 152)
         Me.roleCombo.Name = "roleCombo"
         Me.roleCombo.Size = New System.Drawing.Size(121, 21)
-        Me.roleCombo.TabIndex = 39
+        Me.roleCombo.TabIndex = 3
         Me.roleCombo.Text = "Choose role.."
         '
         'FNLabel
@@ -129,7 +129,7 @@ Partial Class addUserForm
         Me.pwdTextBox.Name = "pwdTextBox"
         Me.pwdTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.pwdTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.pwdTextBox.TabIndex = 38
+        Me.pwdTextBox.TabIndex = 2
         '
         'addUserForm
         '

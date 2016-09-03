@@ -36,7 +36,7 @@ Partial Class addYearForm
         Me.saveBtn.Location = New System.Drawing.Point(73, 129)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
-        Me.saveBtn.TabIndex = 54
+        Me.saveBtn.TabIndex = 2
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
@@ -45,7 +45,7 @@ Partial Class addYearForm
         Me.cancelBtn.Location = New System.Drawing.Point(163, 129)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
-        Me.cancelBtn.TabIndex = 55
+        Me.cancelBtn.TabIndex = 3
         Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = True
         '
@@ -64,7 +64,7 @@ Partial Class addYearForm
         Me.schoolCombo.Location = New System.Drawing.Point(117, 50)
         Me.schoolCombo.Name = "schoolCombo"
         Me.schoolCombo.Size = New System.Drawing.Size(121, 21)
-        Me.schoolCombo.TabIndex = 52
+        Me.schoolCombo.TabIndex = 0
         Me.schoolCombo.Text = "Choose school.."
         '
         'schoolLabel
@@ -91,7 +91,7 @@ Partial Class addYearForm
         Me.yearTextBox.Location = New System.Drawing.Point(117, 81)
         Me.yearTextBox.Name = "yearTextBox"
         Me.yearTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.yearTextBox.TabIndex = 53
+        Me.yearTextBox.TabIndex = 1
         '
         'addYearForm
         '

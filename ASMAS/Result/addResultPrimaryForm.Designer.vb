@@ -231,7 +231,7 @@ Partial Class addResultPrimaryForm
         Me.studentRegCombo.Location = New System.Drawing.Point(122, 62)
         Me.studentRegCombo.Name = "studentRegCombo"
         Me.studentRegCombo.Size = New System.Drawing.Size(121, 21)
-        Me.studentRegCombo.TabIndex = 179
+        Me.studentRegCombo.TabIndex = 1
         Me.studentRegCombo.Text = "Choose reg number..."
         '
         'Label14
@@ -249,7 +249,7 @@ Partial Class addResultPrimaryForm
         Me.studentName.Location = New System.Drawing.Point(375, 58)
         Me.studentName.Name = "studentName"
         Me.studentName.Size = New System.Drawing.Size(170, 20)
-        Me.studentName.TabIndex = 149
+        Me.studentName.TabIndex = 2
         '
         'termCombo
         '
@@ -258,7 +258,7 @@ Partial Class addResultPrimaryForm
         Me.termCombo.Location = New System.Drawing.Point(122, 32)
         Me.termCombo.Name = "termCombo"
         Me.termCombo.Size = New System.Drawing.Size(121, 21)
-        Me.termCombo.TabIndex = 151
+        Me.termCombo.TabIndex = 0
         Me.termCombo.Text = "Choose term..."
         '
         'termLabel
@@ -275,7 +275,7 @@ Partial Class addResultPrimaryForm
         Me.cancelBtn.Location = New System.Drawing.Point(573, 400)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
-        Me.cancelBtn.TabIndex = 177
+        Me.cancelBtn.TabIndex = 21
         Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = True
         '
@@ -284,7 +284,7 @@ Partial Class addResultPrimaryForm
         Me.saveBtn.Location = New System.Drawing.Point(492, 400)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
-        Me.saveBtn.TabIndex = 176
+        Me.saveBtn.TabIndex = 20
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
@@ -293,7 +293,7 @@ Partial Class addResultPrimaryForm
         Me.gkConvPr.Location = New System.Drawing.Point(329, 331)
         Me.gkConvPr.Name = "gkConvPr"
         Me.gkConvPr.Size = New System.Drawing.Size(100, 20)
-        Me.gkConvPr.TabIndex = 172
+        Me.gkConvPr.TabIndex = 16
         Me.gkConvPr.Text = "0"
         '
         'gkConvTh
@@ -301,7 +301,7 @@ Partial Class addResultPrimaryForm
         Me.gkConvTh.Location = New System.Drawing.Point(175, 331)
         Me.gkConvTh.Name = "gkConvTh"
         Me.gkConvTh.Size = New System.Drawing.Size(100, 20)
-        Me.gkConvTh.TabIndex = 171
+        Me.gkConvTh.TabIndex = 15
         Me.gkConvTh.Text = "0"
         '
         'Label10
@@ -318,7 +318,7 @@ Partial Class addResultPrimaryForm
         Me.optEngPr.Location = New System.Drawing.Point(329, 299)
         Me.optEngPr.Name = "optEngPr"
         Me.optEngPr.Size = New System.Drawing.Size(100, 20)
-        Me.optEngPr.TabIndex = 169
+        Me.optEngPr.TabIndex = 14
         Me.optEngPr.Text = "0"
         '
         'optEngTh
@@ -326,7 +326,7 @@ Partial Class addResultPrimaryForm
         Me.optEngTh.Location = New System.Drawing.Point(175, 299)
         Me.optEngTh.Name = "optEngTh"
         Me.optEngTh.Size = New System.Drawing.Size(100, 20)
-        Me.optEngTh.TabIndex = 168
+        Me.optEngTh.TabIndex = 13
         Me.optEngTh.Text = "0"
         '
         'Label11
@@ -343,7 +343,7 @@ Partial Class addResultPrimaryForm
         Me.socPr.Location = New System.Drawing.Point(329, 269)
         Me.socPr.Name = "socPr"
         Me.socPr.Size = New System.Drawing.Size(100, 20)
-        Me.socPr.TabIndex = 166
+        Me.socPr.TabIndex = 12
         Me.socPr.Text = "0"
         '
         'socTh
@@ -351,7 +351,7 @@ Partial Class addResultPrimaryForm
         Me.socTh.Location = New System.Drawing.Point(175, 269)
         Me.socTh.Name = "socTh"
         Me.socTh.Size = New System.Drawing.Size(100, 20)
-        Me.socTh.TabIndex = 165
+        Me.socTh.TabIndex = 11
         Me.socTh.Text = "0"
         '
         'Label12
@@ -368,7 +368,7 @@ Partial Class addResultPrimaryForm
         Me.sciPr.Location = New System.Drawing.Point(329, 234)
         Me.sciPr.Name = "sciPr"
         Me.sciPr.Size = New System.Drawing.Size(100, 20)
-        Me.sciPr.TabIndex = 163
+        Me.sciPr.TabIndex = 10
         Me.sciPr.Text = "0"
         '
         'sciTh
@@ -376,7 +376,7 @@ Partial Class addResultPrimaryForm
         Me.sciTh.Location = New System.Drawing.Point(175, 234)
         Me.sciTh.Name = "sciTh"
         Me.sciTh.Size = New System.Drawing.Size(100, 20)
-        Me.sciTh.TabIndex = 162
+        Me.sciTh.TabIndex = 9
         Me.sciTh.Text = "0"
         '
         'Label7
@@ -393,7 +393,7 @@ Partial Class addResultPrimaryForm
         Me.mathPr.Location = New System.Drawing.Point(329, 204)
         Me.mathPr.Name = "mathPr"
         Me.mathPr.Size = New System.Drawing.Size(100, 20)
-        Me.mathPr.TabIndex = 160
+        Me.mathPr.TabIndex = 8
         Me.mathPr.Text = "0"
         '
         'mathTh
@@ -401,7 +401,7 @@ Partial Class addResultPrimaryForm
         Me.mathTh.Location = New System.Drawing.Point(175, 204)
         Me.mathTh.Name = "mathTh"
         Me.mathTh.Size = New System.Drawing.Size(100, 20)
-        Me.mathTh.TabIndex = 159
+        Me.mathTh.TabIndex = 7
         Me.mathTh.Text = "0"
         '
         'Label8
@@ -418,7 +418,7 @@ Partial Class addResultPrimaryForm
         Me.nepPr.Location = New System.Drawing.Point(329, 172)
         Me.nepPr.Name = "nepPr"
         Me.nepPr.Size = New System.Drawing.Size(100, 20)
-        Me.nepPr.TabIndex = 157
+        Me.nepPr.TabIndex = 6
         Me.nepPr.Text = "0"
         '
         'nepTh
@@ -426,7 +426,7 @@ Partial Class addResultPrimaryForm
         Me.nepTh.Location = New System.Drawing.Point(175, 172)
         Me.nepTh.Name = "nepTh"
         Me.nepTh.Size = New System.Drawing.Size(100, 20)
-        Me.nepTh.TabIndex = 156
+        Me.nepTh.TabIndex = 5
         Me.nepTh.Text = "0"
         '
         'Label6
@@ -443,7 +443,7 @@ Partial Class addResultPrimaryForm
         Me.engPr.Location = New System.Drawing.Point(329, 142)
         Me.engPr.Name = "engPr"
         Me.engPr.Size = New System.Drawing.Size(100, 20)
-        Me.engPr.TabIndex = 154
+        Me.engPr.TabIndex = 4
         Me.engPr.Text = "0"
         '
         'engTh
@@ -451,7 +451,7 @@ Partial Class addResultPrimaryForm
         Me.engTh.Location = New System.Drawing.Point(175, 142)
         Me.engTh.Name = "engTh"
         Me.engTh.Size = New System.Drawing.Size(100, 20)
-        Me.engTh.TabIndex = 153
+        Me.engTh.TabIndex = 3
         Me.engTh.Text = "0"
         '
         'Label5
@@ -535,7 +535,7 @@ Partial Class addResultPrimaryForm
         Me.presentDays.Location = New System.Drawing.Point(591, 169)
         Me.presentDays.Name = "presentDays"
         Me.presentDays.Size = New System.Drawing.Size(45, 20)
-        Me.presentDays.TabIndex = 201
+        Me.presentDays.TabIndex = 18
         Me.presentDays.Text = "0"
         '
         'totalDays
@@ -543,7 +543,7 @@ Partial Class addResultPrimaryForm
         Me.totalDays.Location = New System.Drawing.Point(591, 139)
         Me.totalDays.Name = "totalDays"
         Me.totalDays.Size = New System.Drawing.Size(45, 20)
-        Me.totalDays.TabIndex = 200
+        Me.totalDays.TabIndex = 17
         Me.totalDays.Text = "0"
         '
         'Label35
@@ -562,7 +562,7 @@ Partial Class addResultPrimaryForm
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(560, 205)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(21, 16)
+        Me.Label13.Size = New System.Drawing.Size(22, 16)
         Me.Label13.TabIndex = 205
         Me.Label13.Text = "%"
         '
@@ -571,7 +571,7 @@ Partial Class addResultPrimaryForm
         Me.attendance.Location = New System.Drawing.Point(591, 201)
         Me.attendance.Name = "attendance"
         Me.attendance.Size = New System.Drawing.Size(45, 20)
-        Me.attendance.TabIndex = 204
+        Me.attendance.TabIndex = 19
         Me.attendance.Text = "0"
         '
         'addResultPrimaryForm

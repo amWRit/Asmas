@@ -115,7 +115,7 @@ Partial Class viewDatabaseForm
         Me.className.Location = New System.Drawing.Point(409, 10)
         Me.className.Name = "className"
         Me.className.Size = New System.Drawing.Size(121, 21)
-        Me.className.TabIndex = 14
+        Me.className.TabIndex = 8
         Me.className.Text = "Choose class..."
         '
         'TerseDataSet
@@ -134,7 +134,7 @@ Partial Class viewDatabaseForm
         Me.yearName.Location = New System.Drawing.Point(234, 10)
         Me.yearName.Name = "yearName"
         Me.yearName.Size = New System.Drawing.Size(121, 21)
-        Me.yearName.TabIndex = 15
+        Me.yearName.TabIndex = 7
         Me.yearName.Text = "Choose year..."
         '
         'viewDatabaseForm
