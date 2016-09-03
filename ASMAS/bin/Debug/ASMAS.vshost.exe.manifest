@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Gii+5bxHuoHsrOitIApfcy1P2lfr9dNMiXbP6MqCjyc=</dsig:DigestValue>
+        <dsig:DigestValue>hEW/7Cz4IW0GQ+wreqQ5VhH7uuG4KGWfvaYX13hdLg8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -138,7 +138,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>E9UzHU1YH82Nsz9p22Sp4UhzpBWXX2UMCP3pwj8BLKY=</dsig:DigestValue>
+      <dsig:DigestValue>3UGJgC8wWw0Yz+BnZLdKlRnjMTmkn+92/9ws/19Osho=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Terse1.accdb" size="438272">
