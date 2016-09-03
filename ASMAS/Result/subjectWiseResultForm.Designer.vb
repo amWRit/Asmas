@@ -206,6 +206,7 @@ Partial Class subjectWiseResultForm
         '
         'nextBtn
         '
+        Me.nextBtn.Enabled = False
         Me.nextBtn.Location = New System.Drawing.Point(99, 220)
         Me.nextBtn.Name = "nextBtn"
         Me.nextBtn.Size = New System.Drawing.Size(75, 23)
@@ -215,6 +216,7 @@ Partial Class subjectWiseResultForm
         '
         'prevBtn
         '
+        Me.prevBtn.Enabled = False
         Me.prevBtn.Location = New System.Drawing.Point(18, 220)
         Me.prevBtn.Name = "prevBtn"
         Me.prevBtn.Size = New System.Drawing.Size(75, 23)
