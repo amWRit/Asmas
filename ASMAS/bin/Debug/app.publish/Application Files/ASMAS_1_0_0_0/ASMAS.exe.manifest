@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ASMAS.exe" version="1.0.0.0" publicKeyToken="f986b46e1b969805" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="asmas_CiZ_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ASMAS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ASMAS.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+             If you want to change the Windows User Account Control level replace the 
+             requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel element will disable file and registry virtualization. 
+            Remove this element if your application requires this virtualization for backwards
+            compatibility.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="5316072">
+      <assemblyIdentity name="ASMAS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>vLr1XFjdWMxdXKdcjoCQXtsfZrPiDwAvU0C04TNndKw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.Common.dll" size="8741568">
+      <assemblyIdentity name="Microsoft.ReportViewer.Common" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4/bZjfJ9GHc2ajdKgtvfpSlAUpchdiSxMJpXM51X1N0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.DataVisualization.dll" size="5416128">
+      <assemblyIdentity name="Microsoft.ReportViewer.DataVisualization" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>6eobgv17x2bHIxgfHNAdm6fcl1TTTDpeTLEmAdBZsfw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.ProcessingObjectModel.dll" size="115904">
+      <assemblyIdentity name="Microsoft.ReportViewer.ProcessingObjectModel" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>LpolCbXnnGiux4/oTflcUrotVjWbHiSSBHm9FDQQ4qU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.ReportViewer.WinForms.dll" size="563392">
+      <assemblyIdentity name="Microsoft.ReportViewer.WinForms" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sQraLWiB7q2Q3DGfeRq9DV1vAo41MrfXZBrd0AGvuTw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Types.dll" size="392896">
+      <assemblyIdentity name="Microsoft.SqlServer.Types" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>g0uPPSp1+4yyv5ZCerojXZO6R0+rDi1fljO+PXSESY4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ASMAS.exe.config" size="489">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2MEe6qlrbU01da6KfBp8mXa36X3rHwZU3GnjYCdyx4Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="asmas_CiZ_icon.ico" size="59198">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YWtqegxgR98PNsVhuuwUILWrmcP+0ChCRW13hX6JpU0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Terse.accdb" size="6918144">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1bY60Or4Drp5AB2vbAheNHvaEjfqBSB8bIygB5hPTUs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Terse1.accdb" size="438272">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>96WAb0f04yAzwvChcHZy1c+/iCmZKUbHNoEzKnbx9ao=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of the Windows versions that this application has been tested on and is
+           is designed to work with. Uncomment the appropriate elements and Windows will 
+           automatically selected the most compatible environment. -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=DESKTOP-RS90NBG\amWRit" issuerKeyHash="1063e134847c160d00e1267f85731f2477ca4acf" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>zh9iI0LCN0isDJ5yYKh7I7VaIopPi0wXr+K2iGrLZko=</DigestValue></Reference></SignedInfo><SignatureValue>I2ZvZ3LNfCtVkur7UFTGTFbRMRr4G3rV3sA/65gAiSHsXyNjNtBlGrkpl76vig3tE51OLNNoibeDLFE5OJn+Qs1eOjCdesXCewuZWG+BfMVWy/q/DEzrPZ/8+Tauwrq19Y1xfzRUUZCu2wA3jsomtWnMzjput+1fEq4Ai1LshxE=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tKR7cx6aUg7mZ299v9FxH277FXjrtujxn/bJhv+1FtVH73KzWi+kbIv2sS+If+ps/A+wDSa8EWDz1WWQVBcNvPFhO0AcHbxNUVaiqGMWeGvTox01iQp6o3kaf4izsAl50GCjErt8rxnhVWFg2qssHx7yFF9Ul7ImPi9rgN4fKhc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="4a66cb6a88b6e2af174c8b4f8a225ab5237ba860729e0cac4837c24223621fce" Description="" Url=""><as:assemblyIdentity name="ASMAS.exe" version="1.0.0.0" publicKeyToken="f986b46e1b969805" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-RS90NBG\amWRit</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>w3TEmBrcARsjFaJUMx61VfDWLEo+rfJhbJk8I4ts4nA=</DigestValue></Reference></SignedInfo><SignatureValue>ry4nNLQHz0Y9rf7YfhZ1sDK48DBJMROcvm002h+Ii9RPgqLQs/QR7jMCItDAaQYiO/9Vd6vjHIy1tKRTbtQrphpMMAAp5S5pAGkvSgoVRB4cQCJzEpjC5f1KBHzppOK+sc1EJt8bciAdDcxQW4aqdiRPHQaNWKxbls734nQXnX4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tKR7cx6aUg7mZ299v9FxH277FXjrtujxn/bJhv+1FtVH73KzWi+kbIv2sS+If+ps/A+wDSa8EWDz1WWQVBcNvPFhO0AcHbxNUVaiqGMWeGvTox01iQp6o3kaf4izsAl50GCjErt8rxnhVWFg2qssHx7yFF9Ul7ImPi9rgN4fKhc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQICMAh2uI4q5PnH7ixpg6TTANBgkqhkiG9w0BAQsFADA3MTUwMwYDVQQDHiwARABFAFMASwBUAE8AUAAtAFIAUwA5ADAATgBCAEcAXABhAG0AVwBSAGkAdDAeFw0xNjA5MDIxMjMyMzBaFw0xNzA5MDIxODMyMzBaMDcxNTAzBgNVBAMeLABEAEUAUwBLAFQATwBQAC0AUgBTADkAMABOAEIARwBcAGEAbQBXAFIAaQB0MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0pHtzHppSDuZnb32/0XEfbvsVeOu26PGf9smG/7UW1UfvcrNaL6Rsi/axL4h/6mz8D7ANJrwRYPPVZZBUFw288WE7QBwdvE1RVqKoYxZ4a9OjHTWJCnqjeRp/iLOwCXnQYKMSu3yvGeFVYWDaqywfHvIUX1SXsiY+L2uA3h8qFwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAKdJR1mE99CU3K+C04KOjStbKFVy5O1pNSb1qUIOAHl9ZmfafLd02wcRVOf/K8MSxkk3qJSi5cRInNV0ddO38xNMdYDJ5ZLQMIUAi1k+eOeBNI8mSPE7d8toCbooJ2vL7ameBGkWFOx7BLBqRKYDRCECCNYonOY15upWV4AP9O2z</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
