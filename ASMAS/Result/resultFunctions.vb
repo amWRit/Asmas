@@ -379,7 +379,7 @@ Public Class resultFunctions
         Dim rowID = CInt(DS.Tables(0).Rows(0)(0))
 
         updateSQL = getUpdateResultSQL(class_name, rowID)
-        Return updateSQL 
+        Return updateSQL
     End Function
 
     Public Shared Function getUpdateResultSQL(class_name As String, rowID As Integer) As String
