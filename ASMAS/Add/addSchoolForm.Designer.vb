@@ -48,7 +48,7 @@ Partial Class addSchoolForm
         Me.shortnameTextBox.Location = New System.Drawing.Point(108, 36)
         Me.shortnameTextBox.Name = "shortnameTextBox"
         Me.shortnameTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.shortnameTextBox.TabIndex = 58
+        Me.shortnameTextBox.TabIndex = 0
         '
         'shortnameLabel
         '
@@ -74,7 +74,7 @@ Partial Class addSchoolForm
         Me.fullnameTextBox.Location = New System.Drawing.Point(108, 78)
         Me.fullnameTextBox.Name = "fullnameTextBox"
         Me.fullnameTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.fullnameTextBox.TabIndex = 60
+        Me.fullnameTextBox.TabIndex = 2
         '
         'fullnameLabel
         '
@@ -90,7 +90,7 @@ Partial Class addSchoolForm
         Me.addressTextBox.Location = New System.Drawing.Point(108, 120)
         Me.addressTextBox.Name = "addressTextBox"
         Me.addressTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.addressTextBox.TabIndex = 62
+        Me.addressTextBox.TabIndex = 4
         '
         'addressLabel
         '
@@ -106,7 +106,7 @@ Partial Class addSchoolForm
         Me.estdTextBox.Location = New System.Drawing.Point(108, 160)
         Me.estdTextBox.Name = "estdTextBox"
         Me.estdTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.estdTextBox.TabIndex = 64
+        Me.estdTextBox.TabIndex = 6
         '
         'estdLabel
         '
@@ -122,7 +122,7 @@ Partial Class addSchoolForm
         Me.phoneTextBox.Location = New System.Drawing.Point(341, 36)
         Me.phoneTextBox.Name = "phoneTextBox"
         Me.phoneTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.phoneTextBox.TabIndex = 66
+        Me.phoneTextBox.TabIndex = 1
         '
         'phoneLabel
         '
@@ -138,7 +138,7 @@ Partial Class addSchoolForm
         Me.emailTextBox.Location = New System.Drawing.Point(341, 78)
         Me.emailTextBox.Name = "emailTextBox"
         Me.emailTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.emailTextBox.TabIndex = 68
+        Me.emailTextBox.TabIndex = 3
         '
         'emailLabel
         '
@@ -154,7 +154,7 @@ Partial Class addSchoolForm
         Me.websiteTextBox.Location = New System.Drawing.Point(341, 121)
         Me.websiteTextBox.Name = "websiteTextBox"
         Me.websiteTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.websiteTextBox.TabIndex = 70
+        Me.websiteTextBox.TabIndex = 5
         '
         'websiteLabel
         '
@@ -170,7 +170,7 @@ Partial Class addSchoolForm
         Me.saveBtn.Location = New System.Drawing.Point(292, 326)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
-        Me.saveBtn.TabIndex = 72
+        Me.saveBtn.TabIndex = 8
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
@@ -179,7 +179,7 @@ Partial Class addSchoolForm
         Me.cancelBtn.Location = New System.Drawing.Point(384, 326)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
-        Me.cancelBtn.TabIndex = 73
+        Me.cancelBtn.TabIndex = 9
         Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = True
         '
@@ -199,7 +199,7 @@ Partial Class addSchoolForm
         Me.descTextBox.MaxLength = 255
         Me.descTextBox.Name = "descTextBox"
         Me.descTextBox.Size = New System.Drawing.Size(354, 96)
-        Me.descTextBox.TabIndex = 71
+        Me.descTextBox.TabIndex = 7
         Me.descTextBox.Text = ""
         '
         'addSchoolForm

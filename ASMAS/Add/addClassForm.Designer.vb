@@ -65,7 +65,7 @@ Partial Class addClassForm
         Me.yearNameCombo.Location = New System.Drawing.Point(265, 36)
         Me.yearNameCombo.Name = "yearNameCombo"
         Me.yearNameCombo.Size = New System.Drawing.Size(121, 21)
-        Me.yearNameCombo.TabIndex = 6
+        Me.yearNameCombo.TabIndex = 1
         Me.yearNameCombo.Text = "Choose year..."
         '
         'schoolLabel
@@ -83,34 +83,34 @@ Partial Class addClassForm
         Me.schoolNameCombo.Location = New System.Drawing.Point(69, 36)
         Me.schoolNameCombo.Name = "schoolNameCombo"
         Me.schoolNameCombo.Size = New System.Drawing.Size(121, 21)
-        Me.schoolNameCombo.TabIndex = 4
+        Me.schoolNameCombo.TabIndex = 0
         Me.schoolNameCombo.Text = "Choose School..."
         '
         'shortnameTextBox
         '
-        Me.shortnameTextBox.Location = New System.Drawing.Point(112, 75)
+        Me.shortnameTextBox.Location = New System.Drawing.Point(108, 87)
         Me.shortnameTextBox.Name = "shortnameTextBox"
         Me.shortnameTextBox.Size = New System.Drawing.Size(212, 20)
-        Me.shortnameTextBox.TabIndex = 8
+        Me.shortnameTextBox.TabIndex = 2
         '
         'fullnameTextBox
         '
-        Me.fullnameTextBox.Location = New System.Drawing.Point(112, 111)
+        Me.fullnameTextBox.Location = New System.Drawing.Point(108, 120)
         Me.fullnameTextBox.Name = "fullnameTextBox"
         Me.fullnameTextBox.Size = New System.Drawing.Size(212, 20)
-        Me.fullnameTextBox.TabIndex = 9
+        Me.fullnameTextBox.TabIndex = 3
         '
         'sizeTextBox
         '
-        Me.sizeTextBox.Location = New System.Drawing.Point(112, 143)
+        Me.sizeTextBox.Location = New System.Drawing.Point(108, 153)
         Me.sizeTextBox.Name = "sizeTextBox"
-        Me.sizeTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.sizeTextBox.TabIndex = 10
+        Me.sizeTextBox.Size = New System.Drawing.Size(212, 20)
+        Me.sizeTextBox.TabIndex = 4
         '
         'shortNameLabel
         '
         Me.shortNameLabel.AutoSize = True
-        Me.shortNameLabel.Location = New System.Drawing.Point(16, 78)
+        Me.shortNameLabel.Location = New System.Drawing.Point(17, 94)
         Me.shortNameLabel.Name = "shortNameLabel"
         Me.shortNameLabel.Size = New System.Drawing.Size(63, 13)
         Me.shortNameLabel.TabIndex = 12
@@ -119,7 +119,7 @@ Partial Class addClassForm
         'fullNameLabel
         '
         Me.fullNameLabel.AutoSize = True
-        Me.fullNameLabel.Location = New System.Drawing.Point(25, 118)
+        Me.fullNameLabel.Location = New System.Drawing.Point(17, 127)
         Me.fullNameLabel.Name = "fullNameLabel"
         Me.fullNameLabel.Size = New System.Drawing.Size(54, 13)
         Me.fullNameLabel.TabIndex = 13
@@ -128,7 +128,7 @@ Partial Class addClassForm
         'sizeLabel
         '
         Me.sizeLabel.AutoSize = True
-        Me.sizeLabel.Location = New System.Drawing.Point(25, 150)
+        Me.sizeLabel.Location = New System.Drawing.Point(17, 160)
         Me.sizeLabel.Name = "sizeLabel"
         Me.sizeLabel.Size = New System.Drawing.Size(81, 13)
         Me.sizeLabel.TabIndex = 14
@@ -137,7 +137,7 @@ Partial Class addClassForm
         'ctLabel
         '
         Me.ctLabel.AutoSize = True
-        Me.ctLabel.Location = New System.Drawing.Point(25, 191)
+        Me.ctLabel.Location = New System.Drawing.Point(17, 194)
         Me.ctLabel.Name = "ctLabel"
         Me.ctLabel.Size = New System.Drawing.Size(71, 13)
         Me.ctLabel.TabIndex = 15
@@ -148,7 +148,7 @@ Partial Class addClassForm
         Me.cancelBtn.Location = New System.Drawing.Point(311, 232)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
-        Me.cancelBtn.TabIndex = 16
+        Me.cancelBtn.TabIndex = 7
         Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = True
         '
@@ -157,7 +157,7 @@ Partial Class addClassForm
         Me.saveBtn.Location = New System.Drawing.Point(224, 232)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
-        Me.saveBtn.TabIndex = 17
+        Me.saveBtn.TabIndex = 6
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
@@ -173,10 +173,10 @@ Partial Class addClassForm
         'ctCombo
         '
         Me.ctCombo.FormattingEnabled = True
-        Me.ctCombo.Location = New System.Drawing.Point(112, 183)
+        Me.ctCombo.Location = New System.Drawing.Point(108, 186)
         Me.ctCombo.Name = "ctCombo"
         Me.ctCombo.Size = New System.Drawing.Size(212, 21)
-        Me.ctCombo.TabIndex = 19
+        Me.ctCombo.TabIndex = 5
         Me.ctCombo.Text = "Choose class teacher..."
         '
         'addClassForm

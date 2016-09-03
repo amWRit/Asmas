@@ -52,7 +52,7 @@ Partial Class subjectWiseResultForm
         Me.subjectCombo.Location = New System.Drawing.Point(99, 49)
         Me.subjectCombo.Name = "subjectCombo"
         Me.subjectCombo.Size = New System.Drawing.Size(98, 21)
-        Me.subjectCombo.TabIndex = 0
+        Me.subjectCombo.TabIndex = 3
         Me.subjectCombo.Text = "Choose subject..."
         '
         'Label1
@@ -69,7 +69,7 @@ Partial Class subjectWiseResultForm
         Me.subjPr.Location = New System.Drawing.Point(259, 48)
         Me.subjPr.Name = "subjPr"
         Me.subjPr.Size = New System.Drawing.Size(100, 20)
-        Me.subjPr.TabIndex = 3
+        Me.subjPr.TabIndex = 7
         Me.subjPr.Text = "0"
         '
         'subjTh
@@ -77,7 +77,7 @@ Partial Class subjectWiseResultForm
         Me.subjTh.Location = New System.Drawing.Point(105, 48)
         Me.subjTh.Name = "subjTh"
         Me.subjTh.Size = New System.Drawing.Size(100, 20)
-        Me.subjTh.TabIndex = 2
+        Me.subjTh.TabIndex = 6
         Me.subjTh.Text = "0"
         '
         'Label4
@@ -115,7 +115,7 @@ Partial Class subjectWiseResultForm
         Me.regNumberTextBox.Location = New System.Drawing.Point(99, 11)
         Me.regNumberTextBox.Name = "regNumberTextBox"
         Me.regNumberTextBox.Size = New System.Drawing.Size(98, 20)
-        Me.regNumberTextBox.TabIndex = 199
+        Me.regNumberTextBox.TabIndex = 1
         '
         'Label14
         '
@@ -132,14 +132,14 @@ Partial Class subjectWiseResultForm
         Me.studentNameTextBox.Location = New System.Drawing.Point(304, 11)
         Me.studentNameTextBox.Name = "studentNameTextBox"
         Me.studentNameTextBox.Size = New System.Drawing.Size(182, 20)
-        Me.studentNameTextBox.TabIndex = 202
+        Me.studentNameTextBox.TabIndex = 2
         '
         'cancelBtn
         '
         Me.cancelBtn.Location = New System.Drawing.Point(418, 221)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
-        Me.cancelBtn.TabIndex = 204
+        Me.cancelBtn.TabIndex = 9
         Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = True
         '
@@ -148,7 +148,7 @@ Partial Class subjectWiseResultForm
         Me.saveBtn.Location = New System.Drawing.Point(337, 221)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
-        Me.saveBtn.TabIndex = 203
+        Me.saveBtn.TabIndex = 8
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
@@ -163,7 +163,7 @@ Partial Class subjectWiseResultForm
         Me.GroupBox1.Location = New System.Drawing.Point(12, 129)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(476, 85)
-        Me.GroupBox1.TabIndex = 205
+        Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Enter Marks"
         '
@@ -201,7 +201,7 @@ Partial Class subjectWiseResultForm
         Me.termCombo.Location = New System.Drawing.Point(304, 49)
         Me.termCombo.Name = "termCombo"
         Me.termCombo.Size = New System.Drawing.Size(98, 21)
-        Me.termCombo.TabIndex = 1
+        Me.termCombo.TabIndex = 4
         Me.termCombo.Text = "Choose terminal..."
         '
         'nextBtn

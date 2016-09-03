@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="5316072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="5314536">
       <assemblyIdentity name="ASMAS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vLr1XFjdWMxdXKdcjoCQXtsfZrPiDwAvU0C04TNndKw=</dsig:DigestValue>
+        <dsig:DigestValue>cw64U7QRkVxpRuu6wsFUsBRchdyg79PO7d6IShhRGCw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -138,7 +138,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>1bY60Or4Drp5AB2vbAheNHvaEjfqBSB8bIygB5hPTUs=</dsig:DigestValue>
+      <dsig:DigestValue>E9UzHU1YH82Nsz9p22Sp4UhzpBWXX2UMCP3pwj8BLKY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Terse1.accdb" size="438272">

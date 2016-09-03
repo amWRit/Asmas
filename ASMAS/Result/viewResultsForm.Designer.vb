@@ -188,7 +188,7 @@ Partial Class viewResultsForm
         Me.printBtn.Location = New System.Drawing.Point(837, 19)
         Me.printBtn.Name = "printBtn"
         Me.printBtn.Size = New System.Drawing.Size(101, 23)
-        Me.printBtn.TabIndex = 27
+        Me.printBtn.TabIndex = 24
         Me.printBtn.Text = "Print Report Card"
         Me.printBtn.UseVisualStyleBackColor = True
         '

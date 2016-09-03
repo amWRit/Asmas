@@ -93,7 +93,7 @@ Partial Class HomeForm
         Me.addUserBtn.Location = New System.Drawing.Point(76, 399)
         Me.addUserBtn.Name = "addUserBtn"
         Me.addUserBtn.Size = New System.Drawing.Size(195, 43)
-        Me.addUserBtn.TabIndex = 6
+        Me.addUserBtn.TabIndex = 7
         Me.addUserBtn.Text = "Add User"
         Me.addUserBtn.UseVisualStyleBackColor = True
         '
@@ -102,7 +102,7 @@ Partial Class HomeForm
         Me.addClassBtn.Location = New System.Drawing.Point(76, 343)
         Me.addClassBtn.Name = "addClassBtn"
         Me.addClassBtn.Size = New System.Drawing.Size(195, 43)
-        Me.addClassBtn.TabIndex = 7
+        Me.addClassBtn.TabIndex = 6
         Me.addClassBtn.Text = "Add Class"
         Me.addClassBtn.UseVisualStyleBackColor = True
         '
@@ -111,7 +111,7 @@ Partial Class HomeForm
         Me.viewMyClassesBtn.Location = New System.Drawing.Point(76, 164)
         Me.viewMyClassesBtn.Name = "viewMyClassesBtn"
         Me.viewMyClassesBtn.Size = New System.Drawing.Size(195, 43)
-        Me.viewMyClassesBtn.TabIndex = 8
+        Me.viewMyClassesBtn.TabIndex = 3
         Me.viewMyClassesBtn.Text = "View My Classes"
         Me.viewMyClassesBtn.UseVisualStyleBackColor = True
         Me.viewMyClassesBtn.Visible = False
@@ -121,7 +121,7 @@ Partial Class HomeForm
         Me.viewResultBtn.Location = New System.Drawing.Point(76, 458)
         Me.viewResultBtn.Name = "viewResultBtn"
         Me.viewResultBtn.Size = New System.Drawing.Size(195, 43)
-        Me.viewResultBtn.TabIndex = 9
+        Me.viewResultBtn.TabIndex = 8
         Me.viewResultBtn.Text = "View Results"
         Me.viewResultBtn.UseVisualStyleBackColor = True
         '

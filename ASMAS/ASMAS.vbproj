@@ -251,12 +251,6 @@
     <Compile Include="Print\printResultsPrimaryForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportCard.Designer.vb">
-      <DependentUpon>ReportCard.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ReportCard.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Result\resultFunctions.vb" />
     <Compile Include="SearchForm.Designer.vb">
       <DependentUpon>SearchForm.vb</DependentUpon>
@@ -391,9 +385,6 @@
     <EmbeddedResource Include="Print\resultSec.rdlc" />
     <EmbeddedResource Include="Print\resultPrimary.rdlc" />
     <EmbeddedResource Include="Print\resultLowSec.rdlc" />
-    <EmbeddedResource Include="ReportCard.resx">
-      <DependentUpon>ReportCard.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.vb</DependentUpon>
     </EmbeddedResource>

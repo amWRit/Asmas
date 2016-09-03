@@ -80,7 +80,7 @@ Partial Class classResults
         Me.termCombo.Location = New System.Drawing.Point(375, 9)
         Me.termCombo.Name = "termCombo"
         Me.termCombo.Size = New System.Drawing.Size(121, 21)
-        Me.termCombo.TabIndex = 168
+        Me.termCombo.TabIndex = 1
         Me.termCombo.Text = "Choose term..."
         '
         'termLabel
@@ -97,7 +97,7 @@ Partial Class classResults
         Me.viewBtn.Location = New System.Drawing.Point(502, 9)
         Me.viewBtn.Name = "viewBtn"
         Me.viewBtn.Size = New System.Drawing.Size(75, 23)
-        Me.viewBtn.TabIndex = 170
+        Me.viewBtn.TabIndex = 2
         Me.viewBtn.Text = "View"
         Me.viewBtn.UseVisualStyleBackColor = True
         '
@@ -106,7 +106,7 @@ Partial Class classResults
         Me.updateRankBtn.Location = New System.Drawing.Point(884, 9)
         Me.updateRankBtn.Name = "updateRankBtn"
         Me.updateRankBtn.Size = New System.Drawing.Size(99, 23)
-        Me.updateRankBtn.TabIndex = 173
+        Me.updateRankBtn.TabIndex = 5
         Me.updateRankBtn.Text = "Update Rank"
         Me.updateRankBtn.UseVisualStyleBackColor = True
         '
@@ -128,7 +128,7 @@ Partial Class classResults
         Me.printBtn.Location = New System.Drawing.Point(764, 9)
         Me.printBtn.Name = "printBtn"
         Me.printBtn.Size = New System.Drawing.Size(101, 23)
-        Me.printBtn.TabIndex = 174
+        Me.printBtn.TabIndex = 4
         Me.printBtn.Text = "Print Report Card"
         Me.printBtn.UseVisualStyleBackColor = True
         '
@@ -137,7 +137,7 @@ Partial Class classResults
         Me.updateCalcBtn.Location = New System.Drawing.Point(630, 8)
         Me.updateCalcBtn.Name = "updateCalcBtn"
         Me.updateCalcBtn.Size = New System.Drawing.Size(114, 23)
-        Me.updateCalcBtn.TabIndex = 175
+        Me.updateCalcBtn.TabIndex = 3
         Me.updateCalcBtn.Text = "Update Calculations"
         Me.updateCalcBtn.UseVisualStyleBackColor = True
         '
