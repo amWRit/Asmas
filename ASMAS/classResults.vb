@@ -117,6 +117,7 @@ Public Class classResults
                     Con.Close()
                 Next
                 MsgBox("Rank updated successfully. Please make sure of it.", MsgBoxStyle.Information, "Updated")
+                refreshLV(className, terminal)
             Catch ex As Exception
                 MsgBox(ex.Message)
 
@@ -198,5 +199,6 @@ Public Class classResults
         Dim year_num = contents(1)
         Dim school_name = contents(2)
         resultFunctions.updateCalculations(tempDS, school_name, year_num, class_name)
+        refreshLV(class_name, termCombo.Text)
     End Sub
 End Class

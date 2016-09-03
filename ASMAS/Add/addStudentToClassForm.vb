@@ -7,13 +7,6 @@ Public Class addStudentToClassForm
 
     Dim DS As DataSet 'Object to store data in
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub addStudentToClassForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Public Sub New(ByVal class_id As String)
         MyBase.New
@@ -87,23 +80,35 @@ Public Class addStudentToClassForm
                     searchResultListView.GetItemAt(e.X, e.Y).Selected = True
                     searchResultContextMenu.Show(searchResultListView, New Point(e.X, e.Y))
                 End If
-
             ElseIf e.Button = MouseButtons.Left Then
-                If searchResultListView.SelectedIndices.Count = 0 Then Exit Sub
-
-                Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
-                Dim photoPath = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
-
-                If photoPath = "" Then photoPath = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\photo_not_available.png"
-                studentPhoto.Image = Image.FromFile(photoPath)
-
-                Dim f_name = searchResultListView.Items(ItemIndex).SubItems(2).Text.ToString
-                Dim m_name = searchResultListView.Items(ItemIndex).SubItems(3).Text.ToString
-                Dim l_name = searchResultListView.Items(ItemIndex).SubItems(4).Text.ToString
-                fullnameLabel.Text = f_name & " " & m_name & " " & l_name
+                loadStudentInfo()
             End If
         End If
 
+    End Sub
+
+    Private Sub searchResultListView_KeyUp(sender As Object, e As System.Windows.Forms.KeyEventArgs) Handles searchResultListView.KeyUp
+        Dim rowCount = searchResultListView.Items.Count
+        If rowCount > 0 Then
+            If (e.KeyCode = Keys.Up Or e.KeyCode = Keys.Down) Then
+                loadStudentInfo()
+            End If
+        End If
+    End Sub
+
+    Public Sub loadStudentInfo()
+        If searchResultListView.SelectedIndices.Count = 0 Then Exit Sub
+
+        Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
+        Dim photoPath = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
+
+        If photoPath = "" Then photoPath = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\photo_not_available.png"
+        studentPhoto.Image = Image.FromFile(photoPath)
+
+        Dim f_name = searchResultListView.Items(ItemIndex).SubItems(2).Text.ToString
+        Dim m_name = searchResultListView.Items(ItemIndex).SubItems(3).Text.ToString
+        Dim l_name = searchResultListView.Items(ItemIndex).SubItems(4).Text.ToString
+        fullnameLabel.Text = f_name & " " & m_name & " " & l_name
     End Sub
 
     Private Sub addStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles addStudentToolStripMenuItem.Click

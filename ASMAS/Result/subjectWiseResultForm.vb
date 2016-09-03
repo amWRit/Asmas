@@ -128,6 +128,8 @@ Public Class subjectWiseResultForm
                 subjTh.Text = ""
                 subjPr.Text = ""
             End If
+            prevBtn.Enabled = True
+            nextBtn.Enabled = True
         End If
     End Sub
 
@@ -151,6 +153,8 @@ Public Class subjectWiseResultForm
                 subjTh.Text = "0"
                 subjPr.Text = "0"
             End If
+            prevBtn.Enabled = True
+            nextBtn.Enabled = True
         End If
     End Sub
 
