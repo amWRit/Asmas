@@ -80,7 +80,15 @@ Public Class studentDetails
             _email.Text = email.ToString
             _info.Text = info.ToString
             If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-            studentPhoto.Image = Image.FromFile(photoPath)
+
+            Try
+                studentPhoto.Image = Image.FromFile(photoPath)
+            Catch ex As Exception
+                MsgBox("Couldn't find file" & ex.Message)
+            Finally
+                photoPath = ""
+            End Try
+
 
             'find current class
             Dim currentClassSQL As String = "SELECT
