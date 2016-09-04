@@ -229,7 +229,7 @@ Partial Class addSchoolForm
         Me.MaximizeBox = False
         Me.Name = "addSchoolForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "addSchoolForm"
+        Me.Text = "Add School"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

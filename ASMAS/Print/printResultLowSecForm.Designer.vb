@@ -23,7 +23,7 @@ Partial Class printResultLowSecForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.printResultsLowSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -47,9 +47,9 @@ Partial Class printResultLowSecForm
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom
-        ReportDataSource2.Name = "resultLowSec"
-        ReportDataSource2.Value = Me.printResultsLowSecBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "resultLowSec"
+        ReportDataSource1.Value = Me.printResultsLowSecBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "ASMAS.resultLowSec.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 32)
         Me.ReportViewer1.Name = "ReportViewer1"
@@ -79,7 +79,7 @@ Partial Class printResultLowSecForm
         Me.nextBtn.Text = "Next"
         Me.nextBtn.UseVisualStyleBackColor = True
         '
-        'printForm
+        'printResultLowSecForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -88,8 +88,8 @@ Partial Class printResultLowSecForm
         Me.Controls.Add(Me.previousBtn)
         Me.Controls.Add(Me.ReportViewer1)
         Me.MinimizeBox = False
-        Me.Name = "printForm"
-        Me.Text = "printForm"
+        Me.Name = "printResultLowSecForm"
+        Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.printResultsLowSecBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()

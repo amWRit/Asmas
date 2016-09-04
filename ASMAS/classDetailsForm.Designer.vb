@@ -193,7 +193,7 @@ Partial Class classDetailsForm
         Me.Controls.Add(Me.schoolLabel)
         Me.MaximizeBox = False
         Me.Name = "classDetailsForm"
-        Me.Text = "classDetailsForm"
+        Me.Text = "Class Details"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

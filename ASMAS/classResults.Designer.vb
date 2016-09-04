@@ -157,7 +157,7 @@ Partial Class classResults
         Me.MaximizeBox = False
         Me.Name = "classResults"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Update Calculations"
+        Me.Text = "Class Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.classResultsContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)

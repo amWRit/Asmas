@@ -108,7 +108,7 @@ Partial Class addYearForm
         Me.MaximizeBox = False
         Me.Name = "addYearForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "addYearForm"
+        Me.Text = "Add Year"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

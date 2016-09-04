@@ -422,7 +422,7 @@ Partial Class studentDetails
         Me.Controls.Add(Me.studentPhoto)
         Me.MaximizeBox = False
         Me.Name = "studentDetails"
-        Me.Text = "studentDetails"
+        Me.Text = "Student Details"
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

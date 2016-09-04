@@ -415,7 +415,7 @@ Partial Class addStudentForm
         Me.MaximizeBox = False
         Me.Name = "addStudentForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "addStudentForm"
+        Me.Text = "Add Student"
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
