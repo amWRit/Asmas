@@ -382,7 +382,6 @@
     <EmbeddedResource Include="Print\printResultsPrimaryForm.resx">
       <DependentUpon>printResultsPrimaryForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\Report1.rdlc" />
     <EmbeddedResource Include="Print\resultSec.rdlc" />
     <EmbeddedResource Include="Print\resultPrimary.rdlc" />
     <EmbeddedResource Include="Print\resultLowSec.rdlc" />
