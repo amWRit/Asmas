@@ -60,12 +60,12 @@ Partial Class subjectTeachersDetails
         '
         Me.subjectTeacherMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteToolStripMenuItem})
         Me.subjectTeacherMenuStrip.Name = "subjectTeacherMenuStrip"
-        Me.subjectTeacherMenuStrip.Size = New System.Drawing.Size(153, 48)
+        Me.subjectTeacherMenuStrip.Size = New System.Drawing.Size(108, 26)
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'subjectTeachersDetails
@@ -77,7 +77,7 @@ Partial Class subjectTeachersDetails
         Me.MaximizeBox = False
         Me.Name = "subjectTeachersDetails"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "subjectTeachersDetails"
+        Me.Text = "Subject Teacher Details"
         Me.subjectTeacherMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
 

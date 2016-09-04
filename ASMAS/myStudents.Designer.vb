@@ -73,24 +73,24 @@ Partial Class myStudents
         '
         Me.myStudentsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem})
         Me.myStudentsContextMenu.Name = "searchResultContextMenu"
-        Me.myStudentsContextMenu.Size = New System.Drawing.Size(153, 92)
+        Me.myStudentsContextMenu.Size = New System.Drawing.Size(108, 70)
         '
         'ViewToolStripMenuItem
         '
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.ViewToolStripMenuItem.Text = "View"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'myStudents
@@ -103,7 +103,7 @@ Partial Class myStudents
         Me.MaximizeBox = False
         Me.Name = "myStudents"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "myStudents"
+        Me.Text = "My Students"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.myStudentsContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)

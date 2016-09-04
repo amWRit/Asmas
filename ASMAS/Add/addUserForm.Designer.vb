@@ -150,7 +150,7 @@ Partial Class addUserForm
         Me.MaximizeBox = False
         Me.Name = "addUserForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "addUserForm"
+        Me.Text = "Add User"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

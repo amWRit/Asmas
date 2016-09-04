@@ -203,7 +203,7 @@ Partial Class addClassForm
         Me.MaximizeBox = False
         Me.Name = "addClassForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "addClassForm"
+        Me.Text = "Add Class"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

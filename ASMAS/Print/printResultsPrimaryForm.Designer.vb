@@ -89,7 +89,7 @@ Partial Class printResultsPrimaryForm
         Me.Controls.Add(Me.primaryReportViewer)
         Me.MinimizeBox = False
         Me.Name = "printResultsPrimaryForm"
-        Me.Text = "printResultsPrimaryForm"
+        Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.printResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()

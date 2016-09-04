@@ -156,7 +156,7 @@ Partial Class addStudentToClassForm
         Me.MaximizeBox = False
         Me.Name = "addStudentToClassForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "addStudentToClassForm"
+        Me.Text = "Add student"
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.searchResultContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)

@@ -100,7 +100,7 @@ Partial Class assignSubjectTeacherForm
         Me.MaximizeBox = False
         Me.Name = "assignSubjectTeacherForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "assignSubjectTeacherForm"
+        Me.Text = "Subject Teacher"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

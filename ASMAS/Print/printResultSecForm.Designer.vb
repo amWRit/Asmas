@@ -89,7 +89,7 @@ Partial Class printResultSecForm
         Me.Controls.Add(Me.secReportViewer)
         Me.MinimizeBox = False
         Me.Name = "printResultSecForm"
-        Me.Text = "printResultSecForm"
+        Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.printResultsSecBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()

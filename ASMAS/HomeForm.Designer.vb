@@ -144,7 +144,7 @@ Partial Class HomeForm
         Me.MaximizeBox = False
         Me.Name = "HomeForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "HomeForm"
+        Me.Text = "Home"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
