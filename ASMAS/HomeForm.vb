@@ -1,36 +1,5 @@
 ﻿Public Class HomeForm
 
-    'Private id As String
-    'Private _name As String
-    'Private me_user As DataSet
-    'Public Property userID() As String
-    '    Get
-    '        Return id
-    '    End Get
-    '    Set(ByVal value As String)
-    '        id = value
-    '    End Set
-    'End Property
-
-    'Public Property User() As DataSet
-    '    Get
-    '        Return me_user
-    '    End Get
-    '    Set(ByVal value As DataSet)
-    '        me_user = value
-    '    End Set
-    'End Property
-
-    'Public Property userName() As String
-    '    Get
-    '        Return _name
-    '    End Get
-    '    Set(value As String)
-    '        _name = value
-    '    End Set
-    'End Property
-
-
     Private Sub HomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim currentUser As DataSet
         currentUser = User.user

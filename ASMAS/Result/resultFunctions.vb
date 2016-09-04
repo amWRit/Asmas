@@ -1,7 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 Public Class resultFunctions
-    Public Shared data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Private Shared data_source_path As String = DBConnection.data_source_path
     Public Shared Con As System.Data.OleDb.OleDbConnection
 
     Public Shared contents As String() = {}

@@ -3,7 +3,7 @@ Imports System.Data.OleDb
 Public Class studentDetails
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
-    Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Private data_source_path As String = DBConnection.data_source_path
 
     Public class_id As String
     Private Sub studentDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -79,7 +79,7 @@ Public Class studentDetails
             _phone.Text = phone.ToString
             _email.Text = email.ToString
             _info.Text = info.ToString
-            If photoPath = "" Then photoPath = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\photo_not_available.png"
+            If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
             studentPhoto.Image = Image.FromFile(photoPath)
 
             'find current class

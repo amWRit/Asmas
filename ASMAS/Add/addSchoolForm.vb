@@ -3,7 +3,7 @@ Imports System.Data.OleDb
 Public Class addSchoolForm
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
-    Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Private data_source_path As String = DBConnection.data_source_path
 
     Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
         Con = New OleDbConnection

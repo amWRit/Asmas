@@ -6,7 +6,9 @@ Public Class Year
     Public Shared data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
     Public Shared DS As New DataSet
 
-    Public Shared current_year As String = "2073"
+    Public Shared BS As Date = ConvertToBS(Date.Today)
+
+    Public Shared current_year As String = BS.Year.ToString
     Public Shared current_year_id As String
 
     Public Shared Property currentYear() As String
@@ -38,4 +40,16 @@ Public Class Year
             current_year_id = value
         End Set
     End Property
+
+    Public Shared Function ConvertToBS(ByVal ad As Date) As Date
+        'About Nepali Calendar
+        'Nepali Calendar is based on Bikram Sambat and is 56 years and 8 
+        'months ahead of A.D. The Bikram Sambat calendar was started 
+        'in 57 B.C. by King Bikramaditya in India. 
+
+        Dim bs As New Date
+        bs = ad.AddYears(56)
+        bs = bs.AddMonths(8)
+        Return bs
+    End Function
 End Class

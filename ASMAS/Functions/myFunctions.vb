@@ -3,7 +3,7 @@ Imports System.Data.OleDb
 Imports Microsoft.Reporting.WinForms
 
 Public Class myFunctions
-    Public Shared data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Private Shared data_source_path As String = DBConnection.data_source_path
     Public Shared Con As System.Data.OleDb.OleDbConnection
 
     'prepare temp table for printing results - three different tables for three levels
