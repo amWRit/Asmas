@@ -6,8 +6,9 @@ Public Class LoginForm1
     Private user_name As String
     Dim mypassword As String = ""
     Private pwd As String
-    Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
 
+    Private data_source_path As String = DBConnection.data_source_path
+    Dim connectionString As String = DBConnection.connectionString
     Dim con As New OleDbConnection
     'Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb ;Jet OLEDB:Database Password= & mypassword")
     Dim cmd As New OleDbCommand
@@ -35,7 +36,7 @@ Public Class LoginForm1
             passwordError.Text = "Please enter password."
         End If
 
-        Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+        'Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
         con = New OleDbConnection(connectionString)
 
         Dim sql = "SELECT * FROM [user] WHERE user_name='" & user_name & "' AND user_password='" & pwd & "'"

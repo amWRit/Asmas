@@ -4,7 +4,7 @@ Imports System.Data.OleDb
 Public Class addClassForm
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
-    Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
+    Private data_source_path As String = DBConnection.data_source_path
     Public contents As String() = {}
     Public edit As String = ""
 
