@@ -7,6 +7,7 @@ Public Class addStudentForm
     Private pwd As String
     Private data_source_path As String = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\Terse.accdb"
     Public contents As String() = {}
+    Public regNumber As String = ""
 
     Private Sub addStudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Con = New OleDbConnection
@@ -100,10 +101,9 @@ Public Class addStudentForm
                 phoneTextBox.Text = phone.ToString
                 emailTextBox.Text = email.ToString
                 infoTextBox.Text = info.ToString
-                If photoPath = "" Then photoPath = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\photo_not_available.png"
+                If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
                 studentPhoto.Image = Image.FromFile(photoPath)
-
-
+                'studentPhoto.Image.Dispose()
 
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -135,7 +135,7 @@ Public Class addStudentForm
         Dim f_name = fnameTextBox.Text
         Dim m_name = mnameTextBox.Text
         Dim l_name = lnameTextBox.Text
-        Dim regNumber = ""
+        'Dim regNumber = ""
 
         Dim schoolName = schoolCombo.Text
         Dim schoolSQL As String = "SELECT distinct school_id from SCHOOL where short_name='" & schoolName & "'"
@@ -260,6 +260,13 @@ Public Class addStudentForm
 
     Dim bytImage() As Byte
     Private Sub browsePhotoBtn_Click(sender As Object, e As EventArgs) Handles browsePhotoBtn.Click
+        Dim edit = contents(1)
+        If edit = "FALSE" Then
+            regNumber = buildNewRegNumber()
+        Else
+            regNumber = contents(0)
+        End If
+        studentPhoto.Image.Dispose()
         Dim myStream As Stream = Nothing
         Dim dialog As New OpenFileDialog()
         dialog.Title = "Browse Picture"
@@ -273,8 +280,26 @@ Public Class addStudentForm
             Try
                 myStream = dialog.OpenFile()
                 If (myStream IsNot Nothing) Then
-                    studentPhoto.Image = Image.FromFile(dialog.FileName)
-                    filepathTextBox.Text = dialog.FileName
+                    Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
+                    Dim imageName = fnameTextBox.Text & mnameTextBox.Text & lnameTextBox.Text & regNumber & ".jpg"
+                    Dim imagePath = strBasePath & imageName
+
+                    If System.IO.File.Exists(imagePath) Then
+                        Dim I As Integer = MessageBox.Show("Photo already exists for the student. Are you sure you want to replace the file?", "File exists.", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+                        If I = MsgBoxResult.Ok Then
+                            System.IO.File.Delete(imagePath)
+                        End If
+                    End If
+
+                    studentPhoto.Image = FileHandler.RotateImage(Image.FromFile(dialog.FileName))
+                    studentPhoto.Image = FileHandler.ResizeImage(studentPhoto.Image, 198, 188)
+                    'save resized image to folder
+                    'create folder if doesn't exist
+                    If (Not System.IO.Directory.Exists(strBasePath)) Then
+                        System.IO.Directory.CreateDirectory(strBasePath)
+                    End If
+                    filepathTextBox.Text = imagePath
+                    studentPhoto.Image.Save(imagePath, System.Drawing.Imaging.ImageFormat.Jpeg)
                 End If
             Catch Ex As Exception
                 MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
@@ -282,10 +307,9 @@ Public Class addStudentForm
                 If (myStream IsNot Nothing) Then
                     myStream.Close()
                 End If
+                'studentPhoto.Image.Dispose()
             End Try
         End If
-
-
     End Sub
 
     Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click

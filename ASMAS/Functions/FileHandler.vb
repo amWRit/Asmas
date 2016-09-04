@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms
+﻿Imports System.Drawing.Imaging
+Imports System.Windows.Forms
 Imports Excel = Microsoft.Office.Interop.Excel
 
 Public Class FileHandler
@@ -54,6 +55,8 @@ Public Class FileHandler
 
         MessageBox.Show("File Exported Successfully!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+
     Public Shared Sub ReleaseObject(ByVal o As Object)
         Try
             While (System.Runtime.InteropServices.Marshal.ReleaseComObject(o) > 0)
@@ -63,4 +66,46 @@ Public Class FileHandler
             o = Nothing
         End Try
     End Sub
+
+    Public Shared Function ResizeImage(ByVal InputImage As Image, maxWidth As Integer, maxHeight As Integer) As Image
+        'Return New Bitmap(InputImage, New Size(198, 188 ))
+        Dim ratioX = CDbl(maxWidth / InputImage.Width)
+        Dim ratioY = CDbl(maxHeight / InputImage.Height)
+        Dim ratio = Math.Min(ratioX, ratioY)
+
+        Dim newWidth = CInt(InputImage.Width * ratio)
+        Dim newHeight = CInt(InputImage.Height * ratio)
+
+        Dim newImage = New Bitmap(newWidth, newHeight)
+
+        Using graphics As Graphics = Graphics.FromImage(newImage)
+            graphics.DrawImage(InputImage, 0, 0, newWidth, newHeight)
+        End Using
+        Return newImage
+    End Function
+
+    Public Shared Function RotateImage(ByVal InputImage As Image) As Image
+        Dim rft As RotateFlipType = RotateFlipType.RotateNoneFlipNone
+        Dim properties As PropertyItem() = InputImage.PropertyItems
+        Dim bReturn As Boolean = False
+        For Each p As PropertyItem In properties
+            If p.Id = 274 Then
+                Dim orientation As Short = BitConverter.ToInt16(p.Value, 0)
+                Select Case orientation
+                    Case 1
+                        rft = RotateFlipType.RotateNoneFlipNone
+                    Case 3
+                        rft = RotateFlipType.Rotate180FlipNone
+                    Case 6
+                        rft = RotateFlipType.Rotate90FlipNone
+                    Case 8
+                        rft = RotateFlipType.Rotate270FlipNone
+                End Select
+            End If
+        Next
+        If rft <> RotateFlipType.RotateNoneFlipNone Then
+            InputImage.RotateFlip(rft)
+        End If
+        Return InputImage
+    End Function
 End Class

@@ -102,8 +102,9 @@ Public Class addStudentToClassForm
         Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
         Dim photoPath = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
 
-        If photoPath = "" Then photoPath = "C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\photo_not_available.png"
-        studentPhoto.Image = Image.FromFile(photoPath)
+        If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+        studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
+        'studentPhoto.Image.Dispose()
 
         Dim f_name = searchResultListView.Items(ItemIndex).SubItems(2).Text.ToString
         Dim m_name = searchResultListView.Items(ItemIndex).SubItems(3).Text.ToString
