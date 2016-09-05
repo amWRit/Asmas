@@ -588,9 +588,9 @@ order by student_id"
         ElseIf subject = "Opt. Math" Then
             key = "opt1"
         ElseIf subject = "Account" Then
-            key = "opt1"
-        ElseIf subject = "Economics" Then
             key = "opt2"
+        ElseIf subject = "Economics" Then
+            key = "opt1"
         ElseIf subject = "Education" Then
             key = "opt2"
         ElseIf subject = "Computer" Then
