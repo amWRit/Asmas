@@ -90,9 +90,9 @@ Public Class studentsUnderLocosForm
         studentsListView.Columns.Clear() 'remove columns in LV
 
         'create columns on listview
-        For i As Integer = 0 To resultDS.Tables(0).Columns.Count - 1
-            studentsListView.Columns.Add(resultDS.Tables(0).Columns(i).Caption, 200, HorizontalAlignment.Left)
-        Next
+        studentsListView.Columns.Add("Full Name", 200, HorizontalAlignment.Left)
+        studentsListView.Columns.Add("Marks Obtained", 200, HorizontalAlignment.Left)
+
         Dim rowCount = resultDS.Tables(0).Rows.Count
         'Parse and add data to the listview
         For i As Integer = 0 To rowCount - 1
