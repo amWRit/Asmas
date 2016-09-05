@@ -39,6 +39,7 @@ Partial Class myClassesForm
         Me.SubjectTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AssignToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResultAnalysisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.myClassesContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,7 +71,7 @@ Partial Class myClassesForm
         '
         Me.myClassesContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ViewStudentsToolStripMenuItem, Me.AddStudentToolStripMenuItem, Me.ViewResultsToolStripMenuItem, Me.AddResultToolStripMenuItem, Me.SubjectTeacherToolStripMenuItem})
         Me.myClassesContextMenu.Name = "searchResultContextMenu"
-        Me.myClassesContextMenu.Size = New System.Drawing.Size(158, 180)
+        Me.myClassesContextMenu.Size = New System.Drawing.Size(158, 202)
         '
         'ViewToolStripMenuItem
         '
@@ -119,18 +120,18 @@ Partial Class myClassesForm
         'StudentWiseToolStripMenuItem
         '
         Me.StudentWiseToolStripMenuItem.Name = "StudentWiseToolStripMenuItem"
-        Me.StudentWiseToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.StudentWiseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.StudentWiseToolStripMenuItem.Text = "Student wise"
         '
         'SubjectWiseToolStripMenuItem
         '
         Me.SubjectWiseToolStripMenuItem.Name = "SubjectWiseToolStripMenuItem"
-        Me.SubjectWiseToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.SubjectWiseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SubjectWiseToolStripMenuItem.Text = "Subject wise"
         '
         'SubjectTeacherToolStripMenuItem
         '
-        Me.SubjectTeacherToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AssignToolStripMenuItem, Me.ViewToolStripMenuItem1})
+        Me.SubjectTeacherToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AssignToolStripMenuItem, Me.ViewToolStripMenuItem1, Me.ResultAnalysisToolStripMenuItem})
         Me.SubjectTeacherToolStripMenuItem.Name = "SubjectTeacherToolStripMenuItem"
         Me.SubjectTeacherToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.SubjectTeacherToolStripMenuItem.Text = "Subject Teacher"
@@ -138,14 +139,20 @@ Partial Class myClassesForm
         'AssignToolStripMenuItem
         '
         Me.AssignToolStripMenuItem.Name = "AssignToolStripMenuItem"
-        Me.AssignToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
+        Me.AssignToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AssignToolStripMenuItem.Text = "Assign"
         '
         'ViewToolStripMenuItem1
         '
         Me.ViewToolStripMenuItem1.Name = "ViewToolStripMenuItem1"
-        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(109, 22)
+        Me.ViewToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ViewToolStripMenuItem1.Text = "View"
+        '
+        'ResultAnalysisToolStripMenuItem
+        '
+        Me.ResultAnalysisToolStripMenuItem.Name = "ResultAnalysisToolStripMenuItem"
+        Me.ResultAnalysisToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ResultAnalysisToolStripMenuItem.Text = "Result Analysis"
         '
         'myClassesForm
         '
@@ -179,4 +186,5 @@ Partial Class myClassesForm
     Friend WithEvents SubjectTeacherToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AssignToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ResultAnalysisToolStripMenuItem As ToolStripMenuItem
 End Class

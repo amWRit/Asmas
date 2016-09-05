@@ -253,6 +253,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Result\resultFunctions.vb" />
+    <Compile Include="Result\subjectResultAnalysisForm.Designer.vb">
+      <DependentUpon>subjectResultAnalysisForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Result\subjectResultAnalysisForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SearchForm.Designer.vb">
       <DependentUpon>SearchForm.vb</DependentUpon>
     </Compile>
@@ -385,6 +391,9 @@
     <EmbeddedResource Include="Print\resultSec.rdlc" />
     <EmbeddedResource Include="Print\resultPrimary.rdlc" />
     <EmbeddedResource Include="Print\resultLowSec.rdlc" />
+    <EmbeddedResource Include="Result\subjectResultAnalysisForm.resx">
+      <DependentUpon>subjectResultAnalysisForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SearchForm.resx">
       <DependentUpon>SearchForm.vb</DependentUpon>
     </EmbeddedResource>
