@@ -37,3 +37,16 @@ __Viewer__ can:
 * Search the database
   * class, by ID/name; only his/her assigned classes are available
   * student, by ID/name
+
+__Result features__ 
+* Can be added 
+  * Student wise
+  * Subject wise
+* Calculations can be updated later
+* Rank can be updated later
+* Analysis of each subject result of a specific terminal
+  * Average
+  * High
+  * Low
+  * LOCOS (Lowest Cutoff Score)
+    *Students under the LOCOS can be obtained
