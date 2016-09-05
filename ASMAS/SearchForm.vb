@@ -4,10 +4,6 @@ Public Class SearchForm
     Private pwd As String
     Private data_source_path As String = DBConnection.data_source_path
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles searchByLabel.Click
-
-    End Sub
-
 
     Private Sub searchBtn_Click(sender As Object, e As EventArgs) Handles searchBtn.Click
         Dim search_type As String = searchType.Text

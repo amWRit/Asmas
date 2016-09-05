@@ -104,6 +104,15 @@ Public Class addStudentForm
                 If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
                 studentPhoto.Image = Image.FromFile(photoPath)
                 'studentPhoto.Image.Dispose()
+                Try
+                    If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+                    studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
+                Catch ex As Exception
+                    MsgBox("Couldn't find file" & ex.Message)
+                Finally
+                    photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+                    studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
+                End Try
 
             Catch ex As Exception
                 MsgBox(ex.Message)

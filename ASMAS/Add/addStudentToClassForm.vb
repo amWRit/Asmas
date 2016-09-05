@@ -106,9 +106,10 @@ Public Class addStudentToClassForm
             If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
             studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
         Catch ex As Exception
-            MsgBox("Couldn't find file" & ex.Message)
+            MsgBox("Couldn't find file " & ex.Message)
         Finally
-            photoPath = ""
+            photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+            studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
         End Try
 
         'studentPhoto.Image.Dispose()

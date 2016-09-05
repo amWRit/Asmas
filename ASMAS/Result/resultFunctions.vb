@@ -585,7 +585,7 @@ order by student_id"
             key = "gk_conv"
         ElseIf subject = "EPH" Then
             key = "eph"
-        ElseIf subject = "Opt. Maths" Then
+        ElseIf subject = "Opt. Math" Then
             key = "opt1"
         ElseIf subject = "Account" Then
             key = "opt1"
@@ -595,6 +595,44 @@ order by student_id"
             key = "opt2"
         ElseIf subject = "Computer" Then
             key = "comp"
+        End If
+        Return key
+    End Function
+
+    Public Shared Function getSubjCode(subject As String) As String
+        Dim key As String = ""
+        If subject = "English" Then
+            key = "eng"
+        ElseIf subject = "Nepali" Then
+            key = "nep"
+        ElseIf subject = "Maths" Then
+            key = "math"
+        ElseIf subject = "Science" Then
+            key = "sci"
+        ElseIf subject = "Social" Then
+            key = "soc"
+        ElseIf subject = "OBT" Then
+            key = "obt"
+        ElseIf subject = "Health" Then
+            key = "hea"
+        ElseIf subject = "Moral" Then
+            key = "mor"
+        ElseIf subject = "Computer" Then
+            key = "comp"
+        ElseIf subject = "Opt English" Then
+            key = "opt_eng"
+        ElseIf subject = "GK/Conv" Then
+            key = "gk_conv"
+        ElseIf subject = "EPH" Then
+            key = "eph"
+        ElseIf subject = "Opt. Math" Then
+            key = "opt_math"
+        ElseIf subject = "Account" Then
+            key = "acc"
+        ElseIf subject = "Economics" Then
+            key = "eco"
+        ElseIf subject = "Education" Then
+            key = "edu"
         End If
         Return key
     End Function
@@ -807,4 +845,28 @@ order by student_id"
             Con.Close()
         End Try
     End Sub
+
+    Public Shared Function getResultOf(class_name As String, terminal As String, school_year As String, school_name As String) As DataSet
+        Dim resultDS As New DataSet
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim SQL As String = ""
+        Dim oData As OleDbDataAdapter
+
+        Try
+            SQL = "SELECT * from results_" & class_name & " where school_name='" & school_name & "' and school_year ='" & school_year & "'" & " and terminal = '" & terminal & "'"
+            resultDS.Tables.Clear()
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(resultDS)
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+        Return resultDS
+    End Function
 End Class

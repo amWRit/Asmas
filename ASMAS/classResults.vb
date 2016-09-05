@@ -21,6 +21,7 @@ Public Class classResults
 
 
     Private Sub viewBtn_Click(sender As Object, e As EventArgs) Handles viewBtn.Click
+        printBtn.Enabled = False
         Dim terminal = termCombo.Text
         refreshLV(contents(0), terminal)
     End Sub
