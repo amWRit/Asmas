@@ -253,6 +253,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Result\resultFunctions.vb" />
+    <Compile Include="Result\studentsUnderLocosForm.Designer.vb">
+      <DependentUpon>studentsUnderLocosForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Result\studentsUnderLocosForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Result\subjectResultAnalysisForm.Designer.vb">
       <DependentUpon>subjectResultAnalysisForm.vb</DependentUpon>
     </Compile>
@@ -391,6 +397,9 @@
     <EmbeddedResource Include="Print\resultSec.rdlc" />
     <EmbeddedResource Include="Print\resultPrimary.rdlc" />
     <EmbeddedResource Include="Print\resultLowSec.rdlc" />
+    <EmbeddedResource Include="Result\studentsUnderLocosForm.resx">
+      <DependentUpon>studentsUnderLocosForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Result\subjectResultAnalysisForm.resx">
       <DependentUpon>subjectResultAnalysisForm.vb</DependentUpon>
     </EmbeddedResource>

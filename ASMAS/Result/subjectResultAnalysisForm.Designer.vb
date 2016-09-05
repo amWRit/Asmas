@@ -31,8 +31,12 @@ Partial Class subjectResultAnalysisForm
         Me.termCombo = New System.Windows.Forms.ComboBox()
         Me.analyseBtn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.resultAnalysisContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ViewDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StudentsUnderLOCOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.resultAnalysisContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'TerseDataSet
@@ -98,6 +102,25 @@ Partial Class subjectResultAnalysisForm
         Me.Label1.TabIndex = 169
         Me.Label1.Text = "Terminal"
         '
+        'resultAnalysisContextMenu
+        '
+        Me.resultAnalysisContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewDetailsToolStripMenuItem})
+        Me.resultAnalysisContextMenu.Name = "searchResultContextMenu"
+        Me.resultAnalysisContextMenu.Size = New System.Drawing.Size(153, 48)
+        '
+        'ViewDetailsToolStripMenuItem
+        '
+        Me.ViewDetailsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentsUnderLOCOSToolStripMenuItem})
+        Me.ViewDetailsToolStripMenuItem.Name = "ViewDetailsToolStripMenuItem"
+        Me.ViewDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewDetailsToolStripMenuItem.Text = "View"
+        '
+        'StudentsUnderLOCOSToolStripMenuItem
+        '
+        Me.StudentsUnderLOCOSToolStripMenuItem.Name = "StudentsUnderLOCOSToolStripMenuItem"
+        Me.StudentsUnderLOCOSToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
+        Me.StudentsUnderLOCOSToolStripMenuItem.Text = "Students under LOCOS"
+        '
         'subjectResultAnalysisForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -113,6 +136,7 @@ Partial Class subjectResultAnalysisForm
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.resultAnalysisContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -126,4 +150,7 @@ Partial Class subjectResultAnalysisForm
     Friend WithEvents termCombo As ComboBox
     Friend WithEvents analyseBtn As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents resultAnalysisContextMenu As ContextMenuStrip
+    Friend WithEvents ViewDetailsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StudentsUnderLOCOSToolStripMenuItem As ToolStripMenuItem
 End Class

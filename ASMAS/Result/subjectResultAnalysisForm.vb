@@ -5,7 +5,7 @@ Public Class subjectResultAnalysisForm
     Private pwd As String
     Private data_source_path As String = DBConnection.data_source_path
     Public Shared Con As System.Data.OleDb.OleDbConnection
-    Public params As String()
+    Public Shared params As String()
     Public opt1 As String() = {"Opt. Math", "Economics"}
     Public opt2 As String() = {"Computer", "Account", "Education"}
     Public Shared primary As String() = {"1", "2", "3", "4", "5"}
@@ -272,4 +272,31 @@ Public Class subjectResultAnalysisForm
     Private Sub termCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles termCombo.SelectedIndexChanged
         refreshLV()
     End Sub
+
+    Private Sub subjectAnalysisListView_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles subjectAnalysisListView.MouseUp
+        If e.Button = MouseButtons.Right Then
+            If subjectAnalysisListView.GetItemAt(e.X, e.Y) IsNot Nothing Then
+                subjectAnalysisListView.GetItemAt(e.X, e.Y).Selected = True
+                resultAnalysisContextMenu.Show(subjectAnalysisListView, New Point(e.X, e.Y))
+            End If
+        End If
+    End Sub
+
+    Private Sub StudentsUnderLOCOSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentsUnderLOCOSToolStripMenuItem.Click
+        Dim ItemIndex As Integer = subjectAnalysisListView.SelectedIndices(0) 'Grab the selected Index
+
+        'Dim 1,2,3,4,6,11
+        Dim class_id = subjectAnalysisListView.Items(ItemIndex).SubItems(1).Text
+        Dim school_name = subjectAnalysisListView.Items(ItemIndex).SubItems(2).Text
+        Dim school_year = subjectAnalysisListView.Items(ItemIndex).SubItems(3).Text
+        Dim terminal = subjectAnalysisListView.Items(ItemIndex).SubItems(4).Text
+        Dim subject = subjectAnalysisListView.Items(ItemIndex).SubItems(6).Text
+        Dim locos = subjectAnalysisListView.Items(ItemIndex).SubItems(11).Text
+        Dim class_name = params(1)
+
+        Dim contents As String() = {class_id, class_name, school_name, school_year, terminal, subject, locos}
+        Dim _studentsUnderLocosForm As New studentsUnderLocosForm(contents)
+        _studentsUnderLocosForm.Show()
+    End Sub
+
 End Class
