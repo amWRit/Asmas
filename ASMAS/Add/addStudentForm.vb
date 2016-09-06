@@ -69,8 +69,8 @@ Public Class addStudentForm
                 Dim t_address = DS.Tables(0).Rows(0)(13)
                 Dim phone = DS.Tables(0).Rows(0)(14)
                 Dim email = DS.Tables(0).Rows(0)(15)
-                Dim photoPath As String = DS.Tables(0).Rows(0)(16).ToString
-                Dim info = DS.Tables(0).Rows(0)(17)
+                Dim photoPresent As String = DS.Tables(0).Rows(0)(17).ToString
+                Dim info = DS.Tables(0).Rows(0)(16)
 
 
                 'get school name
@@ -101,17 +101,20 @@ Public Class addStudentForm
                 phoneTextBox.Text = phone.ToString
                 emailTextBox.Text = email.ToString
                 infoTextBox.Text = info.ToString
-                If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-                studentPhoto.Image = Image.FromFile(photoPath)
-                'studentPhoto.Image.Dispose()
+                Dim imagePath As String = ""
+                If photoPresent = "" Then
+                    imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+                Else
+                    Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
+                    Dim imageName = fnameTextBox.Text & mnameTextBox.Text & lnameTextBox.Text & reg_number & ".jpg"
+                    imagePath = strBasePath & imageName
+                End If
+
                 Try
-                    If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-                    studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
+                    studentPhoto.Image = Image.FromFile(imagePath)
                 Catch ex As Exception
                     MsgBox("Couldn't find file" & ex.Message)
                 Finally
-                    photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-                    studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
                 End Try
 
             Catch ex As Exception
@@ -145,6 +148,8 @@ Public Class addStudentForm
         Dim m_name = mnameTextBox.Text
         Dim l_name = lnameTextBox.Text
         'Dim regNumber = ""
+        Dim photoPresent As String = ""
+        If filepathTextBox.Text <> "" Then photoPresent = "present"
 
         Dim schoolName = schoolCombo.Text
         Dim schoolSQL As String = "SELECT distinct school_id from SCHOOL where short_name='" & schoolName & "'"
@@ -189,7 +194,7 @@ Public Class addStudentForm
             cmd.Parameters.AddWithValue("@temp_address", tAddTextBox.Text)
             cmd.Parameters.AddWithValue("@phone", phoneTextBox.Text)
             cmd.Parameters.AddWithValue("@email", emailTextBox.Text)
-            cmd.Parameters.AddWithValue("@photo", filepathTextBox.Text)
+            cmd.Parameters.AddWithValue("@photo", photoPresent)
             cmd.Parameters.AddWithValue("@info", infoTextBox.Text)
 
             cmd.ExecuteNonQuery()
@@ -307,8 +312,8 @@ Public Class addStudentForm
                     If (Not System.IO.Directory.Exists(strBasePath)) Then
                         System.IO.Directory.CreateDirectory(strBasePath)
                     End If
-                    filepathTextBox.Text = imagePath
                     studentPhoto.Image.Save(imagePath, System.Drawing.Imaging.ImageFormat.Jpeg)
+                    filepathTextBox.Text = imagePath
                 End If
             Catch Ex As Exception
                 MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)

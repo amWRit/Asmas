@@ -331,6 +331,11 @@
       <DependentUpon>TerseDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\User.vb" />
+    <Compile Include="TerseDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TerseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="viewDatabaseForm.Designer.vb">
       <DependentUpon>viewDatabaseForm.vb</DependentUpon>
     </Compile>
@@ -465,6 +470,7 @@
     <None Include="TerseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>TerseDataSet6.Designer.vb</LastGenOutput>
     </None>
     <None Include="TerseDataSet.xss">
       <DependentUpon>TerseDataSet.xsd</DependentUpon>
