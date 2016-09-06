@@ -45,6 +45,8 @@ Public Class addSchoolForm
             cmd.ExecuteNonQuery()
 
             MsgBox("School successfully added.", MsgBoxStyle.Information, "ADDED")
+            Dim textboxes = myFunctions.getTextBoxes(Me)
+            myFunctions.clearTextBoxes(textboxes)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally

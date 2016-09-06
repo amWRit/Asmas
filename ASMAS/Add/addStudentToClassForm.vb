@@ -107,14 +107,12 @@ Public Class addStudentToClassForm
         fullnameLabel.Text = f_name & " " & m_name & " " & l_name
 
         Dim photoPresent = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
-        Dim imagePath As String = ""
 
-        If photoPresent = "" Then
+        Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
+        Dim imageName = f_name.ToString & m_name.ToString & l_name.ToString & reg_number & ".jpg"
+        Dim imagePath = strBasePath & imageName
+        If photoPresent = "" Or Not System.IO.File.Exists(imagePath) Then
             imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-        Else
-            Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
-            Dim imageName = f_name & m_name & l_name & reg_number & ".jpg"
-            imagePath = strBasePath & imageName
         End If
 
         Try

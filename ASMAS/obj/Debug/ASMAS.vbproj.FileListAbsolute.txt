@@ -8,17 +8,8 @@ C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.vbproj.Ge
 C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.exe
 C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.xml
 C:\Users\amWRit\AppData\Local\Temporary Projects\ASMAS\obj\Debug\ASMAS.pdb
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.exe.config
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.vbproj.ResolveComReference.cache
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Terse.accdb
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Terse1.accdb
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.exe.manifest
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.application
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.exe
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.pdb
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.xml
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.vbprojResolveAssemblyReference.cache
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.AboutBox1.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addClassForm.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.assignSubjectTeacherForm.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addResultLowSecForm.resources
@@ -51,11 +42,20 @@ C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMA
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.vbproj.GenerateResource.Cache
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\RdlCompile.cache
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\RdlCompile.compiled
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\AsmasHelp.chm
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Terse.accdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Terse1.accdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.exe.config
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.exe.manifest
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.application
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.exe
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.pdb
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\ASMAS.xml
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.TrustInfo.xml
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.exe.manifest
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.application
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.exe
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.xml
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.pdb
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.AboutBox1.resources
-C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\bin\Debug\AsmasHelp.chm
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.vbprojResolveAssemblyReference.cache

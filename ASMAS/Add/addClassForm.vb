@@ -179,6 +179,9 @@ Public Class addClassForm
             MsgBox("Successful", MsgBoxStyle.Information, "INSERTED")
             If edit = "TRUE" Then
                 Me.Close()
+            Else
+                Dim textboxes = myFunctions.getTextBoxes(Me)
+                myFunctions.clearTextBoxes(textboxes)
             End If
             Con.Close()
         Catch ex As Exception
@@ -253,7 +256,7 @@ Public Class addClassForm
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
         Dim schoolSQL As String = "SELECT short_name from SCHOOL"
         Dim yearSQL As String = "SELECT distinct year_num from school_year"
-        Dim ctSQL As String = "SELECT [full_name] from [user] ORDER BY full_name"
+        Dim ctSQL As String = "SELECT [full_name] from [user] WHERE role='Teacher' ORDER BY full_name"
 
         'SCHOOL COMBOBOX
         Con.Open() 'Open connection
