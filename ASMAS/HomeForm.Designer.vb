@@ -32,6 +32,9 @@ Partial Class HomeForm
         Me.addClassBtn = New System.Windows.Forms.Button()
         Me.viewMyClassesBtn = New System.Windows.Forms.Button()
         Me.viewResultBtn = New System.Windows.Forms.Button()
+        Me.aboutLink = New System.Windows.Forms.LinkLabel()
+        Me.supportLink = New System.Windows.Forms.LinkLabel()
+        Me.HelpProvider = New System.Windows.Forms.HelpProvider()
         Me.SuspendLayout()
         '
         'currentUserLabel
@@ -125,12 +128,34 @@ Partial Class HomeForm
         Me.viewResultBtn.Text = "View Results"
         Me.viewResultBtn.UseVisualStyleBackColor = True
         '
+        'aboutLink
+        '
+        Me.aboutLink.AutoSize = True
+        Me.aboutLink.Location = New System.Drawing.Point(132, 506)
+        Me.aboutLink.Name = "aboutLink"
+        Me.aboutLink.Size = New System.Drawing.Size(35, 13)
+        Me.aboutLink.TabIndex = 10
+        Me.aboutLink.TabStop = True
+        Me.aboutLink.Text = "About"
+        '
+        'supportLink
+        '
+        Me.supportLink.AutoSize = True
+        Me.supportLink.Location = New System.Drawing.Point(173, 506)
+        Me.supportLink.Name = "supportLink"
+        Me.supportLink.Size = New System.Drawing.Size(44, 13)
+        Me.supportLink.TabIndex = 11
+        Me.supportLink.TabStop = True
+        Me.supportLink.Text = "Support"
+        '
         'HomeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(340, 528)
+        Me.Controls.Add(Me.supportLink)
+        Me.Controls.Add(Me.aboutLink)
         Me.Controls.Add(Me.viewResultBtn)
         Me.Controls.Add(Me.viewMyClassesBtn)
         Me.Controls.Add(Me.addClassBtn)
@@ -160,4 +185,7 @@ Partial Class HomeForm
     Friend WithEvents addClassBtn As Button
     Friend WithEvents viewMyClassesBtn As Button
     Friend WithEvents viewResultBtn As Button
+    Friend WithEvents aboutLink As LinkLabel
+    Friend WithEvents supportLink As LinkLabel
+    Friend WithEvents HelpProvider As HelpProvider
 End Class

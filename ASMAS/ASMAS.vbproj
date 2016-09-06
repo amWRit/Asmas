@@ -139,6 +139,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Add\addClassForm.Designer.vb">
       <DependentUpon>addClassForm.vb</DependentUpon>
     </Compile>
@@ -340,6 +346,9 @@
     <Compile Include="Models\Year.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add\addClassForm.resx">
       <DependentUpon>addClassForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -435,6 +444,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AsmasHelp.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="ASMAS_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
@@ -460,6 +472,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="asmas_CiZ_icon.ico" />
+    <None Include="Resources\Help.png" />
     <Content Include="Terse.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

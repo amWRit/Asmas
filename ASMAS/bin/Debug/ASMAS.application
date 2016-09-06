@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ASMAS.exe.manifest" size="9443">
+    <dependentAssembly dependencyType="install" codebase="ASMAS.exe.manifest" size="9835">
       <assemblyIdentity name="ASMAS.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bIUGnppueoCg+8R+XqFtZsyDvgfgqsTkmQ0Cr4bzZAA=</dsig:DigestValue>
+        <dsig:DigestValue>t79BiP8/E2bVbrnrJzHCCao3WbvnUknTl0jke+AXYxg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
