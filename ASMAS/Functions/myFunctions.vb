@@ -6,6 +6,23 @@ Public Class myFunctions
     Private Shared data_source_path As String = DBConnection.data_source_path
     Public Shared Con As System.Data.OleDb.OleDbConnection
 
+    Public Shared Function getTextBoxes(_me As Form) As TextBox()
+        Dim textBoxes As New List(Of TextBox)
+        For Each c In _me.Controls
+            If TypeName(c) = "TextBox" Then
+                Dim tb As TextBox = DirectCast(c, TextBox)
+                textBoxes.Add(tb)
+            End If
+        Next
+        Return textBoxes.ToArray
+    End Function
+
+    Public Shared Sub clearTextBoxes(textBoxes As TextBox())
+        For i As Integer = 0 To textBoxes.Count - 1
+            textBoxes(i).Text = ""
+        Next
+    End Sub
+
     'prepare temp table for printing results - three different tables for three levels
     Public Shared Sub prepareTempTable(ByVal DS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String)
         Dim Con As System.Data.OleDb.OleDbConnection

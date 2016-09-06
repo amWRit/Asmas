@@ -101,13 +101,12 @@ Public Class addStudentForm
                 phoneTextBox.Text = phone.ToString
                 emailTextBox.Text = email.ToString
                 infoTextBox.Text = info.ToString
-                Dim imagePath As String = ""
-                If photoPresent = "" Then
+
+                Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
+                Dim imageName = f_name.ToString & m_name.ToString & l_name.ToString & reg_number & ".jpg"
+                Dim imagePath = strBasePath & imageName
+                If photoPresent = "" Or Not System.IO.File.Exists(imagePath) Then
                     imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-                Else
-                    Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
-                    Dim imageName = fnameTextBox.Text & mnameTextBox.Text & lnameTextBox.Text & reg_number & ".jpg"
-                    imagePath = strBasePath & imageName
                 End If
 
                 Try
@@ -200,7 +199,14 @@ Public Class addStudentForm
             cmd.ExecuteNonQuery()
 
             MsgBox("Insert Successful", MsgBoxStyle.Information, "INSERTED")
-            If edit = "TRUE" Then Me.Close()
+            If edit = "TRUE" Then
+                Me.Close()
+            Else
+                Dim textboxes = myFunctions.getTextBoxes(Me)
+                myFunctions.clearTextBoxes(textboxes)
+                tAddTextBox.Text = ""
+                pAddTextBox.Text = ""
+            End If
             Con.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -218,7 +224,7 @@ Public Class addStudentForm
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
 
-        Dim regNumberSQL As String = "SELECT last(reg_number) from student"
+        Dim regNumberSQL As String = "SELECT TOP 1 reg_number from student ORDER BY reg_number DESC"
 
         Con.Open() 'Open connection
         DS.Tables.Clear()
@@ -227,14 +233,20 @@ Public Class addStudentForm
         Con.Close()
         regData.Fill(DS)
 
-        Dim regString As String = DS.Tables(0).Rows(0)(0).ToString
-        Dim separators() As String = {"THSS"}
-        Dim result() As String
-        result = regString.Split(separators, StringSplitOptions.RemoveEmptyEntries)
-        'Dim reg_number As Integer = Convert.ToInt32(result)
         Dim reg_number As Integer
-        Integer.TryParse(result(0), reg_number)
-        reg_number += 1
+        Dim regString = ""
+        If DS.Tables(0).Rows.Count = 0 Then 'no students added yet
+            reg_number = 1
+        Else
+            regString = DS.Tables(0).Rows(0)(0).ToString
+            Dim separators() As String = {"THSS"}
+            Dim result() As String
+            result = regString.Split(separators, StringSplitOptions.RemoveEmptyEntries)
+
+            Integer.TryParse(result(0), reg_number)
+            reg_number += 1
+        End If
+
         regString = "THSS" & reg_number
         Return regString
     End Function
@@ -274,13 +286,20 @@ Public Class addStudentForm
 
     Dim bytImage() As Byte
     Private Sub browsePhotoBtn_Click(sender As Object, e As EventArgs) Handles browsePhotoBtn.Click
+        If fnameTextBox.Text = "" And lnameTextBox.Text = "" Then
+            MessageBox.Show("Please enter the name first.", "Incomplete input", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
         Dim edit = contents(1)
         If edit = "FALSE" Then
             regNumber = buildNewRegNumber()
         Else
             regNumber = contents(0)
         End If
-        studentPhoto.Image.Dispose()
+
+        If studentPhoto.Image IsNot Nothing Then
+            studentPhoto.Image.Dispose()
+        End If
         Dim myStream As Stream = Nothing
         Dim dialog As New OpenFileDialog()
         dialog.Title = "Browse Picture"

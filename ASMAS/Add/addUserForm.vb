@@ -79,6 +79,8 @@ Public Class addUserForm
             cmd.ExecuteNonQuery()
 
             MsgBox("User successfully added.", MsgBoxStyle.Information, "ADDED")
+            Dim textboxes = myFunctions.getTextBoxes(Me)
+            myFunctions.clearTextBoxes(textboxes)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally

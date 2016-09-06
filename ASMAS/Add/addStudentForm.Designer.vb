@@ -69,6 +69,7 @@ Partial Class addStudentForm
         Me.studentPhoto.Location = New System.Drawing.Point(24, 52)
         Me.studentPhoto.Name = "studentPhoto"
         Me.studentPhoto.Size = New System.Drawing.Size(198, 188)
+        Me.studentPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.studentPhoto.TabIndex = 0
         Me.studentPhoto.TabStop = False
         '
