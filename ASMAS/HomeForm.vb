@@ -1,5 +1,7 @@
 ﻿Public Class HomeForm
+    'Dim strHelpPath As String = System.IO.Path.Combine(Application.StartupPath, "\Help\AsmasHelp.chm")
 
+    Dim strHelpPath As String = Application.StartupPath & "\Help\AsmasHelp.chm"
     Private Sub HomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim currentUser As DataSet
         currentUser = User.user
@@ -15,6 +17,8 @@
 
         If User.userRole = "Teacher" Then viewMyClassesBtn.Show()
         If User.userRole = "Viewer" Then viewResultBtn.Enabled = False
+
+        HelpProvider.HelpNamespace = strHelpPath
     End Sub
 
     Private Sub searchBtn_Click(sender As Object, e As EventArgs) Handles searchBtn.Click
@@ -70,5 +74,13 @@
     Private Sub viewResultBtn_Click(sender As Object, e As EventArgs) Handles viewResultBtn.Click
         Me.Hide()
         viewResultsForm.Show()
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles aboutLink.LinkClicked
+        AboutBox1.Show()
+    End Sub
+
+    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles supportLink.LinkClicked
+        Help.ShowHelp(Me, HelpProvider.HelpNamespace, HelpNavigator.TableOfContents)
     End Sub
 End Class
