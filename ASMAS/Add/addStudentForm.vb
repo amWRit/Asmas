@@ -224,7 +224,7 @@ Public Class addStudentForm
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
 
-        Dim regNumberSQL As String = "SELECT TOP 1 reg_number from student ORDER BY reg_number DESC"
+        Dim regNumberSQL As String = "SELECT TOP 1 reg_number from student ORDER BY ID DESC"
 
         Con.Open() 'Open connection
         DS.Tables.Clear()
