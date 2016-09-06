@@ -46,8 +46,8 @@ Public Class studentDetails
             Dim t_address = DS.Tables(0).Rows(0)(13)
             Dim phone = DS.Tables(0).Rows(0)(14)
             Dim email = DS.Tables(0).Rows(0)(15)
-            Dim photoPath As String = DS.Tables(0).Rows(0)(16).ToString
-            Dim info = DS.Tables(0).Rows(0)(17)
+            Dim photoPresent As String = DS.Tables(0).Rows(0)(17).ToString
+            Dim info = DS.Tables(0).Rows(0)(16)
 
 
             'get school name
@@ -79,16 +79,22 @@ Public Class studentDetails
             _phone.Text = phone.ToString
             _email.Text = email.ToString
             _info.Text = info.ToString
-            If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+
+            Dim imagePath As String = ""
+            If photoPresent = "" Then
+                imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+            Else
+                Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
+                Dim imageName = f_name.ToString & m_name.ToString & l_name.ToString & reg_number & ".jpg"
+                imagePath = strBasePath & imageName
+            End If
 
             Try
-                studentPhoto.Image = Image.FromFile(photoPath)
+                studentPhoto.Image = Image.FromFile(imagePath)
             Catch ex As Exception
                 MsgBox("Couldn't find file" & ex.Message)
             Finally
-                photoPath = ""
             End Try
-
 
             'find current class
             Dim currentClassSQL As String = "SELECT

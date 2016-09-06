@@ -100,24 +100,34 @@ Public Class addStudentToClassForm
         If searchResultListView.SelectedIndices.Count = 0 Then Exit Sub
 
         Dim ItemIndex As Integer = searchResultListView.SelectedIndices(0) 'Grab the selected Index
-        Dim photoPath = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
-
-        Try
-            If photoPath = "" Then photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-            studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
-        Catch ex As Exception
-            MsgBox("Couldn't find file " & ex.Message)
-        Finally
-            photoPath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-            studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(photoPath), 198, 188)
-        End Try
-
-        'studentPhoto.Image.Dispose()
-
+        Dim reg_number = searchResultListView.Items(ItemIndex).SubItems(1).Text.ToString
         Dim f_name = searchResultListView.Items(ItemIndex).SubItems(2).Text.ToString
         Dim m_name = searchResultListView.Items(ItemIndex).SubItems(3).Text.ToString
         Dim l_name = searchResultListView.Items(ItemIndex).SubItems(4).Text.ToString
         fullnameLabel.Text = f_name & " " & m_name & " " & l_name
+
+        Dim photoPresent = searchResultListView.Items(ItemIndex).SubItems(5).Text.ToString
+        Dim imagePath As String = ""
+
+        If photoPresent = "" Then
+            imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+        Else
+            Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
+            Dim imageName = f_name & m_name & l_name & reg_number & ".jpg"
+            imagePath = strBasePath & imageName
+        End If
+
+        Try
+            studentPhoto.Image = FileHandler.ResizeImage(Image.FromFile(imagePath), 198, 188)
+        Catch ex As Exception
+            MsgBox("Couldn't find file " & ex.Message)
+        Finally
+
+        End Try
+
+        'studentPhoto.Image.Dispose()
+
+
     End Sub
 
     Private Sub addStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles addStudentToolStripMenuItem.Click
