@@ -110,10 +110,15 @@ Public Class studentDetails
             classData = New OleDbDataAdapter(currentClassSQL, Con)
             Con.Close()
             classData.Fill(DS)
-            class_id = DS.Tables(0).Rows(0)(0).ToString
-            classLabel.Text = DS.Tables(0).Rows(0)(1).ToString
+            If DS.Tables(0).Rows.Count > 0 Then
+                class_id = DS.Tables(0).Rows(0)(0).ToString
+                classLabel.Text = DS.Tables(0).Rows(0)(1).ToString
+            Else
+                classLabel.Enabled = False
+                classLabel.Text = "NA"
+            End if
 
-            If User.userRole = "Viewer" Then classLabel.Enabled = False
+                If User.userRole = "Viewer" Then classLabel.Enabled = False
 
         Catch ex As Exception
             MsgBox(ex.Message)
