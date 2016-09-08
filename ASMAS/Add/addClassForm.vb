@@ -86,14 +86,14 @@ Public Class addClassForm
 
     Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click
         Me.Close()
-        'HomeForm.Show()
+        If edit <> "FALSE" Then HomeForm.Show()
     End Sub
 
     Private Sub addClassForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
             Me.Hide()
-            'HomeForm.Show()
+            If edit <> "FALSE" Then HomeForm.Show()
         End If
     End Sub
 

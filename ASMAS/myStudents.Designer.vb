@@ -43,10 +43,10 @@ Partial Class myStudents
         Me.myStudentsListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.myStudentsListView.FullRowSelect = True
         Me.myStudentsListView.GridLines = True
-        Me.myStudentsListView.Location = New System.Drawing.Point(0, 134)
+        Me.myStudentsListView.Location = New System.Drawing.Point(0, 51)
         Me.myStudentsListView.MultiSelect = False
         Me.myStudentsListView.Name = "myStudentsListView"
-        Me.myStudentsListView.Size = New System.Drawing.Size(1008, 595)
+        Me.myStudentsListView.Size = New System.Drawing.Size(1008, 678)
         Me.myStudentsListView.TabIndex = 166
         Me.myStudentsListView.UseCompatibleStateImageBehavior = False
         Me.myStudentsListView.View = System.Windows.Forms.View.Details

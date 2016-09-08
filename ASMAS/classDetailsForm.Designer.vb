@@ -193,6 +193,7 @@ Partial Class classDetailsForm
         Me.Controls.Add(Me.schoolLabel)
         Me.MaximizeBox = False
         Me.Name = "classDetailsForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Class Details"
         Me.ResumeLayout(False)
         Me.PerformLayout()

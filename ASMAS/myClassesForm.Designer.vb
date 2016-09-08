@@ -71,7 +71,7 @@ Partial Class myClassesForm
         '
         Me.myClassesContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ViewStudentsToolStripMenuItem, Me.AddStudentToolStripMenuItem, Me.ViewResultsToolStripMenuItem, Me.AddResultToolStripMenuItem, Me.SubjectTeacherToolStripMenuItem})
         Me.myClassesContextMenu.Name = "searchResultContextMenu"
-        Me.myClassesContextMenu.Size = New System.Drawing.Size(158, 202)
+        Me.myClassesContextMenu.Size = New System.Drawing.Size(158, 180)
         '
         'ViewToolStripMenuItem
         '
@@ -120,13 +120,13 @@ Partial Class myClassesForm
         'StudentWiseToolStripMenuItem
         '
         Me.StudentWiseToolStripMenuItem.Name = "StudentWiseToolStripMenuItem"
-        Me.StudentWiseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.StudentWiseToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.StudentWiseToolStripMenuItem.Text = "Student wise"
         '
         'SubjectWiseToolStripMenuItem
         '
         Me.SubjectWiseToolStripMenuItem.Name = "SubjectWiseToolStripMenuItem"
-        Me.SubjectWiseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SubjectWiseToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.SubjectWiseToolStripMenuItem.Text = "Subject wise"
         '
         'SubjectTeacherToolStripMenuItem
@@ -165,6 +165,7 @@ Partial Class myClassesForm
         Me.Name = "myClassesForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "My classes"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.myClassesContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
 

@@ -211,7 +211,7 @@ Public Class addStudentToClassForm
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
             Me.Hide()
-            HomeForm.Show()
+            'HomeForm.Show()
         End If
     End Sub
 

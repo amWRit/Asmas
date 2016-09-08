@@ -78,6 +78,7 @@ Partial Class subjectTeachersDetails
         Me.Name = "subjectTeachersDetails"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Subject Teacher Details"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.subjectTeacherMenuStrip.ResumeLayout(False)
         Me.ResumeLayout(False)
 

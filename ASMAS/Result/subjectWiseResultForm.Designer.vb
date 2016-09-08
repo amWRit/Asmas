@@ -266,6 +266,7 @@ Partial Class subjectWiseResultForm
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.subjectCombo)
         Me.Name = "subjectWiseResultForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "subjectWiseResultForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
