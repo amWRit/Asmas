@@ -346,15 +346,23 @@ Public Class addStudentForm
     End Sub
 
     Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click
-        Me.Close()
-        myClassesForm.Show()
+        Me.Hide()
+        If User.userRole = "Teacher" Then
+            myClassesForm.Show()
+        ElseIf User.userRole = "Admin" Then
+            HomeForm.Show()
+        End If
     End Sub
 
     Private Sub addStudentForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
             Me.Hide()
-            myClassesForm.Show()
+            If User.userRole = "Teacher" Then
+                myClassesForm.Show()
+            ElseIf User.userRole = "Admin" Then
+                HomeForm.Show()
+            End If
         End If
     End Sub
 End Class

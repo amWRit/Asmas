@@ -87,7 +87,6 @@ Partial Class printResultsPrimaryForm
         Me.Controls.Add(Me.nextBtn)
         Me.Controls.Add(Me.previousBtn)
         Me.Controls.Add(Me.primaryReportViewer)
-        Me.MinimizeBox = False
         Me.Name = "printResultsPrimaryForm"
         Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

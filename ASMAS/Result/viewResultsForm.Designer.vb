@@ -211,7 +211,6 @@ Partial Class viewResultsForm
         Me.Controls.Add(Me.schoolName)
         Me.Controls.Add(Me.yearName)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "viewResultsForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "viewResultsForm"

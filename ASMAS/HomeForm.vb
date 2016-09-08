@@ -66,8 +66,11 @@
     Private Sub HomeForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
-            Me.Hide()
-            Application.Exit()
+            Dim I As Integer = MsgBox("Are you sure?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Exit")
+            If I = MsgBoxResult.Yes Then
+                Me.Hide()
+                Application.Exit()
+            End If
         End If
     End Sub
 

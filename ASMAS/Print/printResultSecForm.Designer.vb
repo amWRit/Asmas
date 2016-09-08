@@ -23,13 +23,14 @@ Partial Class printResultSecForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.printResultsSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.secReportViewer = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.nextBtn = New System.Windows.Forms.Button()
         Me.previousBtn = New System.Windows.Forms.Button()
         Me.printResultsSecTableAdapter = New ASMAS.TerseDataSetTableAdapters.printResultsSecTableAdapter()
+        Me.PrintResultsSecTableAdapter1 = New ASMAS.TerseDataSetTableAdapters.printResultsSecTableAdapter()
         CType(Me.printResultsSecBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,9 +48,9 @@ Partial Class printResultSecForm
         'secReportViewer
         '
         Me.secReportViewer.Dock = System.Windows.Forms.DockStyle.Bottom
-        ReportDataSource1.Name = "resultsSec"
-        ReportDataSource1.Value = Me.printResultsSecBindingSource
-        Me.secReportViewer.LocalReport.DataSources.Add(ReportDataSource1)
+        ReportDataSource2.Name = "resultsSec"
+        ReportDataSource2.Value = Me.printResultsSecBindingSource
+        Me.secReportViewer.LocalReport.DataSources.Add(ReportDataSource2)
         Me.secReportViewer.LocalReport.ReportEmbeddedResource = "ASMAS.resultSec.rdlc"
         Me.secReportViewer.Location = New System.Drawing.Point(0, 36)
         Me.secReportViewer.Name = "secReportViewer"
@@ -79,6 +80,10 @@ Partial Class printResultSecForm
         '
         Me.printResultsSecTableAdapter.ClearBeforeFill = True
         '
+        'PrintResultsSecTableAdapter1
+        '
+        Me.PrintResultsSecTableAdapter1.ClearBeforeFill = True
+        '
         'printResultSecForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -87,7 +92,6 @@ Partial Class printResultSecForm
         Me.Controls.Add(Me.nextBtn)
         Me.Controls.Add(Me.previousBtn)
         Me.Controls.Add(Me.secReportViewer)
-        Me.MinimizeBox = False
         Me.Name = "printResultSecForm"
         Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -103,4 +107,5 @@ Partial Class printResultSecForm
     Friend WithEvents printResultsSecBindingSource As BindingSource
     Friend WithEvents TerseDataSet As TerseDataSet
     Friend WithEvents printResultsSecTableAdapter As TerseDataSetTableAdapters.printResultsSecTableAdapter
+    Friend WithEvents PrintResultsSecTableAdapter1 As TerseDataSetTableAdapters.printResultsSecTableAdapter
 End Class

@@ -14,7 +14,7 @@ Public Class addUserForm
     Private Sub addUserForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If e.CloseReason = CloseReason.UserClosing Then
             e.Cancel = True
-            Me.Hide()
+            Me.Close()
             HomeForm.Show()
         End If
     End Sub

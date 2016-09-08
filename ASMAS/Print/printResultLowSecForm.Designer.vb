@@ -87,7 +87,6 @@ Partial Class printResultLowSecForm
         Me.Controls.Add(Me.nextBtn)
         Me.Controls.Add(Me.previousBtn)
         Me.Controls.Add(Me.ReportViewer1)
-        Me.MinimizeBox = False
         Me.Name = "printResultLowSecForm"
         Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
