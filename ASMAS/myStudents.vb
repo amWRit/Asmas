@@ -4,12 +4,13 @@ Public Class myStudents
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
     Private data_source_path As String = DBConnection.data_source_path
+    Public Shared class_id As String = ""
 
     Public Sub New(ByVal itemID As String)
         MyBase.New
         ' This call is required by the designer.
         InitializeComponent()
-
+        class_id = itemID
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -82,10 +83,11 @@ Public Class myStudents
 
     Private Sub DeleteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteToolStripMenuItem.Click
         Dim ItemIndex As Integer = myStudentsListView.SelectedIndices(0) 'Grab the selected Index
-        Dim itemID = myStudentsListView.Items(ItemIndex).SubItems(1).Text
-        Dim I As Integer = MsgBox("Are you sure you want to delete?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Are you sure?")
+        Dim student_id = myStudentsListView.Items(ItemIndex).SubItems(0).Text
+        Dim I As Integer = MsgBox("Are you sure you want to remove this student?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Are you sure?")
         If I = MsgBoxResult.Yes Then
-            SearchForm.deleteFromDatabase(itemID, "Student")
+            'SearchForm.deleteFromDatabase(itemID, "Student")
+            removeFromMyClass(student_id)
             myStudentsListView.Items(ItemIndex).Remove()
         End If
     End Sub
@@ -95,5 +97,23 @@ Public Class myStudents
         Dim itemID = myStudentsListView.Items(ItemIndex).SubItems(1).Text
         Dim _addStudentForm As New addStudentForm({itemID, "TRUE"})
         _addStudentForm.Show()
+    End Sub
+
+    Private Sub removeFromMyClass(student_id As String)
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim SQL = "DELETE * from class_student where student_id=" & student_id & " and class_id=" & class_id
+        Try
+            Con.Open()
+            'DELETE FROM TableName WHERE PrimaryKey = ID
+            Dim cmd2 As New OleDb.OleDbCommand(SQL, Con)
+            cmd2.ExecuteNonQuery()
+            MsgBox("Student removed successfully from your class. Please check.", MsgBoxStyle.Information, "REMOVED")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
     End Sub
 End Class

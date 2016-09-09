@@ -278,4 +278,68 @@ VALUES
 
         Return subjects
     End Function
+
+    Public Shared Function getStudentIdOf(regNumber As String) As String
+        Dim student_id As String = ""
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            Dim oData As OleDbDataAdapter
+            SQL = "SELECT * FROM STUDENT where reg_number='" & regNumber & "'"
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            DS.Tables.Clear()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            If rowCount > 0 Then
+                student_id = DS.Tables(0).Rows(0).Item("id").ToString
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+        Return student_id
+    End Function
+
+    Public Shared Function getClassIdOf(school_id As String, year_id As String, class_name As String) As String
+        Dim class_id As String = ""
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            Dim oData As OleDbDataAdapter
+            SQL = "SELECT * FROM CLASS where school_id=" & school_id & " and year_id=" & year_id & " and short_name='" & class_name & "'"
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            DS.Tables.Clear()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            If rowCount > 0 Then
+                class_id = DS.Tables(0).Rows(0).Item("class_id").ToString
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+        Return class_id
+    End Function
+
+
 End Class

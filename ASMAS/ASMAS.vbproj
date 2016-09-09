@@ -158,6 +158,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBConnection.vb" />
+    <Compile Include="Models\MyClass.vb" />
+    <Compile Include="Models\School.vb" />
     <Compile Include="Result\addResultLowSecForm.Designer.vb">
       <DependentUpon>addResultLowSecForm.vb</DependentUpon>
     </Compile>

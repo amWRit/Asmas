@@ -102,7 +102,7 @@ Public Class studentDetails
                                             from class_student
                                             where student_id = " & student_id & ") tb
                                             on c.class_id = tb.class_id
-                                            where year_id = " & Year.currentYearID
+                                            where year_id = " & Year.currentYearID(school_id)
             DS = New DataSet 'Declare a new instance, or we get Null Reference Error
             Con.Open() 'Open connection
             Dim classData As OleDbDataAdapter

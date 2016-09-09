@@ -185,7 +185,7 @@ Public Class classResults
             Dim printForm As New printResultLowSecForm(tempDS, 0, class_name, class_teacher)
             printForm.Show()
         ElseIf sec.Contains(class_name) Then
-            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name, class_teacher)
+            Dim printForm As New printResultSecForm(tempDS, 0, class_name, class_teacher)
             printForm.Show()
         End If
     End Sub
