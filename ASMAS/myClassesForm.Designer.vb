@@ -49,12 +49,13 @@ Partial Class myClassesForm
         Me.myClassesListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.myClassesListView.CausesValidation = False
         Me.myClassesListView.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
+        Me.myClassesListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.myClassesListView.FullRowSelect = True
         Me.myClassesListView.GridLines = True
-        Me.myClassesListView.Location = New System.Drawing.Point(1, 44)
+        Me.myClassesListView.Location = New System.Drawing.Point(0, 34)
         Me.myClassesListView.MultiSelect = False
         Me.myClassesListView.Name = "myClassesListView"
-        Me.myClassesListView.Size = New System.Drawing.Size(635, 355)
+        Me.myClassesListView.Size = New System.Drawing.Size(1008, 695)
         Me.myClassesListView.TabIndex = 165
         Me.myClassesListView.UseCompatibleStateImageBehavior = False
         Me.myClassesListView.View = System.Windows.Forms.View.Details
@@ -159,7 +160,7 @@ Partial Class myClassesForm
         Me.AccessibleName = ""
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(636, 392)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.myClassesListView)
         Me.MaximizeBox = False
         Me.Name = "myClassesForm"

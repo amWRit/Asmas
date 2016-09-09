@@ -20,12 +20,12 @@ Public Class Year
         End Set
     End Property
 
-    Public Shared Property currentYearID() As String
+    Public Shared Property currentYearID(school_id As Integer) As String
         Get
             Con = New OleDbConnection
             Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
-            Dim SQL As String = "SELECT * from school_year where year_num = '" & current_year & "'"
+            Dim SQL As String = "SELECT * from school_year where year_num = '" & current_year & "' and school_id=" & school_id
             DS = New DataSet 'Declare a new instance, or we get Null Reference Error
             Con.Open() 'Open connection
             Dim oData As OleDbDataAdapter

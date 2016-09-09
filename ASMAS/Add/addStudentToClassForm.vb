@@ -1,12 +1,12 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 Public Class addStudentToClassForm
-    Dim Con As System.Data.OleDb.OleDbConnection
+    Public Shared Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
-    Private data_source_path As String = DBConnection.data_source_path
+    Private Shared data_source_path As String = DBConnection.data_source_path
 
     Dim DS As DataSet 'Object to store data in
-
+    Public Shared school_id As Integer
 
     Public Sub New(ByVal class_id As String)
         MyBase.New
@@ -15,6 +15,7 @@ Public Class addStudentToClassForm
 
         classIDLabel.Text = class_id
         classIDLabel.Visible = False
+        school_id = TheClass.schoolId(CInt(class_id))
     End Sub
 
     Private Sub searchBtn_Click(sender As Object, e As EventArgs) Handles searchBtn.Click
@@ -23,7 +24,7 @@ Public Class addStudentToClassForm
 
         Dim search_key As String = searchKey.Text
         Dim search_keyword As String = searchKeyword.Text
-        Dim student_query As String = "id, reg_number, f_name, m_name, l_name, photo, father_name, mother_name FROM STUDENT"
+        Dim student_query As String = "id, reg_number, f_name, m_name, l_name, photo, father_name, mother_name FROM STUDENT where school_id=" & school_id
         Dim query As String = ""
         Dim SQL As String = ""
 
@@ -31,9 +32,9 @@ Public Class addStudentToClassForm
 
         Try
             If search_key = "ID" Then
-                query = " where reg_number = '" & search_keyword & "'"
+                query = " and reg_number = '" & search_keyword & "'"
             ElseIf search_key = "Name" Then
-                query = " where (f_name LIKE '%" & search_keyword & "%')"
+                query = " and (f_name LIKE '%" & search_keyword & "%')"
             End If
             SQL = "SELECT " & student_query & query
 
@@ -138,17 +139,17 @@ Public Class addStudentToClassForm
         addStudentToClass(class_id, student_id)
     End Sub
 
-    Public Sub addStudentToClass(class_id As String, student_id As String)
+    Public Shared Sub addStudentToClass(class_id As String, student_id As String)
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
 
         Dim present As Boolean
-        present = checkIfPresent(class_id, student_id)
+        present = checkIfAssigned(class_id, student_id)
 
         If present = True Then
-            MessageBox.Show("This student is already assigned to your class. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("This student is already assigned to a class. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
 
@@ -161,8 +162,8 @@ Public Class addStudentToClassForm
             cmd.Parameters.AddWithValue("@class_id", class_id)
             cmd.Parameters.AddWithValue("@student_id", student_id)
             cmd.ExecuteNonQuery()
+            MsgBox("Student assigned to class successfully! ", MsgBoxStyle.Information, "Assigned")
 
-            MsgBox("Insert Successful", MsgBoxStyle.Information, "INSERTED")
             Con.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -173,7 +174,7 @@ Public Class addStudentToClassForm
 
     End Sub
 
-    Public Function checkIfPresent(class_id As String, student_id As String) As Boolean
+    Public Shared Function checkIfAssigned(class_id As String, student_id As String) As Boolean
         Dim present As Boolean = False
 
         Con = New OleDbConnection
@@ -185,7 +186,12 @@ Public Class addStudentToClassForm
 
         Try
             Dim oData As OleDbDataAdapter
-            SQL = "SELECT * from class_student WHERE class_id=" & class_id & " and student_id = " & student_id
+            Dim current_year_id = Year.currentYearID(school_id)
+            'SQL = "SELECT * from class_student WHERE class_id=" & class_id & " and student_id = " & student_id
+            SQL = "Select * From class_student
+            Where class_id In (Select class_id from Class where year_id=" & current_year_id & " and school_id=" & school_id & ")
+            And student_id = " & student_id
+
             Con.Open() 'Open connection
             oData = New OleDbDataAdapter(SQL, Con)
             Con.Close()

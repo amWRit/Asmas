@@ -30,6 +30,21 @@ Public Class addStudentForm
             Dim Val = DS.Tables(0).Rows(i)(0).ToString
             schoolCombo.Items.Add(Val)
         Next
+
+        DS.Tables.Clear()
+        'CLASS COMBOBOX
+        Dim classSQL As String = "SELECT distinct short_name from CLASS ORDER BY short_name"
+        Con.Open() 'Open connection
+        Dim classData As OleDbDataAdapter
+        classData = New OleDbDataAdapter(classSQL, Con)
+        Con.Close()
+        classData.Fill(DS)
+        rowCount = DS.Tables(0).Rows.Count
+
+        For i As Integer = 0 To rowCount - 1
+            Dim Val = DS.Tables(0).Rows(i)(0).ToString
+            classCombo.Items.Add(Val)
+        Next
     End Sub
 
     Public Sub New(ByVal params As String())
@@ -40,6 +55,7 @@ Public Class addStudentForm
         Dim itemID = params(0)
 
         If itemID IsNot "" Then 'edit is true
+            classCombo.Enabled = False
             ' Add any initialization after the InitializeComponent() call.
             Con = New OleDbConnection
             Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
@@ -199,6 +215,17 @@ Public Class addStudentForm
             cmd.ExecuteNonQuery()
 
             MsgBox("Insert Successful", MsgBoxStyle.Information, "INSERTED")
+            If classCombo.SelectedIndex <> -1 Then
+                'check if student is created
+                Dim student_id = myFunctions.getStudentIdOf(regNumber)
+                If student_id <> "" Then
+                    'find class_id
+                    Dim class_id = myFunctions.getClassIdOf(school_id.ToString, Year.currentYearID(school_id), classCombo.Text)
+                    addStudentToClassForm.addStudentToClass(class_id, student_id)
+                End If
+
+            End If
+
             If edit = "TRUE" Then
                 Me.Close()
             Else
@@ -206,6 +233,7 @@ Public Class addStudentForm
                 myFunctions.clearTextBoxes(textboxes)
                 tAddTextBox.Text = ""
                 pAddTextBox.Text = ""
+                classCombo.Text = ""
             End If
             Con.Close()
         Catch ex As Exception

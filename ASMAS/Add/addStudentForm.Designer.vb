@@ -59,8 +59,13 @@ Partial Class addStudentForm
         Me.infoTextBox = New System.Windows.Forms.RichTextBox()
         Me.filepathTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.classCombo = New System.Windows.Forms.ComboBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'studentPhoto
@@ -321,7 +326,7 @@ Partial Class addStudentForm
         '
         'saveBtn
         '
-        Me.saveBtn.Location = New System.Drawing.Point(574, 425)
+        Me.saveBtn.Location = New System.Drawing.Point(577, 432)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
         Me.saveBtn.TabIndex = 19
@@ -330,7 +335,7 @@ Partial Class addStudentForm
         '
         'cancelBtn
         '
-        Me.cancelBtn.Location = New System.Drawing.Point(668, 425)
+        Me.cancelBtn.Location = New System.Drawing.Point(668, 432)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
         Me.cancelBtn.TabIndex = 20
@@ -375,11 +380,50 @@ Partial Class addStudentForm
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Address"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(27, 39)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(32, 13)
+        Me.Label16.TabIndex = 91
+        Me.Label16.Text = "Class"
+        '
+        'classCombo
+        '
+        Me.classCombo.FormattingEnabled = True
+        Me.classCombo.Location = New System.Drawing.Point(78, 35)
+        Me.classCombo.Name = "classCombo"
+        Me.classCombo.Size = New System.Drawing.Size(100, 21)
+        Me.classCombo.TabIndex = 19
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label16)
+        Me.GroupBox2.Controls.Add(Me.classCombo)
+        Me.GroupBox2.Location = New System.Drawing.Point(24, 327)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(200, 87)
+        Me.GroupBox2.TabIndex = 18
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Assign to a class?"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(12, 417)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(231, 13)
+        Me.Label17.TabIndex = 90
+        Me.Label17.Text = "You can leave this blank and assign class later."
+        '
         'addStudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(760, 463)
+        Me.ClientSize = New System.Drawing.Size(760, 478)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.filepathTextBox)
         Me.Controls.Add(Me.infoTextBox)
@@ -420,6 +464,8 @@ Partial Class addStudentForm
         CType(Me.studentPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -462,4 +508,8 @@ Partial Class addStudentForm
     Friend WithEvents infoTextBox As RichTextBox
     Friend WithEvents filepathTextBox As TextBox
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents classCombo As ComboBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label17 As Label
 End Class
