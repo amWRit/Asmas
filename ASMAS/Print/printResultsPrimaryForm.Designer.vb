@@ -51,14 +51,14 @@ Partial Class printResultsPrimaryForm
         ReportDataSource1.Value = Me.printResultsPrimaryBindingSource
         Me.primaryReportViewer.LocalReport.DataSources.Add(ReportDataSource1)
         Me.primaryReportViewer.LocalReport.ReportEmbeddedResource = "ASMAS.resultPrimary.rdlc"
-        Me.primaryReportViewer.Location = New System.Drawing.Point(0, 47)
+        Me.primaryReportViewer.Location = New System.Drawing.Point(0, 71)
         Me.primaryReportViewer.Name = "primaryReportViewer"
-        Me.primaryReportViewer.Size = New System.Drawing.Size(1008, 682)
+        Me.primaryReportViewer.Size = New System.Drawing.Size(1008, 658)
         Me.primaryReportViewer.TabIndex = 0
         '
         'nextBtn
         '
-        Me.nextBtn.Location = New System.Drawing.Point(93, 12)
+        Me.nextBtn.Location = New System.Drawing.Point(93, 21)
         Me.nextBtn.Name = "nextBtn"
         Me.nextBtn.Size = New System.Drawing.Size(75, 23)
         Me.nextBtn.TabIndex = 4
@@ -68,7 +68,7 @@ Partial Class printResultsPrimaryForm
         'previousBtn
         '
         Me.previousBtn.Enabled = False
-        Me.previousBtn.Location = New System.Drawing.Point(12, 12)
+        Me.previousBtn.Location = New System.Drawing.Point(12, 21)
         Me.previousBtn.Name = "previousBtn"
         Me.previousBtn.Size = New System.Drawing.Size(75, 23)
         Me.previousBtn.TabIndex = 3

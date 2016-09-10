@@ -5,6 +5,8 @@ Public Class viewDatabaseForm
     Private pwd As String
 
     Private data_source_path As String = DBConnection.data_source_path
+    Public filePath As String = ""
+    Public tempDS As DataSet
 
     Private Sub viewDatabaseForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Con = New OleDbConnection
@@ -83,6 +85,8 @@ Public Class viewDatabaseForm
         If className.SelectedIndex = -1 Then
             class_name = "%%"
         End If
+
+        filePath = "StudentData_" & school_name & "_" & year_num & "_Class" & class_name
         SQL = "select * from student st
                 inner Join
                 (select cs.student_id from class_student cs
@@ -105,6 +109,7 @@ Public Class viewDatabaseForm
             oData = New OleDbDataAdapter(SQL, Con)
             Con.Close()
             oData.Fill(DS)
+            tempDS = DS
 
             databaseResultListView.Items.Clear() 'prep Listview by clearing it
             databaseResultListView.Columns.Clear() 'remove columns in LV
@@ -123,6 +128,9 @@ Public Class viewDatabaseForm
                 databaseResultListView.Items.Add(xItem)
             Next
 
+            If DS.Tables(0).Rows.Count > 0 Then
+                exportBtn.Enabled = True
+            End If
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -140,6 +148,17 @@ Public Class viewDatabaseForm
             e.Cancel = True
             Me.Hide()
             HomeForm.Show()
+        End If
+    End Sub
+
+    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
+        Dim objDlg As New SaveFileDialog
+        objDlg.Filter = "Excel File|*.xlsx"
+        objDlg.OverwritePrompt = False
+        objDlg.FileName = filePath
+        If objDlg.ShowDialog = DialogResult.OK Then
+            Dim filepath As String = objDlg.FileName
+            FileHandler.ExportToExcel(FileHandler.GetDatatable(tempDS), filepath)
         End If
     End Sub
 End Class

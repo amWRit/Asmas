@@ -169,17 +169,9 @@ Public Class viewResultsForm
         objDlg.FileName = filePath
         If objDlg.ShowDialog = DialogResult.OK Then
             Dim filepath As String = objDlg.FileName
-            FileHandler.ExportToExcel(GetDatatable(), filepath)
+            FileHandler.ExportToExcel(FileHandler.GetDatatable(tempDS), filepath)
         End If
-
     End Sub
-
-    Private Function GetDatatable() As DataTable
-        'Create the data table at runtime
-        Dim DT As New DataTable
-        DT = tempDS.Tables(0)
-        Return DT
-    End Function
 
     Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
         Dim primary As String() = {"1", "2", "3", "4", "5"}

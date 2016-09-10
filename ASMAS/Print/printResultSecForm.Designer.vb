@@ -23,7 +23,7 @@ Partial Class printResultSecForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.printResultsSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.secReportViewer = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -48,18 +48,18 @@ Partial Class printResultSecForm
         'secReportViewer
         '
         Me.secReportViewer.Dock = System.Windows.Forms.DockStyle.Bottom
-        ReportDataSource2.Name = "resultsSec"
-        ReportDataSource2.Value = Me.printResultsSecBindingSource
-        Me.secReportViewer.LocalReport.DataSources.Add(ReportDataSource2)
+        ReportDataSource1.Name = "resultsSec"
+        ReportDataSource1.Value = Me.printResultsSecBindingSource
+        Me.secReportViewer.LocalReport.DataSources.Add(ReportDataSource1)
         Me.secReportViewer.LocalReport.ReportEmbeddedResource = "ASMAS.resultSec.rdlc"
-        Me.secReportViewer.Location = New System.Drawing.Point(0, 36)
+        Me.secReportViewer.Location = New System.Drawing.Point(0, 64)
         Me.secReportViewer.Name = "secReportViewer"
-        Me.secReportViewer.Size = New System.Drawing.Size(1008, 693)
+        Me.secReportViewer.Size = New System.Drawing.Size(1008, 665)
         Me.secReportViewer.TabIndex = 0
         '
         'nextBtn
         '
-        Me.nextBtn.Location = New System.Drawing.Point(93, 7)
+        Me.nextBtn.Location = New System.Drawing.Point(93, 12)
         Me.nextBtn.Name = "nextBtn"
         Me.nextBtn.Size = New System.Drawing.Size(75, 23)
         Me.nextBtn.TabIndex = 4
@@ -69,7 +69,7 @@ Partial Class printResultSecForm
         'previousBtn
         '
         Me.previousBtn.Enabled = False
-        Me.previousBtn.Location = New System.Drawing.Point(12, 7)
+        Me.previousBtn.Location = New System.Drawing.Point(12, 12)
         Me.previousBtn.Name = "previousBtn"
         Me.previousBtn.Size = New System.Drawing.Size(75, 23)
         Me.previousBtn.TabIndex = 3

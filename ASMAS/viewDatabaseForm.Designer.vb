@@ -23,6 +23,7 @@ Partial Class viewDatabaseForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(viewDatabaseForm))
         Me.databaseResultListView = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -35,6 +36,8 @@ Partial Class viewDatabaseForm
         Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.TerseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.yearName = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.exportBtn = New System.Windows.Forms.Button()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,10 +51,10 @@ Partial Class viewDatabaseForm
         Me.databaseResultListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.databaseResultListView.FullRowSelect = True
         Me.databaseResultListView.GridLines = True
-        Me.databaseResultListView.Location = New System.Drawing.Point(0, 133)
+        Me.databaseResultListView.Location = New System.Drawing.Point(0, 65)
         Me.databaseResultListView.MultiSelect = False
         Me.databaseResultListView.Name = "databaseResultListView"
-        Me.databaseResultListView.Size = New System.Drawing.Size(1008, 596)
+        Me.databaseResultListView.Size = New System.Drawing.Size(1008, 664)
         Me.databaseResultListView.TabIndex = 10
         Me.databaseResultListView.UseCompatibleStateImageBehavior = False
         Me.databaseResultListView.View = System.Windows.Forms.View.Details
@@ -137,12 +140,34 @@ Partial Class viewDatabaseForm
         Me.yearName.TabIndex = 7
         Me.yearName.Text = "Choose year..."
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(643, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
+        Me.Label1.TabIndex = 28
+        Me.Label1.Text = "Export to excel"
+        '
+        'exportBtn
+        '
+        Me.exportBtn.BackgroundImage = CType(resources.GetObject("exportBtn.BackgroundImage"), System.Drawing.Image)
+        Me.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.exportBtn.Enabled = False
+        Me.exportBtn.Location = New System.Drawing.Point(646, 8)
+        Me.exportBtn.Name = "exportBtn"
+        Me.exportBtn.Size = New System.Drawing.Size(27, 23)
+        Me.exportBtn.TabIndex = 27
+        Me.exportBtn.UseVisualStyleBackColor = True
+        '
         'viewDatabaseForm
         '
         Me.AcceptButton = Me.viewBtn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.exportBtn)
         Me.Controls.Add(Me.yearName)
         Me.Controls.Add(Me.className)
         Me.Controls.Add(Me.classLabel)
@@ -154,7 +179,7 @@ Partial Class viewDatabaseForm
         Me.MaximizeBox = False
         Me.Name = "viewDatabaseForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "View Database"
+        Me.Text = "View Student Database"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -175,4 +200,6 @@ Partial Class viewDatabaseForm
     Friend WithEvents classLabel As Label
     Friend WithEvents className As ComboBox
     Friend WithEvents yearName As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents exportBtn As Button
 End Class

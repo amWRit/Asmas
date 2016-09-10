@@ -351,6 +351,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Models\Year.vb" />
+    <Compile Include="viewUsersForm.Designer.vb">
+      <DependentUpon>viewUsersForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewUsersForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutBox1.resx">
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Result\viewResultsForm.resx">
       <DependentUpon>viewResultsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewUsersForm.resx">
+      <DependentUpon>viewUsersForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

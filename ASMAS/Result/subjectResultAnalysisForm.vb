@@ -12,6 +12,9 @@ Public Class subjectResultAnalysisForm
     Public Shared lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
     Public Shared sec As String() = {"9E", "9N", "10E", "10A"}
 
+    Public filePath As String = ""
+    Public tempDS As DataSet
+
     Private Sub subjectResultAnalysisForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -57,11 +60,15 @@ Public Class subjectResultAnalysisForm
             Con.Close()
             oData.Fill(DS)
 
+            tempDS = DS
+            filePath = "SubjectResultAnalysis_" & school_name & "_" & school_year & "_" & terminal & "Term_Class" & class_name
             Dim rowCount = DS.Tables(0).Rows.Count
             If rowCount = 0 Then
                 MessageBox.Show("The result is not analysed yet. Press 'Analyse Result' button.", "Not available", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Exit Sub
             End If
+
+            exportBtn.Enabled = True
             subjectAnalysisListView.Items.Clear() 'prep Listview by clearing it
             subjectAnalysisListView.Columns.Clear() 'remove columns in LV
 
@@ -101,7 +108,7 @@ Public Class subjectResultAnalysisForm
             'get the results
             Dim resultDS As DataSet = resultFunctions.getResultOf(class_name, terminal, school_year, school_name)
             If resultDS.Tables(0).Rows.Count = 0 Then
-                MsgBox("There are no results availabe to be analysed.", MsgBoxStyle.Information, "No DATA")
+                MsgBox("There are no results available to be analysed.", MsgBoxStyle.Information, "No DATA")
             Else
                 dataHash = getResultAnaysisData(resultDS, class_id, class_name)
                 'update into the table
@@ -138,23 +145,31 @@ Public Class subjectResultAnalysisForm
             Dim presentStudentCount = rowCount
             Dim locosIndex As Integer
             For i As Integer = 0 To rowCount - 1
-                Dim val As Double = 0
+                Dim val As Object
+                Dim dVal As Double = 0
                 If opt1.Contains(subj) And sec.contains(class_name) Then
                     drs = resultDS.Tables(0).Select("opt1='" & subj & "'")
-                    val = CDbl(drs.ElementAt(i).Item(47))
+                    val = drs.ElementAt(i).Item(47)
                 ElseIf opt2.Contains(subj) And sec.contains(class_name) Then
                     drs = resultDS.Tables(0).Select("opt2='" & subj & "'")
-                    val = CDbl(drs.ElementAt(i).Item(53))
+                    val = drs.ElementAt(i).Item(53)
                 Else
-                    val = CDbl(resultDS.Tables(0).Rows(i).Item(key & "_total"))
+                    val = resultDS.Tables(0).Rows(i).Item(key & "_total")
                 End If
-                total += val
-                If val = 0 Then
+
+                If val Is DBNull.Value Then
+                    dVal = 0
+                Else
+                    dVal = CDbl(val)
+                End If
+
+                total += dVal
+                If dVal = 0 Then
                     presentStudentCount -= 1 'assuming he/she was absent
                 Else
-                    marks.Add(val)
-                    min = Math.Min(val, min)
-                    max = Math.Max(val, max)
+                    marks.Add(dVal)
+                    min = Math.Min(dVal, min)
+                    max = Math.Max(dVal, max)
                 End If
             Next
             dataHash(key) = total
@@ -299,4 +314,14 @@ Public Class subjectResultAnalysisForm
         _studentsUnderLocosForm.Show()
     End Sub
 
+    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
+        Dim objDlg As New SaveFileDialog
+        objDlg.Filter = "Excel File|*.xlsx"
+        objDlg.OverwritePrompt = False
+        objDlg.FileName = filePath
+        If objDlg.ShowDialog = DialogResult.OK Then
+            Dim filepath As String = objDlg.FileName
+            FileHandler.ExportToExcel(FileHandler.GetDatatable(tempDS), filepath)
+        End If
+    End Sub
 End Class

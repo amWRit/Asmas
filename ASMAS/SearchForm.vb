@@ -32,6 +32,7 @@ Public Class SearchForm
                     query = " where (f_name LIKE '%" & search_keyword & "%')"
                 End If
                 SQL = "SELECT " & student_query & query
+                If User.userRole = "Admin" Then SubjectTeacherToolStripMenuItem.Visible = False
             ElseIf search_type = "Class" Then
                 If search_key = "ID" Then
                     query = " where class_id = " & Convert.ToInt32(search_keyword) & ""

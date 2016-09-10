@@ -54,10 +54,10 @@ Partial Class viewResultsForm
         Me.databaseResultListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.databaseResultListView.FullRowSelect = True
         Me.databaseResultListView.GridLines = True
-        Me.databaseResultListView.Location = New System.Drawing.Point(0, 133)
+        Me.databaseResultListView.Location = New System.Drawing.Point(0, 74)
         Me.databaseResultListView.MultiSelect = False
         Me.databaseResultListView.Name = "databaseResultListView"
-        Me.databaseResultListView.Size = New System.Drawing.Size(1008, 596)
+        Me.databaseResultListView.Size = New System.Drawing.Size(1008, 655)
         Me.databaseResultListView.TabIndex = 21
         Me.databaseResultListView.UseCompatibleStateImageBehavior = False
         Me.databaseResultListView.View = System.Windows.Forms.View.Details
