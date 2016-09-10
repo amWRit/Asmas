@@ -12,6 +12,9 @@ Public Class studentsUnderLocosForm
     Public Shared sec As String() = {"9E", "9N", "10E", "10A"}
     Public Shared params As String()
 
+    Public filePath As String = ""
+    Public tempDS As DataSet
+
     'contents = {class_id, class_name, school_name, school_year, terminal, subject, locos}
     Public Sub New(contents As String())
         MyBase.New
@@ -43,6 +46,10 @@ Public Class studentsUnderLocosForm
         Dim subjKey = resultFunctions.getSubjKey(subject, class_name)
         'get results
         Dim resultDS = getResultOf(subjKey)
+        If resultDS.Tables(0).Rows.Count > 0 Then exportBtn.Enabled = True
+
+        filePath = "LocosStudents_" & school_name & "_" & school_year & "_CLass_" & class_name & "_" & terminal & "Term_" & subject
+        tempDS = resultDS
         'load to list view
         loadLV(resultDS)
     End Sub
@@ -102,5 +109,17 @@ Public Class studentsUnderLocosForm
             Next
             studentsListView.Items.Add(xItem)
         Next
+    End Sub
+
+    Private Sub exportBtn_Click(sender As Object, e As EventArgs) Handles exportBtn.Click
+        'Using save file dialog that allow you to chosse the file name.
+        Dim objDlg As New SaveFileDialog
+        objDlg.Filter = "Excel File|*.xlsx"
+        objDlg.OverwritePrompt = False
+        objDlg.FileName = filePath
+        If objDlg.ShowDialog = DialogResult.OK Then
+            Dim filepath As String = objDlg.FileName
+            FileHandler.ExportToExcel(FileHandler.GetDatatable(tempDS), filepath)
+        End If
     End Sub
 End Class

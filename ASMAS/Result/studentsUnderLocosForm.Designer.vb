@@ -22,12 +22,15 @@ Partial Class studentsUnderLocosForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studentsUnderLocosForm))
         Me.studentsListView = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.titleLabel = New System.Windows.Forms.Label()
         Me.locosLabel = New System.Windows.Forms.Label()
         Me.subjectLabel = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.exportBtn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'studentsListView
@@ -42,7 +45,7 @@ Partial Class studentsUnderLocosForm
         Me.studentsListView.Location = New System.Drawing.Point(0, 61)
         Me.studentsListView.MultiSelect = False
         Me.studentsListView.Name = "studentsListView"
-        Me.studentsListView.Size = New System.Drawing.Size(436, 293)
+        Me.studentsListView.Size = New System.Drawing.Size(520, 293)
         Me.studentsListView.TabIndex = 167
         Me.studentsListView.UseCompatibleStateImageBehavior = False
         Me.studentsListView.View = System.Windows.Forms.View.Details
@@ -85,11 +88,33 @@ Partial Class studentsUnderLocosForm
         Me.subjectLabel.TabIndex = 171
         Me.subjectLabel.Text = "Subject"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(434, 44)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
+        Me.Label1.TabIndex = 173
+        Me.Label1.Text = "Export to excel"
+        '
+        'exportBtn
+        '
+        Me.exportBtn.BackgroundImage = CType(resources.GetObject("exportBtn.BackgroundImage"), System.Drawing.Image)
+        Me.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.exportBtn.Enabled = False
+        Me.exportBtn.Location = New System.Drawing.Point(437, 18)
+        Me.exportBtn.Name = "exportBtn"
+        Me.exportBtn.Size = New System.Drawing.Size(27, 23)
+        Me.exportBtn.TabIndex = 172
+        Me.exportBtn.UseVisualStyleBackColor = True
+        '
         'studentsUnderLocosForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(436, 354)
+        Me.ClientSize = New System.Drawing.Size(520, 354)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.exportBtn)
         Me.Controls.Add(Me.subjectLabel)
         Me.Controls.Add(Me.locosLabel)
         Me.Controls.Add(Me.titleLabel)
@@ -108,4 +133,6 @@ Partial Class studentsUnderLocosForm
     Friend WithEvents titleLabel As Label
     Friend WithEvents locosLabel As Label
     Friend WithEvents subjectLabel As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents exportBtn As Button
 End Class

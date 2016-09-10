@@ -13,6 +13,8 @@
             addClassBtn.Enabled = False
             addStudentBtn.Enabled = False
             addUserBtn.Enabled = False
+            AdminToolsToolStripMenuItem.Enabled = False
+            AdminToolsToolStripMenuItem.Visible = False
         End If
 
         If User.userRole = "Teacher" Then viewMyClassesBtn.Show()
@@ -49,7 +51,9 @@
 
     Private Sub addUserBtn_Click(sender As Object, e As EventArgs) Handles addUserBtn.Click
         Me.Hide()
-        addUserForm.Show()
+        'params = {user_id, edit}
+        Dim _addUserForm As New addUserForm({"", "False"})
+        _addUserForm.Show()
     End Sub
 
     Private Sub addClassBtn_Click(sender As Object, e As EventArgs) Handles addClassBtn.Click
@@ -79,11 +83,16 @@
         viewResultsForm.Show()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles aboutLink.LinkClicked
+    Private Sub ViewUsersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewUsersToolStripMenuItem.Click
+        viewUsersForm.Show()
+    End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
         AboutBox1.Show()
     End Sub
 
-    Private Sub LinkLabel2_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles supportLink.LinkClicked
+    Private Sub SupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupportToolStripMenuItem.Click
         Help.ShowHelp(Me, HelpProvider.HelpNamespace, HelpNavigator.TableOfContents)
+
     End Sub
 End Class

@@ -51,9 +51,9 @@ Partial Class printResultLowSecForm
         ReportDataSource1.Value = Me.printResultsLowSecBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "ASMAS.resultLowSec.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(0, 32)
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 67)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(1008, 697)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1008, 662)
         Me.ReportViewer1.TabIndex = 0
         '
         'printResultsLowSecTableAdapter
@@ -63,7 +63,7 @@ Partial Class printResultLowSecForm
         'previousBtn
         '
         Me.previousBtn.Enabled = False
-        Me.previousBtn.Location = New System.Drawing.Point(13, 3)
+        Me.previousBtn.Location = New System.Drawing.Point(12, 12)
         Me.previousBtn.Name = "previousBtn"
         Me.previousBtn.Size = New System.Drawing.Size(75, 23)
         Me.previousBtn.TabIndex = 1
@@ -72,7 +72,7 @@ Partial Class printResultLowSecForm
         '
         'nextBtn
         '
-        Me.nextBtn.Location = New System.Drawing.Point(94, 3)
+        Me.nextBtn.Location = New System.Drawing.Point(93, 12)
         Me.nextBtn.Name = "nextBtn"
         Me.nextBtn.Size = New System.Drawing.Size(75, 23)
         Me.nextBtn.TabIndex = 2

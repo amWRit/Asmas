@@ -23,6 +23,7 @@ Partial Class subjectResultAnalysisForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(subjectResultAnalysisForm))
         Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.TerseDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.subjectAnalysisListView = New System.Windows.Forms.ListView()
@@ -34,6 +35,8 @@ Partial Class subjectResultAnalysisForm
         Me.resultAnalysisContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ViewDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentsUnderLOCOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.exportBtn = New System.Windows.Forms.Button()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.resultAnalysisContextMenu.SuspendLayout()
@@ -58,10 +61,10 @@ Partial Class subjectResultAnalysisForm
         Me.subjectAnalysisListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.subjectAnalysisListView.FullRowSelect = True
         Me.subjectAnalysisListView.GridLines = True
-        Me.subjectAnalysisListView.Location = New System.Drawing.Point(0, 50)
+        Me.subjectAnalysisListView.Location = New System.Drawing.Point(0, 83)
         Me.subjectAnalysisListView.MultiSelect = False
         Me.subjectAnalysisListView.Name = "subjectAnalysisListView"
-        Me.subjectAnalysisListView.Size = New System.Drawing.Size(1008, 679)
+        Me.subjectAnalysisListView.Size = New System.Drawing.Size(1008, 646)
         Me.subjectAnalysisListView.TabIndex = 166
         Me.subjectAnalysisListView.UseCompatibleStateImageBehavior = False
         Me.subjectAnalysisListView.View = System.Windows.Forms.View.Details
@@ -106,13 +109,13 @@ Partial Class subjectResultAnalysisForm
         '
         Me.resultAnalysisContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewDetailsToolStripMenuItem})
         Me.resultAnalysisContextMenu.Name = "searchResultContextMenu"
-        Me.resultAnalysisContextMenu.Size = New System.Drawing.Size(153, 48)
+        Me.resultAnalysisContextMenu.Size = New System.Drawing.Size(100, 26)
         '
         'ViewDetailsToolStripMenuItem
         '
         Me.ViewDetailsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentsUnderLOCOSToolStripMenuItem})
         Me.ViewDetailsToolStripMenuItem.Name = "ViewDetailsToolStripMenuItem"
-        Me.ViewDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewDetailsToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.ViewDetailsToolStripMenuItem.Text = "View"
         '
         'StudentsUnderLOCOSToolStripMenuItem
@@ -121,11 +124,33 @@ Partial Class subjectResultAnalysisForm
         Me.StudentsUnderLOCOSToolStripMenuItem.Size = New System.Drawing.Size(195, 22)
         Me.StudentsUnderLOCOSToolStripMenuItem.Text = "Students under LOCOS"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(483, 38)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(77, 13)
+        Me.Label2.TabIndex = 171
+        Me.Label2.Text = "Export to excel"
+        '
+        'exportBtn
+        '
+        Me.exportBtn.BackgroundImage = CType(resources.GetObject("exportBtn.BackgroundImage"), System.Drawing.Image)
+        Me.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.exportBtn.Enabled = False
+        Me.exportBtn.Location = New System.Drawing.Point(486, 12)
+        Me.exportBtn.Name = "exportBtn"
+        Me.exportBtn.Size = New System.Drawing.Size(27, 23)
+        Me.exportBtn.TabIndex = 170
+        Me.exportBtn.UseVisualStyleBackColor = True
+        '
         'subjectResultAnalysisForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.exportBtn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.analyseBtn)
         Me.Controls.Add(Me.termCombo)
@@ -153,4 +178,6 @@ Partial Class subjectResultAnalysisForm
     Friend WithEvents resultAnalysisContextMenu As ContextMenuStrip
     Friend WithEvents ViewDetailsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentsUnderLOCOSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label2 As Label
+    Friend WithEvents exportBtn As Button
 End Class

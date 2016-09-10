@@ -6,10 +6,10 @@ Public Class FileHandler
     Public Shared Sub ExportToExcel(ByVal dtTemp As DataTable, ByVal filepath As String)
         Dim strFileName As String = filepath
         If System.IO.File.Exists(strFileName) Then
-            If (MessageBox.Show("Do you want to replace from the existing file?", "Export to Excel", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = System.Windows.Forms.DialogResult.Yes) Then
+            Dim I As Integer = MessageBox.Show("Do you want to replace from the existing file?", "Export to Excel", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+
+            If I = MsgBoxResult.Ok Then
                 System.IO.File.Delete(strFileName)
-            Else
-                Return
             End If
 
         End If
@@ -55,6 +55,13 @@ Public Class FileHandler
 
         MessageBox.Show("File Exported Successfully!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+    Public Shared Function GetDatatable(tempDS As DataSet) As DataTable
+        'Create the data table at runtime
+        Dim DT As New DataTable
+        DT = tempDS.Tables(0)
+        Return DT
+    End Function
 
 
     Public Shared Sub ReleaseObject(ByVal o As Object)
