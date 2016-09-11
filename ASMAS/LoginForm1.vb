@@ -65,6 +65,8 @@ Public Class LoginForm1
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
+        Finally
+            con.Close()
         End Try
 
     End Sub

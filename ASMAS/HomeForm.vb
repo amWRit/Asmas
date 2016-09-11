@@ -112,4 +112,37 @@
             End Try
         End If
     End Sub
+
+    Private Sub ImportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportToolStripMenuItem.Click
+        Dim objDlg As New OpenFileDialog
+        objDlg.Filter = "Access File|*.accdb"
+        Dim old_file_path As String = DBConnection.data_source_path
+        Dim random = New Random
+        Dim backup_path As String = ".\Backup\db_backup_" & random.Next.ToString & ".accdb"
+
+        If objDlg.ShowDialog = DialogResult.OK Then
+            Dim new_filepath As String = objDlg.FileName
+            Try
+                Dim I As Integer = MessageBox.Show("Importing a new database will completely REPLACE the existing database. ARE YOU ABSOLUTELY SURE?", "IMPORT", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
+                If I = MsgBoxResult.Yes Then
+                    FileHandler.ReleaseObject(old_file_path)
+                    'System.IO.File.Replace(filepath, db_file_path, backup_path)
+                    System.IO.File.Copy(old_file_path, backup_path)
+                    'making sure the file has been backed up 
+                    If System.IO.File.Exists(backup_path) Then
+                        System.IO.File.Delete(old_file_path)
+                        System.IO.File.Copy(new_filepath, old_file_path)
+                        MessageBox.Show("Database imported successfully!", "Imported", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        MessageBox.Show("You have a new database. So, the program needs to restart.", "RESTART", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Me.Close()
+                        Application.Exit()
+                    Else
+                        MessageBox.Show("The backup of current database couldn't be created.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
 End Class
