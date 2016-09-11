@@ -95,4 +95,21 @@
         Help.ShowHelp(Me, HelpProvider.HelpNamespace, HelpNavigator.TableOfContents)
 
     End Sub
+
+    Private Sub ExportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportToolStripMenuItem.Click
+        Dim objDlg As New SaveFileDialog
+        objDlg.Filter = "Access File|*.accdb"
+        objDlg.OverwritePrompt = True
+        Dim db_file_path As String = DBConnection.data_source_path
+
+        If objDlg.ShowDialog = DialogResult.OK Then
+            Dim filepath As String = objDlg.FileName
+            Try
+                System.IO.File.Copy(db_file_path, filepath)
+                MessageBox.Show("Database exported successfully!", "Exported", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
 End Class

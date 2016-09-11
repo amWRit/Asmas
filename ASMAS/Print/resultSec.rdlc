@@ -7544,10 +7544,9 @@ Point</Value>
   </Body>
   <Width>7.66121in</Width>
   <Page>
-    <PageHeight>0in</PageHeight>
-    <PageWidth>8.27in</PageWidth>
+    <PageHeight>8.27in</PageHeight>
+    <PageWidth>11.69in</PageWidth>
     <LeftMargin>0.3937in</LeftMargin>
-    <RightMargin>0.27559in</RightMargin>
     <TopMargin>0.07874in</TopMargin>
     <Style />
   </Page>
