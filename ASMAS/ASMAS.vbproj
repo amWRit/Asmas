@@ -214,10 +214,10 @@
     <Compile Include="classDetailsForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="classResults.Designer.vb">
+    <Compile Include="Result\classResults.Designer.vb">
       <DependentUpon>classResults.vb</DependentUpon>
     </Compile>
-    <Compile Include="classResults.vb">
+    <Compile Include="Result\classResults.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Functions\FileHandler.vb" />
@@ -395,7 +395,7 @@
     <EmbeddedResource Include="classDetailsForm.resx">
       <DependentUpon>classDetailsForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="classResults.resx">
+    <EmbeddedResource Include="Result\classResults.resx">
       <DependentUpon>classResults.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">

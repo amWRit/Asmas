@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+Imports System.Drawing.Printing
 Imports Microsoft.Reporting.WinForms
 
 Public Class printResultLowSecForm
@@ -12,7 +13,7 @@ Public Class printResultLowSecForm
     Public _class_teacher As String
 
     Private Sub printForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.ReportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
+        Me.ReportViewer1.SetDisplayMode(DisplayMode.PrintLayout)
         Me.ReportViewer1.RefreshReport()
     End Sub
 

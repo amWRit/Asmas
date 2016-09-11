@@ -14,7 +14,6 @@ Public Class printResultsPrimaryForm
     Private Sub printResultsPrimaryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TerseDataSet.printResultsPrimary' table. You can move, or remove it, as needed.
         Me.printResultsPrimaryTableAdapter.Fill(Me.TerseDataSet.printResultsPrimary)
-        'TODO: This line of code loads data into the 'TerseDataSet.printResultsPrimary' table. You can move, or remove it, as needed.
         Me.primaryReportViewer.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
         Me.primaryReportViewer.RefreshReport()
     End Sub

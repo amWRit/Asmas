@@ -174,6 +174,24 @@ Public Class viewResultsForm
     End Sub
 
     Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        letsPrint(0) ' index = 0; print from beginning
+    End Sub
+
+    Private Sub databaseResultListView_MouseUp(sender As Object, e As System.Windows.Forms.MouseEventArgs) Handles databaseResultListView.MouseUp
+        If e.Button = MouseButtons.Right Then
+            If databaseResultListView.GetItemAt(e.X, e.Y) IsNot Nothing Then
+                databaseResultListView.GetItemAt(e.X, e.Y).Selected = True
+                viewResultsContextMenu.Show(databaseResultListView, New Point(e.X, e.Y))
+            End If
+        End If
+    End Sub
+
+    Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
+        Dim ItemIndex As Integer = databaseResultListView.SelectedIndices(0) 'Grab the selected Index
+        letsPrint(ItemIndex)
+    End Sub
+
+    Public Sub letsPrint(index As Integer)
         Dim primary As String() = {"1", "2", "3", "4", "5"}
         Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
         Dim sec As String() = {"9E", "9N", "10E", "10A"}
@@ -183,15 +201,14 @@ Public Class viewResultsForm
         Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
 
         If primary.Contains(class_name) Then
-            Dim printForm As New printResultsPrimaryForm(tempDS, 0, class_name, class_teacher)
+            Dim printForm As New printResultsPrimaryForm(tempDS, index, class_name, class_teacher)
             printForm.Show()
         ElseIf lowSec.Contains(class_name) Then
-            Dim printForm As New printResultLowSecForm(tempDS, 0, class_name, class_teacher)
+            Dim printForm As New printResultLowSecForm(tempDS, index, class_name, class_teacher)
             printForm.Show()
         ElseIf sec.Contains(class_name) Then
-            Dim printForm As New printResultSecForm(tempDS, 0, class_name, class_teacher)
+            Dim printForm As New printResultSecForm(tempDS, index, class_name, class_teacher)
             printForm.Show()
         End If
     End Sub
-
 End Class

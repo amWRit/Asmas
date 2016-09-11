@@ -7544,10 +7544,11 @@ Point</Value>
   </Body>
   <Width>7.66121in</Width>
   <Page>
-    <LeftMargin>1cm</LeftMargin>
-    <RightMargin>0.7cm</RightMargin>
-    <TopMargin>0.2cm</TopMargin>
-    <BottomMargin>0cm</BottomMargin>
+    <PageHeight>0in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <LeftMargin>0.3937in</LeftMargin>
+    <RightMargin>0.27559in</RightMargin>
+    <TopMargin>0.07874in</TopMargin>
     <Style />
   </Page>
   <Author>Artain</Author>

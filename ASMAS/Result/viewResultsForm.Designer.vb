@@ -41,8 +41,11 @@ Partial Class viewResultsForm
         Me.exportBtn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.printBtn = New System.Windows.Forms.Button()
+        Me.viewResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.viewResultsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'databaseResultListView
@@ -192,6 +195,18 @@ Partial Class viewResultsForm
         Me.printBtn.Text = "Print Report Card"
         Me.printBtn.UseVisualStyleBackColor = True
         '
+        'viewResultsContextMenu
+        '
+        Me.viewResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrintToolStripMenuItem})
+        Me.viewResultsContextMenu.Name = "searchResultContextMenu"
+        Me.viewResultsContextMenu.Size = New System.Drawing.Size(153, 48)
+        '
+        'PrintToolStripMenuItem
+        '
+        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PrintToolStripMenuItem.Text = "Print"
+        '
         'viewResultsForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -217,6 +232,7 @@ Partial Class viewResultsForm
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.viewResultsContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -239,4 +255,6 @@ Partial Class viewResultsForm
     Friend WithEvents exportBtn As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents printBtn As Button
+    Friend WithEvents viewResultsContextMenu As ContextMenuStrip
+    Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
 End Class

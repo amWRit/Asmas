@@ -6993,10 +6993,10 @@ Point</Value>
   </Body>
   <Width>7.7578in</Width>
   <Page>
-    <LeftMargin>1cm</LeftMargin>
-    <RightMargin>0.7cm</RightMargin>
-    <TopMargin>0.2cm</TopMargin>
-    <BottomMargin>0cm</BottomMargin>
+    <PageHeight>11.69in</PageHeight>
+    <PageWidth>8.27in</PageWidth>
+    <LeftMargin>0.3937in</LeftMargin>
+    <TopMargin>0.07874in</TopMargin>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
