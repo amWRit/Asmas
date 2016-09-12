@@ -498,7 +498,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="asmas_CiZ_icon.ico" />
-    <None Include="Resources\Help.png" />
+    <None Include="Resources\FB_IMG_14593569270893.jpg" />
     <Content Include="Terse.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

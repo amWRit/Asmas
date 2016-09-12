@@ -108,10 +108,10 @@ Partial Class SearchForm
         Me.searchResultListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.searchResultListView.FullRowSelect = True
         Me.searchResultListView.GridLines = True
-        Me.searchResultListView.Location = New System.Drawing.Point(0, 134)
+        Me.searchResultListView.Location = New System.Drawing.Point(0, 77)
         Me.searchResultListView.MultiSelect = False
         Me.searchResultListView.Name = "searchResultListView"
-        Me.searchResultListView.Size = New System.Drawing.Size(1008, 595)
+        Me.searchResultListView.Size = New System.Drawing.Size(1008, 652)
         Me.searchResultListView.TabIndex = 4
         Me.searchResultListView.UseCompatibleStateImageBehavior = False
         Me.searchResultListView.View = System.Windows.Forms.View.Details

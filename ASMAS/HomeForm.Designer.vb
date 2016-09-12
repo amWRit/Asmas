@@ -23,15 +23,6 @@ Partial Class HomeForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.currentUserLabel = New System.Windows.Forms.Label()
-        Me.searchBtn = New System.Windows.Forms.Button()
-        Me.viewDBBtn = New System.Windows.Forms.Button()
-        Me.addSchoolBtn = New System.Windows.Forms.Button()
-        Me.addYearBtn = New System.Windows.Forms.Button()
-        Me.addStudentBtn = New System.Windows.Forms.Button()
-        Me.addUserBtn = New System.Windows.Forms.Button()
-        Me.addClassBtn = New System.Windows.Forms.Button()
-        Me.viewMyClassesBtn = New System.Windows.Forms.Button()
-        Me.viewResultBtn = New System.Windows.Forms.Button()
         Me.HelpProvider = New System.Windows.Forms.HelpProvider()
         Me.menuStrip = New System.Windows.Forms.MenuStrip()
         Me.AdminToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,121 +30,49 @@ Partial Class HomeForm
         Me.ImportDatabaseToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.YearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SchoolToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClassToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MyClassesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StudentDatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResultsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.menuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'currentUserLabel
         '
         Me.currentUserLabel.AutoSize = True
-        Me.currentUserLabel.Location = New System.Drawing.Point(133, 32)
+        Me.currentUserLabel.BackColor = System.Drawing.Color.Coral
+        Me.currentUserLabel.Font = New System.Drawing.Font("Bigmouth", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.currentUserLabel.Location = New System.Drawing.Point(14, 226)
         Me.currentUserLabel.Name = "currentUserLabel"
-        Me.currentUserLabel.Size = New System.Drawing.Size(77, 13)
+        Me.currentUserLabel.Size = New System.Drawing.Size(232, 46)
         Me.currentUserLabel.TabIndex = 0
-        Me.currentUserLabel.Text = "Logged in as : "
+        Me.currentUserLabel.Text = "Username"
         Me.currentUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'searchBtn
-        '
-        Me.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.HelpProvider.SetHelpKeyword(Me.searchBtn, "Search class or students")
-        Me.HelpProvider.SetHelpNavigator(Me.searchBtn, System.Windows.Forms.HelpNavigator.Index)
-        Me.HelpProvider.SetHelpString(Me.searchBtn, "search")
-        Me.searchBtn.Location = New System.Drawing.Point(77, 51)
-        Me.searchBtn.Name = "searchBtn"
-        Me.HelpProvider.SetShowHelp(Me.searchBtn, True)
-        Me.searchBtn.Size = New System.Drawing.Size(195, 43)
-        Me.searchBtn.TabIndex = 1
-        Me.searchBtn.Text = "Search"
-        Me.searchBtn.UseVisualStyleBackColor = True
-        '
-        'viewDBBtn
-        '
-        Me.viewDBBtn.Location = New System.Drawing.Point(77, 112)
-        Me.viewDBBtn.Name = "viewDBBtn"
-        Me.viewDBBtn.Size = New System.Drawing.Size(195, 43)
-        Me.viewDBBtn.TabIndex = 2
-        Me.viewDBBtn.Text = "View Student Database"
-        Me.viewDBBtn.UseVisualStyleBackColor = True
-        '
-        'addSchoolBtn
-        '
-        Me.addSchoolBtn.Location = New System.Drawing.Point(77, 173)
-        Me.addSchoolBtn.Name = "addSchoolBtn"
-        Me.addSchoolBtn.Size = New System.Drawing.Size(195, 43)
-        Me.addSchoolBtn.TabIndex = 3
-        Me.addSchoolBtn.Text = "Add School"
-        Me.addSchoolBtn.UseVisualStyleBackColor = True
-        '
-        'addYearBtn
-        '
-        Me.addYearBtn.Location = New System.Drawing.Point(77, 233)
-        Me.addYearBtn.Name = "addYearBtn"
-        Me.addYearBtn.Size = New System.Drawing.Size(195, 43)
-        Me.addYearBtn.TabIndex = 4
-        Me.addYearBtn.Text = "Add Year"
-        Me.addYearBtn.UseVisualStyleBackColor = True
-        '
-        'addStudentBtn
-        '
-        Me.addStudentBtn.Location = New System.Drawing.Point(77, 293)
-        Me.addStudentBtn.Name = "addStudentBtn"
-        Me.addStudentBtn.Size = New System.Drawing.Size(195, 43)
-        Me.addStudentBtn.TabIndex = 5
-        Me.addStudentBtn.Text = "Add Student"
-        Me.addStudentBtn.UseVisualStyleBackColor = True
-        '
-        'addUserBtn
-        '
-        Me.addUserBtn.Location = New System.Drawing.Point(77, 408)
-        Me.addUserBtn.Name = "addUserBtn"
-        Me.addUserBtn.Size = New System.Drawing.Size(195, 43)
-        Me.addUserBtn.TabIndex = 7
-        Me.addUserBtn.Text = "Add User"
-        Me.addUserBtn.UseVisualStyleBackColor = True
-        '
-        'addClassBtn
-        '
-        Me.addClassBtn.Location = New System.Drawing.Point(77, 352)
-        Me.addClassBtn.Name = "addClassBtn"
-        Me.addClassBtn.Size = New System.Drawing.Size(195, 43)
-        Me.addClassBtn.TabIndex = 6
-        Me.addClassBtn.Text = "Add Class"
-        Me.addClassBtn.UseVisualStyleBackColor = True
-        '
-        'viewMyClassesBtn
-        '
-        Me.viewMyClassesBtn.Location = New System.Drawing.Point(77, 173)
-        Me.viewMyClassesBtn.Name = "viewMyClassesBtn"
-        Me.viewMyClassesBtn.Size = New System.Drawing.Size(195, 43)
-        Me.viewMyClassesBtn.TabIndex = 3
-        Me.viewMyClassesBtn.Text = "View My Classes"
-        Me.viewMyClassesBtn.UseVisualStyleBackColor = True
-        Me.viewMyClassesBtn.Visible = False
-        '
-        'viewResultBtn
-        '
-        Me.viewResultBtn.Location = New System.Drawing.Point(77, 467)
-        Me.viewResultBtn.Name = "viewResultBtn"
-        Me.viewResultBtn.Size = New System.Drawing.Size(195, 43)
-        Me.viewResultBtn.TabIndex = 8
-        Me.viewResultBtn.Text = "View Results"
-        Me.viewResultBtn.UseVisualStyleBackColor = True
         '
         'menuStrip
         '
-        Me.menuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.menuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminToolsToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SearchToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.menuStrip.Location = New System.Drawing.Point(0, 0)
         Me.menuStrip.Name = "menuStrip"
-        Me.menuStrip.Size = New System.Drawing.Size(340, 24)
+        Me.menuStrip.Size = New System.Drawing.Size(477, 24)
         Me.menuStrip.TabIndex = 12
         Me.menuStrip.Text = "MenuStrip1"
         '
         'AdminToolsToolStripMenuItem
         '
-        Me.AdminToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewUsersToolStripMenuItem, Me.ImportDatabaseToolStripMenuItem1})
+        Me.AdminToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewUsersToolStripMenuItem, Me.ImportDatabaseToolStripMenuItem1, Me.AddToolStripMenuItem})
         Me.AdminToolsToolStripMenuItem.Name = "AdminToolsToolStripMenuItem"
         Me.AdminToolsToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
         Me.AdminToolsToolStripMenuItem.Text = "Admin Tools"
@@ -161,27 +80,102 @@ Partial Class HomeForm
         'ViewUsersToolStripMenuItem
         '
         Me.ViewUsersToolStripMenuItem.Name = "ViewUsersToolStripMenuItem"
-        Me.ViewUsersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewUsersToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.ViewUsersToolStripMenuItem.Text = "View users"
         '
         'ImportDatabaseToolStripMenuItem1
         '
         Me.ImportDatabaseToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportToolStripMenuItem, Me.ExportToolStripMenuItem})
         Me.ImportDatabaseToolStripMenuItem1.Name = "ImportDatabaseToolStripMenuItem1"
-        Me.ImportDatabaseToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ImportDatabaseToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
         Me.ImportDatabaseToolStripMenuItem1.Text = "Database"
         '
         'ImportToolStripMenuItem
         '
         Me.ImportToolStripMenuItem.Name = "ImportToolStripMenuItem"
-        Me.ImportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ImportToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
         Me.ImportToolStripMenuItem.Text = "Import"
         '
         'ExportToolStripMenuItem
         '
         Me.ExportToolStripMenuItem.Name = "ExportToolStripMenuItem"
-        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExportToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
         Me.ExportToolStripMenuItem.Text = "Export"
+        '
+        'AddToolStripMenuItem
+        '
+        Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.YearToolStripMenuItem, Me.SchoolToolStripMenuItem, Me.ClassToolStripMenuItem, Me.UserToolStripMenuItem, Me.StudentToolStripMenuItem})
+        Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.AddToolStripMenuItem.Text = "Add"
+        '
+        'YearToolStripMenuItem
+        '
+        Me.YearToolStripMenuItem.Name = "YearToolStripMenuItem"
+        Me.YearToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.YearToolStripMenuItem.Text = "Year"
+        '
+        'SchoolToolStripMenuItem
+        '
+        Me.SchoolToolStripMenuItem.Name = "SchoolToolStripMenuItem"
+        Me.SchoolToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.SchoolToolStripMenuItem.Text = "School"
+        '
+        'ClassToolStripMenuItem
+        '
+        Me.ClassToolStripMenuItem.Name = "ClassToolStripMenuItem"
+        Me.ClassToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.ClassToolStripMenuItem.Text = "Class"
+        '
+        'UserToolStripMenuItem
+        '
+        Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.UserToolStripMenuItem.Text = "User"
+        '
+        'StudentToolStripMenuItem
+        '
+        Me.StudentToolStripMenuItem.Name = "StudentToolStripMenuItem"
+        Me.StudentToolStripMenuItem.Size = New System.Drawing.Size(115, 22)
+        Me.StudentToolStripMenuItem.Text = "Student"
+        '
+        'ToolsToolStripMenuItem
+        '
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.ToolsToolStripMenuItem.Text = "Tools"
+        '
+        'ViewToolStripMenuItem
+        '
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MyClassesToolStripMenuItem, Me.StudentDatabaseToolStripMenuItem, Me.ResultsToolStripMenuItem})
+        Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
+        Me.ViewToolStripMenuItem.Text = "View"
+        '
+        'MyClassesToolStripMenuItem
+        '
+        Me.MyClassesToolStripMenuItem.Name = "MyClassesToolStripMenuItem"
+        Me.MyClassesToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.MyClassesToolStripMenuItem.Text = "My Classes"
+        '
+        'StudentDatabaseToolStripMenuItem
+        '
+        Me.StudentDatabaseToolStripMenuItem.Name = "StudentDatabaseToolStripMenuItem"
+        Me.StudentDatabaseToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.StudentDatabaseToolStripMenuItem.Text = "Student Database"
+        '
+        'ResultsToolStripMenuItem
+        '
+        Me.ResultsToolStripMenuItem.Name = "ResultsToolStripMenuItem"
+        Me.ResultsToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
+        Me.ResultsToolStripMenuItem.Text = "Results"
+        '
+        'SearchToolStripMenuItem
+        '
+        Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
+        Me.SearchToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.SearchToolStripMenuItem.Text = "Search"
         '
         'HelpToolStripMenuItem
         '
@@ -202,21 +196,26 @@ Partial Class HomeForm
         Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.SupportToolStripMenuItem.Text = "Support"
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(14, 190)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(153, 31)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "WELCOME"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'HomeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(340, 528)
-        Me.Controls.Add(Me.viewResultBtn)
-        Me.Controls.Add(Me.viewMyClassesBtn)
-        Me.Controls.Add(Me.addClassBtn)
-        Me.Controls.Add(Me.addUserBtn)
-        Me.Controls.Add(Me.addStudentBtn)
-        Me.Controls.Add(Me.addYearBtn)
-        Me.Controls.Add(Me.addSchoolBtn)
-        Me.Controls.Add(Me.viewDBBtn)
-        Me.Controls.Add(Me.searchBtn)
+        Me.BackgroundImage = Global.ASMAS.My.Resources.Resources.FB_IMG_1459356927089
+        Me.ClientSize = New System.Drawing.Size(477, 308)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.currentUserLabel)
         Me.Controls.Add(Me.menuStrip)
         Me.MainMenuStrip = Me.menuStrip
@@ -232,15 +231,6 @@ Partial Class HomeForm
     End Sub
 
     Friend WithEvents currentUserLabel As Label
-    Friend WithEvents searchBtn As Button
-    Friend WithEvents viewDBBtn As Button
-    Friend WithEvents addSchoolBtn As Button
-    Friend WithEvents addYearBtn As Button
-    Friend WithEvents addStudentBtn As Button
-    Friend WithEvents addUserBtn As Button
-    Friend WithEvents addClassBtn As Button
-    Friend WithEvents viewMyClassesBtn As Button
-    Friend WithEvents viewResultBtn As Button
     Friend WithEvents HelpProvider As HelpProvider
     Friend WithEvents menuStrip As MenuStrip
     Friend WithEvents AdminToolsToolStripMenuItem As ToolStripMenuItem
@@ -251,4 +241,17 @@ Partial Class HomeForm
     Friend WithEvents ImportDatabaseToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ImportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AddToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents YearToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SchoolToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClassToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UserToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StudentToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MyClassesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StudentDatabaseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ResultsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SearchToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
 End Class
