@@ -656,7 +656,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!eng_total_g.Value, "resultsSec") = "A+", 4.0, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "C", 2.0, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!eng_total_g.Value, "resultsSec") = "A+", "4.0", IIf(First(Fields!eng_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "C", "2.0", IIf(First(Fields!eng_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!eng_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -688,7 +688,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1135,7 +1134,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!nep_total_g.Value, "resultsSec") = "A+", 4.0, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "C", 2.0, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!nep_total_g.Value, "resultsSec") = "A+", "4.0", IIf(First(Fields!nep_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "C", "2.0", IIf(First(Fields!nep_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!nep_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1613,7 +1612,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!math_total_g.Value, "resultsSec") = "A+", 4.0, IIf(First(Fields!math_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!math_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!math_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!math_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!math_total_g.Value, "resultsSec") = "C", 2.0, IIf(First(Fields!math_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!math_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!math_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!math_total_g.Value, "resultsSec") = "A+", "4.0", IIf(First(Fields!math_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!math_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!math_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!math_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!math_total_g.Value, "resultsSec") = "C", "2.0", IIf(First(Fields!math_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!math_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!math_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2091,7 +2090,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!sci_total_g.Value, "resultsSec") = "A+", 4.0, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "C", 2.0, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!sci_total_g.Value, "resultsSec") = "A+", "4.0", IIf(First(Fields!sci_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "C", "2.0", IIf(First(Fields!sci_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!sci_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2569,7 +2568,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!soc_total_g.Value, "resultsSec") = "A+", 4.0, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "C", 2.0, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!soc_total_g.Value, "resultsSec") = "A+", "4.0", IIf(First(Fields!soc_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "C", "2.0", IIf(First(Fields!soc_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!soc_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -3047,7 +3046,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!eph_total_g.Value, "resultsSec") = "A+", 4.0, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "C", 2.0, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!eph_total_g.Value, "resultsSec") = "A+", "4.0", IIf(First(Fields!eph_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "C", "2.0", IIf(First(Fields!eph_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!eph_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -3525,7 +3524,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "A+", 4.0, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "C", 2.0, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "A+", "4.0", IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "C", "2.0", IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!opt1_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4003,7 +4002,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "A+", 4.0, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "C", 2.0, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "A+", "4.0", IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "A", 3.6, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "B+", 3.2, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "B", 2.8, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "C+", 2.4, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "C", "2.0", IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "D+", 1.6, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "D", 1.2, IIf(First(Fields!opt2_total_g.Value, "resultsSec") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4035,6 +4034,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>

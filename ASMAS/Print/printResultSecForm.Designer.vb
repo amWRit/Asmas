@@ -30,7 +30,6 @@ Partial Class printResultSecForm
         Me.nextBtn = New System.Windows.Forms.Button()
         Me.previousBtn = New System.Windows.Forms.Button()
         Me.printResultsSecTableAdapter = New ASMAS.TerseDataSetTableAdapters.printResultsSecTableAdapter()
-        Me.PrintResultsSecTableAdapter1 = New ASMAS.TerseDataSetTableAdapters.printResultsSecTableAdapter()
         CType(Me.printResultsSecBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,10 +79,6 @@ Partial Class printResultSecForm
         '
         Me.printResultsSecTableAdapter.ClearBeforeFill = True
         '
-        'PrintResultsSecTableAdapter1
-        '
-        Me.PrintResultsSecTableAdapter1.ClearBeforeFill = True
-        '
         'printResultSecForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -107,5 +102,4 @@ Partial Class printResultSecForm
     Friend WithEvents printResultsSecBindingSource As BindingSource
     Friend WithEvents TerseDataSet As TerseDataSet
     Friend WithEvents printResultsSecTableAdapter As TerseDataSetTableAdapters.printResultsSecTableAdapter
-    Friend WithEvents PrintResultsSecTableAdapter1 As TerseDataSetTableAdapters.printResultsSecTableAdapter
 End Class

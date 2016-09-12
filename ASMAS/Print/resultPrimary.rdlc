@@ -1990,7 +1990,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "A+", 4.0, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "C", 2.0, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "A+", "4.0", IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "C", "2.0", IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!eng_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2468,7 +2468,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "A+", 4.0, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "C", 2.0, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "A+", "4.0", IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "C", "2.0", IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!nep_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2946,7 +2946,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!math_total_g.Value, "resultPrimary") = "A+", 4.0, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "C", 2.0, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!math_total_g.Value, "resultPrimary") = "A+", "4.0", IIf(First(Fields!math_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "C", "2.0", IIf(First(Fields!math_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!math_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -3424,7 +3424,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "A+", 4.0, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "C", 2.0, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "A+", "4.0", IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "C", "2.0", IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!sci_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -3902,7 +3902,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "A+", 4.0, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "C", 2.0, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "A+", "4.0", IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "C", "2.0", IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!soc_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4380,7 +4380,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "A+", 4.0, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "C", 2.0, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "A+", "4.0", IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "C", "2.0", IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!opt_eng_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -4858,7 +4858,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "A+", 4.0, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "C", 2.0, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
+                              <Value>=IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "A+", "4.0", IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "A", 3.6, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "B+", 3.2, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "B", 2.8, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "C+", 2.4, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "C", "2.0", IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "D+", 1.6, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "D", 1.2, IIf(First(Fields!gk_conv_total_g.Value, "resultPrimary") = "E", 0.8, "0")))))))))</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
