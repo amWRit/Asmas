@@ -210,7 +210,7 @@ Public Class resultFunctions
             gradePoint = 1.6
         ElseIf percentage >= 20 Then
             gradePoint = 1.2
-        ElseIf percentage >= 0 Then
+        ElseIf percentage > 0 Then
             gradePoint = 0.8
         Else
             gradePoint = 0
@@ -249,12 +249,16 @@ Public Class resultFunctions
         Dim grade As String = ""
         Dim percentage As Double = 0
         Dim grade_point As Double = 0
+        'for low primary
         Dim th_marks = 100
         Dim pr_marks = 1 'to avoid 0/0 error
 
         If highPrimary.Contains(class_name) Then
             th_marks = 60
             pr_marks = 40
+        ElseIf lowSec.Contains(class_name) Or sec.Contains(class_name) Then
+            th_marks = 75
+            pr_marks = 25
         End If
 
         Dim theorySub = getSubjects("theory", class_name)
@@ -262,6 +266,28 @@ Public Class resultFunctions
         Dim totalSub = getSubjects("total", class_name)
 
         For Each subj As String In theorySub
+            If (lowSec.Contains(class_name) Or sec.Contains(class_name)) And subj = "math_th" Then
+                th_marks = 100
+            ElseIf lowSec.Contains(class_name) Then
+                If subj = "obt_th" Or subj = "comp_th" Then
+                    th_marks = 50
+                ElseIf subj = "hea_th" Then
+                    th_marks = 30
+                ElseIf subj = "mor_th" Then
+                    th_marks = 25
+                Else
+                    th_marks = 75
+                End If
+            ElseIf sec.Contains(class_name) Then
+                If subj = "opt1_th" Then
+                    th_marks = 100
+                ElseIf subj = "opt2_th" And inputHash("opt2").ToString = "Computer" Then
+                    th_marks = 50
+                Else
+                    th_marks = 75
+                End If
+            End If
+
             percentage = CDbl(inputHash(subj)) / th_marks * 100
 
             grade = resultFunctions.percentToGrade(percentage)
@@ -269,6 +295,28 @@ Public Class resultFunctions
         Next
 
         For Each subj As String In pracSub
+            If (lowSec.Contains(class_name) Or sec.Contains(class_name)) And subj = "math_pr" Then
+                pr_marks = 1 'to avoid 0/0 error
+            ElseIf lowSec.Contains(class_name) Then
+                If subj = "obt_pr" Or subj = "comp_pr" Then
+                    pr_marks = 50
+                ElseIf subj = "hea_pr" Then
+                    pr_marks = 20
+                ElseIf subj = "mor_pr" Then
+                    pr_marks = 25
+                Else
+                    pr_marks = 25
+                End If
+            ElseIf sec.Contains(class_name) Then
+                If subj = "opt1_pr" Then
+                    pr_marks = 1 'to avoid 0/0 error
+                ElseIf subj = "opt2_pr" And inputHash("opt2").ToString = "Computer" Then
+                    pr_marks = 50
+                Else
+                    pr_marks = 25
+                End If
+            End If
+
             percentage = CDbl(inputHash(subj)) / pr_marks * 100
 
             grade = resultFunctions.percentToGrade(percentage)
@@ -277,6 +325,11 @@ Public Class resultFunctions
 
         For Each subj As String In totalSub
             percentage = CDbl(inputHash(subj))
+            If lowSec.Contains(class_name) Then
+                If subj = "mor_total" Or subj = "hea_total" Then
+                    percentage = CDbl(inputHash(subj)) / 50 * 100
+                End If
+            End If
 
             grade = resultFunctions.percentToGrade(percentage)
             inputHash(subj & "_g") = grade

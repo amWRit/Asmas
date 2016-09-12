@@ -140,7 +140,7 @@ Partial Class addResultSecForm
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(24, 13)
         Me.Label28.TabIndex = 135
-        Me.Label28.Text = "/50"
+        Me.Label28.Text = "/20"
         '
         'Label29
         '
@@ -212,7 +212,7 @@ Partial Class addResultSecForm
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(24, 13)
         Me.Label22.TabIndex = 126
-        Me.Label22.Text = "/50"
+        Me.Label22.Text = "/75"
         '
         'Label17
         '
@@ -633,7 +633,7 @@ Partial Class addResultSecForm
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(543, 209)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(22, 16)
+        Me.Label13.Size = New System.Drawing.Size(21, 16)
         Me.Label13.TabIndex = 151
         Me.Label13.Text = "%"
         '
