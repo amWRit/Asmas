@@ -126,7 +126,7 @@
                 Dim I As Integer = MessageBox.Show("Importing a new database will completely REPLACE the existing database. ARE YOU ABSOLUTELY SURE?", "IMPORT", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
                 If I = MsgBoxResult.Yes Then
                     FileHandler.ReleaseObject(old_file_path)
-                    'System.IO.File.Replace(filepath, db_file_path, backup_path)
+                    'System.IO.File.Replace(old_file_path, new_filepath, backup_path)
                     System.IO.File.Copy(old_file_path, backup_path)
                     'making sure the file has been backed up 
                     If System.IO.File.Exists(backup_path) Then

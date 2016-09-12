@@ -157,6 +157,12 @@
     <Compile Include="assignSubjectTeacherForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="createAdminForm.Designer.vb">
+      <DependentUpon>createAdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="createAdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DBConnection.vb" />
     <Compile Include="Models\MyClass.vb" />
     <Compile Include="Models\School.vb" />
@@ -367,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="assignSubjectTeacherForm.resx">
       <DependentUpon>assignSubjectTeacherForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="createAdminForm.resx">
+      <DependentUpon>createAdminForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Result\addResultLowSecForm.resx">
       <DependentUpon>addResultLowSecForm.vb</DependentUpon>
