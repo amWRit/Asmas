@@ -126,6 +126,7 @@ Partial Class createAdminForm
         Me.Controls.Add(Me.FNLabel)
         Me.Controls.Add(Me.Label1)
         Me.Name = "createAdminForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Create New Admin"
         Me.ResumeLayout(False)
         Me.PerformLayout()

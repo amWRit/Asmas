@@ -135,7 +135,7 @@
                         MessageBox.Show("Database imported successfully!", "Imported", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         MessageBox.Show("You have a new database. So, the program needs to restart.", "RESTART", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Me.Close()
-                        Application.Exit()
+                        Application.Restart()
                     Else
                         MessageBox.Show("The backup of current database couldn't be created.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
