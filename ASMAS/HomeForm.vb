@@ -18,7 +18,7 @@
         End If
 
         If User.userRole = "Teacher" Then viewMyClassesBtn.Show()
-        If User.userRole = "Viewer" Then viewResultBtn.Enabled = False
+        'If User.userRole = "Viewer" Then viewResultBtn.Enabled = False
 
         HelpProvider.HelpNamespace = strHelpPath
     End Sub
