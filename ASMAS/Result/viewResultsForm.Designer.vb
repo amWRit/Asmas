@@ -43,6 +43,7 @@ Partial Class viewResultsForm
         Me.printBtn = New System.Windows.Forms.Button()
         Me.viewResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.updateCalcBtn = New System.Windows.Forms.Button()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.viewResultsContextMenu.SuspendLayout()
@@ -57,10 +58,10 @@ Partial Class viewResultsForm
         Me.databaseResultListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.databaseResultListView.FullRowSelect = True
         Me.databaseResultListView.GridLines = True
-        Me.databaseResultListView.Location = New System.Drawing.Point(0, 74)
+        Me.databaseResultListView.Location = New System.Drawing.Point(0, 85)
         Me.databaseResultListView.MultiSelect = False
         Me.databaseResultListView.Name = "databaseResultListView"
-        Me.databaseResultListView.Size = New System.Drawing.Size(1008, 655)
+        Me.databaseResultListView.Size = New System.Drawing.Size(1008, 644)
         Me.databaseResultListView.TabIndex = 21
         Me.databaseResultListView.UseCompatibleStateImageBehavior = False
         Me.databaseResultListView.View = System.Windows.Forms.View.Details
@@ -76,16 +77,16 @@ Partial Class viewResultsForm
         'className
         '
         Me.className.FormattingEnabled = True
-        Me.className.Location = New System.Drawing.Point(576, 19)
+        Me.className.Location = New System.Drawing.Point(535, 19)
         Me.className.Name = "className"
-        Me.className.Size = New System.Drawing.Size(121, 21)
+        Me.className.Size = New System.Drawing.Size(95, 21)
         Me.className.TabIndex = 19
         Me.className.Text = "Choose class..."
         '
         'classLabel
         '
         Me.classLabel.AutoSize = True
-        Me.classLabel.Location = New System.Drawing.Point(538, 24)
+        Me.classLabel.Location = New System.Drawing.Point(497, 24)
         Me.classLabel.Name = "classLabel"
         Me.classLabel.Size = New System.Drawing.Size(32, 13)
         Me.classLabel.TabIndex = 21
@@ -93,7 +94,7 @@ Partial Class viewResultsForm
         '
         'viewBtn
         '
-        Me.viewBtn.Location = New System.Drawing.Point(710, 19)
+        Me.viewBtn.Location = New System.Drawing.Point(645, 18)
         Me.viewBtn.Name = "viewBtn"
         Me.viewBtn.Size = New System.Drawing.Size(75, 23)
         Me.viewBtn.TabIndex = 20
@@ -142,7 +143,7 @@ Partial Class viewResultsForm
         Me.yearName.FormattingEnabled = True
         Me.yearName.Location = New System.Drawing.Point(234, 18)
         Me.yearName.Name = "yearName"
-        Me.yearName.Size = New System.Drawing.Size(121, 21)
+        Me.yearName.Size = New System.Drawing.Size(93, 21)
         Me.yearName.TabIndex = 17
         Me.yearName.Text = "Choose year..."
         '
@@ -150,16 +151,16 @@ Partial Class viewResultsForm
         '
         Me.termCombo.FormattingEnabled = True
         Me.termCombo.Items.AddRange(New Object() {"First", "Second", "Third", "SendUp"})
-        Me.termCombo.Location = New System.Drawing.Point(399, 19)
+        Me.termCombo.Location = New System.Drawing.Point(381, 19)
         Me.termCombo.Name = "termCombo"
-        Me.termCombo.Size = New System.Drawing.Size(121, 21)
+        Me.termCombo.Size = New System.Drawing.Size(92, 21)
         Me.termCombo.TabIndex = 18
         Me.termCombo.Text = "Choose term..."
         '
         'termLabel
         '
         Me.termLabel.AutoSize = True
-        Me.termLabel.Location = New System.Drawing.Point(361, 24)
+        Me.termLabel.Location = New System.Drawing.Point(343, 24)
         Me.termLabel.Name = "termLabel"
         Me.termLabel.Size = New System.Drawing.Size(31, 13)
         Me.termLabel.TabIndex = 24
@@ -170,7 +171,7 @@ Partial Class viewResultsForm
         Me.exportBtn.BackgroundImage = CType(resources.GetObject("exportBtn.BackgroundImage"), System.Drawing.Image)
         Me.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.exportBtn.Enabled = False
-        Me.exportBtn.Location = New System.Drawing.Point(944, 19)
+        Me.exportBtn.Location = New System.Drawing.Point(974, 18)
         Me.exportBtn.Name = "exportBtn"
         Me.exportBtn.Size = New System.Drawing.Size(27, 23)
         Me.exportBtn.TabIndex = 25
@@ -179,7 +180,7 @@ Partial Class viewResultsForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(941, 45)
+        Me.Label1.Location = New System.Drawing.Point(971, 44)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 13)
         Me.Label1.TabIndex = 26
@@ -188,7 +189,7 @@ Partial Class viewResultsForm
         'printBtn
         '
         Me.printBtn.Enabled = False
-        Me.printBtn.Location = New System.Drawing.Point(837, 19)
+        Me.printBtn.Location = New System.Drawing.Point(754, 18)
         Me.printBtn.Name = "printBtn"
         Me.printBtn.Size = New System.Drawing.Size(101, 23)
         Me.printBtn.TabIndex = 24
@@ -207,11 +208,23 @@ Partial Class viewResultsForm
         Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.PrintToolStripMenuItem.Text = "Print"
         '
+        'updateCalcBtn
+        '
+        Me.updateCalcBtn.Enabled = False
+        Me.updateCalcBtn.Location = New System.Drawing.Point(861, 18)
+        Me.updateCalcBtn.Name = "updateCalcBtn"
+        Me.updateCalcBtn.Size = New System.Drawing.Size(101, 23)
+        Me.updateCalcBtn.TabIndex = 27
+        Me.updateCalcBtn.Text = "Update Calc."
+        Me.updateCalcBtn.UseVisualStyleBackColor = True
+        '
         'viewResultsForm
         '
+        Me.AcceptButton = Me.viewBtn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.updateCalcBtn)
         Me.Controls.Add(Me.printBtn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.exportBtn)
@@ -256,4 +269,5 @@ Partial Class viewResultsForm
     Friend WithEvents printBtn As Button
     Friend WithEvents viewResultsContextMenu As ContextMenuStrip
     Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents updateCalcBtn As Button
 End Class

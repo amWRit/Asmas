@@ -12,6 +12,8 @@ Public Class viewResultsForm
 
     Private Sub viewResultsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximizeBox = False
+        If User.userRole = "Viewer" Then updateCalcBtn.Visible = False
+
         databaseResultListView.Width = 270
         Dim currentUser As DataSet
         currentUser = User.user
@@ -86,12 +88,14 @@ Public Class viewResultsForm
     End Sub
 
     Private Sub viewBtn_Click(sender As Object, e As EventArgs) Handles viewBtn.Click
-
         If schoolName.SelectedIndex = -1 Or yearName.SelectedIndex = -1 Or termCombo.SelectedIndex = -1 Or className.SelectedIndex = -1 Then
             MessageBox.Show("One of the fields is not selected. Please check.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
+        refreshLV()
+    End Sub
 
+    Private Sub refreshLV()
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -137,6 +141,7 @@ Public Class viewResultsForm
             If DS.Tables(0).Rows.Count > 0 Then
                 exportBtn.Enabled = True
                 printBtn.Enabled = True
+                updateCalcBtn.Enabled = True
             End If
             'prepare table for print
             'myFunctions.prepareTempTable(tempDS, 0, class_name)
@@ -150,7 +155,6 @@ Public Class viewResultsForm
             'This ensures that you close the Database and avoid corrupted data
             Con.Close()
         End Try
-
     End Sub
 
     Private Sub viewResultsForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -210,5 +214,15 @@ Public Class viewResultsForm
             Dim printForm As New printResultSecForm(tempDS, index, class_name, class_teacher)
             printForm.Show()
         End If
+    End Sub
+
+    Private Sub updateCalcBtn_Click(sender As Object, e As EventArgs) Handles updateCalcBtn.Click
+        Dim school_name = schoolName.Text
+        Dim year_num = yearName.Text
+        class_name = className.Text
+        Dim term = termCombo.Text
+
+        resultFunctions.updateCalculations(tempDS, school_name, year_num, class_name)
+        refreshLV()
     End Sub
 End Class
