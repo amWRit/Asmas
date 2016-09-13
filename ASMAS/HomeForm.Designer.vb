@@ -63,6 +63,7 @@ Partial Class HomeForm
         '
         'menuStrip
         '
+        Me.menuStrip.BackColor = System.Drawing.SystemColors.Control
         Me.menuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminToolsToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.SearchToolStripMenuItem, Me.HelpToolStripMenuItem})
         Me.menuStrip.Location = New System.Drawing.Point(0, 0)
         Me.menuStrip.Name = "menuStrip"
@@ -187,13 +188,13 @@ Partial Class HomeForm
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
         'SupportToolStripMenuItem
         '
         Me.SupportToolStripMenuItem.Name = "SupportToolStripMenuItem"
-        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SupportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SupportToolStripMenuItem.Text = "Support"
         '
         'Label1
@@ -213,6 +214,7 @@ Partial Class HomeForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.AutoSize = True
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.ASMAS.My.Resources.Resources.FB_IMG_1459356927089
         Me.ClientSize = New System.Drawing.Size(477, 308)
         Me.Controls.Add(Me.Label1)
