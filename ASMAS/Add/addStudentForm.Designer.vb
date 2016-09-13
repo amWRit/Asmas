@@ -383,6 +383,7 @@ Partial Class addStudentForm
         'Label16
         '
         Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(27, 39)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(32, 13)
@@ -391,6 +392,7 @@ Partial Class addStudentForm
         '
         'classCombo
         '
+        Me.classCombo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.classCombo.FormattingEnabled = True
         Me.classCombo.Location = New System.Drawing.Point(78, 35)
         Me.classCombo.Name = "classCombo"
@@ -401,6 +403,7 @@ Partial Class addStudentForm
         '
         Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.classCombo)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(24, 327)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(200, 87)

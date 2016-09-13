@@ -16,7 +16,7 @@ Public Class subjectResultAnalysisForm
     Public tempDS As DataSet
 
     Private Sub subjectResultAnalysisForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.MaximizeBox = False
     End Sub
 
     Private Sub subjectResultAnalysisForm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

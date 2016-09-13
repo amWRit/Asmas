@@ -199,12 +199,12 @@ Partial Class viewResultsForm
         '
         Me.viewResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrintToolStripMenuItem})
         Me.viewResultsContextMenu.Name = "searchResultContextMenu"
-        Me.viewResultsContextMenu.Size = New System.Drawing.Size(153, 48)
+        Me.viewResultsContextMenu.Size = New System.Drawing.Size(100, 26)
         '
         'PrintToolStripMenuItem
         '
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.PrintToolStripMenuItem.Text = "Print"
         '
         'viewResultsForm
@@ -225,7 +225,6 @@ Partial Class viewResultsForm
         Me.Controls.Add(Me.schoolLabel)
         Me.Controls.Add(Me.schoolName)
         Me.Controls.Add(Me.yearName)
-        Me.MaximizeBox = False
         Me.Name = "viewResultsForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "viewResultsForm"

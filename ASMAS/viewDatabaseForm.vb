@@ -9,6 +9,7 @@ Public Class viewDatabaseForm
     Public tempDS As DataSet
 
     Private Sub viewDatabaseForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MaximizeBox = False
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 

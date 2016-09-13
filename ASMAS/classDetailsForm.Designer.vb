@@ -41,64 +41,77 @@ Partial Class classDetailsForm
         'ctLabel
         '
         Me.ctLabel.AutoSize = True
-        Me.ctLabel.Location = New System.Drawing.Point(38, 224)
+        Me.ctLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ctLabel.Location = New System.Drawing.Point(57, 276)
+        Me.ctLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ctLabel.Name = "ctLabel"
-        Me.ctLabel.Size = New System.Drawing.Size(71, 13)
+        Me.ctLabel.Size = New System.Drawing.Size(107, 17)
         Me.ctLabel.TabIndex = 27
         Me.ctLabel.Text = "Class teacher"
         '
         'sizeLabel
         '
         Me.sizeLabel.AutoSize = True
-        Me.sizeLabel.Location = New System.Drawing.Point(28, 189)
+        Me.sizeLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.sizeLabel.Location = New System.Drawing.Point(42, 233)
+        Me.sizeLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.sizeLabel.Name = "sizeLabel"
-        Me.sizeLabel.Size = New System.Drawing.Size(81, 13)
+        Me.sizeLabel.Size = New System.Drawing.Size(121, 17)
         Me.sizeLabel.TabIndex = 26
         Me.sizeLabel.Text = "No. of Students"
         '
         'fullNameLabel
         '
         Me.fullNameLabel.AutoSize = True
-        Me.fullNameLabel.Location = New System.Drawing.Point(55, 155)
+        Me.fullNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.fullNameLabel.Location = New System.Drawing.Point(82, 191)
+        Me.fullNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.fullNameLabel.Name = "fullNameLabel"
-        Me.fullNameLabel.Size = New System.Drawing.Size(54, 13)
+        Me.fullNameLabel.Size = New System.Drawing.Size(80, 17)
         Me.fullNameLabel.TabIndex = 25
         Me.fullNameLabel.Text = "Full Name"
         '
         'shortNameLabel
         '
         Me.shortNameLabel.AutoSize = True
-        Me.shortNameLabel.Location = New System.Drawing.Point(46, 116)
+        Me.shortNameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.shortNameLabel.Location = New System.Drawing.Point(69, 143)
+        Me.shortNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.shortNameLabel.Name = "shortNameLabel"
-        Me.shortNameLabel.Size = New System.Drawing.Size(63, 13)
+        Me.shortNameLabel.Size = New System.Drawing.Size(93, 17)
         Me.shortNameLabel.TabIndex = 24
         Me.shortNameLabel.Text = "Short Name"
         '
         'yearLabel
         '
         Me.yearLabel.AutoSize = True
-        Me.yearLabel.Location = New System.Drawing.Point(80, 87)
+        Me.yearLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.yearLabel.Location = New System.Drawing.Point(120, 107)
+        Me.yearLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.yearLabel.Name = "yearLabel"
-        Me.yearLabel.Size = New System.Drawing.Size(29, 13)
+        Me.yearLabel.Size = New System.Drawing.Size(42, 17)
         Me.yearLabel.TabIndex = 19
         Me.yearLabel.Text = "Year"
         '
         'schoolLabel
         '
         Me.schoolLabel.AutoSize = True
-        Me.schoolLabel.Location = New System.Drawing.Point(69, 57)
+        Me.schoolLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.schoolLabel.Location = New System.Drawing.Point(103, 70)
+        Me.schoolLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.schoolLabel.Name = "schoolLabel"
-        Me.schoolLabel.Size = New System.Drawing.Size(40, 13)
+        Me.schoolLabel.Size = New System.Drawing.Size(57, 17)
         Me.schoolLabel.TabIndex = 17
         Me.schoolLabel.Text = "School"
         '
         'titleLabel
         '
         Me.titleLabel.AutoSize = True
-        Me.titleLabel.Font = New System.Drawing.Font("Nexa Light", 9.749999!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.titleLabel.Location = New System.Drawing.Point(17, 20)
+        Me.titleLabel.Font = New System.Drawing.Font("Nexa Light", 9.749999!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.titleLabel.Location = New System.Drawing.Point(26, 25)
+        Me.titleLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.titleLabel.Name = "titleLabel"
-        Me.titleLabel.Size = New System.Drawing.Size(76, 16)
+        Me.titleLabel.Size = New System.Drawing.Size(81, 16)
         Me.titleLabel.TabIndex = 28
         Me.titleLabel.Text = "Class detail"
         '
@@ -106,7 +119,8 @@ Partial Class classDetailsForm
         '
         Me.ct.AutoSize = True
         Me.ct.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ct.Location = New System.Drawing.Point(136, 224)
+        Me.ct.Location = New System.Drawing.Point(204, 276)
+        Me.ct.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ct.Name = "ct"
         Me.ct.Size = New System.Drawing.Size(11, 16)
         Me.ct.TabIndex = 34
@@ -116,7 +130,8 @@ Partial Class classDetailsForm
         '
         Me.sizeOfClass.AutoSize = True
         Me.sizeOfClass.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.sizeOfClass.Location = New System.Drawing.Point(136, 189)
+        Me.sizeOfClass.Location = New System.Drawing.Point(204, 233)
+        Me.sizeOfClass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.sizeOfClass.Name = "sizeOfClass"
         Me.sizeOfClass.Size = New System.Drawing.Size(11, 16)
         Me.sizeOfClass.TabIndex = 33
@@ -126,7 +141,8 @@ Partial Class classDetailsForm
         '
         Me.fullname.AutoSize = True
         Me.fullname.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.fullname.Location = New System.Drawing.Point(136, 155)
+        Me.fullname.Location = New System.Drawing.Point(204, 191)
+        Me.fullname.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.fullname.Name = "fullname"
         Me.fullname.Size = New System.Drawing.Size(11, 16)
         Me.fullname.TabIndex = 32
@@ -136,7 +152,8 @@ Partial Class classDetailsForm
         '
         Me.shortName.AutoSize = True
         Me.shortName.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.shortName.Location = New System.Drawing.Point(136, 116)
+        Me.shortName.Location = New System.Drawing.Point(204, 143)
+        Me.shortName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.shortName.Name = "shortName"
         Me.shortName.Size = New System.Drawing.Size(11, 16)
         Me.shortName.TabIndex = 31
@@ -146,7 +163,8 @@ Partial Class classDetailsForm
         '
         Me.yearNum.AutoSize = True
         Me.yearNum.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.yearNum.Location = New System.Drawing.Point(136, 87)
+        Me.yearNum.Location = New System.Drawing.Point(204, 107)
+        Me.yearNum.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.yearNum.Name = "yearNum"
         Me.yearNum.Size = New System.Drawing.Size(11, 16)
         Me.yearNum.TabIndex = 30
@@ -156,7 +174,8 @@ Partial Class classDetailsForm
         '
         Me.schoolName.AutoSize = True
         Me.schoolName.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.schoolName.Location = New System.Drawing.Point(136, 54)
+        Me.schoolName.Location = New System.Drawing.Point(204, 66)
+        Me.schoolName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.schoolName.Name = "schoolName"
         Me.schoolName.Size = New System.Drawing.Size(11, 16)
         Me.schoolName.TabIndex = 29
@@ -165,18 +184,20 @@ Partial Class classDetailsForm
         'addStudentBtn
         '
         Me.addStudentBtn.Enabled = False
-        Me.addStudentBtn.Location = New System.Drawing.Point(352, 242)
+        Me.addStudentBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addStudentBtn.Location = New System.Drawing.Point(528, 298)
+        Me.addStudentBtn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.addStudentBtn.Name = "addStudentBtn"
-        Me.addStudentBtn.Size = New System.Drawing.Size(75, 23)
+        Me.addStudentBtn.Size = New System.Drawing.Size(112, 28)
         Me.addStudentBtn.TabIndex = 36
         Me.addStudentBtn.Text = "Add student"
         Me.addStudentBtn.UseVisualStyleBackColor = True
         '
         'classDetailsForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(440, 277)
+        Me.ClientSize = New System.Drawing.Size(660, 341)
         Me.Controls.Add(Me.addStudentBtn)
         Me.Controls.Add(Me.ct)
         Me.Controls.Add(Me.sizeOfClass)
@@ -191,6 +212,8 @@ Partial Class classDetailsForm
         Me.Controls.Add(Me.shortNameLabel)
         Me.Controls.Add(Me.yearLabel)
         Me.Controls.Add(Me.schoolLabel)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "classDetailsForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

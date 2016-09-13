@@ -116,4 +116,8 @@ Public Class myStudents
             Con.Close()
         End Try
     End Sub
+
+    Private Sub myStudents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MaximizeBox = False
+    End Sub
 End Class

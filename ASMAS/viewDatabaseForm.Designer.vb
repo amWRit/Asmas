@@ -176,7 +176,6 @@ Partial Class viewDatabaseForm
         Me.Controls.Add(Me.yearLabel)
         Me.Controls.Add(Me.schoolLabel)
         Me.Controls.Add(Me.schoolName)
-        Me.MaximizeBox = False
         Me.Name = "viewDatabaseForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "View Student Database"

@@ -33,9 +33,9 @@ Partial Class classResults
         Me.updateRankBtn = New System.Windows.Forms.Button()
         Me.classResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.printBtn = New System.Windows.Forms.Button()
         Me.updateCalcBtn = New System.Windows.Forms.Button()
-        Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.classResultsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -115,13 +115,19 @@ Partial Class classResults
         '
         Me.classResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.PrintToolStripMenuItem})
         Me.classResultsContextMenu.Name = "searchResultContextMenu"
-        Me.classResultsContextMenu.Size = New System.Drawing.Size(153, 70)
+        Me.classResultsContextMenu.Size = New System.Drawing.Size(100, 48)
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'PrintToolStripMenuItem
+        '
+        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
+        Me.PrintToolStripMenuItem.Text = "Print"
         '
         'printBtn
         '
@@ -142,12 +148,6 @@ Partial Class classResults
         Me.updateCalcBtn.Text = "Update Calculations"
         Me.updateCalcBtn.UseVisualStyleBackColor = True
         '
-        'PrintToolStripMenuItem
-        '
-        Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PrintToolStripMenuItem.Text = "Print"
-        '
         'classResults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -161,7 +161,6 @@ Partial Class classResults
         Me.Controls.Add(Me.viewBtn)
         Me.Controls.Add(Me.titleLabel)
         Me.Controls.Add(Me.classResultListView)
-        Me.MaximizeBox = False
         Me.Name = "classResults"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Class Results"

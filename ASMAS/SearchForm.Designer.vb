@@ -193,7 +193,6 @@ Partial Class SearchForm
         Me.Controls.Add(Me.searchKey)
         Me.Controls.Add(Me.searchLabel)
         Me.Controls.Add(Me.searchType)
-        Me.MaximizeBox = False
         Me.Name = "SearchForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Search"

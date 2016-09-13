@@ -41,7 +41,7 @@ Partial Class viewUsersForm
         Me.usersListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.usersListView.FullRowSelect = True
         Me.usersListView.GridLines = True
-        Me.usersListView.Location = New System.Drawing.Point(0, 26)
+        Me.usersListView.Location = New System.Drawing.Point(0, 34)
         Me.usersListView.MultiSelect = False
         Me.usersListView.Name = "usersListView"
         Me.usersListView.Size = New System.Drawing.Size(1008, 695)
@@ -61,25 +61,25 @@ Partial Class viewUsersForm
         '
         Me.viewUsersContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem})
         Me.viewUsersContextMenu.Name = "searchResultContextMenu"
-        Me.viewUsersContextMenu.Size = New System.Drawing.Size(153, 70)
+        Me.viewUsersContextMenu.Size = New System.Drawing.Size(108, 48)
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'DeleteToolStripMenuItem
         '
         Me.DeleteToolStripMenuItem.Name = "DeleteToolStripMenuItem"
-        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DeleteToolStripMenuItem.Size = New System.Drawing.Size(107, 22)
         Me.DeleteToolStripMenuItem.Text = "Delete"
         '
         'viewUsersForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1008, 721)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.usersListView)
         Me.Name = "viewUsersForm"
         Me.Text = "viewUsersForm"

@@ -73,7 +73,7 @@ Partial Class myStudents
         '
         Me.myStudentsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem})
         Me.myStudentsContextMenu.Name = "searchResultContextMenu"
-        Me.myStudentsContextMenu.Size = New System.Drawing.Size(175, 92)
+        Me.myStudentsContextMenu.Size = New System.Drawing.Size(175, 70)
         '
         'ViewToolStripMenuItem
         '
@@ -100,7 +100,6 @@ Partial Class myStudents
         Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.titleLabel)
         Me.Controls.Add(Me.myStudentsListView)
-        Me.MaximizeBox = False
         Me.Name = "myStudents"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "My Students"

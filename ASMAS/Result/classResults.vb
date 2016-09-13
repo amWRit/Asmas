@@ -212,4 +212,8 @@ Public Class classResults
         Dim ItemIndex As Integer = classResultListView.SelectedIndices(0) 'Grab the selected Index
         letsPrint(ItemIndex)
     End Sub
+
+    Private Sub classResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MaximizeBox = False
+    End Sub
 End Class

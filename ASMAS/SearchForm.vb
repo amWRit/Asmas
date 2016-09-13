@@ -192,10 +192,12 @@ Public Class SearchForm
     End Sub
 
     Private Sub SearchForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MaximizeBox = False
         If User.userRole = "Viewer" Or User.userRole = "Teacher" Then
             EditToolStripMenuItem.Visible = False
             DeleteToolStripMenuItem.Visible = False
         End If
+
     End Sub
 
     Private Sub AssignToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AssignToolStripMenuItem.Click

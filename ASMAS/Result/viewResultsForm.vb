@@ -11,7 +11,7 @@ Public Class viewResultsForm
     Public class_name As String = ""
 
     Private Sub viewResultsForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.MaximizeBox = False
         databaseResultListView.Width = 270
         Dim currentUser As DataSet
         currentUser = User.user

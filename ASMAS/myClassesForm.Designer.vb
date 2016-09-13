@@ -162,7 +162,6 @@ Partial Class myClassesForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.myClassesListView)
-        Me.MaximizeBox = False
         Me.Name = "myClassesForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "My classes"
