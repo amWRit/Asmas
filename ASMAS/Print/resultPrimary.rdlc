@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=IIf(First(Fields!school_name.Value, "resultPrimary")="TerseHSS","Terse Secondary School", First(Fields!school_name.Value, "resultPrimary"))</Value>
+                <Value>=First(Fields!school_full_name.Value, "resultPrimary")</Value>
                 <Style>
                   <FontFamily>Adobe Fan Heiti Std B</FontFamily>
                   <FontSize>20pt</FontSize>
@@ -223,7 +223,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=IIf(First(Fields!school_name.Value, "resultPrimary")="TerseHSS","Melamchi-2, Sindhupalchowk", "------------------------------")</Value>
+                <Value>=First(Fields!school_address.Value, "resultPrimary")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -7258,6 +7258,14 @@ Point</Value>
         </Field>
         <Field Name="class_teacher">
           <DataField>class_teacher</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="school_full_name">
+          <DataField>school_full_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="school_address">
+          <DataField>school_address</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
