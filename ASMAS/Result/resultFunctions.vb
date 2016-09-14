@@ -253,13 +253,13 @@ Public Class resultFunctions
         Dim th_marks = 100
         Dim pr_marks = 1 'to avoid 0/0 error
 
-        If highPrimary.Contains(class_name) Then
-            th_marks = 60
-            pr_marks = 40
-        ElseIf lowSec.Contains(class_name) Or sec.Contains(class_name) Then
-            th_marks = 75
-            pr_marks = 25
-        End If
+        'If highPrimary.Contains(class_name) Then
+        '    th_marks = 60
+        '    pr_marks = 40
+        'ElseIf lowSec.Contains(class_name) Or sec.Contains(class_name) Then
+        '    th_marks = 75
+        '    pr_marks = 25
+        'End If
 
         Dim theorySub = getSubjects("theory", class_name)
         Dim pracSub = getSubjects("prac", class_name)
@@ -836,10 +836,6 @@ order by student_id"
             Dim total_th_marks = 700 '100% CAS in actual
             Dim total_pr_marks = 1 'just  to avoid 0/0 error
 
-            If highPrimary.Contains(class_name) Then
-                total_th_marks = 60 * 7 '60% written
-                total_pr_marks = 40 * 7 '40% CAS
-            End If
             Dim total_th = CDbl(inputHash("total_th"))
             total_th_perc = total_th / total_th_marks * 100
             Dim total_pr = CDbl(inputHash("total_pr"))

@@ -88,12 +88,10 @@ Public Class addResultPrimaryForm
             Exit Sub
         End If
 
-        If lowPrimary.Contains(contents(3)) Then
-            Dim okData As Boolean = checkDataEntry(textBoxes)
-            If okData = False Then
-                MessageBox.Show("One of the input marks is more than full marks. Please check", "Data Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Exit Sub
-            End If
+        Dim okData As Boolean = checkDataEntry(textBoxes)
+        If okData = False Then
+            MessageBox.Show("One of the input marks is more than full marks. Please check", "Data Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
         End If
 
         Con = New OleDbConnection
@@ -180,10 +178,10 @@ VALUES
         Dim total_th_marks = 700 '100% CAS in actual
         Dim total_pr_marks = 1 'just  to avoid 0/0 error
 
-        If highPrimary.Contains(contents(3)) Then
-            total_th_marks = 60 * 7 '60% written
-            total_pr_marks = 40 * 7 '40% CAS
-        End If
+        'If highPrimary.Contains(contents(3)) Then
+        '    total_th_marks = 60 * 7 '60% written
+        '    total_pr_marks = 40 * 7 '40% CAS
+        'End If
         Dim total_th = CDbl(engTh.Text) + CDbl(nepTh.Text) + CDbl(mathTh.Text) + CDbl(sciTh.Text) + CDbl(socTh.Text) + CDbl(optEngTh.Text) + CDbl(gkConvTh.Text)
         Dim total_th_perc = total_th / total_th_marks * 100
         Dim total_pr = CDbl(engPr.Text) + CDbl(nepPr.Text) + CDbl(mathPr.Text) + CDbl(sciPr.Text) + CDbl(socPr.Text) + CDbl(optEngPr.Text) + CDbl(gkConvPr.Text)
@@ -270,15 +268,15 @@ VALUES
 
         Dim toDisableTextboxes As TextBox() = {engPr, nepPr, mathPr, sciPr, socPr, optEngPr, gkConvPr}
 
-        If lowPrimary.Contains(contents(3)) Then
-            For i As Integer = 0 To labels.Count - 1
-                labels(i).Text = "/100"
-            Next
+        'If lowPrimary.Contains(contents(3)) Then
+        '    For i As Integer = 0 To labels.Count - 1
+        '        labels(i).Text = "/100"
+        '    Next
 
-            For i As Integer = 0 To toDisableTextboxes.Count - 1
-                toDisableTextboxes(i).Enabled = False
-            Next
-        End If
+        '    For i As Integer = 0 To toDisableTextboxes.Count - 1
+        '        toDisableTextboxes(i).Enabled = False
+        '    Next
+        'End If
 
     End Sub
 End Class
