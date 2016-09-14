@@ -10,6 +10,7 @@ Public Class printResultSecForm
     Public _index As Integer
     Public _class_name As String
     Public _class_teacher As String
+    Public _school_info As String()
 
     Private Sub printResultSecForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'TerseDataSet.printResultsSec' table. You can move, or remove it, as needed.
@@ -18,7 +19,7 @@ Public Class printResultSecForm
         Me.secReportViewer.RefreshReport()
     End Sub
 
-    Public Sub New(ByVal tempDS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String)
+    Public Sub New(ByVal tempDS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String, school_info As String())
         MyBase.New
         ' This call is required by the designer.
         InitializeComponent()
@@ -26,7 +27,8 @@ Public Class printResultSecForm
         _index = index
         _class_name = class_name
         _class_teacher = class_teacher
-        myFunctions.prepareTempTable(resultDS, _index, class_name, class_teacher)
+        _school_info = school_info
+        myFunctions.prepareTempTable(resultDS, _index, class_name, class_teacher, school_info)
         If resultDS.Tables(0).Rows.Count = 1 Then nextBtn.Enabled = False
         prepareReport()
     End Sub
@@ -35,7 +37,7 @@ Public Class printResultSecForm
         _index += 1
         If previousBtn.Enabled = False Then previousBtn.Enabled = True
         If _index = resultDS.Tables(0).Rows.Count - 1 Then nextBtn.Enabled = False
-        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher)
+        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info)
         prepareReport()
     End Sub
 
@@ -43,7 +45,7 @@ Public Class printResultSecForm
         _index -= 1
         If nextBtn.Enabled = False Then nextBtn.Enabled = True
         If _index = 0 Then previousBtn.Enabled = False
-        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher)
+        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info)
         prepareReport()
     End Sub
 

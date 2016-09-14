@@ -434,6 +434,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -477,6 +478,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -520,6 +522,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -692,6 +695,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -912,6 +916,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -955,6 +960,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -998,6 +1004,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1170,6 +1177,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1390,6 +1398,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1433,6 +1442,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1476,6 +1486,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1648,6 +1659,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1868,6 +1880,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1911,6 +1924,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1954,6 +1968,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2126,6 +2141,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2346,6 +2362,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2389,6 +2406,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2432,6 +2450,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2604,6 +2623,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2824,6 +2844,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2867,6 +2888,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2910,6 +2932,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3082,6 +3105,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3302,6 +3326,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3345,6 +3370,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3388,6 +3414,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3560,6 +3587,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3791,6 +3819,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3834,6 +3863,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3877,6 +3907,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4049,6 +4080,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4269,6 +4301,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4312,6 +4345,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4355,6 +4389,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4527,6 +4562,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -5063,7 +5099,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Full marks</Value>
+                            <Value>FM</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                             </Style>
@@ -5217,7 +5253,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Pass Marks</Value>
+                            <Value>PM</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                             </Style>
@@ -7008,7 +7044,7 @@ Point</Value>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=IIf(First(Fields!school_name.Value, "resultLowSec")="TerseHSS","Melamchi-2, Sindhupalchowk", "------------------------------")</Value>
+                <Value>=First(Fields!school_address.Value, "resultLowSec")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -7019,9 +7055,9 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>0.51932in</Top>
-        <Left>2.85424in</Left>
+        <Left>1.70093in</Left>
         <Height>0.25in</Height>
-        <Width>2.07711in</Width>
+        <Width>4.93241in</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -8108,7 +8144,7 @@ Point</Value>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=IIf(First(Fields!school_name.Value, "resultLowSec")="TerseHSS","Terse Secondary School", First(Fields!school_name.Value, "resultLowSec"))</Value>
+                <Value>=First(Fields!school_full_name.Value, "resultLowSec")</Value>
                 <Style>
                   <FontFamily>Adobe Fan Heiti Std B</FontFamily>
                   <FontSize>20pt</FontSize>
@@ -8123,9 +8159,9 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
         <Top>0.20507in</Top>
-        <Left>1.9931in</Left>
+        <Left>1.70093in</Left>
         <Height>0.30036in</Height>
-        <Width>3.6263in</Width>
+        <Width>4.93241in</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -8456,6 +8492,14 @@ Point</Value>
         </Field>
         <Field Name="class_teacher">
           <DataField>class_teacher</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="school_full_name">
+          <DataField>school_full_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="school_address">
+          <DataField>school_address</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

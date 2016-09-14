@@ -424,6 +424,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -467,6 +468,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -510,6 +512,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -553,6 +556,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -682,12 +686,14 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -902,6 +908,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -945,6 +952,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -988,6 +996,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1031,6 +1040,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1160,12 +1170,14 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1380,6 +1392,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1423,6 +1436,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1466,6 +1480,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1509,6 +1524,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1638,12 +1654,14 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1858,6 +1876,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1901,6 +1920,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1944,6 +1964,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1987,6 +2008,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2116,12 +2138,14 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -2336,6 +2360,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2379,6 +2404,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2422,6 +2448,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2465,6 +2492,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2594,12 +2622,14 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -2814,6 +2844,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2857,6 +2888,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2900,6 +2932,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2943,6 +2976,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3072,12 +3106,14 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -3292,6 +3328,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3335,6 +3372,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3378,6 +3416,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3421,6 +3460,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3550,12 +3590,14 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -3770,6 +3812,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3813,6 +3856,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3856,6 +3900,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3899,6 +3944,7 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4028,12 +4074,14 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -4564,7 +4612,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Full marks</Value>
+                            <Value>FM</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                             </Style>
@@ -4718,7 +4766,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Pass Marks</Value>
+                            <Value>PM</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                             </Style>
@@ -6409,7 +6457,7 @@ Point</Value>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=IIf(First(Fields!school_name.Value, "resultsSec")="TerseHSS","Melamchi-2, Sindhupalchowk", "------------------------------")</Value>
+                <Value>=First(Fields!school_address.Value, "resultsSec")</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -6420,9 +6468,9 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>0.53632in</Top>
-        <Left>2.74204in</Left>
+        <Left>1.58873in</Left>
         <Height>0.25in</Height>
-        <Width>2.07711in</Width>
+        <Width>4.9324in</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -7509,7 +7557,7 @@ Point</Value>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=IIf(First(Fields!school_name.Value, "resultsSec")="TerseHSS","Terse Secondary School", First(Fields!school_name.Value, "resultsSec"))</Value>
+                <Value>=First(Fields!school_full_name.Value, "resultsSec")</Value>
                 <Style>
                   <FontFamily>Adobe Fan Heiti Std B</FontFamily>
                   <FontSize>20pt</FontSize>
@@ -7524,9 +7572,9 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
         <Top>0.23596in</Top>
-        <Left>1.99188in</Left>
+        <Left>1.58873in</Left>
         <Height>0.30036in</Height>
-        <Width>3.6263in</Width>
+        <Width>4.9324in</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -7842,6 +7890,14 @@ Point</Value>
         </Field>
         <Field Name="class_teacher">
           <DataField>class_teacher</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="school_full_name">
+          <DataField>school_full_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="school_address">
+          <DataField>school_address</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
