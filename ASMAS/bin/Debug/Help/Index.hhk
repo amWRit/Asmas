@@ -5,5 +5,17 @@
 <!-- Sitemap 1.0 -->
 </HEAD><BODY>
 <UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="search">
+		<param name="Local" value="search.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="add result">
+		<param name="Local" value="myClasses.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="result">
+		<param name="Local" value="viewResults.htm">
+		</OBJECT>
 </UL>
 </BODY></HTML>
