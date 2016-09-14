@@ -26,7 +26,7 @@ Public Class myStudents
                     class_student cs
                     on c.class_id = cs.class_id
                     where c.class_id =" & itemID & ") tb
-                    on s.id = tb.student_id"
+                    on s.id = tb.student_id ORDER BY ID"
 
             Con.Open() 'Open connection
 

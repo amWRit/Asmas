@@ -103,7 +103,7 @@ Public Class viewDatabaseForm
                 on tb.year_id = c.year_id
                 where c.short_name like '" & class_name & "') as temp
                 on cs.class_id = temp.class_id) temp2
-                On st.id = temp2.student_id"
+                On st.id = temp2.student_id ORDER BY ID;"
         Try
             Con.Open() 'Open connection
             Dim oData As OleDbDataAdapter

@@ -111,7 +111,7 @@ Public Class viewResultsForm
         filePath = school_name & "_" & year_num & "_" & class_name & "_" & term & "Term"
         SQL = "SELECT * from" &
                 "  results_" & class_name &
-                " where school_name ='" & school_name & "' and school_year='" & year_num & "' and terminal='" & term & "';"
+                " where school_name ='" & school_name & "' and school_year='" & year_num & "' and terminal='" & term & "' ORDER BY ID;"
         Try
             Con.Open() 'Open connection
             Dim oData As OleDbDataAdapter

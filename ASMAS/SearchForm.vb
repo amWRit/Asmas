@@ -43,7 +43,7 @@ Public Class SearchForm
                 If User.userRole = "Admin" Then SubjectTeacherToolStripMenuItem.Visible = True
             End If
 
-
+            SQL = SQL & "ORDER BY ID"
             Dim DS As DataSet 'Object to store data in
             DS = New DataSet 'Declare a new instance, or we get Null Reference Error
 

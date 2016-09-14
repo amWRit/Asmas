@@ -43,7 +43,7 @@ Public Class classResults
             If terminal <> "" Then
                 SQL = SQL & " and terminal = '" & terminal & "'"
             End If
-            SQL = SQL & " ORDER BY reg_number"
+            SQL = SQL & " ORDER BY ID"
 
             DS.Tables.Clear()
             Con.Open() 'Open connection
