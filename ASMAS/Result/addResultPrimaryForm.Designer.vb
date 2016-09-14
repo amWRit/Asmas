@@ -104,126 +104,126 @@ Partial Class addResultPrimaryForm
         Me.socPrLabel.AutoSize = True
         Me.socPrLabel.Location = New System.Drawing.Point(431, 273)
         Me.socPrLabel.Name = "socPrLabel"
-        Me.socPrLabel.Size = New System.Drawing.Size(24, 13)
+        Me.socPrLabel.Size = New System.Drawing.Size(18, 13)
         Me.socPrLabel.TabIndex = 196
-        Me.socPrLabel.Text = "/40"
+        Me.socPrLabel.Text = "/0"
         '
         'gkConvPrLabel
         '
         Me.gkConvPrLabel.AutoSize = True
         Me.gkConvPrLabel.Location = New System.Drawing.Point(431, 335)
         Me.gkConvPrLabel.Name = "gkConvPrLabel"
-        Me.gkConvPrLabel.Size = New System.Drawing.Size(24, 13)
+        Me.gkConvPrLabel.Size = New System.Drawing.Size(18, 13)
         Me.gkConvPrLabel.TabIndex = 194
-        Me.gkConvPrLabel.Text = "/40"
+        Me.gkConvPrLabel.Text = "/0"
         '
         'optEngPrLabel
         '
         Me.optEngPrLabel.AutoSize = True
         Me.optEngPrLabel.Location = New System.Drawing.Point(431, 303)
         Me.optEngPrLabel.Name = "optEngPrLabel"
-        Me.optEngPrLabel.Size = New System.Drawing.Size(24, 13)
+        Me.optEngPrLabel.Size = New System.Drawing.Size(18, 13)
         Me.optEngPrLabel.TabIndex = 193
-        Me.optEngPrLabel.Text = "/40"
+        Me.optEngPrLabel.Text = "/0"
         '
         'sciPrLabel
         '
         Me.sciPrLabel.AutoSize = True
         Me.sciPrLabel.Location = New System.Drawing.Point(431, 238)
         Me.sciPrLabel.Name = "sciPrLabel"
-        Me.sciPrLabel.Size = New System.Drawing.Size(24, 13)
+        Me.sciPrLabel.Size = New System.Drawing.Size(18, 13)
         Me.sciPrLabel.TabIndex = 192
-        Me.sciPrLabel.Text = "/40"
+        Me.sciPrLabel.Text = "/0"
         '
         'mathPrLabel
         '
         Me.mathPrLabel.AutoSize = True
         Me.mathPrLabel.Location = New System.Drawing.Point(431, 208)
         Me.mathPrLabel.Name = "mathPrLabel"
-        Me.mathPrLabel.Size = New System.Drawing.Size(24, 13)
+        Me.mathPrLabel.Size = New System.Drawing.Size(18, 13)
         Me.mathPrLabel.TabIndex = 191
-        Me.mathPrLabel.Text = "/40"
+        Me.mathPrLabel.Text = "/0"
         '
         'nepPrLabel
         '
         Me.nepPrLabel.AutoSize = True
         Me.nepPrLabel.Location = New System.Drawing.Point(431, 176)
         Me.nepPrLabel.Name = "nepPrLabel"
-        Me.nepPrLabel.Size = New System.Drawing.Size(24, 13)
+        Me.nepPrLabel.Size = New System.Drawing.Size(18, 13)
         Me.nepPrLabel.TabIndex = 190
-        Me.nepPrLabel.Text = "/40"
+        Me.nepPrLabel.Text = "/0"
         '
         'engPrLabel
         '
         Me.engPrLabel.AutoSize = True
         Me.engPrLabel.Location = New System.Drawing.Point(431, 146)
         Me.engPrLabel.Name = "engPrLabel"
-        Me.engPrLabel.Size = New System.Drawing.Size(24, 13)
+        Me.engPrLabel.Size = New System.Drawing.Size(18, 13)
         Me.engPrLabel.TabIndex = 189
-        Me.engPrLabel.Text = "/40"
+        Me.engPrLabel.Text = "/0"
         '
         'socThLabel
         '
         Me.socThLabel.AutoSize = True
         Me.socThLabel.Location = New System.Drawing.Point(277, 273)
         Me.socThLabel.Name = "socThLabel"
-        Me.socThLabel.Size = New System.Drawing.Size(24, 13)
+        Me.socThLabel.Size = New System.Drawing.Size(30, 13)
         Me.socThLabel.TabIndex = 188
-        Me.socThLabel.Text = "/60"
+        Me.socThLabel.Text = "/100"
         '
         'gkConvThLabel
         '
         Me.gkConvThLabel.AutoSize = True
         Me.gkConvThLabel.Location = New System.Drawing.Point(277, 335)
         Me.gkConvThLabel.Name = "gkConvThLabel"
-        Me.gkConvThLabel.Size = New System.Drawing.Size(24, 13)
+        Me.gkConvThLabel.Size = New System.Drawing.Size(30, 13)
         Me.gkConvThLabel.TabIndex = 186
-        Me.gkConvThLabel.Text = "/60"
+        Me.gkConvThLabel.Text = "/100"
         '
         'optEngThLabel
         '
         Me.optEngThLabel.AutoSize = True
         Me.optEngThLabel.Location = New System.Drawing.Point(277, 303)
         Me.optEngThLabel.Name = "optEngThLabel"
-        Me.optEngThLabel.Size = New System.Drawing.Size(24, 13)
+        Me.optEngThLabel.Size = New System.Drawing.Size(30, 13)
         Me.optEngThLabel.TabIndex = 185
-        Me.optEngThLabel.Text = "/60"
+        Me.optEngThLabel.Text = "/100"
         '
         'sciThLabel
         '
         Me.sciThLabel.AutoSize = True
         Me.sciThLabel.Location = New System.Drawing.Point(277, 238)
         Me.sciThLabel.Name = "sciThLabel"
-        Me.sciThLabel.Size = New System.Drawing.Size(24, 13)
+        Me.sciThLabel.Size = New System.Drawing.Size(30, 13)
         Me.sciThLabel.TabIndex = 184
-        Me.sciThLabel.Text = "/60"
+        Me.sciThLabel.Text = "/100"
         '
         'mathThLabel
         '
         Me.mathThLabel.AutoSize = True
         Me.mathThLabel.Location = New System.Drawing.Point(277, 208)
         Me.mathThLabel.Name = "mathThLabel"
-        Me.mathThLabel.Size = New System.Drawing.Size(24, 13)
+        Me.mathThLabel.Size = New System.Drawing.Size(30, 13)
         Me.mathThLabel.TabIndex = 183
-        Me.mathThLabel.Text = "/60"
+        Me.mathThLabel.Text = "/100"
         '
         'nepThLabel
         '
         Me.nepThLabel.AutoSize = True
         Me.nepThLabel.Location = New System.Drawing.Point(277, 176)
         Me.nepThLabel.Name = "nepThLabel"
-        Me.nepThLabel.Size = New System.Drawing.Size(24, 13)
+        Me.nepThLabel.Size = New System.Drawing.Size(30, 13)
         Me.nepThLabel.TabIndex = 182
-        Me.nepThLabel.Text = "/60"
+        Me.nepThLabel.Text = "/100"
         '
         'engThLabel
         '
         Me.engThLabel.AutoSize = True
         Me.engThLabel.Location = New System.Drawing.Point(277, 146)
         Me.engThLabel.Name = "engThLabel"
-        Me.engThLabel.Size = New System.Drawing.Size(24, 13)
+        Me.engThLabel.Size = New System.Drawing.Size(30, 13)
         Me.engThLabel.TabIndex = 181
-        Me.engThLabel.Text = "/60"
+        Me.engThLabel.Text = "/100"
         '
         'studentRegCombo
         '
@@ -290,6 +290,7 @@ Partial Class addResultPrimaryForm
         '
         'gkConvPr
         '
+        Me.gkConvPr.Enabled = False
         Me.gkConvPr.Location = New System.Drawing.Point(329, 331)
         Me.gkConvPr.Name = "gkConvPr"
         Me.gkConvPr.Size = New System.Drawing.Size(100, 20)
@@ -315,6 +316,7 @@ Partial Class addResultPrimaryForm
         '
         'optEngPr
         '
+        Me.optEngPr.Enabled = False
         Me.optEngPr.Location = New System.Drawing.Point(329, 299)
         Me.optEngPr.Name = "optEngPr"
         Me.optEngPr.Size = New System.Drawing.Size(100, 20)
@@ -340,6 +342,7 @@ Partial Class addResultPrimaryForm
         '
         'socPr
         '
+        Me.socPr.Enabled = False
         Me.socPr.Location = New System.Drawing.Point(329, 269)
         Me.socPr.Name = "socPr"
         Me.socPr.Size = New System.Drawing.Size(100, 20)
@@ -365,6 +368,7 @@ Partial Class addResultPrimaryForm
         '
         'sciPr
         '
+        Me.sciPr.Enabled = False
         Me.sciPr.Location = New System.Drawing.Point(329, 234)
         Me.sciPr.Name = "sciPr"
         Me.sciPr.Size = New System.Drawing.Size(100, 20)
@@ -390,6 +394,7 @@ Partial Class addResultPrimaryForm
         '
         'mathPr
         '
+        Me.mathPr.Enabled = False
         Me.mathPr.Location = New System.Drawing.Point(329, 204)
         Me.mathPr.Name = "mathPr"
         Me.mathPr.Size = New System.Drawing.Size(100, 20)
@@ -415,6 +420,7 @@ Partial Class addResultPrimaryForm
         '
         'nepPr
         '
+        Me.nepPr.Enabled = False
         Me.nepPr.Location = New System.Drawing.Point(329, 172)
         Me.nepPr.Name = "nepPr"
         Me.nepPr.Size = New System.Drawing.Size(100, 20)
@@ -440,6 +446,7 @@ Partial Class addResultPrimaryForm
         '
         'engPr
         '
+        Me.engPr.Enabled = False
         Me.engPr.Location = New System.Drawing.Point(329, 142)
         Me.engPr.Name = "engPr"
         Me.engPr.Size = New System.Drawing.Size(100, 20)
@@ -562,7 +569,7 @@ Partial Class addResultPrimaryForm
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(560, 205)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(22, 16)
+        Me.Label13.Size = New System.Drawing.Size(21, 16)
         Me.Label13.TabIndex = 205
         Me.Label13.Text = "%"
         '
