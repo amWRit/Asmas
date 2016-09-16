@@ -918,4 +918,24 @@ order by student_id"
         End Try
         Return resultDS
     End Function
+
+    'updates full name in results table if student name is edited 
+    Public Shared Sub updateFullNameInResults(reg_number As String, class_name As String, full_name As String)
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim SQL As String = ""
+        SQL = "UPDATE results_" & class_name & " SET full_name = @full_name where reg_number='" & reg_number & "'"
+        Dim DS = New DataSet
+        Try
+            Con.Open() 'Open connection
+            Dim cmd As New OleDbCommand(SQL, Con)
+            cmd.Parameters.AddWithValue("@full_name", full_name)
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+    End Sub
 End Class

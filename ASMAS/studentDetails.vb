@@ -1,9 +1,9 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
 Public Class studentDetails
-    Dim Con As System.Data.OleDb.OleDbConnection
-    Private pwd As String
-    Private data_source_path As String = DBConnection.data_source_path
+    Public Shared Con As System.Data.OleDb.OleDbConnection
+    Public Shared pwd As String
+    Public Shared data_source_path As String = DBConnection.data_source_path
 
     Public class_id As String
     Private Sub studentDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -95,30 +95,17 @@ Public Class studentDetails
             End Try
 
             'find current class
-            Dim currentClassSQL As String = "SELECT
-                                            c.class_id, short_name from class c
-                                            inner join
-                                            (select class_id
-                                            from class_student
-                                            where student_id = " & student_id & ") tb
-                                            on c.class_id = tb.class_id
-                                            where year_id = " & Year.currentYearID(school_id)
-            DS = New DataSet 'Declare a new instance, or we get Null Reference Error
-            Con.Open() 'Open connection
-            Dim classData As OleDbDataAdapter
             DS.Tables.Clear()
-            classData = New OleDbDataAdapter(currentClassSQL, Con)
-            Con.Close()
-            classData.Fill(DS)
+            DS = findCurrentClass(student_id, school_id)
             If DS.Tables(0).Rows.Count > 0 Then
                 class_id = DS.Tables(0).Rows(0)(0).ToString
                 classLabel.Text = DS.Tables(0).Rows(0)(1).ToString
             Else
                 classLabel.Enabled = False
                 classLabel.Text = "NA"
-            End if
+            End If
 
-                If User.userRole = "Viewer" Then classLabel.Enabled = False
+            If User.userRole = "Viewer" Then classLabel.Enabled = False
 
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -130,6 +117,29 @@ Public Class studentDetails
             Con.Close()
         End Try
     End Sub
+
+    Public Shared Function findCurrentClass(student_id As String, school_id As Integer) As DataSet
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Con.Open() 'Open connection
+        Dim DS = New DataSet
+        Dim currentClassSQL As String = "SELECT
+                                            c.class_id, short_name from class c
+                                            inner join
+                                            (select class_id
+                                            from class_student
+                                            where student_id = " & student_id & ") tb
+                                            on c.class_id = tb.class_id
+                                            where year_id = " & Year.currentYearID(school_id)
+        DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+        Dim classData As OleDbDataAdapter
+        DS.Tables.Clear()
+        classData = New OleDbDataAdapter(currentClassSQL, Con)
+        Con.Close()
+        classData.Fill(DS)
+        Return DS
+    End Function
 
     Private Sub classLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles classLabel.LinkClicked
         myClassesForm.viewDetails(class_id)

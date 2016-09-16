@@ -136,17 +136,17 @@ Public Class addStudentToClassForm
         Dim student_id = searchResultListView.Items(ItemIndex).SubItems(0).Text
 
         Dim class_id = classIDLabel.Text
-        addStudentToClass(class_id, student_id)
+        addStudentToClass(class_id, student_id, school_id)
     End Sub
 
-    Public Shared Sub addStudentToClass(class_id As String, student_id As String)
+    Public Shared Sub addStudentToClass(class_id As String, student_id As String, _school_id As Integer)
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
 
         Dim present As Boolean
-        present = checkIfAssigned(class_id, student_id)
+        present = checkIfAssigned(class_id, student_id, _school_id)
 
         If present = True Then
             MessageBox.Show("This student is already assigned to a class. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -174,7 +174,7 @@ Public Class addStudentToClassForm
 
     End Sub
 
-    Public Shared Function checkIfAssigned(class_id As String, student_id As String) As Boolean
+    Public Shared Function checkIfAssigned(class_id As String, student_id As String, _school_id As Integer) As Boolean
         Dim present As Boolean = False
 
         Con = New OleDbConnection
@@ -186,10 +186,10 @@ Public Class addStudentToClassForm
 
         Try
             Dim oData As OleDbDataAdapter
-            Dim current_year_id = Year.currentYearID(school_id)
+            Dim current_year_id = Year.currentYearID(_school_id)
             'SQL = "SELECT * from class_student WHERE class_id=" & class_id & " and student_id = " & student_id
             SQL = "Select * From class_student
-            Where class_id In (Select class_id from Class where year_id=" & current_year_id & " and school_id=" & school_id & ")
+            Where class_id In (Select class_id from Class where year_id=" & current_year_id & " and school_id=" & _school_id & ")
             And student_id = " & student_id
 
             Con.Open() 'Open connection

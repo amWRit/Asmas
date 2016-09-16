@@ -87,6 +87,7 @@ Public Class addStudentForm
                 Dim email = DS.Tables(0).Rows(0)(15)
                 Dim photoPresent As String = DS.Tables(0).Rows(0)(17).ToString
                 Dim info = DS.Tables(0).Rows(0)(16)
+                Dim student_id = DS.Tables(0).Rows(0).Item("id").ToString
 
 
                 'get school name
@@ -117,6 +118,11 @@ Public Class addStudentForm
                 phoneTextBox.Text = phone.ToString
                 emailTextBox.Text = email.ToString
                 infoTextBox.Text = info.ToString
+
+                Dim classDS As DataSet = studentDetails.findCurrentClass(student_id, school_id)
+                If classDS.Tables(0).Rows.Count > 0 Then
+                    classCombo.Text = classDS.Tables(0).Rows(0)(1).ToString
+                End If
 
                 Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
                 Dim imageName = f_name.ToString & m_name.ToString & l_name.ToString & reg_number & ".jpg"
@@ -221,12 +227,15 @@ Public Class addStudentForm
                 If student_id <> "" Then
                     'find class_id
                     Dim class_id = myFunctions.getClassIdOf(school_id.ToString, Year.currentYearID(school_id), classCombo.Text)
-                    addStudentToClassForm.addStudentToClass(class_id, student_id)
+                    addStudentToClassForm.addStudentToClass(class_id, student_id, school_id)
                 End If
 
             End If
 
             If edit = "TRUE" Then
+                'update full name in results table
+                Dim full_name = fnameTextBox.Text & " " & mnameTextBox.Text & " " & lnameTextBox.Text
+                resultFunctions.updateFullNameInResults(regNumber, classCombo.Text, full_name)
                 Me.Close()
             Else
                 Dim textboxes = myFunctions.getTextBoxes(Me)
@@ -234,6 +243,7 @@ Public Class addStudentForm
                 tAddTextBox.Text = ""
                 pAddTextBox.Text = ""
                 classCombo.Text = ""
+                classCombo.SelectedIndex = -1
             End If
             Con.Close()
         Catch ex As Exception
