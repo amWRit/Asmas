@@ -196,9 +196,9 @@ Public Class viewResultsForm
     End Sub
 
     Public Sub letsPrint(index As Integer)
-        Dim primary As String() = {"1", "2", "3", "4", "5"}
-        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
 
         Dim school_name = schoolName.Text
         Dim year_num = yearName.Text

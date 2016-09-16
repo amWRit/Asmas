@@ -144,9 +144,9 @@ Public Class classResults
         Dim ItemIndex As Integer = classResultListView.SelectedIndices(0) 'Grab the selected Index
         Dim studentID = classResultListView.Items(ItemIndex).SubItems(1).Text
 
-        Dim primary As String() = {"1", "2", "3", "4", "5"}
-        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
 
         Dim className = contents(3)
         Dim year_num = classResultListView.Items(ItemIndex).SubItems(4).Text
@@ -173,9 +173,9 @@ Public Class classResults
     End Sub
 
     Private Sub letsPrint(index As Integer)
-        Dim primary As String() = {"1", "2", "3", "4", "5"}
-        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
 
         Dim class_name = contents(3)
         Dim year_num = contents(1)

@@ -75,9 +75,9 @@ Public Class myFunctions
 
     Public Shared Function getTempTableName(ByVal className As String) As String
         Dim table_name = ""
-        Dim primary As String() = {"1", "2", "3", "4", "5"}
-        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
 
         If primary.Contains(className) Then
             table_name = "printResultsPrimary"
@@ -139,9 +139,9 @@ VALUES
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @eph_th, @eph_th_g, @eph_pr, @eph_pr_g, @eph_total, @eph_total_g, @opt1_th, @opt1_th_g, @opt1_pr, @opt1_pr_g, @opt1_total, @opt1_total_g, 
 @opt2_th, @opt2_th_g, @opt2_pr, @opt2_pr_g, @opt2_total, @opt2_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @opt1, @opt2, @rank, @attendance, @class_teacher, @class_name, @school_full_name, @school_address)"
 
-        Dim primary As String() = {"1", "2", "3", "4", "5"}
-        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
 
         If primary.Contains(className) Then
             SQL = primarySQL

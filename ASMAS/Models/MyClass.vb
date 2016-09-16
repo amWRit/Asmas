@@ -7,6 +7,11 @@ Public Class TheClass
     Private Shared data_source_path As String = DBConnection.data_source_path
     Public Shared DS As New DataSet
 
+    Public Shared AcceptableClassShortNames As String() = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "1A", "2A", "3A", "4A", "5A", "6A", "7A", "8A", "9A", "10A", "1B", "2B", "3B", "4B", "5B", "6B", "7B", "8B", "9B", "10B", "1E", "2E", "3E", "4E", "5E", "6E", "7E", "8E", "9E", "10E", "1N", "2N", "3N", "4N", "5N", "6N", "7N", "8N", "9N", "10N"}
+    Public Shared primaryShortNames As String() = {"1", "2", "3", "4", "5", "1A", "2A", "3A", "4A", "5A", "1B", "2B", "3B", "4B", "5B", "1E", "2E", "3E", "4E", "5E", "1N", "2N", "3N", "4N", "5N"}
+    Public Shared lowSecShortNames As String() = {"6", "7", "8", "6A", "7A", "8A", "6B", "7B", "8B", "6E", "7E", "8E", "6N", "7N", "8N"}
+    Public Shared secShortNames As String() = {"9", "10", "9A", "10A", "9B", "10B", "9E", "10E", "9N", "10N"}
+
     Public Shared school_id As Integer
 
     Public Shared Property schoolId(class_id As Integer) As Integer

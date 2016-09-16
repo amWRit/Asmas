@@ -151,9 +151,9 @@ Public Class myClassesForm
     End Sub
 
     Private Sub StudentWiseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentWiseToolStripMenuItem.Click
-        Dim primary As String() = {"1", "2", "3", "4", "5"}
-        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
 
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
         Dim itemID = myClassesListView.Items(ItemIndex).SubItems(0).Text
@@ -176,9 +176,9 @@ Public Class myClassesForm
     End Sub
 
     Private Sub SubjectWiseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubjectWiseToolStripMenuItem.Click
-        Dim primary As String() = {"1", "2", "3", "4", "5"}
-        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
 
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
         Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text

@@ -8,9 +8,9 @@ Public Class subjectResultAnalysisForm
     Public Shared params As String()
     Public opt1 As String() = {"Opt. Math", "Economics"}
     Public opt2 As String() = {"Computer", "Account", "Education"}
-    Public Shared primary As String() = {"1", "2", "3", "4", "5"}
-    Public Shared lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-    Public Shared sec As String() = {"9E", "9N", "10E", "10A"}
+    Public Shared primary As String() = TheClass.primaryShortNames
+    Public Shared lowSec As String() = TheClass.lowSecShortNames
+    Public Shared sec As String() = TheClass.secShortNames
 
     Public filePath As String = ""
     Public tempDS As DataSet

@@ -151,6 +151,12 @@
     <Compile Include="Add\addClassForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Add\ClassShortNames.Designer.vb">
+      <DependentUpon>ClassShortNames.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Add\ClassShortNames.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="assignSubjectTeacherForm.Designer.vb">
       <DependentUpon>assignSubjectTeacherForm.vb</DependentUpon>
     </Compile>
@@ -371,6 +377,9 @@
     <EmbeddedResource Include="Add\addClassForm.resx">
       <DependentUpon>addClassForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Add\ClassShortNames.resx">
+      <DependentUpon>ClassShortNames.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="assignSubjectTeacherForm.resx">
       <DependentUpon>assignSubjectTeacherForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -418,6 +427,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Print\printResultLowSecForm.resx">
       <DependentUpon>printResultLowSecForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Print\printResultSecForm.resx">
       <DependentUpon>printResultSecForm.vb</DependentUpon>
