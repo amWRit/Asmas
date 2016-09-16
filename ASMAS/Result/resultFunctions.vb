@@ -583,7 +583,7 @@ order by student_id"
             If DS.Tables(0).Rows.Count = 0 Then
                 Dim I As Integer = MessageBox.Show("Yay!! You have successfully entered result of every student.", "Congratulations!", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 If I = MsgBoxResult.Ok Then
-                    'Me.Close()
+                    Exit Sub
                 End If
             End If
 
