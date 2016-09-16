@@ -104,6 +104,14 @@ Public Class addClassForm
             Exit Sub
         End If
 
+        Dim valid_class_name = checkIfClassNameValid(shortnameTextBox.Text)
+        If valid_class_name = False Then
+            MessageBox.Show("Unacceptable short name format. The acceptable formats are  1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 
+1A , 2A , 3A , 4A , 5A , 6A , 7A , 8A , 9A , 10A , 1B , 2B , 3B , 4B , 5B , 6B , 7B , 8B , 9B , 10B , 1E , 2E , 3E , 4E , 5E , 6E , 
+7E , 8E , 9E , 10E , 1N , 2N , 3N , 4N , 5N , 6N , 7N , 8N , 9N , 10N", "Unacceptable format", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
+
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -192,13 +200,19 @@ Public Class addClassForm
         End Try
 
     End Sub
+    Public Function checkIfClassNameValid(short_name As String) As Boolean
+        Dim valid As Boolean = False
+        If TheClass.AcceptableClassShortNames.Contains(short_name) Then
+            Return True
+        End If
+        Return valid
+    End Function
 
     Public Function checkIfPresent(className As String, school_name As String, year_num As String) As Boolean
         Dim present As Boolean = False
 
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
-
 
         Dim DS = New DataSet
         Dim SQL As String = ""
@@ -300,4 +314,8 @@ Public Class addClassForm
         Next
     End Sub
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As MouseEventArgs) Handles LinkLabel1.MouseClick
+        ClassShortNames.Show()
+        classNamesToolTip.SetToolTip(shortnameTextBox, "Please see acceptable formats.")
+    End Sub
 End Class

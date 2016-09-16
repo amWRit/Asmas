@@ -22,12 +22,13 @@ Partial Class addClassForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(addClassForm))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.yearLabel = New System.Windows.Forms.Label()
         Me.yearNameCombo = New System.Windows.Forms.ComboBox()
         Me.schoolLabel = New System.Windows.Forms.Label()
         Me.schoolNameCombo = New System.Windows.Forms.ComboBox()
-        Me.shortnameTextBox = New System.Windows.Forms.TextBox()
         Me.fullnameTextBox = New System.Windows.Forms.TextBox()
         Me.sizeTextBox = New System.Windows.Forms.TextBox()
         Me.shortNameLabel = New System.Windows.Forms.Label()
@@ -38,6 +39,9 @@ Partial Class addClassForm
         Me.saveBtn = New System.Windows.Forms.Button()
         Me.currentUserLabel = New System.Windows.Forms.Label()
         Me.ctCombo = New System.Windows.Forms.ComboBox()
+        Me.shortnameTextBox = New System.Windows.Forms.TextBox()
+        Me.classNamesToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
         'Label1
@@ -85,13 +89,6 @@ Partial Class addClassForm
         Me.schoolNameCombo.Size = New System.Drawing.Size(121, 21)
         Me.schoolNameCombo.TabIndex = 0
         Me.schoolNameCombo.Text = "Choose School..."
-        '
-        'shortnameTextBox
-        '
-        Me.shortnameTextBox.Location = New System.Drawing.Point(108, 87)
-        Me.shortnameTextBox.Name = "shortnameTextBox"
-        Me.shortnameTextBox.Size = New System.Drawing.Size(212, 20)
-        Me.shortnameTextBox.TabIndex = 2
         '
         'fullnameTextBox
         '
@@ -179,11 +176,34 @@ Partial Class addClassForm
         Me.ctCombo.TabIndex = 5
         Me.ctCombo.Text = "Choose class teacher..."
         '
+        'shortnameTextBox
+        '
+        Me.shortnameTextBox.Location = New System.Drawing.Point(108, 87)
+        Me.shortnameTextBox.Name = "shortnameTextBox"
+        Me.shortnameTextBox.Size = New System.Drawing.Size(108, 20)
+        Me.shortnameTextBox.TabIndex = 2
+        Me.classNamesToolTip.SetToolTip(Me.shortnameTextBox, resources.GetString("shortnameTextBox.ToolTip"))
+        '
+        'classNamesToolTip
+        '
+        Me.classNamesToolTip.IsBalloon = True
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Location = New System.Drawing.Point(222, 94)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(98, 13)
+        Me.LinkLabel1.TabIndex = 19
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Acceptable formats"
+        '
         'addClassForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(398, 274)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.ctCombo)
         Me.Controls.Add(Me.currentUserLabel)
         Me.Controls.Add(Me.saveBtn)
@@ -214,7 +234,6 @@ Partial Class addClassForm
     Friend WithEvents yearNameCombo As ComboBox
     Friend WithEvents schoolLabel As Label
     Friend WithEvents schoolNameCombo As ComboBox
-    Friend WithEvents shortnameTextBox As TextBox
     Friend WithEvents fullnameTextBox As TextBox
     Friend WithEvents sizeTextBox As TextBox
     Friend WithEvents shortNameLabel As Label
@@ -225,4 +244,7 @@ Partial Class addClassForm
     Friend WithEvents saveBtn As Button
     Friend WithEvents currentUserLabel As Label
     Friend WithEvents ctCombo As ComboBox
+    Friend WithEvents shortnameTextBox As TextBox
+    Friend WithEvents classNamesToolTip As ToolTip
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

@@ -7,9 +7,9 @@ Public Class resultFunctions
     Public Shared contents As String() = {}
     Public Shared lowPrimary As String() = {"1", "2", "3"}
     Public Shared highPrimary As String() = {"4", "5"}
-    Public Shared primary As String() = {"1", "2", "3", "4", "5"}
-    Public Shared lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-    Public Shared sec As String() = {"9E", "9N", "10E", "10A"}
+    Public Shared primary As String() = TheClass.primaryShortNames
+    Public Shared lowSec As String() = TheClass.lowSecShortNames
+    Public Shared sec As String() = TheClass.secShortNames
 
     Public Shared Function getRegNumber(params As String()) As DataSet
         Con = New OleDbConnection
@@ -151,9 +151,9 @@ Public Class resultFunctions
             "total_th", "total_th_g", "total_pr", "total_pr_g", "total", "percentage", "grade", "grade_point", "opt1", "opt2", "rank", "attendance"}
 
         Dim hashKeys As String() = {}
-        Dim primary As String() = {"1", "2", "3", "4", "5"}
-        Dim lowSec As String() = {"6E", "6N", "7E", "7N", "8E", "8N"}
-        Dim sec As String() = {"9E", "9N", "10E", "10A"}
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
 
         If primary.Contains(className) Then
             hashKeys = primaryHashKeys
