@@ -32,6 +32,8 @@ Public Class subjectWiseResultForm
         InitializeComponent()
         class_params = params
         Dim class_id = params(0)
+        Dim class_name = params(3)
+        If TheClass.primaryShortNames.Contains(class_name) Then subjPr.Enabled = False
         'find student ids
         student_ids = myFunctions.getStudentIdsOf(class_id)
         remainingCount.Text = student_ids.Count.ToString
@@ -102,6 +104,7 @@ Public Class subjectWiseResultForm
         Finally
             Con.Close()
         End Try
+        subjTh.Focus()
     End Sub
 
     Private Sub subjectCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles subjectCombo.SelectedIndexChanged
@@ -109,6 +112,9 @@ Public Class subjectWiseResultForm
         If optSub.Contains(subjectCombo.Text) Then
             MessageBox.Show("Please input marks of Optional subjects student wise.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
+
+        If subjectCombo.Text = "Maths" Then subjPr.Enabled = False
+        If subjectCombo.Text <> "Maths" And Not TheClass.primaryShortNames.Contains(class_params(3)) Then subjPr.Enabled = True
 
         If termCombo.SelectedIndex <> -1 Then
             Dim terminal = termCombo.Text
