@@ -12,6 +12,11 @@ Public Class TheClass
     Public Shared lowSecShortNames As String() = {"6", "7", "8", "6A", "7A", "8A", "6B", "7B", "8B", "6E", "7E", "8E", "6N", "7N", "8N"}
     Public Shared secShortNames As String() = {"9", "10", "9A", "10A", "9B", "10B", "9E", "10E", "9N", "10N"}
 
+    Public Shared primaryRegEx As String = "[1-5]*"
+    Public Shared lowSecRegEx As String = "[6-8]*"
+    Public Shared SecRegEx1 As String = "9*"
+    Public Shared secRegEx2 As String = "10*"
+
     Public Shared school_id As Integer
 
     Public Shared Property schoolId(class_id As Integer) As Integer
