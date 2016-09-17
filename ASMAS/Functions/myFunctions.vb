@@ -373,5 +373,17 @@ VALUES
         Return class_id
     End Function
 
+    Public Shared Sub upgradeClass(student_ids As String(), class_id As String, year_id As String)
+        Dim school_id = TheClass.schoolId(CInt(class_id))
+        Dim assigned As Boolean
+        For i As Integer = 0 To student_ids.Count - 1
+            assigned = addStudentToClassForm.addStudentToClass(class_id, student_ids(i), school_id, year_id)
+        Next
+        If assigned = True Then
+            MsgBox("Students were assigned to class successfully! ", MsgBoxStyle.Information, "Assigned")
+        Else
+            MsgBox("Some/All Students weren't assigned to class! Please check ", MsgBoxStyle.Exclamation, "Error")
+        End If
+    End Sub
 
 End Class

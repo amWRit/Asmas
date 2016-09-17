@@ -31,7 +31,7 @@ Public Class SearchForm
                 ElseIf search_key = "Name" Then
                     query = " where (f_name LIKE '%" & search_keyword & "%')"
                 End If
-                SQL = "SELECT " & student_query & query
+                SQL = "SELECT " & student_query & query & " ORDER BY ID"
                 If User.userRole = "Admin" Then SubjectTeacherToolStripMenuItem.Visible = False
             ElseIf search_type = "Class" Then
                 If search_key = "ID" Then
@@ -39,11 +39,10 @@ Public Class SearchForm
                 ElseIf search_key = "Name" Then
                     query = " where (full_name LIKE '%" & search_keyword & "%')"
                 End If
-                SQL = "SELECT " & class_query & query
+                SQL = "SELECT " & class_query & query & " ORDER BY class_id"
                 If User.userRole = "Admin" Then SubjectTeacherToolStripMenuItem.Visible = True
             End If
 
-            SQL = SQL & "ORDER BY ID"
             Dim DS As DataSet 'Object to store data in
             DS = New DataSet 'Declare a new instance, or we get Null Reference Error
 

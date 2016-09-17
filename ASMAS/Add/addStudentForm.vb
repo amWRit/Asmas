@@ -31,20 +31,6 @@ Public Class addStudentForm
             schoolCombo.Items.Add(Val)
         Next
 
-        DS.Tables.Clear()
-        'CLASS COMBOBOX
-        Dim classSQL As String = "SELECT distinct short_name from CLASS ORDER BY short_name"
-        Con.Open() 'Open connection
-        Dim classData As OleDbDataAdapter
-        classData = New OleDbDataAdapter(classSQL, Con)
-        Con.Close()
-        classData.Fill(DS)
-        rowCount = DS.Tables(0).Rows.Count
-
-        For i As Integer = 0 To rowCount - 1
-            Dim Val = DS.Tables(0).Rows(i)(0).ToString
-            classCombo.Items.Add(Val)
-        Next
     End Sub
 
     Public Sub New(ByVal params As String())
@@ -227,7 +213,13 @@ Public Class addStudentForm
                 If student_id <> "" Then
                     'find class_id
                     Dim class_id = myFunctions.getClassIdOf(school_id.ToString, Year.currentYearID(school_id), classCombo.Text)
-                    addStudentToClassForm.addStudentToClass(class_id, student_id, school_id)
+                    Dim year_id = Year.currentYearID(school_id)
+                    Dim assigned = addStudentToClassForm.addStudentToClass(class_id, student_id, school_id, year_id)
+                    If assigned = True Then
+                        MsgBox("Student assigned to class successfully! ", MsgBoxStyle.Information, "Assigned")
+                    Else
+                        MsgBox("Student wasn't assigned to class! Please check ", MsgBoxStyle.Exclamation, "Error")
+                    End If
                 End If
 
             End If
@@ -404,4 +396,31 @@ Public Class addStudentForm
         End If
     End Sub
 
+    Private Sub schoolCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles schoolCombo.SelectedIndexChanged
+        classCombo.Items.Clear()
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS As DataSet 'Object to store data in
+        DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+        Try
+            'CLASS COMBOBOX
+            Dim classSQL As String = "SELECT short_name from class
+where year_id = (SELECT year_id from school_year where year_num='" & Year.currentYear & "' and school_id=(SELECT school_id from school where short_name='" & schoolCombo.Text & "' ));"
+
+            Con.Open() 'Open connection
+            Dim classData As OleDbDataAdapter
+            classData = New OleDbDataAdapter(classSQL, Con)
+            Con.Close()
+            classData.Fill(DS)
+            Dim rowCount = DS.Tables(0).Rows.Count
+
+            For i As Integer = 0 To rowCount - 1
+                Dim Val = DS.Tables(0).Rows(i)(0).ToString
+                classCombo.Items.Add(Val)
+            Next
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

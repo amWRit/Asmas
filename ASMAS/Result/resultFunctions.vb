@@ -82,8 +82,8 @@ Public Class resultFunctions
 
             If present = True Then
                 MessageBox.Show("Record is already present. Please try editing the result instead.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                'Return {"", ""}
-                Exit Function
+                Return {studentName, "", "present"}
+                'Exit Function
             End If
             'save student_id
             'ReDim Preserve contents(7)
@@ -98,7 +98,7 @@ Public Class resultFunctions
             'This ensures that you close the Database and avoid corrupted data
             Con.Close()
         End Try
-        Return {studentName, student_id}
+        Return {studentName, student_id, "absent"}
     End Function
 
     Public Shared Function checkIfPresent(student_id As String, terminal As String, class_name As String) As Boolean

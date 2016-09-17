@@ -136,21 +136,29 @@ Public Class addStudentToClassForm
         Dim student_id = searchResultListView.Items(ItemIndex).SubItems(0).Text
 
         Dim class_id = classIDLabel.Text
-        addStudentToClass(class_id, student_id, school_id)
+        Dim year_id = Year.currentYearID(school_id)
+        Dim assigned = addStudentToClass(class_id, student_id, school_id, year_id)
+        If assigned = True Then
+            MsgBox("Student assigned to class successfully! ", MsgBoxStyle.Information, "Assigned")
+        Else
+            MsgBox("Student wasn't assigned to class! Please check ", MsgBoxStyle.Exclamation, "Error")
+        End If
     End Sub
 
-    Public Shared Sub addStudentToClass(class_id As String, student_id As String, _school_id As Integer)
+    Public Shared Function addStudentToClass(class_id As String, student_id As String, _school_id As Integer, year_id As String) As Boolean
+        Dim assigned As Boolean = False
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
 
         Dim present As Boolean
-        present = checkIfAssigned(class_id, student_id, _school_id)
+        present = checkIfAssigned(class_id, student_id, _school_id, year_id)
 
         If present = True Then
             MessageBox.Show("This student is already assigned to a class. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Exit Sub
+            Exit Function
+            Return False
         End If
 
         Try
@@ -162,19 +170,19 @@ Public Class addStudentToClassForm
             cmd.Parameters.AddWithValue("@class_id", class_id)
             cmd.Parameters.AddWithValue("@student_id", student_id)
             cmd.ExecuteNonQuery()
-            MsgBox("Student assigned to class successfully! ", MsgBoxStyle.Information, "Assigned")
-
+            'MsgBox("Student assigned to class successfully! ", MsgBoxStyle.Information, "Assigned")
             Con.Close()
+            Return True
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
             Con.Close()
             'AddTable()
         End Try
+        Return assigned
+    End Function
 
-    End Sub
-
-    Public Shared Function checkIfAssigned(class_id As String, student_id As String, _school_id As Integer) As Boolean
+    Public Shared Function checkIfAssigned(class_id As String, student_id As String, _school_id As Integer, year_id As String) As Boolean
         Dim present As Boolean = False
 
         Con = New OleDbConnection
@@ -186,10 +194,9 @@ Public Class addStudentToClassForm
 
         Try
             Dim oData As OleDbDataAdapter
-            Dim current_year_id = Year.currentYearID(_school_id)
             'SQL = "SELECT * from class_student WHERE class_id=" & class_id & " and student_id = " & student_id
             SQL = "Select * From class_student
-            Where class_id In (Select class_id from Class where year_id=" & current_year_id & " and school_id=" & _school_id & ")
+            Where class_id In (Select class_id from Class where year_id=" & year_id & " and school_id=" & _school_id & ")
             And student_id = " & student_id
 
             Con.Open() 'Open connection

@@ -52,4 +52,32 @@ Public Class Year
         bs = bs.AddMonths(8)
         Return bs
     End Function
+
+    Public Shared Function nextYear() As Integer
+        Dim next_year As Date = Date.Today.AddYears(1)
+        Return ConvertToBS(next_year).Year
+    End Function
+
+    Public Shared Function getYearID(school_id As String, year_num As String) As String
+        Dim year_id As String = ""
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim SQL As String = "SELECT * from school_year where year_num = '" & year_num & "' and school_id=" & school_id
+        DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+        Try
+            Con.Open() 'Open connection
+            Dim oData As OleDbDataAdapter
+            DS.Tables.Clear()
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+            year_id = DS.Tables(0).Rows(0)(0).ToString
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+        Return year_id
+    End Function
 End Class
