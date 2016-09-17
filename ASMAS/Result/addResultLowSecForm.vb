@@ -43,8 +43,8 @@ Public Class addResultLowSecForm
         Dim class_name = contents(3)
 
         Dim val As String() = resultFunctions.findStudentName(terminal, class_name, reg_number)
-        If val Is Nothing Then Exit Sub
         studentName.Text = val(0)
+        If val(2) = "present" Then Exit Sub
         ReDim Preserve contents(7)
         contents(7) = val(1) 'save student id
     End Sub
@@ -56,8 +56,8 @@ Public Class addResultLowSecForm
             Dim class_name = contents(3)
 
             Dim val As String() = resultFunctions.findStudentName(terminal, class_name, reg_number) '{studentName, student_id}
-            If val Is Nothing Then Exit Sub
             studentName.Text = val(0)
+            If val(2) = "present" Then Exit Sub
             ReDim Preserve contents(7)
             contents(7) = val(1) 'save student id
         End If

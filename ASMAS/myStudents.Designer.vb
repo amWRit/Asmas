@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class myStudents
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class myStudents
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.myStudentsListView = New System.Windows.Forms.ListView()
@@ -31,6 +31,8 @@ Partial Class myStudents
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpgradeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.myStudentsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,7 +46,6 @@ Partial Class myStudents
         Me.myStudentsListView.FullRowSelect = True
         Me.myStudentsListView.GridLines = True
         Me.myStudentsListView.Location = New System.Drawing.Point(0, 51)
-        Me.myStudentsListView.MultiSelect = False
         Me.myStudentsListView.Name = "myStudentsListView"
         Me.myStudentsListView.Size = New System.Drawing.Size(1008, 678)
         Me.myStudentsListView.TabIndex = 166
@@ -71,9 +72,9 @@ Partial Class myStudents
         '
         'myStudentsContextMenu
         '
-        Me.myStudentsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem})
+        Me.myStudentsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem, Me.UpgradeToolStripMenuItem})
         Me.myStudentsContextMenu.Name = "searchResultContextMenu"
-        Me.myStudentsContextMenu.Size = New System.Drawing.Size(175, 70)
+        Me.myStudentsContextMenu.Size = New System.Drawing.Size(175, 92)
         '
         'ViewToolStripMenuItem
         '
@@ -93,11 +94,27 @@ Partial Class myStudents
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
+        'UpgradeToolStripMenuItem
+        '
+        Me.UpgradeToolStripMenuItem.Name = "UpgradeToolStripMenuItem"
+        Me.UpgradeToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.UpgradeToolStripMenuItem.Text = "Promote"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(760, 35)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(236, 13)
+        Me.Label1.TabIndex = 168
+        Me.Label1.Text = "Tip: You can select multiple students to promote."
+        '
         'myStudents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.titleLabel)
         Me.Controls.Add(Me.myStudentsListView)
         Me.Name = "myStudents"
@@ -118,4 +135,6 @@ Partial Class myStudents
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpgradeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
 End Class

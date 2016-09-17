@@ -120,4 +120,18 @@ Public Class myStudents
     Private Sub myStudents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximizeBox = False
     End Sub
+
+    Private Sub UpgradeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpgradeToolStripMenuItem.Click
+        Dim selectedItemsCount = myStudentsListView.SelectedItems.Count
+        Dim student_ids As String()
+        ReDim Preserve student_ids(selectedItemsCount - 1)
+        For i As Integer = 0 To selectedItemsCount - 1
+            Dim ItemIndex As Integer = myStudentsListView.SelectedIndices(i) 'Grab the selected Index
+            student_ids(i) = myStudentsListView.Items(ItemIndex).SubItems(0).Text
+        Next
+
+        Dim _upgradeStudentForm As New upgradeStudentForm(student_ids, class_id)
+        _upgradeStudentForm.Show()
+    End Sub
+
 End Class

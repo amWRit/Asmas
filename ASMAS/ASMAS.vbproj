@@ -350,6 +350,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TerseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="upgradeStudentForm.Designer.vb">
+      <DependentUpon>upgradeStudentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="upgradeStudentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="viewDatabaseForm.Designer.vb">
       <DependentUpon>viewDatabaseForm.vb</DependentUpon>
     </Compile>
@@ -467,6 +473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="subjectTeachersDetails.resx">
       <DependentUpon>subjectTeachersDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upgradeStudentForm.resx">
+      <DependentUpon>upgradeStudentForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="viewDatabaseForm.resx">
       <DependentUpon>viewDatabaseForm.vb</DependentUpon>
