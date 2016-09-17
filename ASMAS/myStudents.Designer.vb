@@ -32,6 +32,7 @@ Partial Class myStudents
         Me.DeleteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpgradeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.myStudentsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,7 +74,7 @@ Partial Class myStudents
         '
         Me.myStudentsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.EditToolStripMenuItem, Me.UpgradeToolStripMenuItem})
         Me.myStudentsContextMenu.Name = "searchResultContextMenu"
-        Me.myStudentsContextMenu.Size = New System.Drawing.Size(175, 114)
+        Me.myStudentsContextMenu.Size = New System.Drawing.Size(175, 92)
         '
         'ViewToolStripMenuItem
         '
@@ -97,13 +98,23 @@ Partial Class myStudents
         '
         Me.UpgradeToolStripMenuItem.Name = "UpgradeToolStripMenuItem"
         Me.UpgradeToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.UpgradeToolStripMenuItem.Text = "Upgrade"
+        Me.UpgradeToolStripMenuItem.Text = "Promote"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(760, 35)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(236, 13)
+        Me.Label1.TabIndex = 168
+        Me.Label1.Text = "Tip: You can select multiple students to promote."
         '
         'myStudents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.titleLabel)
         Me.Controls.Add(Me.myStudentsListView)
         Me.Name = "myStudents"
@@ -125,4 +136,5 @@ Partial Class myStudents
     Friend WithEvents DeleteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UpgradeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
 End Class
