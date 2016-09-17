@@ -11,6 +11,10 @@ Public Class myStudents
         ' This call is required by the designer.
         InitializeComponent()
         class_id = itemID
+        refreshLV()
+    End Sub
+
+    Private Sub refreshLV()
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -25,7 +29,7 @@ Public Class myStudents
                     INNER JOIN
                     class_student cs
                     on c.class_id = cs.class_id
-                    where c.class_id =" & itemID & ") tb
+                    where c.class_id =" & class_id & ") tb
                     on s.id = tb.student_id ORDER BY ID"
 
             Con.Open() 'Open connection
@@ -134,4 +138,7 @@ Public Class myStudents
         _upgradeStudentForm.Show()
     End Sub
 
+    Private Sub refreshBtn_Click(sender As Object, e As EventArgs) Handles refreshBtn.Click
+        refreshLV()
+    End Sub
 End Class

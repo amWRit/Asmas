@@ -33,6 +33,7 @@ Partial Class myStudents
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpgradeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.refreshBtn = New System.Windows.Forms.Button()
         Me.myStudentsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,9 +46,9 @@ Partial Class myStudents
         Me.myStudentsListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.myStudentsListView.FullRowSelect = True
         Me.myStudentsListView.GridLines = True
-        Me.myStudentsListView.Location = New System.Drawing.Point(0, 51)
+        Me.myStudentsListView.Location = New System.Drawing.Point(0, 75)
         Me.myStudentsListView.Name = "myStudentsListView"
-        Me.myStudentsListView.Size = New System.Drawing.Size(1008, 678)
+        Me.myStudentsListView.Size = New System.Drawing.Size(1008, 654)
         Me.myStudentsListView.TabIndex = 166
         Me.myStudentsListView.UseCompatibleStateImageBehavior = False
         Me.myStudentsListView.View = System.Windows.Forms.View.Details
@@ -109,11 +110,21 @@ Partial Class myStudents
         Me.Label1.TabIndex = 168
         Me.Label1.Text = "Tip: You can select multiple students to promote."
         '
+        'refreshBtn
+        '
+        Me.refreshBtn.Location = New System.Drawing.Point(145, 14)
+        Me.refreshBtn.Name = "refreshBtn"
+        Me.refreshBtn.Size = New System.Drawing.Size(75, 23)
+        Me.refreshBtn.TabIndex = 169
+        Me.refreshBtn.Text = "Refresh"
+        Me.refreshBtn.UseVisualStyleBackColor = True
+        '
         'myStudents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.refreshBtn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.titleLabel)
         Me.Controls.Add(Me.myStudentsListView)
@@ -137,4 +148,5 @@ Partial Class myStudents
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UpgradeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
+    Friend WithEvents refreshBtn As Button
 End Class

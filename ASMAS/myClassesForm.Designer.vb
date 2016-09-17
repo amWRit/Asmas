@@ -40,6 +40,7 @@ Partial Class myClassesForm
         Me.AssignToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResultAnalysisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.refreshBtn = New System.Windows.Forms.Button()
         Me.myClassesContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,10 +53,10 @@ Partial Class myClassesForm
         Me.myClassesListView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.myClassesListView.FullRowSelect = True
         Me.myClassesListView.GridLines = True
-        Me.myClassesListView.Location = New System.Drawing.Point(0, 34)
+        Me.myClassesListView.Location = New System.Drawing.Point(0, 60)
         Me.myClassesListView.MultiSelect = False
         Me.myClassesListView.Name = "myClassesListView"
-        Me.myClassesListView.Size = New System.Drawing.Size(1008, 695)
+        Me.myClassesListView.Size = New System.Drawing.Size(1008, 669)
         Me.myClassesListView.TabIndex = 165
         Me.myClassesListView.UseCompatibleStateImageBehavior = False
         Me.myClassesListView.View = System.Windows.Forms.View.Details
@@ -155,12 +156,22 @@ Partial Class myClassesForm
         Me.ResultAnalysisToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ResultAnalysisToolStripMenuItem.Text = "Result Analysis"
         '
+        'refreshBtn
+        '
+        Me.refreshBtn.Location = New System.Drawing.Point(12, 10)
+        Me.refreshBtn.Name = "refreshBtn"
+        Me.refreshBtn.Size = New System.Drawing.Size(75, 23)
+        Me.refreshBtn.TabIndex = 166
+        Me.refreshBtn.Text = "Refresh"
+        Me.refreshBtn.UseVisualStyleBackColor = True
+        '
         'myClassesForm
         '
         Me.AccessibleName = ""
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.refreshBtn)
         Me.Controls.Add(Me.myClassesListView)
         Me.Name = "myClassesForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -188,4 +199,5 @@ Partial Class myClassesForm
     Friend WithEvents AssignToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ResultAnalysisToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents refreshBtn As Button
 End Class

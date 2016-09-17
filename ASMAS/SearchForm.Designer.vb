@@ -41,6 +41,7 @@ Partial Class SearchForm
         Me.SubjectTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AssignToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.refreshBtn = New System.Windows.Forms.Button()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.searchResultContextMenu.SuspendLayout()
@@ -178,6 +179,16 @@ Partial Class SearchForm
         Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
         Me.ViewToolStripMenuItem.Text = "View"
         '
+        'refreshBtn
+        '
+        Me.refreshBtn.Enabled = False
+        Me.refreshBtn.Location = New System.Drawing.Point(785, 20)
+        Me.refreshBtn.Name = "refreshBtn"
+        Me.refreshBtn.Size = New System.Drawing.Size(75, 23)
+        Me.refreshBtn.TabIndex = 9
+        Me.refreshBtn.Text = "Refresh"
+        Me.refreshBtn.UseVisualStyleBackColor = True
+        '
         'SearchForm
         '
         Me.AcceptButton = Me.searchBtn
@@ -186,6 +197,7 @@ Partial Class SearchForm
         Me.AutoScroll = True
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.refreshBtn)
         Me.Controls.Add(Me.searchResultListView)
         Me.Controls.Add(Me.searchBtn)
         Me.Controls.Add(Me.searchKeyword)
@@ -223,4 +235,5 @@ Partial Class SearchForm
     Friend WithEvents SubjectTeacherToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AssignToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents refreshBtn As Button
 End Class

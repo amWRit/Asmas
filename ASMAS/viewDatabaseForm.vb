@@ -94,7 +94,7 @@ Public Class viewDatabaseForm
                 inner Join
                 (select c.class_id from class c
                 inner Join
-                (select sy.year_id from
+                (select sy.year_id, s.short_name from
                  school s
                 inner Join 
                 school_year sy

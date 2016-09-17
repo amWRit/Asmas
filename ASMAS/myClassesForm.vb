@@ -7,6 +7,10 @@ Public Class myClassesForm
 
     Private Sub myClassesForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximizeBox = False
+        refreshLV()
+    End Sub
+
+    Private Sub refreshLV()
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -223,5 +227,9 @@ Public Class myClassesForm
 
         Dim _subjectResultAnalysisForm As New subjectResultAnalysisForm(params)
         _subjectResultAnalysisForm.Show()
+    End Sub
+
+    Private Sub refreshBtn_Click(sender As Object, e As EventArgs) Handles refreshBtn.Click
+        refreshLV()
     End Sub
 End Class

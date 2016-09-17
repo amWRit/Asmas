@@ -6,6 +6,11 @@ Public Class SearchForm
 
 
     Private Sub searchBtn_Click(sender As Object, e As EventArgs) Handles searchBtn.Click
+        refreshLV()
+        refreshBtn.Enabled = True
+    End Sub
+
+    Private Sub refreshLV()
         Dim search_type As String = searchType.Text
         Dim search_key As String = searchKey.Text
         Dim search_keyword As String = searchKeyword.Text
@@ -82,8 +87,6 @@ Public Class SearchForm
             Con.Close()
         End Try
     End Sub
-
-
     'Private Sub frmProgramma_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
     '    If MessageBox.Show("Are you sur to close this application?", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = MsgBoxResult.Yes Then
     '        Me.Close()
@@ -218,5 +221,9 @@ Public Class SearchForm
         Dim params As String() = {class_id, class_info(1), class_info(0)}
         Dim _subjectTeachersDetails As New subjectTeachersDetails(params)
         _subjectTeachersDetails.Show()
+    End Sub
+
+    Private Sub refreshBtn_Click(sender As Object, e As EventArgs) Handles refreshBtn.Click
+        refreshLV()
     End Sub
 End Class
