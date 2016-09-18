@@ -8,6 +8,7 @@ Public Class addUserForm
 
     Public edit As String = ""
     Public user_id As String = ""
+    Public old_full_name As String = ""
 
     Private Sub cancelBtn_Click_1(sender As Object, e As EventArgs) Handles cancelBtn.Click
         Me.Hide()
@@ -30,6 +31,7 @@ Public Class addUserForm
         edit = params(1)
         If edit = "TRUE" Then
             loadUserInfo(user_id)
+            old_full_name = fullnameTextBox.Text
         End If
     End Sub
 
@@ -75,7 +77,14 @@ Public Class addUserForm
             cmd.ExecuteNonQuery()
 
             MsgBox("User successfully " & command & ".", MsgBoxStyle.Information, command)
-            If edit = "TRUE" Then Me.close
+            If edit = "TRUE" Then
+                Me.Close()
+                'update name in class and subjectTeacher tables
+                If old_full_name <> fullName Then
+                    updateRelatedTables(old_full_name, fullName)
+                End If
+            End If
+
             Dim textboxes = myFunctions.getTextBoxes(Me)
             myFunctions.clearTextBoxes(textboxes)
         Catch ex As Exception
@@ -138,9 +147,9 @@ Public Class addUserForm
 
             Dim role = DS.Tables(0).Rows(0).Item("role").ToString
             Dim rowCount = DS.Tables(0).Rows.Count
-                fullnameTextBox.Text = DS.Tables(0).Rows(0).Item("full_name").ToString
-                usernameTextBox.Text = DS.Tables(0).Rows(0).Item("user_name").ToString
-                pwdTextBox.Text = DS.Tables(0).Rows(0).Item("user_password").ToString
+            fullnameTextBox.Text = DS.Tables(0).Rows(0).Item("full_name").ToString
+            usernameTextBox.Text = DS.Tables(0).Rows(0).Item("user_name").ToString
+            pwdTextBox.Text = DS.Tables(0).Rows(0).Item("user_password").ToString
             roleCombo.Text = DS.Tables(0).Rows(0).Item("role").ToString
 
         Catch ex As Exception
@@ -152,4 +161,30 @@ Public Class addUserForm
             Con.Close()
         End Try
     End Sub
+
+    Private Sub updateRelatedTables(old_full_name As String, new_full_name As String)
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Try
+            Dim SQL = "UPDATE [class] SET [class_teacher] = @fullName where class_teacher='" & old_full_name & "'"
+            Con.Open()
+            Dim cmd As New OleDbCommand(SQL, Con)
+            cmd.Parameters.AddWithValue("@fullName", new_full_name)
+            cmd.ExecuteNonQuery()
+            Con.Close()
+
+            SQL = "UPDATE [subject_teacher] SET [teacher] = @fullName where teacher='" & old_full_name & "'"
+            Con.Open()
+            cmd = New OleDbCommand(SQL, Con)
+            cmd.Parameters.AddWithValue("@fullName", new_full_name)
+            cmd.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+    End Sub
+
 End Class

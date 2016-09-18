@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="5618152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="5618664">
       <assemblyIdentity name="ASMAS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9LSJT7H4cHmUpuhr/cjpBNRTVbeyr4istiWyndxTpfc=</dsig:DigestValue>
+        <dsig:DigestValue>G3xs4nWhW/X2XmV/CrLHs9I/M3oZZN9wblaIGY0/oYg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
