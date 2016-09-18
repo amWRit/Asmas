@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Text.RegularExpressions
 Imports Microsoft.ReportingServices.Rendering.ExcelRenderer
 
 Public Class upgradeStudentForm
@@ -61,7 +62,19 @@ Public Class upgradeStudentForm
             MessageBox.Show("Please select a class.", "No data", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
+        Dim old_class_name = TheClass.getClassName(CInt(prev_class_id))
         Dim class_name = classCombo.Text
+
+        Dim old_class_int = Int32.Parse(Regex.Replace(old_class_name, "\D", ""))
+        Dim new_class_int = Int32.Parse(Regex.Replace(class_name, "\D", ""))
+
+        If new_class_int < old_class_int Then
+            Dim I As Integer = MessageBox.Show("The class you are trying to promote to seems to be smaller than the exisiting class. Are you sure?", "CHECK", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            If I = MsgBoxResult.No Then
+                Me.Close()
+                Exit Sub
+            End If
+        End If
         Dim next_year = Year.nextYear.ToString
 
         Dim year_id = Year.getYearID(school_id, next_year)

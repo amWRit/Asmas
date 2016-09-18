@@ -39,4 +39,27 @@ Public Class TheClass
             school_id = value
         End Set
     End Property
+
+    Public Shared Function getClassName(class_id As Integer) As String
+        Dim class_name = ""
+        Try
+            Con = New OleDbConnection
+            Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+            Dim DS As DataSet 'Object to store data in
+            DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+            Dim SQL As String = "SELECT short_name from class where class_id=" & class_id
+            Con.Open() 'Open connection
+            Dim ctData As OleDbDataAdapter
+            ctData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            ctData.Fill(DS)
+            class_name = (DS.Tables(0).Rows(0)(0)).ToString
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+        Return class_name
+    End Function
 End Class
