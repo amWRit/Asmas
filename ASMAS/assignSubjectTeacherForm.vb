@@ -100,8 +100,8 @@ Public Class assignSubjectTeacherForm
             Dim SQL As String = "SELECT short_name, year_num from
 school inner join school_year
 on school.school_id = school_year.school_id
-where school_year.school_id 
-in (SELECT school_id from class
+where school_year.year_id 
+in (SELECT year_id from class
 WHERE class_id=" & class_id & ")"
             Con.Open() 'Open connection
             Dim ctData As OleDbDataAdapter
