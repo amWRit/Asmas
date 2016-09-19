@@ -74,7 +74,7 @@ Partial Class upgradeStudentForm
         Me.upgradeBtn.Name = "upgradeBtn"
         Me.upgradeBtn.Size = New System.Drawing.Size(75, 23)
         Me.upgradeBtn.TabIndex = 5
-        Me.upgradeBtn.Text = "Upgrade"
+        Me.upgradeBtn.Text = "Promote"
         Me.upgradeBtn.UseVisualStyleBackColor = True
         '
         'upgradeStudentForm

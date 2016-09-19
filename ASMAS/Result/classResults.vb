@@ -166,6 +166,7 @@ Public Class classResults
             Dim _newClassResult As New addResultSecForm(params)
             _newClassResult.Show()
         End If
+
     End Sub
 
     Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
