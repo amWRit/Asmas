@@ -49,20 +49,24 @@ Public Class myFunctions
             If val = "" Then val = "0"
             inputHash(key) = val
         Next
+        inputHash("rank") = DS.Tables(0).Rows(index)("rank").ToString
 
         Try
             insertSQL = getResultTableSQL(class_name, table_name)
             Con.Open()
             cmd = New OleDbCommand(insertSQL, Con)
 
-            For Each key As String In hashKeys
-                cmd.Parameters.AddWithValue("@" & key, inputHash(key))
-            Next
 
+            For Each key As String In hashKeys
+                If key <> "attendance" Then cmd.Parameters.AddWithValue("@" & key, inputHash(key))
+            Next
+            cmd.Parameters.AddWithValue("@rank", inputHash("rank"))
+            cmd.Parameters.AddWithValue("@attendance", inputHash("attendance"))
             cmd.Parameters.AddWithValue("@class_teacher", class_teacher)
             cmd.Parameters.AddWithValue("@class_name", class_name)
             cmd.Parameters.AddWithValue("@school_full_name", school_info(0))
             cmd.Parameters.AddWithValue("@school_address", school_info(1))
+
             cmd.ExecuteNonQuery()
             Con.Close()
         Catch ex As Exception
