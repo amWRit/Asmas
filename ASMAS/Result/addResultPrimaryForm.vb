@@ -48,7 +48,12 @@ Public Class addResultPrimaryForm
 
         Dim val As String() = resultFunctions.findStudentName(terminal, class_name, reg_number)
         studentName.Text = val(0)
-        If val(2) = "present" Then Exit Sub
+        If val(2) = "present" Then
+            saveBtn.Enabled = False
+            Exit Sub
+        Else
+            saveBtn.Enabled = True
+        End If
         ReDim Preserve contents(7)
         contents(7) = val(1) 'save student id
     End Sub
@@ -61,7 +66,12 @@ Public Class addResultPrimaryForm
 
             Dim val As String() = resultFunctions.findStudentName(terminal, class_name, reg_number)
             studentName.Text = val(0)
-            If val(2) = "present" Then Exit Sub
+            If val(2) = "present" Then
+                saveBtn.Enabled = False
+                Exit Sub
+            Else
+                saveBtn.Enabled = True
+            End If
             ReDim Preserve contents(7)
             contents(7) = val(1) 'save student id
         End If

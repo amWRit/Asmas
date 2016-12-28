@@ -4585,7 +4585,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>800</Value>
+                              <Value>580</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -4631,7 +4631,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>100</Value>
+                              <Value>220</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -4677,7 +4677,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>320</Value>
+                              <Value>232</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -4723,7 +4723,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>40</Value>
+                              <Value>--</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -6876,9 +6876,9 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>0.77025in</Top>
-        <Left>6.03338in</Left>
+        <Left>6.15838in</Left>
         <Height>0.25in</Height>
-        <Width>0.59996in</Width>
+        <Width>0.61504in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -6910,7 +6910,7 @@ Point</Value>
         <Top>0.77025in</Top>
         <Left>3.85366in</Left>
         <Height>0.25in</Height>
-        <Width>0.51382in</Width>
+        <Width>0.69906in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -6939,10 +6939,10 @@ Point</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>0.77025in</Top>
-        <Left>4.36748in</Left>
+        <Top>0.75823in</Top>
+        <Left>4.56661in</Left>
         <Height>0.25in</Height>
-        <Width>1.66589in</Width>
+        <Width>1.57788in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -7371,7 +7371,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -7418,7 +7420,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -7465,7 +7469,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -7512,7 +7518,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -7559,7 +7567,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -7606,7 +7616,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox58</rd:DefaultName>

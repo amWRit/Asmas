@@ -108,7 +108,7 @@ Public Class subjectWiseResultForm
     End Sub
 
     Private Sub subjectCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles subjectCombo.SelectedIndexChanged
-        Dim optSub As String() = {"Opt. Maths", "Account", "Education", "Economics", "EPH"}
+        Dim optSub As String() = {"Opt. Math", "Account", "Education", "Economics"}
         If optSub.Contains(subjectCombo.Text) Then
             MessageBox.Show("Please input marks of Optional subjects student wise.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
@@ -123,8 +123,9 @@ Public Class subjectWiseResultForm
             Dim school_name = class_params(2)
             Dim subjKey As String = resultFunctions.getSubjKey(subjectCombo.Text, class_name)
             Dim params As String() = {school_year, school_name, class_name, terminal, current_student_id, subjKey}
-            present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
-            If present = True Then
+            'present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
+            Dim subjMarksEntered = checkIfSubjMarksEntered(current_student_id, terminal, class_name, subjKey)
+            If subjMarksEntered = True Then
                 presentCheckLabel.Text = "Yes"
                 presentCheckLabel.ForeColor = Color.ForestGreen
                 resultFunctions.loadSubjMarks(params, subjTh, subjPr)
@@ -193,10 +194,12 @@ Public Class subjectWiseResultForm
         Dim subjKey As String = resultFunctions.getSubjKey(subjectCombo.Text, class_name)
         Dim params As String() = {school_year, school_name, class_name, terminal, current_student_id, subjKey}
         present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
-        If present = True Then
+        Dim subjMarksEntered = checkIfSubjMarksEntered(current_student_id, terminal, class_name, subjKey)
+
+        If subjMarksEntered = True Then
             presentCheckLabel.Text = "Yes"
             presentCheckLabel.ForeColor = Color.ForestGreen
-            resultFunctions.loadSubjMarks(params, subjTh, subjPr)
+            If present = True Then resultFunctions.loadSubjMarks(params, subjTh, subjPr)
         Else
             presentCheckLabel.Text = "No"
             presentCheckLabel.ForeColor = Color.Red
@@ -229,4 +232,37 @@ Public Class subjectWiseResultForm
     Private Sub prevBtn_Click(sender As Object, e As EventArgs) Handles prevBtn.Click
         preparePrevious()
     End Sub
+
+    Private Function checkIfSubjMarksEntered(student_id As String, terminal As String, class_name As String, subj_key As String) As Boolean
+        Dim present As Boolean = False
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+        Try
+            SQL = "SELECT * from results_" & class_name.ToString & " where student_id=" & student_id & " and terminal = '" & terminal & "' and " & subj_key & "_th <> 0"
+
+            Con.Open() 'Open connection
+
+            Dim oData As OleDbDataAdapter
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            If rowCount > 0 Then present = True
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+
+        Return present
+    End Function
 End Class

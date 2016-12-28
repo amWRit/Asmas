@@ -88,13 +88,14 @@ Public Class classResults
         If termCombo.SelectedIndex = -1 Then
             MessageBox.Show("Please select a terminal to update rank.", "Incomplete input.", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-
             Dim DS = New DataSet
             Dim SQL As String = ""
             Dim oData As OleDbDataAdapter
 
             Dim terminal = termCombo.Text
             Dim className = contents(3)
+            refreshLV(className, terminal)
+
             Dim rankSQL As String = "SELECT id, student_id, percentage from results_" & className & " where school_name='" & contents(2) & "' and school_year ='" & contents(1) &
             "' and terminal = '" & terminal & "' order by percentage DESC"
 
@@ -166,7 +167,6 @@ Public Class classResults
             Dim _newClassResult As New addResultSecForm(params)
             _newClassResult.Show()
         End If
-
     End Sub
 
     Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
@@ -206,6 +206,7 @@ Public Class classResults
         Dim class_name = contents(3)
         Dim year_num = contents(1)
         Dim school_name = contents(2)
+        refreshLV(class_name, termCombo.Text)
         resultFunctions.updateCalculations(tempDS, school_name, year_num, class_name)
         refreshLV(class_name, termCombo.Text)
     End Sub

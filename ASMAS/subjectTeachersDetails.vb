@@ -105,6 +105,7 @@ WHERE school_year='" & school_year & "' and school_name='" & school_name & "' an
         SQL = "DELETE * from subject_teacher where ID=" & itemID
 
         Try
+            Con.Open()
             'DELETE FROM TableName WHERE PrimaryKey = ID
             Dim cmd2 As New OleDb.OleDbCommand(SQL, Con)
             cmd2.ExecuteNonQuery()

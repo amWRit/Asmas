@@ -544,19 +544,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <TopBorder>
-                          <Style>Solid</Style>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Style>Solid</Style>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Style>Solid</Style>
-                        </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -693,7 +680,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1040,7 +1026,6 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1177,7 +1162,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1524,7 +1508,6 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1661,7 +1644,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -2008,7 +1990,6 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2145,7 +2126,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -2492,7 +2472,6 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -2629,7 +2608,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -2976,7 +2954,6 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3113,7 +3090,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -3460,7 +3436,6 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3597,7 +3572,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -3944,7 +3918,6 @@
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
-                        <BackgroundColor>Gainsboro</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -4081,7 +4054,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -4098,7 +4070,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>800</Value>
+                              <Value>=IIF(First(Fields!opt2.Value, "resultsSec")="Computer","625","650")</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -4144,7 +4116,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>100</Value>
+                              <Value>=IIF(First(Fields!opt2.Value, "resultsSec")="Computer","175","150")</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -4190,7 +4162,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>320</Value>
+                              <Value>=IIF(First(Fields!opt2.Value, "resultsSec")="Computer","250","260")</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -4236,7 +4208,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>40</Value>
+                              <Value>--</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -6289,7 +6261,7 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>0.81823in</Top>
-        <Left>5.92117in</Left>
+        <Left>6.17117in</Left>
         <Height>0.25in</Height>
         <Width>0.59996in</Width>
         <ZIndex>1</ZIndex>
@@ -6323,7 +6295,7 @@ Point</Value>
         <Top>0.81823in</Top>
         <Left>3.74146in</Left>
         <Height>0.25in</Height>
-        <Width>0.51382in</Width>
+        <Width>0.74993in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -6353,9 +6325,9 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>0.81823in</Top>
-        <Left>4.25528in</Left>
+        <Left>4.50528in</Left>
         <Height>0.25in</Height>
-        <Width>1.66589in</Width>
+        <Width>1.63811in</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -6467,7 +6439,7 @@ Point</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>0.53632in</Top>
+        <Top>0.55021in</Top>
         <Left>1.58873in</Left>
         <Height>0.25in</Height>
         <Width>4.9324in</Width>
@@ -6784,7 +6756,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -6831,7 +6805,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox11</rd:DefaultName>
@@ -6878,7 +6854,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox13</rd:DefaultName>
@@ -6925,7 +6903,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox15</rd:DefaultName>
@@ -6972,7 +6952,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox17</rd:DefaultName>
@@ -7019,7 +7001,9 @@ Point</Value>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox58</rd:DefaultName>
