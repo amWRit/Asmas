@@ -66,17 +66,31 @@ Public Class subjectWiseResultForm
         'Dim present As Boolean = False
         'present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
         'if present, update, else add new
-        Dim subjectSQL = "INSERT INTO results_" & class_name & " ([student_id], [reg_number], [full_name], [school_year],[school_name],[terminal], [" & subjKey & "_th], [" & subjKey & "_pr])
+        Dim subjectSQL = ""
+
+        If subjKey = "opt1" Or subjKey = "opt2" Then
+            subjectSQL = "INSERT INTO results_" & class_name & " ([student_id], [reg_number], [full_name], [school_year],[school_name],[terminal], [" & subjKey & "_th], [" & subjKey & "_pr], [" & subjKey & "])
+                            VALUES
+                            (@student_id, @reg_number, @full_name, @school_year, @school_name, @terminal, @" & subjKey & "_th, @" & subjKey & "_pr, @" & subjKey & ")"
+        Else
+            subjectSQL = "INSERT INTO results_" & class_name & " ([student_id], [reg_number], [full_name], [school_year],[school_name],[terminal], [" & subjKey & "_th], [" & subjKey & "_pr])
                             VALUES
                             (@student_id, @reg_number, @full_name, @school_year, @school_name, @terminal, @" & subjKey & "_th, @" & subjKey & "_pr)"
+        End If
+
         Dim command = "INSERTED"
         Try
             If present = True Then
                 'get update sql
                 command = "UPDATED"
                 Dim rowID = resultFunctions.getStudentResultRowID(school_year, school_name, terminal, class_name, current_student_id)
-                subjectSQL = "UPDATE results_" & class_name & " SET " &
+                If subjKey = "opt1" Or subjKey = "opt2" Then
+                    subjectSQL = "UPDATE results_" & class_name & " SET " &
+               subjKey & "_th = @" & subjKey & "_th," & subjKey & "_pr = @" & subjKey & "_pr," & subjKey & " = @" & subjKey & " WHERE id=" & rowID
+                Else
+                    subjectSQL = "UPDATE results_" & class_name & " SET " &
                 subjKey & "_th = @" & subjKey & "_th," & subjKey & "_pr = @" & subjKey & "_pr WHERE id=" & rowID
+                End If
             End If
 
             Con.Open()
@@ -92,6 +106,9 @@ Public Class subjectWiseResultForm
 
             cmd.Parameters.AddWithValue("@" & subjKey & "_th", subjTh.Text)
             cmd.Parameters.AddWithValue("@" & subjKey & "_pr", subjPr.Text)
+            If subjKey = "opt1" Or subjKey = "opt2" Then
+                cmd.Parameters.AddWithValue("@" & subjKey, subjectCombo.Text)
+            End If
             cmd.ExecuteNonQuery()
 
             Dim I As Integer = MsgBox("Successful", MsgBoxStyle.Information, command)
@@ -110,7 +127,7 @@ Public Class subjectWiseResultForm
     Private Sub subjectCombo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles subjectCombo.SelectedIndexChanged
         Dim optSub As String() = {"Opt. Math", "Account", "Education", "Economics"}
         If optSub.Contains(subjectCombo.Text) Then
-            MessageBox.Show("Please input marks of Optional subjects student wise.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("You are inputting marks for optional subject. Please be careful.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
 
         If subjectCombo.Text = "Maths" Then subjPr.Enabled = False
