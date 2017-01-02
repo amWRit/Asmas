@@ -124,11 +124,11 @@ Public Class subjectResultAnalysisForm
     Public Function getResultAnaysisData(resultDS As DataSet, class_id As String, class_name As String) As Hashtable
 
         'get analysis data
-        Dim rowCount = resultDS.Tables(0).Rows.Count
         Dim totSubj = myFunctions.getClassSubjectsOf(class_id)
         Dim dataHash As New Hashtable
 
         For Each subj As String In totSubj
+            Dim rowCount = resultDS.Tables(0).Rows.Count
             Dim key = resultFunctions.getSubjCode(subj)
             Dim total As Double = 0
             Dim average As Double = 0
@@ -137,7 +137,7 @@ Public Class subjectResultAnalysisForm
             Dim marks As New List(Of Double)
             Dim locos As Double = 0
             Dim drs As DataRow() = {}
-            If (opt1.Contains(subj) Or opt2.Contains(subj)) And sec.contains(class_name) Then
+            If (opt1.Contains(subj) Or opt2.Contains(subj)) And sec.Contains(class_name) Then
                 If opt1.Contains(subj) Then drs = resultDS.Tables(0).Select("opt1='" & subj & "'")
                 If opt2.Contains(subj) Then drs = resultDS.Tables(0).Select("opt2='" & subj & "'")
                 rowCount = drs.Count
@@ -147,10 +147,10 @@ Public Class subjectResultAnalysisForm
             For i As Integer = 0 To rowCount - 1
                 Dim val As Object
                 Dim dVal As Double = 0
-                If opt1.Contains(subj) And sec.contains(class_name) Then
+                If opt1.Contains(subj) And sec.Contains(class_name) Then
                     drs = resultDS.Tables(0).Select("opt1='" & subj & "'")
                     val = drs.ElementAt(i).Item(47)
-                ElseIf opt2.Contains(subj) And sec.contains(class_name) Then
+                ElseIf opt2.Contains(subj) And sec.Contains(class_name) Then
                     drs = resultDS.Tables(0).Select("opt2='" & subj & "'")
                     val = drs.ElementAt(i).Item(53)
                 Else
