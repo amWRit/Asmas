@@ -38,7 +38,7 @@ Public Class addResultSecForm
 
         Dim reg_number = studentRegCombo.Text
         Dim terminal = termCombo.Text
-        Dim school_name = contents(3)
+        Dim school_name = contents(2)
         Dim school_year = contents(1)
         Dim class_name = contents(3)
 
@@ -58,7 +58,7 @@ Public Class addResultSecForm
         If studentRegCombo.SelectedIndex <> -1 Then
             Dim reg_number = studentRegCombo.Text
             Dim terminal = termCombo.Text
-            Dim school_name = contents(3)
+            Dim school_name = contents(2)
             Dim school_year = contents(1)
             Dim class_name = contents(3)
 
