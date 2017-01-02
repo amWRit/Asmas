@@ -6693,7 +6693,6 @@ Point</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -6947,7 +6946,7 @@ Point</Value>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Attendance</Value>
+                            <Value>Attendance (%)</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                             </Style>

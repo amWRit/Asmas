@@ -56,7 +56,7 @@ Public Class resultFunctions
         Next
     End Sub
 
-    Public Shared Function findStudentName(terminal As String, class_name As String, reg_number As String) As String()
+    Public Shared Function findStudentName(school_name As String, school_year As String, terminal As String, class_name As String, reg_number As String) As String()
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -78,7 +78,7 @@ Public Class resultFunctions
             studentName = DS.Tables(0).Rows(0)(0).ToString & " " & DS.Tables(0).Rows(0)(1).ToString & " " & DS.Tables(0).Rows(0)(2).ToString
 
             Dim present As Boolean
-            present = checkIfPresent(DS.Tables(0).Rows(0)(3).ToString, terminal, class_name)
+            present = checkIfPresent(school_name, school_year, DS.Tables(0).Rows(0)(3).ToString, terminal, class_name)
 
             If present = True Then
                 MessageBox.Show("Record is already present. Please try editing the result instead.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -101,7 +101,7 @@ Public Class resultFunctions
         Return {studentName, student_id, "absent"}
     End Function
 
-    Public Shared Function checkIfPresent(student_id As String, terminal As String, class_name As String) As Boolean
+    Public Shared Function checkIfPresent(school_name As String, school_year As String, student_id As String, terminal As String, class_name As String) As Boolean
         Dim present As Boolean = False
 
         Con = New OleDbConnection
@@ -111,7 +111,7 @@ Public Class resultFunctions
         Dim DS = New DataSet
         Dim SQL As String = ""
         Try
-            SQL = "SELECT * from results_" & class_name.ToString & " where student_id=" & student_id & " and terminal = '" & terminal & "'"
+            SQL = "SELECT * from results_" & class_name.ToString & " where student_id=" & student_id & " and school_name='" & school_name & "' and school_year= '" & school_year & "'"
 
             Con.Open() 'Open connection
 

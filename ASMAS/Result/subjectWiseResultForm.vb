@@ -162,7 +162,7 @@ Public Class subjectWiseResultForm
         Dim class_name = class_params(3)
         Dim school_year = class_params(1)
         Dim school_name = class_params(2)
-        present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
+        present = resultFunctions.checkIfPresent(school_name, school_year, current_student_id, terminal, class_name)
 
         If subjectCombo.SelectedIndex <> -1 Then
             Dim subjKey As String = resultFunctions.getSubjKey(subjectCombo.Text, class_name)
@@ -210,7 +210,7 @@ Public Class subjectWiseResultForm
         Dim school_name = class_params(2)
         Dim subjKey As String = resultFunctions.getSubjKey(subjectCombo.Text, class_name)
         Dim params As String() = {school_year, school_name, class_name, terminal, current_student_id, subjKey}
-        present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
+        present = resultFunctions.checkIfPresent(school_name, school_year, current_student_id, terminal, class_name)
         Dim subjMarksEntered = checkIfSubjMarksEntered(current_student_id, terminal, class_name, subjKey)
 
         If subjMarksEntered = True Then

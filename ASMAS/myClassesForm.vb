@@ -196,6 +196,23 @@ Public Class myClassesForm
         subjectResult.Show()
     End Sub
 
+    Private Sub AttendanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AttendanceToolStripMenuItem.Click
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
+
+        Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
+        Dim class_id = myClassesListView.Items(ItemIndex).SubItems(0).Text
+        Dim year_num = myClassesListView.Items(ItemIndex).SubItems(1).Text
+        Dim school_name = myClassesListView.Items(ItemIndex).SubItems(2).Text
+        Dim className = myClassesListView.Items(ItemIndex).SubItems(3).Text
+
+        Dim params As String() = {class_id, year_num, school_name, className}
+
+        Dim _attendance As New addAttendance(params)
+        _attendance.Show()
+    End Sub
+
     Private Sub AssignToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AssignToolStripMenuItem.Click
         SubjectTeacherToolStripMenuItem.Visible = True
         Dim ItemIndex As Integer = myClassesListView.SelectedIndices(0) 'Grab the selected Index
@@ -232,4 +249,6 @@ Public Class myClassesForm
     Private Sub refreshBtn_Click(sender As Object, e As EventArgs) Handles refreshBtn.Click
         refreshLV()
     End Sub
+
+
 End Class

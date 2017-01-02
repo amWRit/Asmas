@@ -44,9 +44,11 @@ Public Class addResultPrimaryForm
 
         Dim reg_number = studentRegCombo.Text
         Dim terminal = termCombo.Text
+        Dim school_name = contents(3)
+        Dim school_year = contents(1)
         Dim class_name = contents(3)
 
-        Dim val As String() = resultFunctions.findStudentName(terminal, class_name, reg_number)
+        Dim val As String() = resultFunctions.findStudentName(school_name, school_year, terminal, class_name, reg_number)
         studentName.Text = val(0)
         If val(2) = "present" Then
             saveBtn.Enabled = False
@@ -62,9 +64,11 @@ Public Class addResultPrimaryForm
         If studentRegCombo.SelectedIndex <> -1 Then
             Dim reg_number = studentRegCombo.Text
             Dim terminal = termCombo.Text
+            Dim school_name = contents(3)
+            Dim school_year = contents(1)
             Dim class_name = contents(3)
 
-            Dim val As String() = resultFunctions.findStudentName(terminal, class_name, reg_number)
+            Dim val As String() = resultFunctions.findStudentName(school_name, school_year, terminal, class_name, reg_number)
             studentName.Text = val(0)
             If val(2) = "present" Then
                 saveBtn.Enabled = False

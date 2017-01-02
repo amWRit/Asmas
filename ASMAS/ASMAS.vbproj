@@ -172,6 +172,12 @@
     <Compile Include="DBConnection.vb" />
     <Compile Include="Models\MyClass.vb" />
     <Compile Include="Models\School.vb" />
+    <Compile Include="Result\addAttendance.Designer.vb">
+      <DependentUpon>addAttendance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Result\addAttendance.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Result\addResultLowSecForm.Designer.vb">
       <DependentUpon>addResultLowSecForm.vb</DependentUpon>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="createAdminForm.resx">
       <DependentUpon>createAdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Result\addAttendance.resx">
+      <DependentUpon>addAttendance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Result\addResultLowSecForm.resx">
       <DependentUpon>addResultLowSecForm.vb</DependentUpon>

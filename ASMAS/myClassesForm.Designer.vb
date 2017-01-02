@@ -41,6 +41,7 @@ Partial Class myClassesForm
         Me.ViewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResultAnalysisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.refreshBtn = New System.Windows.Forms.Button()
+        Me.AttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.myClassesContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,7 +74,7 @@ Partial Class myClassesForm
         '
         Me.myClassesContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewToolStripMenuItem, Me.EditToolStripMenuItem, Me.DeleteToolStripMenuItem, Me.ViewStudentsToolStripMenuItem, Me.AddStudentToolStripMenuItem, Me.ViewResultsToolStripMenuItem, Me.AddResultToolStripMenuItem, Me.SubjectTeacherToolStripMenuItem})
         Me.myClassesContextMenu.Name = "searchResultContextMenu"
-        Me.myClassesContextMenu.Size = New System.Drawing.Size(158, 180)
+        Me.myClassesContextMenu.Size = New System.Drawing.Size(158, 202)
         '
         'ViewToolStripMenuItem
         '
@@ -114,7 +115,7 @@ Partial Class myClassesForm
         '
         'AddResultToolStripMenuItem
         '
-        Me.AddResultToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentWiseToolStripMenuItem, Me.SubjectWiseToolStripMenuItem})
+        Me.AddResultToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentWiseToolStripMenuItem, Me.SubjectWiseToolStripMenuItem, Me.AttendanceToolStripMenuItem})
         Me.AddResultToolStripMenuItem.Name = "AddResultToolStripMenuItem"
         Me.AddResultToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
         Me.AddResultToolStripMenuItem.Text = "Add Result"
@@ -122,13 +123,13 @@ Partial Class myClassesForm
         'StudentWiseToolStripMenuItem
         '
         Me.StudentWiseToolStripMenuItem.Name = "StudentWiseToolStripMenuItem"
-        Me.StudentWiseToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.StudentWiseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.StudentWiseToolStripMenuItem.Text = "Student wise"
         '
         'SubjectWiseToolStripMenuItem
         '
         Me.SubjectWiseToolStripMenuItem.Name = "SubjectWiseToolStripMenuItem"
-        Me.SubjectWiseToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.SubjectWiseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SubjectWiseToolStripMenuItem.Text = "Subject wise"
         '
         'SubjectTeacherToolStripMenuItem
@@ -165,6 +166,12 @@ Partial Class myClassesForm
         Me.refreshBtn.Text = "Refresh"
         Me.refreshBtn.UseVisualStyleBackColor = True
         '
+        'AttendanceToolStripMenuItem
+        '
+        Me.AttendanceToolStripMenuItem.Name = "AttendanceToolStripMenuItem"
+        Me.AttendanceToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AttendanceToolStripMenuItem.Text = "Attendance"
+        '
         'myClassesForm
         '
         Me.AccessibleName = ""
@@ -200,4 +207,5 @@ Partial Class myClassesForm
     Friend WithEvents ViewToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ResultAnalysisToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents refreshBtn As Button
+    Friend WithEvents AttendanceToolStripMenuItem As ToolStripMenuItem
 End Class

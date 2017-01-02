@@ -659,7 +659,7 @@ Partial Class addResultLowSecForm
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label36.Location = New System.Drawing.Point(542, 208)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(22, 16)
+        Me.Label36.Size = New System.Drawing.Size(21, 16)
         Me.Label36.TabIndex = 153
         Me.Label36.Text = "%"
         '

@@ -750,7 +750,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Attendance</Value>
+                            <Value>Attendance (%)</Value>
                             <Style>
                               <FontWeight>Bold</FontWeight>
                             </Style>
