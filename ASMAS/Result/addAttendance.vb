@@ -206,8 +206,8 @@ Public Class addAttendance
         Dim class_name = class_params(3)
         Dim school_year = class_params(1)
         Dim school_name = class_params(2)
-        'Dim present As Boolean = False
-        'present = resultFunctions.checkIfPresent(current_student_id, terminal, class_name)
+        Dim present As Boolean = False
+        present = resultFunctions.checkIfPresent(school_name, school_year, current_student_id, terminal, class_name)
         'if present, update, else add new
         Dim attSQL = ""
 
@@ -237,9 +237,9 @@ Public Class addAttendance
                 cmd.Parameters.AddWithValue("@school_year", school_year)
                 cmd.Parameters.AddWithValue("@school_name", school_name)
                 cmd.Parameters.AddWithValue("@terminal", terminal)
+                cmd.Parameters.AddWithValue("@attendance", percAttendance)
             End If
-            percAtt.Text = percAttendance.ToString
-            'cmd.Parameters.AddWithValue("@attendance", percAttendance)
+
             cmd.ExecuteNonQuery()
 
             Dim I As Integer = MsgBox("Successful", MsgBoxStyle.Information, command)
