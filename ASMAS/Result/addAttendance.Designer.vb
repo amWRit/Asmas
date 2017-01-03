@@ -117,11 +117,11 @@ Partial Class addAttendance
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.4!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(184, 107)
+        Me.Label6.Location = New System.Drawing.Point(136, 107)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(112, 15)
+        Me.Label6.Size = New System.Drawing.Size(144, 15)
         Me.Label6.TabIndex = 225
-        Me.Label6.Text = "Marks Entered? "
+        Me.Label6.Text = "Attendance Entered? "
         '
         'GroupBox1
         '

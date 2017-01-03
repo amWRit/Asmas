@@ -207,7 +207,13 @@ Public Class classResults
         Dim year_num = contents(1)
         Dim school_name = contents(2)
         refreshLV(class_name, termCombo.Text)
-        resultFunctions.updateCalculations(tempDS, school_name, year_num, class_name)
+        If termCombo.Text <> "SendUp" Then
+            resultFunctions.updateCalculations(tempDS, school_name, year_num, class_name)
+        Else
+            'calc sendup marks
+            Dim class_id = contents(0)
+            sendUpResult.sendupCalculations(termCombo.Text, school_name, year_num, class_name, class_id)
+        End If
         refreshLV(class_name, termCombo.Text)
     End Sub
 

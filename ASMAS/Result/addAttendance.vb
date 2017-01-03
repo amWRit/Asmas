@@ -47,10 +47,12 @@ Public Class addAttendance
         Dim checkAtt = checkIfAttendanceEntered(params)
 
         If present = True And checkAtt = True Then
+            presentCheckLabel.Text = "Yes"
+            presentCheckLabel.ForeColor = Color.ForestGreen
             loadAttendance(params)
         Else
-            'presentCheckLabel.Text = "No"
-            'presentCheckLabel.ForeColor = Color.Red
+            presentCheckLabel.Text = "No"
+            presentCheckLabel.ForeColor = Color.Red
             presentDays.Text = "0"
             percAtt.Text = "0"
         End If
@@ -104,12 +106,13 @@ Public Class addAttendance
         Dim attEntered = checkIfAttendanceEntered(params)
 
         If attEntered = True Then
-            'presentCheckLabel.Text = "Yes"
-            'presentCheckLabel.ForeColor = Color.ForestGreen
+            presentCheckLabel.Text = "Yes"
+            presentCheckLabel.ForeColor = Color.ForestGreen
             If present = True Then loadAttendance(params)
+            presentDays.Text = "0"
         Else
-            'presentCheckLabel.Text = "No"
-            'presentCheckLabel.ForeColor = Color.Red
+            presentCheckLabel.Text = "No"
+            presentCheckLabel.ForeColor = Color.Red
             presentDays.Text = "0"
             percAtt.Text = "0"
         End If

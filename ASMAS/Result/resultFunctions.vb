@@ -111,7 +111,7 @@ Public Class resultFunctions
         Dim DS = New DataSet
         Dim SQL As String = ""
         Try
-            SQL = "SELECT * from results_" & class_name.ToString & " where student_id=" & student_id & " and school_name='" & school_name & "' and school_year= '" & school_year & "'"
+            SQL = "SELECT * from results_" & class_name.ToString & " where student_id=" & student_id & " and school_name='" & school_name & "' and school_year= '" & school_year & "' and terminal='" & terminal & "'"
 
             Con.Open() 'Open connection
 
@@ -941,4 +941,6 @@ order by student_id"
             Con.Close()
         End Try
     End Sub
+
+
 End Class

@@ -279,6 +279,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Result\resultFunctions.vb" />
+    <Compile Include="Result\sendUpResult.vb" />
     <Compile Include="Result\studentsUnderLocosForm.Designer.vb">
       <DependentUpon>studentsUnderLocosForm.vb</DependentUpon>
     </Compile>
