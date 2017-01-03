@@ -157,7 +157,9 @@ Public Class sendUpResult
         Dim cnt = 1 'to prevent 0/0 error
         Dim attPerc As Double = 0
         For i As Integer = 0 To resultDataRows.Count - 1
-            If resultDataRows(i).Item("attendance").ToString <> "0" Then
+            Dim att = resultDataRows(i).Item("attendance").ToString
+            If att = "" Then att = "0"
+            If att <> "0" Then
                 attPerc += CDbl(resultDataRows(i).Item("attendance").ToString)
                 cnt += 1
             End If

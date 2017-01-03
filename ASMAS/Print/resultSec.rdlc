@@ -6461,9 +6461,6 @@ Point</Value>
               <Width>1.22817in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.63917in</Width>
-            </TablixColumn>
-            <TablixColumn>
               <Width>0.96799in</Width>
             </TablixColumn>
             <TablixColumn>
@@ -6473,7 +6470,7 @@ Point</Value>
               <Width>1.10754in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.01644in</Width>
+              <Width>2.6556in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -6499,49 +6496,6 @@ Point</Value>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox1436</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Style>Solid</Style>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Style>Solid</Style>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Style>Solid</Style>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox1437">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=First(Fields!grade.Value, "resultsSec")</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox1437</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -6661,7 +6615,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=First(Fields!attendance.Value, "resultsSec")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -6693,6 +6647,7 @@ Point</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -6762,55 +6717,6 @@ Point</Value>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox2</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Style>Solid</Style>
-                      </Border>
-                      <TopBorder>
-                        <Style>Solid</Style>
-                      </TopBorder>
-                      <BottomBorder>
-                        <Style>Solid</Style>
-                      </BottomBorder>
-                      <LeftBorder>
-                        <Style>Solid</Style>
-                      </LeftBorder>
-                      <RightBorder>
-                        <Style>Solid</Style>
-                      </RightBorder>
-                      <BackgroundColor>Silver</BackgroundColor>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixHeader>
-            </TablixMember>
-            <TablixMember>
-              <TablixHeader>
-                <Size>0.25in</Size>
-                <CellContents>
-                  <Textbox Name="Textbox172">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>Grade</Value>
-                            <Style>
-                              <FontWeight>Bold</FontWeight>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style>
-                          <TextAlign>Center</TextAlign>
-                        </Style>
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox11</rd:DefaultName>
                     <Style>
                       <Border>
                         <Style>Solid</Style>
@@ -7043,7 +6949,7 @@ Point</Value>
         <Top>4.24062in</Top>
         <Left>0.34316in</Left>
         <Height>0.5in</Height>
-        <Width>6.6668in</Width>
+        <Width>6.66679in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>

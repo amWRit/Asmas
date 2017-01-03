@@ -2646,7 +2646,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>75</Value>
+                              <Value>50</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2689,7 +2689,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>25</Value>
+                              <Value>50</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2732,7 +2732,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>30</Value>
+                              <Value>20</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -2775,7 +2775,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>10</Value>
+                              <Value>20</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -7076,9 +7076,6 @@ Point</Value>
               <Width>1.22817in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.63917in</Width>
-            </TablixColumn>
-            <TablixColumn>
               <Width>0.96799in</Width>
             </TablixColumn>
             <TablixColumn>
@@ -7088,7 +7085,7 @@ Point</Value>
               <Width>1.10754in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.01644in</Width>
+              <Width>2.6556in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -7114,49 +7111,6 @@ Point</Value>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox352</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <TopBorder>
-                          <Style>Solid</Style>
-                        </TopBorder>
-                        <BottomBorder>
-                          <Style>Solid</Style>
-                        </BottomBorder>
-                        <LeftBorder>
-                          <Style>Solid</Style>
-                        </LeftBorder>
-                        <RightBorder>
-                          <Style>Solid</Style>
-                        </RightBorder>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox353">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=First(Fields!grade.Value, "resultLowSec")</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox353</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -7276,7 +7230,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=First(Fields!attendance.Value, "resultLowSec")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -7378,55 +7332,6 @@ Point</Value>
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>Textbox2</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Style>Solid</Style>
-                      </Border>
-                      <TopBorder>
-                        <Style>Solid</Style>
-                      </TopBorder>
-                      <BottomBorder>
-                        <Style>Solid</Style>
-                      </BottomBorder>
-                      <LeftBorder>
-                        <Style>Solid</Style>
-                      </LeftBorder>
-                      <RightBorder>
-                        <Style>Solid</Style>
-                      </RightBorder>
-                      <BackgroundColor>Silver</BackgroundColor>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixHeader>
-            </TablixMember>
-            <TablixMember>
-              <TablixHeader>
-                <Size>0.25in</Size>
-                <CellContents>
-                  <Textbox Name="Textbox172">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>Grade</Value>
-                            <Style>
-                              <FontWeight>Bold</FontWeight>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style>
-                          <TextAlign>Center</TextAlign>
-                        </Style>
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox11</rd:DefaultName>
                     <Style>
                       <Border>
                         <Style>Solid</Style>
@@ -7659,7 +7564,7 @@ Point</Value>
         <Top>4.38014in</Top>
         <Left>0.45536in</Left>
         <Height>0.5in</Height>
-        <Width>6.6668in</Width>
+        <Width>6.66679in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
