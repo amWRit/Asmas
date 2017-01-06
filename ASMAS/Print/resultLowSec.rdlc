@@ -7631,7 +7631,7 @@ Point</Value>
               <Width>0.50872in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.95381in</Width>
+              <Width>2.11455in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.53911in</Width>
@@ -7640,13 +7640,7 @@ Point</Value>
               <Width>0.37948in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.9653in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>0.32292in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>0.34874in</Width>
+              <Width>1.45079in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -7877,79 +7871,12 @@ Point</Value>
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox3">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>RN</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox3</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Silver</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox24">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox24</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember />
-            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -7967,7 +7894,7 @@ Point</Value>
         <Top>3.25647in</Top>
         <Left>0.45536in</Left>
         <Height>0.25in</Height>
-        <Width>6.6668in</Width>
+        <Width>6.64137in</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -8002,7 +7929,7 @@ Point</Value>
       <Line Name="Line4">
         <Top>0.18798in</Top>
         <Left>0.32813in</Left>
-        <Height>10.69591in</Height>
+        <Height>10.81202in</Height>
         <Width>0in</Width>
         <ZIndex>13</ZIndex>
         <Style>
@@ -8014,7 +7941,7 @@ Point</Value>
       <Line Name="Line5">
         <Top>0.18798in</Top>
         <Left>7.19626in</Left>
-        <Height>10.69591in</Height>
+        <Height>10.81202in</Height>
         <Width>0in</Width>
         <ZIndex>14</ZIndex>
         <Style>
@@ -8610,7 +8537,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Interval in Perecent</Value>
+                              <Value>Interval in Percent</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -8977,7 +8904,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>3,6</Value>
+                              <Value>3.6</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

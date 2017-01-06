@@ -538,7 +538,7 @@
               <Width>0.50872in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.85342in</Width>
+              <Width>2.11455in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.53911in</Width>
@@ -547,13 +547,7 @@
               <Width>0.39455in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.05061in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>0.27083in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>0.4008in</Width>
+              <Width>1.46424in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -784,79 +778,12 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox7">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>RN</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Silver</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox12">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox12</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember />
-            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -874,7 +801,7 @@
         <Top>3.18953in</Top>
         <Left>0.31649in</Left>
         <Height>0.25in</Height>
-        <Width>6.66676in</Width>
+        <Width>6.66989in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -7496,7 +7423,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Interval in Perecent</Value>
+                              <Value>Interval in Percent</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -7863,7 +7790,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>3,6</Value>
+                              <Value>3.6</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

@@ -5885,7 +5885,7 @@ Point</Value>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>Eph</Value>
+                                <Value>HPE</Value>
                                 <Style>
                                   <FontWeight>Bold</FontWeight>
                                 </Style>
@@ -6770,7 +6770,7 @@ Point</Value>
               <Width>0.50872in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.81373in</Width>
+              <Width>2.11455in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.53911in</Width>
@@ -6779,13 +6779,7 @@ Point</Value>
               <Width>0.39455in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.0903in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>0.32292in</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>0.34874in</Width>
+              <Width>1.46114in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -7016,79 +7010,12 @@ Point</Value>
                     </Textbox>
                   </CellContents>
                 </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox7">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>RN</Value>
-                              <Style>
-                                <FontWeight>Bold</FontWeight>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>Silver</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox8">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value />
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox8</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
               </TablixCells>
             </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember />
-            <TablixMember />
             <TablixMember />
             <TablixMember />
             <TablixMember />
@@ -7141,7 +7068,7 @@ Point</Value>
       <Line Name="Line4">
         <Top>0.21139in</Top>
         <Left>0.21593in</Left>
-        <Height>10.575in</Height>
+        <Height>10.67917in</Height>
         <Width>0in</Width>
         <ZIndex>5</ZIndex>
         <Style>
@@ -7153,7 +7080,7 @@ Point</Value>
       <Line Name="Line5">
         <Top>0.23596in</Top>
         <Left>7.08406in</Left>
-        <Height>10.55043in</Height>
+        <Height>10.6546in</Height>
         <Width>0in</Width>
         <ZIndex>6</ZIndex>
         <Style>
@@ -8043,7 +7970,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Interval in Perecent</Value>
+                              <Value>Interval in Percent</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -8410,7 +8337,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>3,6</Value>
+                              <Value>3.6</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
