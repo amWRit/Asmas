@@ -147,4 +147,7 @@
         End If
     End Sub
 
+    Private Sub MySubjectAnalysisToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MySubjectAnalysisToolStripMenuItem.Click
+        mySubjectAnalysisForm.Show()
+    End Sub
 End Class
