@@ -205,14 +205,18 @@ Public Class viewResultsForm
         Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
         Dim school_info = myFunctions.getSchoolNameAddress(school_name)
 
+        Dim school_id = School.schoolId(school_name)
+        Dim year_id = Year.getYearID(school_id.ToString, year_num)
+        Dim class_id = myFunctions.getClassIdOf(school_id.ToString, year_id, class_name)
+
         If primary.Contains(class_name) Then
-            Dim printForm As New printResultsPrimaryForm(tempDS, index, class_name, class_teacher, school_info)
+            Dim printForm As New printResultsPrimaryForm(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         ElseIf lowSec.Contains(class_name) Then
-            Dim printForm As New printResultLowSecForm(tempDS, index, class_name, class_teacher, school_info)
+            Dim printForm As New printResultLowSecForm(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         ElseIf sec.Contains(class_name) Then
-            Dim printForm As New printResultSecForm(tempDS, index, class_name, class_teacher, school_info)
+            Dim printForm As New printResultSecForm(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         End If
     End Sub

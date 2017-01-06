@@ -9,6 +9,7 @@ Public Class printResultSecForm
     Public resultDS As DataSet
     Public _index As Integer
     Public _class_name As String
+    Public _class_id As String
     Public _class_teacher As String
     Public _school_info As String()
 
@@ -19,18 +20,19 @@ Public Class printResultSecForm
         Me.secReportViewer.RefreshReport()
     End Sub
 
-    Public Sub New(ByVal tempDS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String, school_info As String())
+    Public Sub New(ByVal tempDS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String, school_info As String(), class_id As String)
         MyBase.New
         ' This call is required by the designer.
         InitializeComponent()
         resultDS = tempDS
         _index = index
+        _class_id = class_id
         _class_name = class_name
         _class_teacher = class_teacher
         _school_info = school_info
         Dim student_id = tempDS.Tables(0).Rows(index)("student_id")
         Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
-        myFunctions.prepareTempTable(resultDS, _index, class_name, class_teacher, school_info, student_info)
+        myFunctions.prepareTempTable(resultDS, _index, class_name, class_teacher, school_info, student_info, _class_id)
         If resultDS.Tables(0).Rows.Count = 1 Then nextBtn.Enabled = False
         prepareReport()
     End Sub
@@ -41,7 +43,7 @@ Public Class printResultSecForm
         If _index = resultDS.Tables(0).Rows.Count - 1 Then nextBtn.Enabled = False
         Dim student_id = resultDS.Tables(0).Rows(_index)("student_id")
         Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
-        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info, student_info)
+        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info, student_info, _class_id)
         prepareReport()
     End Sub
 
@@ -51,7 +53,7 @@ Public Class printResultSecForm
         If _index = 0 Then previousBtn.Enabled = False
         Dim student_id = resultDS.Tables(0).Rows(_index)("student_id")
         Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
-        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info, student_info)
+        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info, student_info, _class_id)
         prepareReport()
     End Sub
 

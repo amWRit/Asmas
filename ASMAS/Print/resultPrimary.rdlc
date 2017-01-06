@@ -762,7 +762,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!class.Value, "resultPrimary")="1","One", IIf(First(Fields!class.Value, "resultPrimary")="2","Two", IIf(First(Fields!class.Value, "resultPrimary")="3","Three", IIf(First(Fields!class.Value, "resultPrimary")="4","Four", IIf(First(Fields!class.Value, "resultPrimary")="5","Five", IIf(First(Fields!class.Value, "resultPrimary")="6E","Six English", IIf(First(Fields!class.Value, "resultPrimary")="6N","Six Nepali", IIf(First(Fields!class.Value, "resultPrimary")="7E","Seven English", IIf(First(Fields!class.Value, "resultPrimary")="7N","Seven Nepali", IIf(First(Fields!class.Value, "resultPrimary")="8E","Eight English", IIf(First(Fields!class.Value, "resultPrimary")="8N","Eight Nepali", IIf(First(Fields!class.Value, "resultPrimary")="9N","Nine Nepali", IIf(First(Fields!class.Value, "resultPrimary")="9E","Nine English", IIf(First(Fields!class.Value, "resultPrimary")="10A","Ten Active", IIf(First(Fields!class.Value, "resultPrimary")="10E","Ten Energetic", IIf(First(Fields!class.Value, "resultPrimary")="10En","Ten English", IIf(First(Fields!class.Value, "resultPrimary")="10N","Ten Nepali","NTH")))))))))))))))))</Value>
+                              <Value>=First(Fields!class_full_name.Value, "resultPrimary")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -6982,7 +6982,6 @@ Point</Value>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -9024,7 +9023,7 @@ Point</Value>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Today()</Value>
+                <Value>=CDate(Today()).ToString("MM/dd/yyyy")</Value>
                 <Style>
                   <FontWeight>Normal</FontWeight>
                 </Style>
@@ -9370,6 +9369,10 @@ Point</Value>
         </Field>
         <Field Name="p_address">
           <DataField>p_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="class_full_name">
+          <DataField>class_full_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

@@ -28,12 +28,12 @@ Partial Class printResultsPrimaryForm
         Me.primaryReportViewer = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.nextBtn = New System.Windows.Forms.Button()
         Me.previousBtn = New System.Windows.Forms.Button()
-        Me.PrintDataSet = New ASMAS.printDataSet()
         Me.PrintResultsPrimaryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrintDataSet = New ASMAS.printDataSet()
         Me.PrintResultsPrimaryTableAdapter = New ASMAS.printDataSetTableAdapters.printResultsPrimaryTableAdapter()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TerseDataSet
@@ -72,15 +72,15 @@ Partial Class printResultsPrimaryForm
         Me.previousBtn.Text = "Previous"
         Me.previousBtn.UseVisualStyleBackColor = True
         '
-        'PrintDataSet
-        '
-        Me.PrintDataSet.DataSetName = "printDataSet"
-        Me.PrintDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'PrintResultsPrimaryBindingSource
         '
         Me.PrintResultsPrimaryBindingSource.DataMember = "printResultsPrimary"
         Me.PrintResultsPrimaryBindingSource.DataSource = Me.PrintDataSet
+        '
+        'PrintDataSet
+        '
+        Me.PrintDataSet.DataSetName = "printDataSet"
+        Me.PrintDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'PrintResultsPrimaryTableAdapter
         '
@@ -98,8 +98,8 @@ Partial Class printResultsPrimaryForm
         Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

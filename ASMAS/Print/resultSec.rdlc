@@ -6994,7 +6994,7 @@ Point</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(First(Fields!class.Value, "resultsSec")="1","One", IIf(First(Fields!class.Value, "resultsSec")="2","Two", IIf(First(Fields!class.Value, "resultsSec")="3","Three", IIf(First(Fields!class.Value, "resultsSec")="4","Four", IIf(First(Fields!class.Value, "resultsSec")="5","Five", IIf(First(Fields!class.Value, "resultsSec")="6E","Six English", IIf(First(Fields!class.Value, "resultsSec")="6N","Six Nepali", IIf(First(Fields!class.Value, "resultsSec")="7E","Seven English", IIf(First(Fields!class.Value, "resultsSec")="7N","Seven Nepali", IIf(First(Fields!class.Value, "resultsSec")="8E","Eight English", IIf(First(Fields!class.Value, "resultsSec")="8N","Eight Nepali", IIf(First(Fields!class.Value, "resultsSec")="9N","Nine Nepali", IIf(First(Fields!class.Value, "resultsSec")="9E","Nine English", IIf(First(Fields!class.Value, "resultsSec")="10A","Ten Active", IIf(First(Fields!class.Value, "resultsSec")="10E","Ten Energetic", IIf(First(Fields!class.Value, "resultsSec")="10En","Ten English", IIf(First(Fields!class.Value, "resultsSec")="10N","Ten Nepali","NTH")))))))))))))))))</Value>
+                              <Value>=First(Fields!class_full_name.Value, "resultsSec")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -9570,7 +9570,7 @@ Point</Value>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Today()</Value>
+                <Value>=CDate(Today()).ToString("MM/dd/yyyy")</Value>
                 <Style>
                   <FontWeight>Normal</FontWeight>
                 </Style>
@@ -9945,6 +9945,10 @@ Point</Value>
         </Field>
         <Field Name="p_address">
           <DataField>p_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="class_full_name">
+          <DataField>class_full_name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

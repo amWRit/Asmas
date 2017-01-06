@@ -24,17 +24,27 @@ Partial Class printResultSecForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.PrintResultsSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrintDataSet = New ASMAS.printDataSet()
         Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.secReportViewer = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.nextBtn = New System.Windows.Forms.Button()
         Me.previousBtn = New System.Windows.Forms.Button()
-        Me.PrintDataSet = New ASMAS.printDataSet()
-        Me.PrintResultsSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PrintResultsSecTableAdapter = New ASMAS.printDataSetTableAdapters.printResultsSecTableAdapter()
-        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrintResultsSecBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'PrintResultsSecBindingSource
+        '
+        Me.PrintResultsSecBindingSource.DataMember = "printResultsSec"
+        Me.PrintResultsSecBindingSource.DataSource = Me.PrintDataSet
+        '
+        'PrintDataSet
+        '
+        Me.PrintDataSet.DataSetName = "printDataSet"
+        Me.PrintDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TerseDataSet
         '
@@ -72,16 +82,6 @@ Partial Class printResultSecForm
         Me.previousBtn.Text = "Previous"
         Me.previousBtn.UseVisualStyleBackColor = True
         '
-        'PrintDataSet
-        '
-        Me.PrintDataSet.DataSetName = "printDataSet"
-        Me.PrintDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PrintResultsSecBindingSource
-        '
-        Me.PrintResultsSecBindingSource.DataMember = "printResultsSec"
-        Me.PrintResultsSecBindingSource.DataSource = Me.PrintDataSet
-        '
         'PrintResultsSecTableAdapter
         '
         Me.PrintResultsSecTableAdapter.ClearBeforeFill = True
@@ -97,9 +97,9 @@ Partial Class printResultSecForm
         Me.Name = "printResultSecForm"
         Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrintResultsSecBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
