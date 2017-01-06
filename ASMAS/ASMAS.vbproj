@@ -172,6 +172,11 @@
     <Compile Include="DBConnection.vb" />
     <Compile Include="Models\MyClass.vb" />
     <Compile Include="Models\School.vb" />
+    <Compile Include="printDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>printDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Result\addAttendance.Designer.vb">
       <DependentUpon>addAttendance.vb</DependentUpon>
     </Compile>
@@ -513,6 +518,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="printDataSet1.xsc">
+      <DependentUpon>printDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="printDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>printDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="printDataSet1.xss">
+      <DependentUpon>printDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="TerseDataSet.xsc">
       <DependentUpon>TerseDataSet.xsd</DependentUpon>
     </None>

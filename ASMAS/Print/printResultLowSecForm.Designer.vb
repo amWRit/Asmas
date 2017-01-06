@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class printResultLowSecForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,45 +20,31 @@ Partial Class printResultLowSecForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.printResultsLowSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.printResultsLowSecTableAdapter = New ASMAS.TerseDataSetTableAdapters.printResultsLowSecTableAdapter()
         Me.previousBtn = New System.Windows.Forms.Button()
         Me.nextBtn = New System.Windows.Forms.Button()
-        CType(Me.printResultsLowSecBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.printDataSet = New ASMAS.printDataSet()
+        Me.PrintResultsLowSecBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrintResultsLowSecTableAdapter = New ASMAS.printDataSetTableAdapters.printResultsLowSecTableAdapter()
+        CType(Me.printDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintResultsLowSecBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'printResultsLowSecBindingSource
-        '
-        Me.printResultsLowSecBindingSource.DataMember = "printResultsLowSec"
-        Me.printResultsLowSecBindingSource.DataSource = Me.TerseDataSet
-        '
-        'TerseDataSet
-        '
-        Me.TerseDataSet.DataSetName = "TerseDataSet"
-        Me.TerseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom
         ReportDataSource1.Name = "resultLowSec"
-        ReportDataSource1.Value = Me.printResultsLowSecBindingSource
+        ReportDataSource1.Value = Me.PrintResultsLowSecBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "ASMAS.resultLowSec.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 67)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.Size = New System.Drawing.Size(1008, 662)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'printResultsLowSecTableAdapter
-        '
-        Me.printResultsLowSecTableAdapter.ClearBeforeFill = True
         '
         'previousBtn
         '
@@ -79,6 +65,20 @@ Partial Class printResultLowSecForm
         Me.nextBtn.Text = "Next"
         Me.nextBtn.UseVisualStyleBackColor = True
         '
+        'printDataSet
+        '
+        Me.printDataSet.DataSetName = "printDataSet"
+        Me.printDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PrintResultsLowSecBindingSource
+        '
+        Me.PrintResultsLowSecBindingSource.DataMember = "printResultsLowSec"
+        Me.PrintResultsLowSecBindingSource.DataSource = Me.printDataSet
+        '
+        'PrintResultsLowSecTableAdapter
+        '
+        Me.PrintResultsLowSecTableAdapter.ClearBeforeFill = True
+        '
         'printResultLowSecForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -90,16 +90,16 @@ Partial Class printResultLowSecForm
         Me.Name = "printResultLowSecForm"
         Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.printResultsLowSecBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.printDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintResultsLowSecBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents printResultsLowSecBindingSource As BindingSource
-    Friend WithEvents TerseDataSet As TerseDataSet
-    Friend WithEvents printResultsLowSecTableAdapter As TerseDataSetTableAdapters.printResultsLowSecTableAdapter
     Friend WithEvents previousBtn As Button
     Friend WithEvents nextBtn As Button
+    Friend WithEvents printDataSet As printDataSet
+    Friend WithEvents PrintResultsLowSecBindingSource As BindingSource
+    Friend WithEvents PrintResultsLowSecTableAdapter As printDataSetTableAdapters.printResultsLowSecTableAdapter
 End Class

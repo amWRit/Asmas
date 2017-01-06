@@ -24,20 +24,17 @@ Partial Class printResultsPrimaryForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.printResultsPrimaryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TerseDataSet = New ASMAS.TerseDataSet()
         Me.primaryReportViewer = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.nextBtn = New System.Windows.Forms.Button()
         Me.previousBtn = New System.Windows.Forms.Button()
-        Me.printResultsPrimaryTableAdapter = New ASMAS.TerseDataSetTableAdapters.printResultsPrimaryTableAdapter()
-        CType(Me.printResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PrintDataSet = New ASMAS.printDataSet()
+        Me.PrintResultsPrimaryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrintResultsPrimaryTableAdapter = New ASMAS.printDataSetTableAdapters.printResultsPrimaryTableAdapter()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrintResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'printResultsPrimaryBindingSource
-        '
-        Me.printResultsPrimaryBindingSource.DataMember = "printResultsPrimary"
-        Me.printResultsPrimaryBindingSource.DataSource = Me.TerseDataSet
         '
         'TerseDataSet
         '
@@ -48,7 +45,7 @@ Partial Class printResultsPrimaryForm
         '
         Me.primaryReportViewer.Dock = System.Windows.Forms.DockStyle.Bottom
         ReportDataSource1.Name = "resultPrimary"
-        ReportDataSource1.Value = Me.printResultsPrimaryBindingSource
+        ReportDataSource1.Value = Me.PrintResultsPrimaryBindingSource
         Me.primaryReportViewer.LocalReport.DataSources.Add(ReportDataSource1)
         Me.primaryReportViewer.LocalReport.ReportEmbeddedResource = "ASMAS.resultPrimary.rdlc"
         Me.primaryReportViewer.Location = New System.Drawing.Point(0, 71)
@@ -75,9 +72,19 @@ Partial Class printResultsPrimaryForm
         Me.previousBtn.Text = "Previous"
         Me.previousBtn.UseVisualStyleBackColor = True
         '
-        'printResultsPrimaryTableAdapter
+        'PrintDataSet
         '
-        Me.printResultsPrimaryTableAdapter.ClearBeforeFill = True
+        Me.PrintDataSet.DataSetName = "printDataSet"
+        Me.PrintDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PrintResultsPrimaryBindingSource
+        '
+        Me.PrintResultsPrimaryBindingSource.DataMember = "printResultsPrimary"
+        Me.PrintResultsPrimaryBindingSource.DataSource = Me.PrintDataSet
+        '
+        'PrintResultsPrimaryTableAdapter
+        '
+        Me.PrintResultsPrimaryTableAdapter.ClearBeforeFill = True
         '
         'printResultsPrimaryForm
         '
@@ -90,16 +97,18 @@ Partial Class printResultsPrimaryForm
         Me.Name = "printResultsPrimaryForm"
         Me.Text = "Print Results"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.printResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrintResultsPrimaryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents primaryReportViewer As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents printResultsPrimaryBindingSource As BindingSource
     Friend WithEvents TerseDataSet As TerseDataSet
     Friend WithEvents nextBtn As Button
     Friend WithEvents previousBtn As Button
-    Friend WithEvents printResultsPrimaryTableAdapter As TerseDataSetTableAdapters.printResultsPrimaryTableAdapter
+    Friend WithEvents PrintDataSet As printDataSet
+    Friend WithEvents PrintResultsPrimaryBindingSource As BindingSource
+    Friend WithEvents PrintResultsPrimaryTableAdapter As printDataSetTableAdapters.printResultsPrimaryTableAdapter
 End Class

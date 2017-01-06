@@ -183,8 +183,7 @@ Public Class classResults
         Dim school_name = contents(2)
 
         Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
-        Dim school_info = myFunctions.getSchoolNameAddress(school_name
-                                                           )
+        Dim school_info = myFunctions.getSchoolNameAddress(school_name)
         If primary.Contains(class_name) Then
             Dim printForm As New printResultsPrimaryForm(tempDS, index, class_name, class_teacher, school_info)
             printForm.Show()

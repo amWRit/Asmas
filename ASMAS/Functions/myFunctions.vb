@@ -24,7 +24,7 @@ Public Class myFunctions
     End Sub
 
     'prepare temp table for printing results - three different tables for three levels
-    Public Shared Sub prepareTempTable(ByVal DS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String, ByVal school_info As String())
+    Public Shared Sub prepareTempTable(ByVal DS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String, ByVal school_info As String(), ByVal student_info As String())
         Dim Con As System.Data.OleDb.OleDbConnection
 
         'add current class results' first row to tempTable
@@ -66,6 +66,14 @@ Public Class myFunctions
             cmd.Parameters.AddWithValue("@class_name", class_name)
             cmd.Parameters.AddWithValue("@school_full_name", school_info(0))
             cmd.Parameters.AddWithValue("@school_address", school_info(1))
+
+            '{reg_number, student_name, gender, admission_year, father_name, mother_name, dob, p_address}
+            cmd.Parameters.AddWithValue("@adm_year", student_info(3))
+            cmd.Parameters.AddWithValue("@gender", student_info(2))
+            cmd.Parameters.AddWithValue("@dob", student_info(6))
+            cmd.Parameters.AddWithValue("@father_name", student_info(4))
+            cmd.Parameters.AddWithValue("@mother_name", student_info(5))
+            cmd.Parameters.AddWithValue("@p_address", student_info(7))
 
             cmd.ExecuteNonQuery()
             Con.Close()
@@ -116,32 +124,32 @@ Public Class myFunctions
         Dim primarySQL As String = "INSERT INTO " & table_name & " ([student_id], [reg_number], [full_name] ,[school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
 [nep_th],[nep_th_g],[nep_pr],[nep_pr_g],[nep_total],[nep_total_g],[math_th],[math_th_g],[math_pr],[math_pr_g],[math_total],[math_total_g],[sci_th],[sci_th_g],[sci_pr],[sci_pr_g],[sci_total],[sci_total_g],
 [soc_th],[soc_th_g],[soc_pr],[soc_pr_g],[soc_total],[soc_total_g],[opt_eng_th],[opt_eng_th_g],[opt_eng_pr],[opt_eng_pr_g],[opt_eng_total],[opt_eng_total_g],[gk_conv_th],[gk_conv_th_g],[gk_conv_pr],[gk_conv_pr_g],[gk_conv_total],[gk_conv_total_g],
-[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point], [rank], [attendance], [class_teacher], [class], [school_full_name], [school_address]) 
+[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point], [rank], [attendance], [class_teacher], [class], [school_full_name], [school_address], [adm_year], [gender], [dob], [father_name], [mother_name], [p_address]) 
 VALUES
 (@student_id, @reg_number, @full_name, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
 @nep_total, @nep_total_g, @math_th, @math_th_g, @math_pr, @math_pr_g, @math_total, @math_total_g, @sci_th, @sci_th_g, @sci_pr, @sci_pr_g, @sci_total, @sci_total_g, 
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @opt_eng_th, @opt_eng_th_g, @opt_eng_pr, @opt_eng_pr_g, @opt_eng_total, @opt_eng_total_g, @gk_conv_th, @gk_conv_th_g, @gk_conv_pr, @gk_conv_pr_g, @gk_conv_total, @gk_conv_total_g, 
-@total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @rank, @attendance, @class_teacher, @class_name, @school_full_name, @school_address)"
+@total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @rank, @attendance, @class_teacher, @class_name, @school_full_name, @school_address, @adm_year, @gender, @dob, @father_name, @mother_name, @p_address)"
 
         Dim lowSecSQL = "INSERT INTO " & table_name & " ([student_id], [reg_number], [full_name] ,[school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
 [nep_th],[nep_th_g],[nep_pr],[nep_pr_g],[nep_total],[nep_total_g],[math_th],[math_th_g],[math_pr],[math_pr_g],[math_total],[math_total_g],[sci_th],[sci_th_g],[sci_pr],[sci_pr_g],[sci_total],[sci_total_g],
 [soc_th],[soc_th_g],[soc_pr],[soc_pr_g],[soc_total],[soc_total_g],[obt_th],[obt_th_g],[obt_pr],[obt_pr_g],[obt_total],[obt_total_g],[comp_th],[comp_th_g],[comp_pr],[comp_pr_g],[comp_total],[comp_total_g],
-[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point], [rank], [attendance], [class_teacher], [class], [school_full_name], [school_address]) 
+[hea_th],[hea_th_g],[hea_pr],[hea_pr_g],[hea_total],[hea_total_g],[mor_th],[mor_th_g],[mor_pr],[mor_pr_g],[mor_total],[mor_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point], [rank], [attendance], [class_teacher], [class], [school_full_name], [school_address], [adm_year], [gender], [dob], [father_name], [mother_name], [p_address]) 
 VALUES
 (@student_id, @reg_number, @full_name, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
 @nep_total, @nep_total_g, @math_th, @math_th_g, @math_pr, @math_pr_g, @math_total, @math_total_g, @sci_th, @sci_th_g, @sci_pr, @sci_pr_g, @sci_total, @sci_total_g, 
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @obt_th, @obt_th_g, @obt_pr, @obt_pr_g, @obt_total, @obt_total_g, @comp_th, @comp_th_g, @comp_pr, @comp_pr_g, @comp_total, @comp_total_g, 
-@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @rank, @attendance, @class_teacher, @class_name, @school_full_name, @school_address)"
+@hea_th, @hea_th_g, @hea_pr, @hea_pr_g, @hea_total, @hea_total_g, @mor_th, @mor_th_g, @mor_pr, @mor_pr_g, @mor_total, @mor_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @rank, @attendance, @class_teacher, @class_name, @school_full_name, @school_address, @adm_year, @gender, @dob, @father_name, @mother_name, @p_address)"
 
         Dim secSQL As String = "INSERT INTO " & table_name & " ([student_id], [reg_number], [full_name],[school_year],[school_name],[terminal],[eng_th],[eng_th_g],[eng_pr],[eng_pr_g],[eng_total],[eng_total_g],
 [nep_th],[nep_th_g],[nep_pr],[nep_pr_g],[nep_total],[nep_total_g],[math_th],[math_th_g],[math_pr],[math_pr_g],[math_total],[math_total_g],[sci_th],[sci_th_g],[sci_pr],[sci_pr_g],[sci_total],[sci_total_g],
 [soc_th],[soc_th_g],[soc_pr],[soc_pr_g],[soc_total],[soc_total_g],[eph_th],[eph_th_g],[eph_pr],[eph_pr_g],[eph_total],[eph_total_g],[opt1_th],[opt1_th_g],[opt1_pr],[opt1_pr_g],[opt1_total],[opt1_total_g],
-[opt2_th],[opt2_th_g],[opt2_pr],[opt2_pr_g],[opt2_total],[opt2_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point], [opt1], [opt2], [rank], [attendance], [class_teacher], [class], [school_full_name], [school_address]) 
+[opt2_th],[opt2_th_g],[opt2_pr],[opt2_pr_g],[opt2_total],[opt2_total_g],[total_th],[total_th_g],[total_pr],[total_pr_g],[total],[percentage],[grade],[grade_point], [opt1], [opt2], [rank], [attendance], [class_teacher], [class], [school_full_name], [school_address], [adm_year], [gender], [dob], [father_name], [mother_name], [p_address]) 
 VALUES
 (@student_id, @reg_number, @full_name, @school_year, @school_name, @terminal, @eng_th, @eng_th_g, @eng_pr, @eng_pr_g, @eng_total, @eng_total_g, @nep_th, @nep_th_g, @nep_pr, @nep_pr_g,
 @nep_total, @nep_total_g, @math_th, @math_th_g, @math_pr, @math_pr_g, @math_total, @math_total_g, @sci_th, @sci_th_g, @sci_pr, @sci_pr_g, @sci_total, @sci_total_g, 
 @soc_th, @soc_th_g, @soc_pr, @soc_pr_g, @soc_total, @soc_total_g, @eph_th, @eph_th_g, @eph_pr, @eph_pr_g, @eph_total, @eph_total_g, @opt1_th, @opt1_th_g, @opt1_pr, @opt1_pr_g, @opt1_total, @opt1_total_g, 
-@opt2_th, @opt2_th_g, @opt2_pr, @opt2_pr_g, @opt2_total, @opt2_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @opt1, @opt2, @rank, @attendance, @class_teacher, @class_name, @school_full_name, @school_address)"
+@opt2_th, @opt2_th_g, @opt2_pr, @opt2_pr_g, @opt2_total, @opt2_total_g, @total_th, @total_th_g, @total_pr, @total_pr_g, @total, @percentage, @grade, @grade_point, @opt1, @opt2, @rank, @attendance, @class_teacher, @class_name, @school_full_name, @school_address, @adm_year, @gender, @dob, @father_name, @mother_name, @p_address)"
 
         Dim primary As String() = TheClass.primaryShortNames
         Dim lowSec As String() = TheClass.lowSecShortNames
@@ -261,7 +269,7 @@ VALUES
 
         Try
             'find the student reg_number and name
-            SQL = "SELECT  f_name, m_name, l_name, reg_number from student where id = " & student_id
+            SQL = "SELECT  f_name, m_name, l_name, reg_number, Gender, admission_year, father_name, mother_name, dob, p_address from student where id = " & student_id
             Con.Open() 'Open connection
 
             Dim oData As OleDbDataAdapter
@@ -271,7 +279,14 @@ VALUES
 
             Dim reg_number = DS.Tables(0).Rows(0)(3).ToString
             Dim student_name = DS.Tables(0).Rows(0)(0).ToString & " " & DS.Tables(0).Rows(0)(1).ToString & " " & DS.Tables(0).Rows(0)(2).ToString
-            studentInfo = {reg_number, student_name}
+            Dim gender = DS.Tables(0).Rows(0)(4).ToString
+            Dim admission_year = DS.Tables(0).Rows(0)(5).ToString
+            Dim father_name = DS.Tables(0).Rows(0)(6).ToString
+            Dim mother_name = DS.Tables(0).Rows(0)(7).ToString
+            Dim dob = DS.Tables(0).Rows(0)(8).ToString
+            Dim p_address = DS.Tables(0).Rows(0)(9).ToString
+
+            studentInfo = {reg_number, student_name, gender, admission_year, father_name, mother_name, dob, p_address}
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally

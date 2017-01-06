@@ -13,8 +13,8 @@ Public Class printResultsPrimaryForm
     Public _school_info As String()
 
     Private Sub printResultsPrimaryForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'TerseDataSet.printResultsPrimary' table. You can move, or remove it, as needed.
-        Me.printResultsPrimaryTableAdapter.Fill(Me.TerseDataSet.printResultsPrimary)
+        'TODO: This line of code loads data into the 'PrintDataSet.printResultsPrimary' table. You can move, or remove it, as needed.
+        Me.PrintResultsPrimaryTableAdapter.Fill(Me.PrintDataSet.printResultsPrimary)
         Me.primaryReportViewer.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout)
         Me.primaryReportViewer.RefreshReport()
     End Sub
@@ -28,7 +28,9 @@ Public Class printResultsPrimaryForm
         _class_name = class_name
         _class_teacher = class_teacher
         _school_info = school_info
-        myFunctions.prepareTempTable(resultDS, _index, class_name, _class_teacher, _school_info)
+        Dim student_id = tempDS.Tables(0).Rows(index)("student_id")
+        Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
+        myFunctions.prepareTempTable(resultDS, _index, class_name, class_teacher, school_info, student_info)
         If resultDS.Tables(0).Rows.Count = 1 Then nextBtn.Enabled = False
         prepareReport()
     End Sub
@@ -37,7 +39,9 @@ Public Class printResultsPrimaryForm
         _index += 1
         If previousBtn.Enabled = False Then previousBtn.Enabled = True
         If _index = resultDS.Tables(0).Rows.Count - 1 Then nextBtn.Enabled = False
-        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info)
+        Dim student_id = resultDS.Tables(0).Rows(_index)("student_id")
+        Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
+        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info, student_info)
         prepareReport()
     End Sub
 
@@ -45,7 +49,9 @@ Public Class printResultsPrimaryForm
         _index -= 1
         If nextBtn.Enabled = False Then nextBtn.Enabled = True
         If _index = 0 Then previousBtn.Enabled = False
-        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info)
+        Dim student_id = resultDS.Tables(0).Rows(_index)("student_id")
+        Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
+        myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info, student_info)
         prepareReport()
     End Sub
 
@@ -53,7 +59,7 @@ Public Class printResultsPrimaryForm
         Me.Validate()
         Me.printResultsPrimaryBindingSource.EndEdit()
         Me.printResultsPrimaryBindingSource.DataSource = myFunctions.getResultDataTable(_class_name)
-        Me.printResultsPrimaryTableAdapter.Update(Me.TerseDataSet.printResultsPrimary)
+        Me.PrintResultsPrimaryTableAdapter.Update(Me.PrintDataSet.printResultsPrimary)
         Me.primaryReportViewer.RefreshReport()
     End Sub
 

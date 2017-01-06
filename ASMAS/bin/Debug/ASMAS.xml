@@ -27,6 +27,111 @@ ASMAS
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:ASMAS.printDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsLowSecDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsPrimaryDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsSecDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsLowSecRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsPrimaryRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsSecRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsLowSecRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsPrimaryRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.printDataSet.printResultsSecRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:ASMAS.printDataSetTableAdapters.printResultsLowSecTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSetTableAdapters.printResultsPrimaryTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSetTableAdapters.printResultsSecTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:ASMAS.printDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(ASMAS.printDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:ASMAS.printDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(ASMAS.printDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:ASMAS.printDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(ASMAS.printDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:ASMAS.printDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:ASMAS.printDataSetTableAdapters.TableAdapterManager.UpdateAll(ASMAS.printDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:ASMAS.printDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:ASMAS.printDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:ASMAS.TerseDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.
