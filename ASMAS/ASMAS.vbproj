@@ -177,6 +177,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>printDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Print\printCertificateLowSec.Designer.vb">
+      <DependentUpon>printCertificateLowSec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print\printCertificateLowSec.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Result\addAttendance.Designer.vb">
       <DependentUpon>addAttendance.vb</DependentUpon>
     </Compile>
@@ -410,6 +416,10 @@
     <EmbeddedResource Include="createAdminForm.resx">
       <DependentUpon>createAdminForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Print\printCertificateLowSec.resx">
+      <DependentUpon>printCertificateLowSec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\printCertificateLowSec.rdlc" />
     <EmbeddedResource Include="Result\addAttendance.resx">
       <DependentUpon>addAttendance.vb</DependentUpon>
     </EmbeddedResource>

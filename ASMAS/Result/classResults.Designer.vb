@@ -36,6 +36,7 @@ Partial Class classResults
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.printBtn = New System.Windows.Forms.Button()
         Me.updateCalcBtn = New System.Windows.Forms.Button()
+        Me.PrintCertificateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.classResultsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -113,21 +114,21 @@ Partial Class classResults
         '
         'classResultsContextMenu
         '
-        Me.classResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.PrintToolStripMenuItem})
+        Me.classResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditToolStripMenuItem, Me.PrintToolStripMenuItem, Me.PrintCertificateToolStripMenuItem})
         Me.classResultsContextMenu.Name = "searchResultContextMenu"
-        Me.classResultsContextMenu.Size = New System.Drawing.Size(100, 48)
+        Me.classResultsContextMenu.Size = New System.Drawing.Size(157, 92)
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.EditToolStripMenuItem.Text = "Edit"
         '
         'PrintToolStripMenuItem
         '
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
-        Me.PrintToolStripMenuItem.Text = "Print"
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.PrintToolStripMenuItem.Text = "Print Result"
         '
         'printBtn
         '
@@ -147,6 +148,12 @@ Partial Class classResults
         Me.updateCalcBtn.TabIndex = 3
         Me.updateCalcBtn.Text = "Update Calculations"
         Me.updateCalcBtn.UseVisualStyleBackColor = True
+        '
+        'PrintCertificateToolStripMenuItem
+        '
+        Me.PrintCertificateToolStripMenuItem.Name = "PrintCertificateToolStripMenuItem"
+        Me.PrintCertificateToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.PrintCertificateToolStripMenuItem.Text = "Print Certificate"
         '
         'classResults
         '
@@ -185,4 +192,5 @@ Partial Class classResults
     Friend WithEvents printBtn As Button
     Friend WithEvents updateCalcBtn As Button
     Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PrintCertificateToolStripMenuItem As ToolStripMenuItem
 End Class

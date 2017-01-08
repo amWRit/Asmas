@@ -225,4 +225,33 @@ Public Class classResults
     Private Sub classResults_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximizeBox = False
     End Sub
+
+    Private Sub PrintCertificateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintCertificateToolStripMenuItem.Click
+        Dim ItemIndex As Integer = classResultListView.SelectedIndices(0) 'Grab the selected Index
+        letsPrintCertificate(ItemIndex) 'index = 0; start from beginning
+    End Sub
+
+    Private Sub letsPrintCertificate(index As Integer)
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
+
+        Dim class_id = contents(0)
+        Dim class_name = contents(3)
+        Dim year_num = contents(1)
+        Dim school_name = contents(2)
+
+        Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
+        Dim school_info = myFunctions.getSchoolNameAddress(school_name)
+        If primary.Contains(class_name) Then
+            Dim printForm As New printResultsPrimaryForm(tempDS, index, class_name, class_teacher, school_info, class_id)
+            printForm.Show()
+        ElseIf lowSec.Contains(class_name) Then
+            Dim printForm As New printCertificateLowSec(tempDS, index, class_name, class_teacher, school_info, class_id)
+            printForm.Show()
+        ElseIf sec.Contains(class_name) Then
+            Dim printForm As New printResultSecForm(tempDS, index, class_name, class_teacher, school_info, class_id)
+            printForm.Show()
+        End If
+    End Sub
 End Class
