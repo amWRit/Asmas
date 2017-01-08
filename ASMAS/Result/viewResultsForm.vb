@@ -203,7 +203,7 @@ Public Class viewResultsForm
         Dim school_name = schoolName.Text
         Dim year_num = yearName.Text
         Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
-        Dim school_info = myFunctions.getSchoolNameAddress(school_name)
+        Dim school_info = myFunctions.getSchoolInfo(school_name)
 
         Dim school_id = School.schoolId(school_name)
         Dim year_id = Year.getYearID(school_id.ToString, year_num)

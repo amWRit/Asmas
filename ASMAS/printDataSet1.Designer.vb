@@ -517,6 +517,8 @@ Partial Public Class printDataSet
         
         Private columnclass_full_name As Global.System.Data.DataColumn
         
+        Private columnschool_estd As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -1209,6 +1211,14 @@ Partial Public Class printDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property school_estdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnschool_estd
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1326,9 +1336,10 @@ Partial Public Class printDataSet
                     ByVal father_name As String,  _
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
-                    ByVal class_full_name As String) As printResultsLowSecRow
+                    ByVal class_full_name As String,  _
+                    ByVal school_estd As String) As printResultsLowSecRow
             Dim rowprintResultsLowSecRow As printResultsLowSecRow = CType(Me.NewRow,printResultsLowSecRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, student_id, reg_number, full_name, _class, school_year, school_name, terminal, eng_th, eng_th_g, eng_pr, eng_pr_g, eng_total, eng_total_g, nep_th, nep_th_g, nep_pr, nep_pr_g, nep_total, nep_total_g, math_th, math_th_g, math_pr, math_pr_g, math_total, math_total_g, sci_th, sci_th_g, sci_pr, sci_pr_g, sci_total, sci_total_g, soc_th, soc_th_g, soc_pr, soc_pr_g, soc_total, soc_total_g, obt_th, obt_th_g, obt_pr, obt_pr_g, obt_total, obt_total_g, comp_th, comp_th_g, comp_pr, comp_pr_g, comp_total, comp_total_g, hea_th, hea_th_g, hea_pr, hea_pr_g, hea_total, hea_total_g, mor_th, mor_th_g, mor_pr, mor_pr_g, mor_total, mor_total_g, total_th, total_th_g, total_pr, total_pr_g, total, percentage, grade_point, grade, rank, attendance, class_teacher, school_full_name, school_address, adm_year, gender, dob, father_name, mother_name, p_address, class_full_name}
+            Dim columnValuesArray() As Object = New Object() {Nothing, student_id, reg_number, full_name, _class, school_year, school_name, terminal, eng_th, eng_th_g, eng_pr, eng_pr_g, eng_total, eng_total_g, nep_th, nep_th_g, nep_pr, nep_pr_g, nep_total, nep_total_g, math_th, math_th_g, math_pr, math_pr_g, math_total, math_total_g, sci_th, sci_th_g, sci_pr, sci_pr_g, sci_total, sci_total_g, soc_th, soc_th_g, soc_pr, soc_pr_g, soc_total, soc_total_g, obt_th, obt_th_g, obt_pr, obt_pr_g, obt_total, obt_total_g, comp_th, comp_th_g, comp_pr, comp_pr_g, comp_total, comp_total_g, hea_th, hea_th_g, hea_pr, hea_pr_g, hea_total, hea_total_g, mor_th, mor_th_g, mor_pr, mor_pr_g, mor_total, mor_total_g, total_th, total_th_g, total_pr, total_pr_g, total, percentage, grade_point, grade, rank, attendance, class_teacher, school_full_name, school_address, adm_year, gender, dob, father_name, mother_name, p_address, class_full_name, school_estd}
             rowprintResultsLowSecRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowprintResultsLowSecRow)
             Return rowprintResultsLowSecRow
@@ -1439,6 +1450,7 @@ Partial Public Class printDataSet
             Me.columnmother_name = MyBase.Columns("mother_name")
             Me.columnp_address = MyBase.Columns("p_address")
             Me.columnclass_full_name = MyBase.Columns("class_full_name")
+            Me.columnschool_estd = MyBase.Columns("school_estd")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1611,6 +1623,8 @@ Partial Public Class printDataSet
             MyBase.Columns.Add(Me.columnp_address)
             Me.columnclass_full_name = New Global.System.Data.DataColumn("class_full_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclass_full_name)
+            Me.columnschool_estd = New Global.System.Data.DataColumn("school_estd", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnschool_estd)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -1697,6 +1711,7 @@ Partial Public Class printDataSet
             Me.columnmother_name.MaxLength = 255
             Me.columnp_address.MaxLength = 255
             Me.columnclass_full_name.MaxLength = 255
+            Me.columnschool_estd.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1973,6 +1988,8 @@ Partial Public Class printDataSet
         Private columnp_address As Global.System.Data.DataColumn
         
         Private columnclass_full_name As Global.System.Data.DataColumn
+        
+        Private columnschool_estd As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -2570,6 +2587,14 @@ Partial Public Class printDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property school_estdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnschool_estd
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2675,9 +2700,10 @@ Partial Public Class printDataSet
                     ByVal father_name As String,  _
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
-                    ByVal class_full_name As String) As printResultsPrimaryRow
+                    ByVal class_full_name As String,  _
+                    ByVal school_estd As String) As printResultsPrimaryRow
             Dim rowprintResultsPrimaryRow As printResultsPrimaryRow = CType(Me.NewRow,printResultsPrimaryRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, student_id, reg_number, full_name, _class, school_year, school_name, terminal, eng_th, eng_th_g, eng_pr, eng_pr_g, eng_total, eng_total_g, nep_th, nep_th_g, nep_pr, nep_pr_g, nep_total, nep_total_g, math_th, math_th_g, math_pr, math_pr_g, math_total, math_total_g, sci_th, sci_th_g, sci_pr, sci_pr_g, sci_total, sci_total_g, soc_th, soc_th_g, soc_pr, soc_pr_g, soc_total, soc_total_g, opt_eng_th, opt_eng_th_g, opt_eng_pr, opt_eng_pr_g, opt_eng_total, opt_eng_total_g, gk_conv_th, gk_conv_th_g, gk_conv_pr, gk_conv_pr_g, gk_conv_total, gk_conv_total_g, total_th, total_th_g, total_pr, total_pr_g, total, percentage, grade_point, grade, rank, attendance, class_teacher, school_full_name, school_address, adm_year, gender, dob, father_name, mother_name, p_address, class_full_name}
+            Dim columnValuesArray() As Object = New Object() {Nothing, student_id, reg_number, full_name, _class, school_year, school_name, terminal, eng_th, eng_th_g, eng_pr, eng_pr_g, eng_total, eng_total_g, nep_th, nep_th_g, nep_pr, nep_pr_g, nep_total, nep_total_g, math_th, math_th_g, math_pr, math_pr_g, math_total, math_total_g, sci_th, sci_th_g, sci_pr, sci_pr_g, sci_total, sci_total_g, soc_th, soc_th_g, soc_pr, soc_pr_g, soc_total, soc_total_g, opt_eng_th, opt_eng_th_g, opt_eng_pr, opt_eng_pr_g, opt_eng_total, opt_eng_total_g, gk_conv_th, gk_conv_th_g, gk_conv_pr, gk_conv_pr_g, gk_conv_total, gk_conv_total_g, total_th, total_th_g, total_pr, total_pr_g, total, percentage, grade_point, grade, rank, attendance, class_teacher, school_full_name, school_address, adm_year, gender, dob, father_name, mother_name, p_address, class_full_name, school_estd}
             rowprintResultsPrimaryRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowprintResultsPrimaryRow)
             Return rowprintResultsPrimaryRow
@@ -2776,6 +2802,7 @@ Partial Public Class printDataSet
             Me.columnmother_name = MyBase.Columns("mother_name")
             Me.columnp_address = MyBase.Columns("p_address")
             Me.columnclass_full_name = MyBase.Columns("class_full_name")
+            Me.columnschool_estd = MyBase.Columns("school_estd")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2924,6 +2951,8 @@ Partial Public Class printDataSet
             MyBase.Columns.Add(Me.columnp_address)
             Me.columnclass_full_name = New Global.System.Data.DataColumn("class_full_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclass_full_name)
+            Me.columnschool_estd = New Global.System.Data.DataColumn("school_estd", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnschool_estd)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -2998,6 +3027,7 @@ Partial Public Class printDataSet
             Me.columnmother_name.MaxLength = 536870910
             Me.columnp_address.MaxLength = 255
             Me.columnclass_full_name.MaxLength = 255
+            Me.columnschool_estd.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3290,6 +3320,8 @@ Partial Public Class printDataSet
         Private columnp_address As Global.System.Data.DataColumn
         
         Private columnclass_full_name As Global.System.Data.DataColumn
+        
+        Private columnschool_estd As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -3951,6 +3983,14 @@ Partial Public Class printDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property school_estdColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnschool_estd
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4064,9 +4104,10 @@ Partial Public Class printDataSet
                     ByVal father_name As String,  _
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
-                    ByVal class_full_name As String) As printResultsSecRow
+                    ByVal class_full_name As String,  _
+                    ByVal school_estd As String) As printResultsSecRow
             Dim rowprintResultsSecRow As printResultsSecRow = CType(Me.NewRow,printResultsSecRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, student_id, reg_number, full_name, _class, school_year, school_name, terminal, eng_th, eng_th_g, eng_pr, eng_pr_g, eng_total, eng_total_g, nep_th, nep_th_g, nep_pr, nep_pr_g, nep_total, nep_total_g, math_th, math_th_g, math_pr, math_pr_g, math_total, math_total_g, sci_th, sci_th_g, sci_pr, sci_pr_g, sci_total, sci_total_g, soc_th, soc_th_g, soc_pr, soc_pr_g, soc_total, soc_total_g, eph_th, eph_th_g, eph_pr, eph_pr_g, eph_total, eph_total_g, opt1_th, opt1_th_g, opt1_pr, opt1_pr_g, opt1_total, opt1_total_g, opt2_th, opt2_th_g, opt2_pr, opt2_pr_g, opt2_total, opt2_total_g, total_th, total_th_g, total_pr, total_pr_g, total, percentage, grade_point, grade, opt1, opt2, rank, attendance, class_teacher, school_full_name, school_address, adm_year, gender, dob, father_name, mother_name, p_address, class_full_name}
+            Dim columnValuesArray() As Object = New Object() {Nothing, student_id, reg_number, full_name, _class, school_year, school_name, terminal, eng_th, eng_th_g, eng_pr, eng_pr_g, eng_total, eng_total_g, nep_th, nep_th_g, nep_pr, nep_pr_g, nep_total, nep_total_g, math_th, math_th_g, math_pr, math_pr_g, math_total, math_total_g, sci_th, sci_th_g, sci_pr, sci_pr_g, sci_total, sci_total_g, soc_th, soc_th_g, soc_pr, soc_pr_g, soc_total, soc_total_g, eph_th, eph_th_g, eph_pr, eph_pr_g, eph_total, eph_total_g, opt1_th, opt1_th_g, opt1_pr, opt1_pr_g, opt1_total, opt1_total_g, opt2_th, opt2_th_g, opt2_pr, opt2_pr_g, opt2_total, opt2_total_g, total_th, total_th_g, total_pr, total_pr_g, total, percentage, grade_point, grade, opt1, opt2, rank, attendance, class_teacher, school_full_name, school_address, adm_year, gender, dob, father_name, mother_name, p_address, class_full_name, school_estd}
             rowprintResultsSecRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowprintResultsSecRow)
             Return rowprintResultsSecRow
@@ -4173,6 +4214,7 @@ Partial Public Class printDataSet
             Me.columnmother_name = MyBase.Columns("mother_name")
             Me.columnp_address = MyBase.Columns("p_address")
             Me.columnclass_full_name = MyBase.Columns("class_full_name")
+            Me.columnschool_estd = MyBase.Columns("school_estd")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4337,6 +4379,8 @@ Partial Public Class printDataSet
             MyBase.Columns.Add(Me.columnp_address)
             Me.columnclass_full_name = New Global.System.Data.DataColumn("class_full_name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnclass_full_name)
+            Me.columnschool_estd = New Global.System.Data.DataColumn("school_estd", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnschool_estd)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -4407,6 +4451,7 @@ Partial Public Class printDataSet
             Me.columnmother_name.MaxLength = 255
             Me.columnp_address.MaxLength = 255
             Me.columnclass_full_name.MaxLength = 255
+            Me.columnschool_estd.MaxLength = 255
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5779,6 +5824,21 @@ Partial Public Class printDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property school_estd() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprintResultsLowSec.school_estdColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'school_estd' in table 'printResultsLowSec' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprintResultsLowSec.school_estdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isstudent_idNull() As Boolean
             Return Me.IsNull(Me.tableprintResultsLowSec.student_idColumn)
         End Function
@@ -6747,6 +6807,18 @@ Partial Public Class printDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setclass_full_nameNull()
             Me(Me.tableprintResultsLowSec.class_full_nameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isschool_estdNull() As Boolean
+            Return Me.IsNull(Me.tableprintResultsLowSec.school_estdColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setschool_estdNull()
+            Me(Me.tableprintResultsLowSec.school_estdColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -7814,6 +7886,21 @@ Partial Public Class printDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property school_estd() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprintResultsPrimary.school_estdColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'school_estd' in table 'printResultsPrimary' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprintResultsPrimary.school_estdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isstudent_idNull() As Boolean
             Return Me.IsNull(Me.tableprintResultsPrimary.student_idColumn)
         End Function
@@ -8638,6 +8725,18 @@ Partial Public Class printDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setclass_full_nameNull()
             Me(Me.tableprintResultsPrimary.class_full_nameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isschool_estdNull() As Boolean
+            Return Me.IsNull(Me.tableprintResultsPrimary.school_estdColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setschool_estdNull()
+            Me(Me.tableprintResultsPrimary.school_estdColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -9824,6 +9923,21 @@ Partial Public Class printDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property school_estd() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableprintResultsSec.school_estdColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'school_estd' in table 'printResultsSec' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableprintResultsSec.school_estdColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function Isstudent_idNull() As Boolean
             Return Me.IsNull(Me.tableprintResultsSec.student_idColumn)
         End Function
@@ -10745,6 +10859,18 @@ Partial Public Class printDataSet
         Public Sub Setclass_full_nameNull()
             Me(Me.tableprintResultsSec.class_full_nameColumn) = Global.System.Convert.DBNull
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isschool_estdNull() As Boolean
+            Return Me.IsNull(Me.tableprintResultsSec.school_estdColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setschool_estdNull()
+            Me(Me.tableprintResultsSec.school_estdColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -11067,6 +11193,7 @@ Namespace printDataSetTableAdapters
             tableMapping.ColumnMappings.Add("mother_name", "mother_name")
             tableMapping.ColumnMappings.Add("p_address", "p_address")
             tableMapping.ColumnMappings.Add("class_full_name", "class_full_name")
+            tableMapping.ColumnMappings.Add("school_estd", "school_estd")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -11128,7 +11255,8 @@ Namespace printDataSetTableAdapters
                 "father_name` IS NULL) OR (`father_name` = ?)) AND ((? = 1 AND `gender` IS NULL) "& _ 
                 "OR (`gender` = ?)) AND ((? = 1 AND `mother_name` IS NULL) OR (`mother_name` = ?)"& _ 
                 ") AND ((? = 1 AND `p_address` IS NULL) OR (`p_address` = ?)) AND ((? = 1 AND `cl"& _ 
-                "ass_full_name` IS NULL) OR (`class_full_name` = ?)))"
+                "ass_full_name` IS NULL) OR (`class_full_name` = ?)) AND ((? = 1 AND `school_estd"& _ 
+                "` IS NULL) OR (`school_estd` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -11291,6 +11419,8 @@ Namespace printDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_class_full_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_estd", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `printResultsLowSec` (`student_id`, `reg_number`, `full_name`, `class"& _ 
@@ -11306,10 +11436,10 @@ Namespace printDataSetTableAdapters
                 "tal_th_g`, `total_pr`, `total_pr_g`, `total`, `percentage`, `grade_point`, `grad"& _ 
                 "e`, `rank`, `attendance`, `class_teacher`, `school_full_name`, `school_address`,"& _ 
                 " `adm_year`, `dob`, `father_name`, `gender`, `mother_name`, `p_address`, `class_"& _ 
-                "full_name`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
+                "full_name`, `school_estd`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
                 "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
                 " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
-                ", ?, ?, ?, ?, ?, ?, ?)"
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_number", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_number", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -11392,6 +11522,7 @@ Namespace printDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mother_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `printResultsLowSec` SET `student_id` = ?, `reg_number` = ?, `full_name` ="& _ 
@@ -11411,65 +11542,66 @@ Namespace printDataSetTableAdapters
                 " = ?, `grade_point` = ?, `grade` = ?, `rank` = ?, `attendance` = ?, `class_teach"& _ 
                 "er` = ?, `school_full_name` = ?, `school_address` = ?, `adm_year` = ?, `dob` = ?"& _ 
                 ", `father_name` = ?, `gender` = ?, `mother_name` = ?, `p_address` = ?, `class_fu"& _ 
-                "ll_name` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `student_id` IS NULL) OR (`studen"& _ 
-                "t_id` = ?)) AND ((? = 1 AND `reg_number` IS NULL) OR (`reg_number` = ?)) AND ((?"& _ 
-                " = 1 AND `full_name` IS NULL) OR (`full_name` = ?)) AND ((? = 1 AND `class` IS N"& _ 
-                "ULL) OR (`class` = ?)) AND ((? = 1 AND `school_year` IS NULL) OR (`school_year` "& _ 
-                "= ?)) AND ((? = 1 AND `school_name` IS NULL) OR (`school_name` = ?)) AND ((? = 1"& _ 
-                " AND `terminal` IS NULL) OR (`terminal` = ?)) AND ((? = 1 AND `eng_th` IS NULL) "& _ 
-                "OR (`eng_th` = ?)) AND ((? = 1 AND `eng_th_g` IS NULL) OR (`eng_th_g` = ?)) AND "& _ 
-                "((? = 1 AND `eng_pr` IS NULL) OR (`eng_pr` = ?)) AND ((? = 1 AND `eng_pr_g` IS N"& _ 
-                "ULL) OR (`eng_pr_g` = ?)) AND ((? = 1 AND `eng_total` IS NULL) OR (`eng_total` ="& _ 
-                " ?)) AND ((? = 1 AND `eng_total_g` IS NULL) OR (`eng_total_g` = ?)) AND ((? = 1 "& _ 
-                "AND `nep_th` IS NULL) OR (`nep_th` = ?)) AND ((? = 1 AND `nep_th_g` IS NULL) OR "& _ 
-                "(`nep_th_g` = ?)) AND ((? = 1 AND `nep_pr` IS NULL) OR (`nep_pr` = ?)) AND ((? ="& _ 
-                " 1 AND `nep_pr_g` IS NULL) OR (`nep_pr_g` = ?)) AND ((? = 1 AND `nep_total` IS N"& _ 
-                "ULL) OR (`nep_total` = ?)) AND ((? = 1 AND `nep_total_g` IS NULL) OR (`nep_total"& _ 
-                "_g` = ?)) AND ((? = 1 AND `math_th` IS NULL) OR (`math_th` = ?)) AND ((? = 1 AND"& _ 
-                " `math_th_g` IS NULL) OR (`math_th_g` = ?)) AND ((? = 1 AND `math_pr` IS NULL) O"& _ 
-                "R (`math_pr` = ?)) AND ((? = 1 AND `math_pr_g` IS NULL) OR (`math_pr_g` = ?)) AN"& _ 
-                "D ((? = 1 AND `math_total` IS NULL) OR (`math_total` = ?)) AND ((? = 1 AND `math"& _ 
-                "_total_g` IS NULL) OR (`math_total_g` = ?)) AND ((? = 1 AND `sci_th` IS NULL) OR"& _ 
-                " (`sci_th` = ?)) AND ((? = 1 AND `sci_th_g` IS NULL) OR (`sci_th_g` = ?)) AND (("& _ 
-                "? = 1 AND `sci_pr` IS NULL) OR (`sci_pr` = ?)) AND ((? = 1 AND `sci_pr_g` IS NUL"& _ 
-                "L) OR (`sci_pr_g` = ?)) AND ((? = 1 AND `sci_total` IS NULL) OR (`sci_total` = ?"& _ 
-                ")) AND ((? = 1 AND `sci_total_g` IS NULL) OR (`sci_total_g` = ?)) AND ((? = 1 AN"& _ 
-                "D `soc_th` IS NULL) OR (`soc_th` = ?)) AND ((? = 1 AND `soc_th_g` IS NULL) OR (`"& _ 
-                "soc_th_g` = ?)) AND ((? = 1 AND `soc_pr` IS NULL) OR (`soc_pr` = ?)) AND ((? = 1"& _ 
-                " AND `soc_pr_g` IS NULL) OR (`soc_pr_g` = ?)) AND ((? = 1 AND `soc_total` IS NUL"& _ 
-                "L) OR (`soc_total` = ?)) AND ((? = 1 AND `soc_total_g` IS NULL) OR (`soc_total_g"& _ 
-                "` = ?)) AND ((? = 1 AND `obt_th` IS NULL) OR (`obt_th` = ?)) AND ((? = 1 AND `ob"& _ 
-                "t_th_g` IS NULL) OR (`obt_th_g` = ?)) AND ((? = 1 AND `obt_pr` IS NULL) OR (`obt"& _ 
-                "_pr` = ?)) AND ((? = 1 AND `obt_pr_g` IS NULL) OR (`obt_pr_g` = ?)) AND ((? = 1 "& _ 
-                "AND `obt_total` IS NULL) OR (`obt_total` = ?)) AND ((? = 1 AND `obt_total_g` IS "& _ 
-                "NULL) OR (`obt_total_g` = ?)) AND ((? = 1 AND `comp_th` IS NULL) OR (`comp_th` ="& _ 
-                " ?)) AND ((? = 1 AND `comp_th_g` IS NULL) OR (`comp_th_g` = ?)) AND ((? = 1 AND "& _ 
-                "`comp_pr` IS NULL) OR (`comp_pr` = ?)) AND ((? = 1 AND `comp_pr_g` IS NULL) OR ("& _ 
-                "`comp_pr_g` = ?)) AND ((? = 1 AND `comp_total` IS NULL) OR (`comp_total` = ?)) A"& _ 
-                "ND ((? = 1 AND `comp_total_g` IS NULL) OR (`comp_total_g` = ?)) AND ((? = 1 AND "& _ 
-                "`hea_th` IS NULL) OR (`hea_th` = ?)) AND ((? = 1 AND `hea_th_g` IS NULL) OR (`he"& _ 
-                "a_th_g` = ?)) AND ((? = 1 AND `hea_pr` IS NULL) OR (`hea_pr` = ?)) AND ((? = 1 A"& _ 
-                "ND `hea_pr_g` IS NULL) OR (`hea_pr_g` = ?)) AND ((? = 1 AND `hea_total` IS NULL)"& _ 
-                " OR (`hea_total` = ?)) AND ((? = 1 AND `hea_total_g` IS NULL) OR (`hea_total_g` "& _ 
-                "= ?)) AND ((? = 1 AND `mor_th` IS NULL) OR (`mor_th` = ?)) AND ((? = 1 AND `mor_"& _ 
-                "th_g` IS NULL) OR (`mor_th_g` = ?)) AND ((? = 1 AND `mor_pr` IS NULL) OR (`mor_p"& _ 
-                "r` = ?)) AND ((? = 1 AND `mor_pr_g` IS NULL) OR (`mor_pr_g` = ?)) AND ((? = 1 AN"& _ 
-                "D `mor_total` IS NULL) OR (`mor_total` = ?)) AND ((? = 1 AND `mor_total_g` IS NU"& _ 
-                "LL) OR (`mor_total_g` = ?)) AND ((? = 1 AND `total_th` IS NULL) OR (`total_th` ="& _ 
-                " ?)) AND ((? = 1 AND `total_th_g` IS NULL) OR (`total_th_g` = ?)) AND ((? = 1 AN"& _ 
-                "D `total_pr` IS NULL) OR (`total_pr` = ?)) AND ((? = 1 AND `total_pr_g` IS NULL)"& _ 
-                " OR (`total_pr_g` = ?)) AND ((? = 1 AND `total` IS NULL) OR (`total` = ?)) AND ("& _ 
-                "(? = 1 AND `percentage` IS NULL) OR (`percentage` = ?)) AND ((? = 1 AND `grade_p"& _ 
-                "oint` IS NULL) OR (`grade_point` = ?)) AND ((? = 1 AND `grade` IS NULL) OR (`gra"& _ 
-                "de` = ?)) AND ((? = 1 AND `rank` IS NULL) OR (`rank` = ?)) AND ((? = 1 AND `atte"& _ 
-                "ndance` IS NULL) OR (`attendance` = ?)) AND ((? = 1 AND `class_teacher` IS NULL)"& _ 
-                " OR (`class_teacher` = ?)) AND ((? = 1 AND `school_full_name` IS NULL) OR (`scho"& _ 
-                "ol_full_name` = ?)) AND ((? = 1 AND `adm_year` IS NULL) OR (`adm_year` = ?)) AND"& _ 
-                " ((? = 1 AND `dob` IS NULL) OR (`dob` = ?)) AND ((? = 1 AND `father_name` IS NUL"& _ 
-                "L) OR (`father_name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) "& _ 
-                "AND ((? = 1 AND `mother_name` IS NULL) OR (`mother_name` = ?)) AND ((? = 1 AND `"& _ 
-                "p_address` IS NULL) OR (`p_address` = ?)) AND ((? = 1 AND `class_full_name` IS N"& _ 
-                "ULL) OR (`class_full_name` = ?)))"
+                "ll_name` = ?, `school_estd` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `student_id` I"& _ 
+                "S NULL) OR (`student_id` = ?)) AND ((? = 1 AND `reg_number` IS NULL) OR (`reg_nu"& _ 
+                "mber` = ?)) AND ((? = 1 AND `full_name` IS NULL) OR (`full_name` = ?)) AND ((? ="& _ 
+                " 1 AND `class` IS NULL) OR (`class` = ?)) AND ((? = 1 AND `school_year` IS NULL)"& _ 
+                " OR (`school_year` = ?)) AND ((? = 1 AND `school_name` IS NULL) OR (`school_name"& _ 
+                "` = ?)) AND ((? = 1 AND `terminal` IS NULL) OR (`terminal` = ?)) AND ((? = 1 AND"& _ 
+                " `eng_th` IS NULL) OR (`eng_th` = ?)) AND ((? = 1 AND `eng_th_g` IS NULL) OR (`e"& _ 
+                "ng_th_g` = ?)) AND ((? = 1 AND `eng_pr` IS NULL) OR (`eng_pr` = ?)) AND ((? = 1 "& _ 
+                "AND `eng_pr_g` IS NULL) OR (`eng_pr_g` = ?)) AND ((? = 1 AND `eng_total` IS NULL"& _ 
+                ") OR (`eng_total` = ?)) AND ((? = 1 AND `eng_total_g` IS NULL) OR (`eng_total_g`"& _ 
+                " = ?)) AND ((? = 1 AND `nep_th` IS NULL) OR (`nep_th` = ?)) AND ((? = 1 AND `nep"& _ 
+                "_th_g` IS NULL) OR (`nep_th_g` = ?)) AND ((? = 1 AND `nep_pr` IS NULL) OR (`nep_"& _ 
+                "pr` = ?)) AND ((? = 1 AND `nep_pr_g` IS NULL) OR (`nep_pr_g` = ?)) AND ((? = 1 A"& _ 
+                "ND `nep_total` IS NULL) OR (`nep_total` = ?)) AND ((? = 1 AND `nep_total_g` IS N"& _ 
+                "ULL) OR (`nep_total_g` = ?)) AND ((? = 1 AND `math_th` IS NULL) OR (`math_th` = "& _ 
+                "?)) AND ((? = 1 AND `math_th_g` IS NULL) OR (`math_th_g` = ?)) AND ((? = 1 AND `"& _ 
+                "math_pr` IS NULL) OR (`math_pr` = ?)) AND ((? = 1 AND `math_pr_g` IS NULL) OR (`"& _ 
+                "math_pr_g` = ?)) AND ((? = 1 AND `math_total` IS NULL) OR (`math_total` = ?)) AN"& _ 
+                "D ((? = 1 AND `math_total_g` IS NULL) OR (`math_total_g` = ?)) AND ((? = 1 AND `"& _ 
+                "sci_th` IS NULL) OR (`sci_th` = ?)) AND ((? = 1 AND `sci_th_g` IS NULL) OR (`sci"& _ 
+                "_th_g` = ?)) AND ((? = 1 AND `sci_pr` IS NULL) OR (`sci_pr` = ?)) AND ((? = 1 AN"& _ 
+                "D `sci_pr_g` IS NULL) OR (`sci_pr_g` = ?)) AND ((? = 1 AND `sci_total` IS NULL) "& _ 
+                "OR (`sci_total` = ?)) AND ((? = 1 AND `sci_total_g` IS NULL) OR (`sci_total_g` ="& _ 
+                " ?)) AND ((? = 1 AND `soc_th` IS NULL) OR (`soc_th` = ?)) AND ((? = 1 AND `soc_t"& _ 
+                "h_g` IS NULL) OR (`soc_th_g` = ?)) AND ((? = 1 AND `soc_pr` IS NULL) OR (`soc_pr"& _ 
+                "` = ?)) AND ((? = 1 AND `soc_pr_g` IS NULL) OR (`soc_pr_g` = ?)) AND ((? = 1 AND"& _ 
+                " `soc_total` IS NULL) OR (`soc_total` = ?)) AND ((? = 1 AND `soc_total_g` IS NUL"& _ 
+                "L) OR (`soc_total_g` = ?)) AND ((? = 1 AND `obt_th` IS NULL) OR (`obt_th` = ?)) "& _ 
+                "AND ((? = 1 AND `obt_th_g` IS NULL) OR (`obt_th_g` = ?)) AND ((? = 1 AND `obt_pr"& _ 
+                "` IS NULL) OR (`obt_pr` = ?)) AND ((? = 1 AND `obt_pr_g` IS NULL) OR (`obt_pr_g`"& _ 
+                " = ?)) AND ((? = 1 AND `obt_total` IS NULL) OR (`obt_total` = ?)) AND ((? = 1 AN"& _ 
+                "D `obt_total_g` IS NULL) OR (`obt_total_g` = ?)) AND ((? = 1 AND `comp_th` IS NU"& _ 
+                "LL) OR (`comp_th` = ?)) AND ((? = 1 AND `comp_th_g` IS NULL) OR (`comp_th_g` = ?"& _ 
+                ")) AND ((? = 1 AND `comp_pr` IS NULL) OR (`comp_pr` = ?)) AND ((? = 1 AND `comp_"& _ 
+                "pr_g` IS NULL) OR (`comp_pr_g` = ?)) AND ((? = 1 AND `comp_total` IS NULL) OR (`"& _ 
+                "comp_total` = ?)) AND ((? = 1 AND `comp_total_g` IS NULL) OR (`comp_total_g` = ?"& _ 
+                ")) AND ((? = 1 AND `hea_th` IS NULL) OR (`hea_th` = ?)) AND ((? = 1 AND `hea_th_"& _ 
+                "g` IS NULL) OR (`hea_th_g` = ?)) AND ((? = 1 AND `hea_pr` IS NULL) OR (`hea_pr` "& _ 
+                "= ?)) AND ((? = 1 AND `hea_pr_g` IS NULL) OR (`hea_pr_g` = ?)) AND ((? = 1 AND `"& _ 
+                "hea_total` IS NULL) OR (`hea_total` = ?)) AND ((? = 1 AND `hea_total_g` IS NULL)"& _ 
+                " OR (`hea_total_g` = ?)) AND ((? = 1 AND `mor_th` IS NULL) OR (`mor_th` = ?)) AN"& _ 
+                "D ((? = 1 AND `mor_th_g` IS NULL) OR (`mor_th_g` = ?)) AND ((? = 1 AND `mor_pr` "& _ 
+                "IS NULL) OR (`mor_pr` = ?)) AND ((? = 1 AND `mor_pr_g` IS NULL) OR (`mor_pr_g` ="& _ 
+                " ?)) AND ((? = 1 AND `mor_total` IS NULL) OR (`mor_total` = ?)) AND ((? = 1 AND "& _ 
+                "`mor_total_g` IS NULL) OR (`mor_total_g` = ?)) AND ((? = 1 AND `total_th` IS NUL"& _ 
+                "L) OR (`total_th` = ?)) AND ((? = 1 AND `total_th_g` IS NULL) OR (`total_th_g` ="& _ 
+                " ?)) AND ((? = 1 AND `total_pr` IS NULL) OR (`total_pr` = ?)) AND ((? = 1 AND `t"& _ 
+                "otal_pr_g` IS NULL) OR (`total_pr_g` = ?)) AND ((? = 1 AND `total` IS NULL) OR ("& _ 
+                "`total` = ?)) AND ((? = 1 AND `percentage` IS NULL) OR (`percentage` = ?)) AND ("& _ 
+                "(? = 1 AND `grade_point` IS NULL) OR (`grade_point` = ?)) AND ((? = 1 AND `grade"& _ 
+                "` IS NULL) OR (`grade` = ?)) AND ((? = 1 AND `rank` IS NULL) OR (`rank` = ?)) AN"& _ 
+                "D ((? = 1 AND `attendance` IS NULL) OR (`attendance` = ?)) AND ((? = 1 AND `clas"& _ 
+                "s_teacher` IS NULL) OR (`class_teacher` = ?)) AND ((? = 1 AND `school_full_name`"& _ 
+                " IS NULL) OR (`school_full_name` = ?)) AND ((? = 1 AND `adm_year` IS NULL) OR (`"& _ 
+                "adm_year` = ?)) AND ((? = 1 AND `dob` IS NULL) OR (`dob` = ?)) AND ((? = 1 AND `"& _ 
+                "father_name` IS NULL) OR (`father_name` = ?)) AND ((? = 1 AND `gender` IS NULL) "& _ 
+                "OR (`gender` = ?)) AND ((? = 1 AND `mother_name` IS NULL) OR (`mother_name` = ?)"& _ 
+                ") AND ((? = 1 AND `p_address` IS NULL) OR (`p_address` = ?)) AND ((? = 1 AND `cl"& _ 
+                "ass_full_name` IS NULL) OR (`class_full_name` = ?)) AND ((? = 1 AND `school_estd"& _ 
+                "` IS NULL) OR (`school_estd` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_number", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_number", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -11552,6 +11684,7 @@ Namespace printDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mother_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -11713,6 +11846,8 @@ Namespace printDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_class_full_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_estd", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11738,8 +11873,8 @@ Namespace printDataSetTableAdapters
                 "total, hea_total_g, mor_th, mor_th_g, mor_pr, mor_pr_g, mor_total, mor_total_g, "& _ 
                 "total_th, total_th_g, total_pr, total_pr_g, total, percentage, grade_point, grad"& _ 
                 "e, rank, attendance, class_teacher, school_full_name, school_address, adm_year, "& _ 
-                "dob, father_name, gender, mother_name, p_address, class_full_name FROM printResu"& _ 
-                "ltsLowSec"
+                "dob, father_name, gender, mother_name, p_address, class_full_name, school_estd F"& _ 
+                "ROM printResultsLowSec"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -11880,7 +12015,8 @@ Namespace printDataSetTableAdapters
                     ByVal Original_gender As String,  _
                     ByVal Original_mother_name As String,  _
                     ByVal Original_p_address As String,  _
-                    ByVal Original_class_full_name As String) As Integer
+                    ByVal Original_class_full_name As String,  _
+                    ByVal Original_school_estd As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             If (Original_student_id.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -12442,6 +12578,13 @@ Namespace printDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(159).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(160).Value = CType(Original_class_full_name,String)
             End If
+            If (Original_school_estd Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(161).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(162).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(161).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(162).Value = CType(Original_school_estd,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -12542,7 +12685,8 @@ Namespace printDataSetTableAdapters
                     ByVal gender As String,  _
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
-                    ByVal class_full_name As String) As Integer
+                    ByVal class_full_name As String,  _
+                    ByVal school_estd As String) As Integer
             If (student_id.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(student_id.Value,Integer)
             Else
@@ -12948,6 +13092,11 @@ Namespace printDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(80).Value = CType(class_full_name,String)
             End If
+            If (school_estd Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(81).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(81).Value = CType(school_estd,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -13049,6 +13198,7 @@ Namespace printDataSetTableAdapters
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
                     ByVal class_full_name As String,  _
+                    ByVal school_estd As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_student_id As Global.System.Nullable(Of Integer),  _
                     ByVal Original_reg_number As String,  _
@@ -13129,7 +13279,8 @@ Namespace printDataSetTableAdapters
                     ByVal Original_gender As String,  _
                     ByVal Original_mother_name As String,  _
                     ByVal Original_p_address As String,  _
-                    ByVal Original_class_full_name As String) As Integer
+                    ByVal Original_class_full_name As String,  _
+                    ByVal Original_school_estd As String) As Integer
             If (student_id.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(student_id.Value,Integer)
             Else
@@ -13535,566 +13686,578 @@ Namespace printDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(80).Value = CType(class_full_name,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(81).Value = CType(Original_ID,Integer)
-            If (Original_student_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(Original_student_id.Value,Integer)
+            If (school_estd Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(81).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(83).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(school_estd,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(82).Value = CType(Original_ID,Integer)
+            If (Original_student_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(Original_student_id.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = Global.System.DBNull.Value
             End If
             If (Original_reg_number Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(85).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(Original_reg_number,String)
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(Original_reg_number,String)
             End If
             If (Original_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(87).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(Original_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(Original_full_name,String)
             End If
             If (Original_class Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(89).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(Original_class,String)
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(Original_class,String)
             End If
             If (Original_school_year Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(91).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(Original_school_year,String)
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(Original_school_year,String)
             End If
             If (Original_school_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_school_name,String)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(Original_school_name,String)
             End If
             If (Original_terminal Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(95).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(Original_terminal,String)
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(Original_terminal,String)
             End If
             If (Original_eng_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(97).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(Original_eng_th,String)
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(Original_eng_th,String)
             End If
             If (Original_eng_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(99).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(Original_eng_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(Original_eng_th_g,String)
             End If
             If (Original_eng_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(101).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(102).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(Original_eng_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(Original_eng_pr,String)
             End If
             If (Original_eng_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(103).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(Original_eng_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(Original_eng_pr_g,String)
             End If
             If (Original_eng_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(105).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(Original_eng_total,String)
+                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(Original_eng_total,String)
             End If
             If (Original_eng_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(107).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(Original_eng_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(Original_eng_total_g,String)
             End If
             If (Original_nep_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(109).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(Original_nep_th,String)
+                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(Original_nep_th,String)
             End If
             If (Original_nep_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(111).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(Original_nep_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(Original_nep_th_g,String)
             End If
             If (Original_nep_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(113).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(Original_nep_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(Original_nep_pr,String)
             End If
             If (Original_nep_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(115).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(Original_nep_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(Original_nep_pr_g,String)
             End If
             If (Original_nep_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(117).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(Original_nep_total,String)
+                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(Original_nep_total,String)
             End If
             If (Original_nep_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(119).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(Original_nep_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(Original_nep_total_g,String)
             End If
             If (Original_math_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(121).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(122).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(Original_math_th,String)
+                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(Original_math_th,String)
             End If
             If (Original_math_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(123).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(124).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(Original_math_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(Original_math_th_g,String)
             End If
             If (Original_math_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(125).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(126).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(Original_math_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(Original_math_pr,String)
             End If
             If (Original_math_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(127).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(128).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(Original_math_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(Original_math_pr_g,String)
             End If
             If (Original_math_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(129).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(130).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(Original_math_total,String)
+                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(Original_math_total,String)
             End If
             If (Original_math_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(131).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(132).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(Original_math_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(Original_math_total_g,String)
             End If
             If (Original_sci_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(133).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(134).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(Original_sci_th,String)
+                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(Original_sci_th,String)
             End If
             If (Original_sci_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(135).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(136).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(Original_sci_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(Original_sci_th_g,String)
             End If
             If (Original_sci_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(137).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(138).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(Original_sci_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(Original_sci_pr,String)
             End If
             If (Original_sci_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(139).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(140).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(Original_sci_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(Original_sci_pr_g,String)
             End If
             If (Original_sci_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(141).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(142).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(Original_sci_total,String)
+                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(Original_sci_total,String)
             End If
             If (Original_sci_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(143).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(144).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(Original_sci_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(Original_sci_total_g,String)
             End If
             If (Original_soc_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(145).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(146).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(Original_soc_th,String)
+                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(Original_soc_th,String)
             End If
             If (Original_soc_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(147).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(148).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(Original_soc_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(Original_soc_th_g,String)
             End If
             If (Original_soc_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(149).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(150).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(Original_soc_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(Original_soc_pr,String)
             End If
             If (Original_soc_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(151).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(152).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(Original_soc_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(Original_soc_pr_g,String)
             End If
             If (Original_soc_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(153).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(154).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(Original_soc_total,String)
+                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(Original_soc_total,String)
             End If
             If (Original_soc_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(155).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(156).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(Original_soc_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(Original_soc_total_g,String)
             End If
             If (Original_obt_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(157).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(158).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(Original_obt_th,String)
+                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(Original_obt_th,String)
             End If
             If (Original_obt_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(159).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(160).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(Original_obt_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(Original_obt_th_g,String)
             End If
             If (Original_obt_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(161).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(162).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(Original_obt_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(Original_obt_pr,String)
             End If
             If (Original_obt_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(163).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(164).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(Original_obt_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(Original_obt_pr_g,String)
             End If
             If (Original_obt_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(165).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(166).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(Original_obt_total,String)
+                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(Original_obt_total,String)
             End If
             If (Original_obt_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(167).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(168).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(Original_obt_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(Original_obt_total_g,String)
             End If
             If (Original_comp_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(169).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(170).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(Original_comp_th,String)
+                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(Original_comp_th,String)
             End If
             If (Original_comp_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(171).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(172).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(Original_comp_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(Original_comp_th_g,String)
             End If
             If (Original_comp_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(173).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(174).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(Original_comp_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(Original_comp_pr,String)
             End If
             If (Original_comp_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(175).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(176).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(Original_comp_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(Original_comp_pr_g,String)
             End If
             If (Original_comp_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(177).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(178).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(Original_comp_total,String)
+                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(Original_comp_total,String)
             End If
             If (Original_comp_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(179).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(180).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(Original_comp_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(Original_comp_total_g,String)
             End If
             If (Original_hea_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(181).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(182).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(Original_hea_th,String)
+                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(Original_hea_th,String)
             End If
             If (Original_hea_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(183).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(184).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(Original_hea_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(Original_hea_th_g,String)
             End If
             If (Original_hea_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(185).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(186).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(Original_hea_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(Original_hea_pr,String)
             End If
             If (Original_hea_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(187).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(188).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(Original_hea_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(Original_hea_pr_g,String)
             End If
             If (Original_hea_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(189).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(190).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(Original_hea_total,String)
+                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(Original_hea_total,String)
             End If
             If (Original_hea_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(191).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(192).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(Original_hea_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(Original_hea_total_g,String)
             End If
             If (Original_mor_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(193).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(194).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(Original_mor_th,String)
+                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(Original_mor_th,String)
             End If
             If (Original_mor_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(195).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(196).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(Original_mor_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(Original_mor_th_g,String)
             End If
             If (Original_mor_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(197).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(198).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(Original_mor_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(Original_mor_pr,String)
             End If
             If (Original_mor_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(199).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(200).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(Original_mor_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(Original_mor_pr_g,String)
             End If
             If (Original_mor_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(201).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(202).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(Original_mor_total,String)
+                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(Original_mor_total,String)
             End If
             If (Original_mor_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(203).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(204).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(Original_mor_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(204).Value = CType(Original_mor_total_g,String)
             End If
             If (Original_total_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(204).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(205).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(205).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(206).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(204).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(205).Value = CType(Original_total_th,String)
+                Me.Adapter.UpdateCommand.Parameters(205).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(206).Value = CType(Original_total_th,String)
             End If
             If (Original_total_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(206).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(207).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(207).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(208).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(206).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(207).Value = CType(Original_total_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(207).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(208).Value = CType(Original_total_th_g,String)
             End If
             If (Original_total_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(208).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(209).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(209).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(210).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(208).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(209).Value = CType(Original_total_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(209).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(210).Value = CType(Original_total_pr,String)
             End If
             If (Original_total_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(210).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(211).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(211).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(212).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(210).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(211).Value = CType(Original_total_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(211).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(212).Value = CType(Original_total_pr_g,String)
             End If
             If (Original_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(212).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(213).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(213).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(214).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(212).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(213).Value = CType(Original_total,String)
+                Me.Adapter.UpdateCommand.Parameters(213).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(214).Value = CType(Original_total,String)
             End If
             If (Original_percentage Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(214).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(215).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(215).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(216).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(214).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(215).Value = CType(Original_percentage,String)
+                Me.Adapter.UpdateCommand.Parameters(215).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(216).Value = CType(Original_percentage,String)
             End If
             If (Original_grade_point Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(216).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(217).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(217).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(218).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(216).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(217).Value = CType(Original_grade_point,String)
+                Me.Adapter.UpdateCommand.Parameters(217).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(218).Value = CType(Original_grade_point,String)
             End If
             If (Original_grade Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(218).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(219).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(219).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(220).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(218).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(219).Value = CType(Original_grade,String)
+                Me.Adapter.UpdateCommand.Parameters(219).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(220).Value = CType(Original_grade,String)
             End If
             If (Original_rank Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(220).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(221).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(221).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(222).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(220).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(221).Value = CType(Original_rank,String)
+                Me.Adapter.UpdateCommand.Parameters(221).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(222).Value = CType(Original_rank,String)
             End If
             If (Original_attendance Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(222).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(223).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(223).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(224).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(222).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(223).Value = CType(Original_attendance,String)
+                Me.Adapter.UpdateCommand.Parameters(223).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(224).Value = CType(Original_attendance,String)
             End If
             If (Original_class_teacher Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(224).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(225).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(225).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(226).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(224).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(225).Value = CType(Original_class_teacher,String)
+                Me.Adapter.UpdateCommand.Parameters(225).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(226).Value = CType(Original_class_teacher,String)
             End If
             If (Original_school_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(226).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(227).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(227).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(228).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(226).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(227).Value = CType(Original_school_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(227).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(228).Value = CType(Original_school_full_name,String)
             End If
             If (Original_adm_year Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(228).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(229).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(229).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(230).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(228).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(229).Value = CType(Original_adm_year,String)
+                Me.Adapter.UpdateCommand.Parameters(229).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(230).Value = CType(Original_adm_year,String)
             End If
             If (Original_dob Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(230).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(231).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(231).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(232).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(230).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(231).Value = CType(Original_dob,String)
+                Me.Adapter.UpdateCommand.Parameters(231).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(232).Value = CType(Original_dob,String)
             End If
             If (Original_father_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(232).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(233).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(233).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(234).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(232).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(233).Value = CType(Original_father_name,String)
+                Me.Adapter.UpdateCommand.Parameters(233).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(234).Value = CType(Original_father_name,String)
             End If
             If (Original_gender Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(234).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(235).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(235).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(236).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(234).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(235).Value = CType(Original_gender,String)
+                Me.Adapter.UpdateCommand.Parameters(235).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(236).Value = CType(Original_gender,String)
             End If
             If (Original_mother_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(236).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(237).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(237).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(238).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(236).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(237).Value = CType(Original_mother_name,String)
+                Me.Adapter.UpdateCommand.Parameters(237).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(238).Value = CType(Original_mother_name,String)
             End If
             If (Original_p_address Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(238).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(239).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(239).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(240).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(238).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(239).Value = CType(Original_p_address,String)
+                Me.Adapter.UpdateCommand.Parameters(239).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(240).Value = CType(Original_p_address,String)
             End If
             If (Original_class_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(240).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(241).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(241).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(242).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(240).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(241).Value = CType(Original_class_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(241).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(242).Value = CType(Original_class_full_name,String)
+            End If
+            If (Original_school_estd Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(243).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(244).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(243).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(244).Value = CType(Original_school_estd,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -14309,6 +14472,7 @@ Namespace printDataSetTableAdapters
             tableMapping.ColumnMappings.Add("mother_name", "mother_name")
             tableMapping.ColumnMappings.Add("p_address", "p_address")
             tableMapping.ColumnMappings.Add("class_full_name", "class_full_name")
+            tableMapping.ColumnMappings.Add("school_estd", "school_estd")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -14360,9 +14524,10 @@ Namespace printDataSetTableAdapters
                 " = ?)) AND ((? = 1 AND `school_full_name` IS NULL) OR (`school_full_name` = ?)) "& _ 
                 "AND ((? = 1 AND `adm_year` IS NULL) OR (`adm_year` = ?)) AND ((? = 1 AND `dob` I"& _ 
                 "S NULL) OR (`dob` = ?)) AND ((? = 1 AND `father_name` IS NULL) OR (`father_name`"& _ 
-                " = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `p_a"& _ 
-                "ddress` IS NULL) OR (`p_address` = ?)) AND ((? = 1 AND `class_full_name` IS NULL"& _ 
-                ") OR (`class_full_name` = ?)))"
+                " = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `mot"& _ 
+                "her_name` IS NULL) OR (`mother_name` = ?)) AND ((? = 1 AND `p_address` IS NULL) "& _ 
+                "OR (`p_address` = ?)) AND ((? = 1 AND `class_full_name` IS NULL) OR (`class_full"& _ 
+                "_name` = ?)) AND ((? = 1 AND `school_estd` IS NULL) OR (`school_estd` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -14495,10 +14660,14 @@ Namespace printDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_father_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "father_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_gender", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "gender", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_gender", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "gender", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mother_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mother_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_p_address", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_class_full_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_estd", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `printResultsPrimary` (`student_id`, `reg_number`, `full_name`, `clas"& _ 
@@ -14512,10 +14681,10 @@ Namespace printDataSetTableAdapters
                 "_pr_g`, `gk_conv_total`, `gk_conv_total_g`, `total_th`, `total_th_g`, `total_pr`"& _ 
                 ", `total_pr_g`, `total`, `percentage`, `grade_point`, `grade`, `rank`, `attendan"& _ 
                 "ce`, `class_teacher`, `school_full_name`, `school_address`, `adm_year`, `dob`, `"& _ 
-                "father_name`, `gender`, `mother_name`, `p_address`, `class_full_name`) VALUES (?"& _ 
-                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
+                "father_name`, `gender`, `mother_name`, `p_address`, `class_full_name`, `school_e"& _ 
+                "std`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
                 "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
-                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_number", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_number", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -14583,9 +14752,10 @@ Namespace printDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("dob", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "dob", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("father_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "father_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("gender", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "gender", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mother_name", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mother_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `printResultsPrimary` SET `student_id` = ?, `reg_number` = ?, `full_name` "& _ 
@@ -14603,57 +14773,59 @@ Namespace printDataSetTableAdapters
                 "percentage` = ?, `grade_point` = ?, `grade` = ?, `rank` = ?, `attendance` = ?, `"& _ 
                 "class_teacher` = ?, `school_full_name` = ?, `school_address` = ?, `adm_year` = ?"& _ 
                 ", `dob` = ?, `father_name` = ?, `gender` = ?, `mother_name` = ?, `p_address` = ?"& _ 
-                ", `class_full_name` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `student_id` IS NULL) "& _ 
-                "OR (`student_id` = ?)) AND ((? = 1 AND `reg_number` IS NULL) OR (`reg_number` = "& _ 
-                "?)) AND ((? = 1 AND `full_name` IS NULL) OR (`full_name` = ?)) AND ((? = 1 AND `"& _ 
-                "class` IS NULL) OR (`class` = ?)) AND ((? = 1 AND `school_year` IS NULL) OR (`sc"& _ 
-                "hool_year` = ?)) AND ((? = 1 AND `school_name` IS NULL) OR (`school_name` = ?)) "& _ 
-                "AND ((? = 1 AND `terminal` IS NULL) OR (`terminal` = ?)) AND ((? = 1 AND `eng_th"& _ 
-                "` IS NULL) OR (`eng_th` = ?)) AND ((? = 1 AND `eng_th_g` IS NULL) OR (`eng_th_g`"& _ 
-                " = ?)) AND ((? = 1 AND `eng_pr` IS NULL) OR (`eng_pr` = ?)) AND ((? = 1 AND `eng"& _ 
-                "_pr_g` IS NULL) OR (`eng_pr_g` = ?)) AND ((? = 1 AND `eng_total` IS NULL) OR (`e"& _ 
-                "ng_total` = ?)) AND ((? = 1 AND `eng_total_g` IS NULL) OR (`eng_total_g` = ?)) A"& _ 
-                "ND ((? = 1 AND `nep_th` IS NULL) OR (`nep_th` = ?)) AND ((? = 1 AND `nep_th_g` I"& _ 
-                "S NULL) OR (`nep_th_g` = ?)) AND ((? = 1 AND `nep_pr` IS NULL) OR (`nep_pr` = ?)"& _ 
-                ") AND ((? = 1 AND `nep_pr_g` IS NULL) OR (`nep_pr_g` = ?)) AND ((? = 1 AND `nep_"& _ 
-                "total` IS NULL) OR (`nep_total` = ?)) AND ((? = 1 AND `nep_total_g` IS NULL) OR "& _ 
-                "(`nep_total_g` = ?)) AND ((? = 1 AND `math_th` IS NULL) OR (`math_th` = ?)) AND "& _ 
-                "((? = 1 AND `math_th_g` IS NULL) OR (`math_th_g` = ?)) AND ((? = 1 AND `math_pr`"& _ 
-                " IS NULL) OR (`math_pr` = ?)) AND ((? = 1 AND `math_pr_g` IS NULL) OR (`math_pr_"& _ 
-                "g` = ?)) AND ((? = 1 AND `math_total` IS NULL) OR (`math_total` = ?)) AND ((? = "& _ 
-                "1 AND `math_total_g` IS NULL) OR (`math_total_g` = ?)) AND ((? = 1 AND `sci_th` "& _ 
-                "IS NULL) OR (`sci_th` = ?)) AND ((? = 1 AND `sci_th_g` IS NULL) OR (`sci_th_g` ="& _ 
-                " ?)) AND ((? = 1 AND `sci_pr` IS NULL) OR (`sci_pr` = ?)) AND ((? = 1 AND `sci_p"& _ 
-                "r_g` IS NULL) OR (`sci_pr_g` = ?)) AND ((? = 1 AND `sci_total` IS NULL) OR (`sci"& _ 
-                "_total` = ?)) AND ((? = 1 AND `sci_total_g` IS NULL) OR (`sci_total_g` = ?)) AND"& _ 
-                " ((? = 1 AND `soc_th` IS NULL) OR (`soc_th` = ?)) AND ((? = 1 AND `soc_th_g` IS "& _ 
-                "NULL) OR (`soc_th_g` = ?)) AND ((? = 1 AND `soc_pr` IS NULL) OR (`soc_pr` = ?)) "& _ 
-                "AND ((? = 1 AND `soc_pr_g` IS NULL) OR (`soc_pr_g` = ?)) AND ((? = 1 AND `soc_to"& _ 
-                "tal` IS NULL) OR (`soc_total` = ?)) AND ((? = 1 AND `soc_total_g` IS NULL) OR (`"& _ 
-                "soc_total_g` = ?)) AND ((? = 1 AND `opt_eng_th` IS NULL) OR (`opt_eng_th` = ?)) "& _ 
-                "AND ((? = 1 AND `opt_eng_th_g` IS NULL) OR (`opt_eng_th_g` = ?)) AND ((? = 1 AND"& _ 
-                " `opt_eng_pr` IS NULL) OR (`opt_eng_pr` = ?)) AND ((? = 1 AND `opt_eng_pr_g` IS "& _ 
-                "NULL) OR (`opt_eng_pr_g` = ?)) AND ((? = 1 AND `opt_eng_total` IS NULL) OR (`opt"& _ 
-                "_eng_total` = ?)) AND ((? = 1 AND `opt_eng_total_g` IS NULL) OR (`opt_eng_total_"& _ 
-                "g` = ?)) AND ((? = 1 AND `gk_conv_th` IS NULL) OR (`gk_conv_th` = ?)) AND ((? = "& _ 
-                "1 AND `gk_conv_th_g` IS NULL) OR (`gk_conv_th_g` = ?)) AND ((? = 1 AND `gk_conv_"& _ 
-                "pr` IS NULL) OR (`gk_conv_pr` = ?)) AND ((? = 1 AND `gk_conv_pr_g` IS NULL) OR ("& _ 
-                "`gk_conv_pr_g` = ?)) AND ((? = 1 AND `gk_conv_total` IS NULL) OR (`gk_conv_total"& _ 
-                "` = ?)) AND ((? = 1 AND `gk_conv_total_g` IS NULL) OR (`gk_conv_total_g` = ?)) A"& _ 
-                "ND ((? = 1 AND `total_th` IS NULL) OR (`total_th` = ?)) AND ((? = 1 AND `total_t"& _ 
-                "h_g` IS NULL) OR (`total_th_g` = ?)) AND ((? = 1 AND `total_pr` IS NULL) OR (`to"& _ 
-                "tal_pr` = ?)) AND ((? = 1 AND `total_pr_g` IS NULL) OR (`total_pr_g` = ?)) AND ("& _ 
-                "(? = 1 AND `total` IS NULL) OR (`total` = ?)) AND ((? = 1 AND `percentage` IS NU"& _ 
-                "LL) OR (`percentage` = ?)) AND ((? = 1 AND `grade_point` IS NULL) OR (`grade_poi"& _ 
-                "nt` = ?)) AND ((? = 1 AND `grade` IS NULL) OR (`grade` = ?)) AND ((? = 1 AND `ra"& _ 
-                "nk` IS NULL) OR (`rank` = ?)) AND ((? = 1 AND `attendance` IS NULL) OR (`attenda"& _ 
-                "nce` = ?)) AND ((? = 1 AND `class_teacher` IS NULL) OR (`class_teacher` = ?)) AN"& _ 
-                "D ((? = 1 AND `school_full_name` IS NULL) OR (`school_full_name` = ?)) AND ((? ="& _ 
-                " 1 AND `adm_year` IS NULL) OR (`adm_year` = ?)) AND ((? = 1 AND `dob` IS NULL) O"& _ 
-                "R (`dob` = ?)) AND ((? = 1 AND `father_name` IS NULL) OR (`father_name` = ?)) AN"& _ 
-                "D ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `p_address` I"& _ 
-                "S NULL) OR (`p_address` = ?)) AND ((? = 1 AND `class_full_name` IS NULL) OR (`cl"& _ 
-                "ass_full_name` = ?)))"
+                ", `class_full_name` = ?, `school_estd` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `st"& _ 
+                "udent_id` IS NULL) OR (`student_id` = ?)) AND ((? = 1 AND `reg_number` IS NULL) "& _ 
+                "OR (`reg_number` = ?)) AND ((? = 1 AND `full_name` IS NULL) OR (`full_name` = ?)"& _ 
+                ") AND ((? = 1 AND `class` IS NULL) OR (`class` = ?)) AND ((? = 1 AND `school_yea"& _ 
+                "r` IS NULL) OR (`school_year` = ?)) AND ((? = 1 AND `school_name` IS NULL) OR (`"& _ 
+                "school_name` = ?)) AND ((? = 1 AND `terminal` IS NULL) OR (`terminal` = ?)) AND "& _ 
+                "((? = 1 AND `eng_th` IS NULL) OR (`eng_th` = ?)) AND ((? = 1 AND `eng_th_g` IS N"& _ 
+                "ULL) OR (`eng_th_g` = ?)) AND ((? = 1 AND `eng_pr` IS NULL) OR (`eng_pr` = ?)) A"& _ 
+                "ND ((? = 1 AND `eng_pr_g` IS NULL) OR (`eng_pr_g` = ?)) AND ((? = 1 AND `eng_tot"& _ 
+                "al` IS NULL) OR (`eng_total` = ?)) AND ((? = 1 AND `eng_total_g` IS NULL) OR (`e"& _ 
+                "ng_total_g` = ?)) AND ((? = 1 AND `nep_th` IS NULL) OR (`nep_th` = ?)) AND ((? ="& _ 
+                " 1 AND `nep_th_g` IS NULL) OR (`nep_th_g` = ?)) AND ((? = 1 AND `nep_pr` IS NULL"& _ 
+                ") OR (`nep_pr` = ?)) AND ((? = 1 AND `nep_pr_g` IS NULL) OR (`nep_pr_g` = ?)) AN"& _ 
+                "D ((? = 1 AND `nep_total` IS NULL) OR (`nep_total` = ?)) AND ((? = 1 AND `nep_to"& _ 
+                "tal_g` IS NULL) OR (`nep_total_g` = ?)) AND ((? = 1 AND `math_th` IS NULL) OR (`"& _ 
+                "math_th` = ?)) AND ((? = 1 AND `math_th_g` IS NULL) OR (`math_th_g` = ?)) AND (("& _ 
+                "? = 1 AND `math_pr` IS NULL) OR (`math_pr` = ?)) AND ((? = 1 AND `math_pr_g` IS "& _ 
+                "NULL) OR (`math_pr_g` = ?)) AND ((? = 1 AND `math_total` IS NULL) OR (`math_tota"& _ 
+                "l` = ?)) AND ((? = 1 AND `math_total_g` IS NULL) OR (`math_total_g` = ?)) AND (("& _ 
+                "? = 1 AND `sci_th` IS NULL) OR (`sci_th` = ?)) AND ((? = 1 AND `sci_th_g` IS NUL"& _ 
+                "L) OR (`sci_th_g` = ?)) AND ((? = 1 AND `sci_pr` IS NULL) OR (`sci_pr` = ?)) AND"& _ 
+                " ((? = 1 AND `sci_pr_g` IS NULL) OR (`sci_pr_g` = ?)) AND ((? = 1 AND `sci_total"& _ 
+                "` IS NULL) OR (`sci_total` = ?)) AND ((? = 1 AND `sci_total_g` IS NULL) OR (`sci"& _ 
+                "_total_g` = ?)) AND ((? = 1 AND `soc_th` IS NULL) OR (`soc_th` = ?)) AND ((? = 1"& _ 
+                " AND `soc_th_g` IS NULL) OR (`soc_th_g` = ?)) AND ((? = 1 AND `soc_pr` IS NULL) "& _ 
+                "OR (`soc_pr` = ?)) AND ((? = 1 AND `soc_pr_g` IS NULL) OR (`soc_pr_g` = ?)) AND "& _ 
+                "((? = 1 AND `soc_total` IS NULL) OR (`soc_total` = ?)) AND ((? = 1 AND `soc_tota"& _ 
+                "l_g` IS NULL) OR (`soc_total_g` = ?)) AND ((? = 1 AND `opt_eng_th` IS NULL) OR ("& _ 
+                "`opt_eng_th` = ?)) AND ((? = 1 AND `opt_eng_th_g` IS NULL) OR (`opt_eng_th_g` = "& _ 
+                "?)) AND ((? = 1 AND `opt_eng_pr` IS NULL) OR (`opt_eng_pr` = ?)) AND ((? = 1 AND"& _ 
+                " `opt_eng_pr_g` IS NULL) OR (`opt_eng_pr_g` = ?)) AND ((? = 1 AND `opt_eng_total"& _ 
+                "` IS NULL) OR (`opt_eng_total` = ?)) AND ((? = 1 AND `opt_eng_total_g` IS NULL) "& _ 
+                "OR (`opt_eng_total_g` = ?)) AND ((? = 1 AND `gk_conv_th` IS NULL) OR (`gk_conv_t"& _ 
+                "h` = ?)) AND ((? = 1 AND `gk_conv_th_g` IS NULL) OR (`gk_conv_th_g` = ?)) AND (("& _ 
+                "? = 1 AND `gk_conv_pr` IS NULL) OR (`gk_conv_pr` = ?)) AND ((? = 1 AND `gk_conv_"& _ 
+                "pr_g` IS NULL) OR (`gk_conv_pr_g` = ?)) AND ((? = 1 AND `gk_conv_total` IS NULL)"& _ 
+                " OR (`gk_conv_total` = ?)) AND ((? = 1 AND `gk_conv_total_g` IS NULL) OR (`gk_co"& _ 
+                "nv_total_g` = ?)) AND ((? = 1 AND `total_th` IS NULL) OR (`total_th` = ?)) AND ("& _ 
+                "(? = 1 AND `total_th_g` IS NULL) OR (`total_th_g` = ?)) AND ((? = 1 AND `total_p"& _ 
+                "r` IS NULL) OR (`total_pr` = ?)) AND ((? = 1 AND `total_pr_g` IS NULL) OR (`tota"& _ 
+                "l_pr_g` = ?)) AND ((? = 1 AND `total` IS NULL) OR (`total` = ?)) AND ((? = 1 AND"& _ 
+                " `percentage` IS NULL) OR (`percentage` = ?)) AND ((? = 1 AND `grade_point` IS N"& _ 
+                "ULL) OR (`grade_point` = ?)) AND ((? = 1 AND `grade` IS NULL) OR (`grade` = ?)) "& _ 
+                "AND ((? = 1 AND `rank` IS NULL) OR (`rank` = ?)) AND ((? = 1 AND `attendance` IS"& _ 
+                " NULL) OR (`attendance` = ?)) AND ((? = 1 AND `class_teacher` IS NULL) OR (`clas"& _ 
+                "s_teacher` = ?)) AND ((? = 1 AND `school_full_name` IS NULL) OR (`school_full_na"& _ 
+                "me` = ?)) AND ((? = 1 AND `adm_year` IS NULL) OR (`adm_year` = ?)) AND ((? = 1 A"& _ 
+                "ND `dob` IS NULL) OR (`dob` = ?)) AND ((? = 1 AND `father_name` IS NULL) OR (`fa"& _ 
+                "ther_name` = ?)) AND ((? = 1 AND `gender` IS NULL) OR (`gender` = ?)) AND ((? = "& _ 
+                "1 AND `mother_name` IS NULL) OR (`mother_name` = ?)) AND ((? = 1 AND `p_address`"& _ 
+                " IS NULL) OR (`p_address` = ?)) AND ((? = 1 AND `class_full_name` IS NULL) OR (`"& _ 
+                "class_full_name` = ?)) AND ((? = 1 AND `school_estd` IS NULL) OR (`school_estd` "& _ 
+                "= ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_number", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_number", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -14721,9 +14893,10 @@ Namespace printDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("dob", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "dob", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("father_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "father_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("gender", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "gender", Global.System.Data.DataRowVersion.Current, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mother_name", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mother_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -14855,10 +15028,14 @@ Namespace printDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_father_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "father_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_gender", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "gender", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_gender", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "gender", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_mother_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_mother_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_p_address", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_class_full_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_estd", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -14883,8 +15060,8 @@ Namespace printDataSetTableAdapters
                 "_conv_th, gk_conv_th_g, gk_conv_pr, gk_conv_pr_g, gk_conv_total, gk_conv_total_g"& _ 
                 ", total_th, total_th_g, total_pr, total_pr_g, total, percentage, grade_point, gr"& _ 
                 "ade, rank, attendance, class_teacher, school_full_name, school_address, adm_year"& _ 
-                ", dob, father_name, gender, mother_name, p_address, class_full_name FROM printRe"& _ 
-                "sultsPrimary"
+                ", dob, father_name, gender, mother_name, p_address, class_full_name, school_estd"& _ 
+                " FROM printResultsPrimary"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -15011,8 +15188,10 @@ Namespace printDataSetTableAdapters
                     ByVal Original_dob As String,  _
                     ByVal Original_father_name As String,  _
                     ByVal Original_gender As String,  _
+                    ByVal Original_mother_name As String,  _
                     ByVal Original_p_address As String,  _
-                    ByVal Original_class_full_name As String) As Integer
+                    ByVal Original_class_full_name As String,  _
+                    ByVal Original_school_estd As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             If (Original_student_id.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -15469,19 +15648,33 @@ Namespace printDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(129).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(130).Value = CType(Original_gender,String)
             End If
-            If (Original_p_address Is Nothing) Then
+            If (Original_mother_name Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(131).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(132).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(131).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(132).Value = CType(Original_p_address,String)
+                Me.Adapter.DeleteCommand.Parameters(132).Value = CType(Original_mother_name,String)
             End If
-            If (Original_class_full_name Is Nothing) Then
+            If (Original_p_address Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(133).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(134).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(133).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(134).Value = CType(Original_class_full_name,String)
+                Me.Adapter.DeleteCommand.Parameters(134).Value = CType(Original_p_address,String)
+            End If
+            If (Original_class_full_name Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(135).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(136).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(135).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(136).Value = CType(Original_class_full_name,String)
+            End If
+            If (Original_school_estd Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(137).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(138).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(137).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(138).Value = CType(Original_school_estd,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -15571,7 +15764,8 @@ Namespace printDataSetTableAdapters
                     ByVal gender As String,  _
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
-                    ByVal class_full_name As String) As Integer
+                    ByVal class_full_name As String,  _
+                    ByVal school_estd As String) As Integer
             If (student_id.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(student_id.Value,Integer)
             Else
@@ -15917,6 +16111,11 @@ Namespace printDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(68).Value = CType(class_full_name,String)
             End If
+            If (school_estd Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(69).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(69).Value = CType(school_estd,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -16006,6 +16205,7 @@ Namespace printDataSetTableAdapters
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
                     ByVal class_full_name As String,  _
+                    ByVal school_estd As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_student_id As Global.System.Nullable(Of Integer),  _
                     ByVal Original_reg_number As String,  _
@@ -16072,8 +16272,10 @@ Namespace printDataSetTableAdapters
                     ByVal Original_dob As String,  _
                     ByVal Original_father_name As String,  _
                     ByVal Original_gender As String,  _
+                    ByVal Original_mother_name As String,  _
                     ByVal Original_p_address As String,  _
-                    ByVal Original_class_full_name As String) As Integer
+                    ByVal Original_class_full_name As String,  _
+                    ByVal Original_school_estd As String) As Integer
             If (student_id.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(student_id.Value,Integer)
             Else
@@ -16419,475 +16621,494 @@ Namespace printDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(68).Value = CType(class_full_name,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(69).Value = CType(Original_ID,Integer)
-            If (Original_student_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(Original_student_id.Value,Integer)
+            If (school_estd Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(69).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(70).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(71).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(69).Value = CType(school_estd,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(70).Value = CType(Original_ID,Integer)
+            If (Original_student_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(Original_student_id.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(71).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(72).Value = Global.System.DBNull.Value
             End If
             If (Original_reg_number Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(73).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(72).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(Original_reg_number,String)
+                Me.Adapter.UpdateCommand.Parameters(73).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(Original_reg_number,String)
             End If
             If (Original_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(75).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(74).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(Original_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(75).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(Original_full_name,String)
             End If
             If (Original_class Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(77).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(76).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(Original_class,String)
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_class,String)
             End If
             If (Original_school_year Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(79).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(80).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(Original_school_year,String)
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(Original_school_year,String)
             End If
             If (Original_school_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(81).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(82).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(Original_school_name,String)
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(Original_school_name,String)
             End If
             If (Original_terminal Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(83).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(Original_terminal,String)
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(Original_terminal,String)
             End If
             If (Original_eng_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(85).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(Original_eng_th,String)
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(Original_eng_th,String)
             End If
             If (Original_eng_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(87).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(Original_eng_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(Original_eng_th_g,String)
             End If
             If (Original_eng_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(89).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(Original_eng_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(Original_eng_pr,String)
             End If
             If (Original_eng_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(91).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(Original_eng_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(Original_eng_pr_g,String)
             End If
             If (Original_eng_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_eng_total,String)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(Original_eng_total,String)
             End If
             If (Original_eng_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(95).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(Original_eng_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(Original_eng_total_g,String)
             End If
             If (Original_nep_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(97).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(Original_nep_th,String)
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(Original_nep_th,String)
             End If
             If (Original_nep_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(99).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(Original_nep_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(Original_nep_th_g,String)
             End If
             If (Original_nep_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(101).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(102).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(Original_nep_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(Original_nep_pr,String)
             End If
             If (Original_nep_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(103).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(Original_nep_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(Original_nep_pr_g,String)
             End If
             If (Original_nep_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(105).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(Original_nep_total,String)
+                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(Original_nep_total,String)
             End If
             If (Original_nep_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(107).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(Original_nep_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(Original_nep_total_g,String)
             End If
             If (Original_math_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(109).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(Original_math_th,String)
+                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(Original_math_th,String)
             End If
             If (Original_math_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(111).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(Original_math_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(Original_math_th_g,String)
             End If
             If (Original_math_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(113).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(Original_math_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(Original_math_pr,String)
             End If
             If (Original_math_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(115).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(Original_math_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(Original_math_pr_g,String)
             End If
             If (Original_math_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(117).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(Original_math_total,String)
+                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(Original_math_total,String)
             End If
             If (Original_math_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(119).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(Original_math_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(Original_math_total_g,String)
             End If
             If (Original_sci_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(121).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(122).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(Original_sci_th,String)
+                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(Original_sci_th,String)
             End If
             If (Original_sci_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(123).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(124).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(Original_sci_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(Original_sci_th_g,String)
             End If
             If (Original_sci_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(125).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(126).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(Original_sci_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(Original_sci_pr,String)
             End If
             If (Original_sci_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(127).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(128).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(Original_sci_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(Original_sci_pr_g,String)
             End If
             If (Original_sci_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(129).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(130).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(Original_sci_total,String)
+                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(Original_sci_total,String)
             End If
             If (Original_sci_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(131).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(132).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(Original_sci_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(Original_sci_total_g,String)
             End If
             If (Original_soc_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(133).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(134).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(Original_soc_th,String)
+                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(Original_soc_th,String)
             End If
             If (Original_soc_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(135).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(136).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(Original_soc_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(Original_soc_th_g,String)
             End If
             If (Original_soc_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(137).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(138).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(Original_soc_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(Original_soc_pr,String)
             End If
             If (Original_soc_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(139).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(140).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(Original_soc_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(Original_soc_pr_g,String)
             End If
             If (Original_soc_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(141).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(142).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(Original_soc_total,String)
+                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(Original_soc_total,String)
             End If
             If (Original_soc_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(143).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(144).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(Original_soc_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(Original_soc_total_g,String)
             End If
             If (Original_opt_eng_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(145).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(146).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(Original_opt_eng_th,String)
+                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(Original_opt_eng_th,String)
             End If
             If (Original_opt_eng_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(147).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(148).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(Original_opt_eng_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(Original_opt_eng_th_g,String)
             End If
             If (Original_opt_eng_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(149).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(150).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(Original_opt_eng_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(Original_opt_eng_pr,String)
             End If
             If (Original_opt_eng_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(151).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(152).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(Original_opt_eng_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(Original_opt_eng_pr_g,String)
             End If
             If (Original_opt_eng_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(153).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(154).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(Original_opt_eng_total,String)
+                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(Original_opt_eng_total,String)
             End If
             If (Original_opt_eng_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(155).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(156).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(Original_opt_eng_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(Original_opt_eng_total_g,String)
             End If
             If (Original_gk_conv_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(157).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(158).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(Original_gk_conv_th,String)
+                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(Original_gk_conv_th,String)
             End If
             If (Original_gk_conv_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(159).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(160).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(Original_gk_conv_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(Original_gk_conv_th_g,String)
             End If
             If (Original_gk_conv_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(161).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(162).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(Original_gk_conv_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(Original_gk_conv_pr,String)
             End If
             If (Original_gk_conv_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(163).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(164).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(Original_gk_conv_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(Original_gk_conv_pr_g,String)
             End If
             If (Original_gk_conv_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(165).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(166).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(Original_gk_conv_total,String)
+                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(Original_gk_conv_total,String)
             End If
             If (Original_gk_conv_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(167).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(168).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(Original_gk_conv_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(Original_gk_conv_total_g,String)
             End If
             If (Original_total_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(169).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(170).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(Original_total_th,String)
+                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(Original_total_th,String)
             End If
             If (Original_total_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(171).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(172).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(Original_total_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(Original_total_th_g,String)
             End If
             If (Original_total_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(173).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(174).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(Original_total_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(Original_total_pr,String)
             End If
             If (Original_total_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(175).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(176).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(Original_total_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(Original_total_pr_g,String)
             End If
             If (Original_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(177).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(178).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(Original_total,String)
+                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(Original_total,String)
             End If
             If (Original_percentage Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(179).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(180).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(Original_percentage,String)
+                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(Original_percentage,String)
             End If
             If (Original_grade_point Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(181).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(182).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(Original_grade_point,String)
+                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(Original_grade_point,String)
             End If
             If (Original_grade Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(183).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(184).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(Original_grade,String)
+                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(Original_grade,String)
             End If
             If (Original_rank Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(185).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(186).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(Original_rank,String)
+                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(Original_rank,String)
             End If
             If (Original_attendance Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(187).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(188).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(Original_attendance,String)
+                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(Original_attendance,String)
             End If
             If (Original_class_teacher Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(189).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(190).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(Original_class_teacher,String)
+                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(Original_class_teacher,String)
             End If
             If (Original_school_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(191).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(192).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(Original_school_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(Original_school_full_name,String)
             End If
             If (Original_adm_year Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(193).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(194).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(Original_adm_year,String)
+                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(Original_adm_year,String)
             End If
             If (Original_dob Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(195).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(196).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(Original_dob,String)
+                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(Original_dob,String)
             End If
             If (Original_father_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(197).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(198).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(Original_father_name,String)
+                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(Original_father_name,String)
             End If
             If (Original_gender Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(199).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(200).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(Original_gender,String)
+                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(Original_gender,String)
+            End If
+            If (Original_mother_name Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(202).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(Original_mother_name,String)
             End If
             If (Original_p_address Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(201).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(204).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(Original_p_address,String)
+                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(204).Value = CType(Original_p_address,String)
             End If
             If (Original_class_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(203).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(205).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(206).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(Original_class_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(205).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(206).Value = CType(Original_class_full_name,String)
+            End If
+            If (Original_school_estd Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(207).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(208).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(207).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(208).Value = CType(Original_school_estd,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -17110,6 +17331,7 @@ Namespace printDataSetTableAdapters
             tableMapping.ColumnMappings.Add("mother_name", "mother_name")
             tableMapping.ColumnMappings.Add("p_address", "p_address")
             tableMapping.ColumnMappings.Add("class_full_name", "class_full_name")
+            tableMapping.ColumnMappings.Add("school_estd", "school_estd")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -17168,7 +17390,8 @@ Namespace printDataSetTableAdapters
                 "AND `father_name` IS NULL) OR (`father_name` = ?)) AND ((? = 1 AND `gender` IS N"& _ 
                 "ULL) OR (`gender` = ?)) AND ((? = 1 AND `mother_name` IS NULL) OR (`mother_name`"& _ 
                 " = ?)) AND ((? = 1 AND `p_address` IS NULL) OR (`p_address` = ?)) AND ((? = 1 AN"& _ 
-                "D `class_full_name` IS NULL) OR (`class_full_name` = ?)))"
+                "D `class_full_name` IS NULL) OR (`class_full_name` = ?)) AND ((? = 1 AND `school"& _ 
+                "_estd` IS NULL) OR (`school_estd` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -17323,6 +17546,8 @@ Namespace printDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_class_full_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_estd", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `printResultsSec` (`student_id`, `reg_number`, `full_name`, `class`, "& _ 
@@ -17337,10 +17562,10 @@ Namespace printDataSetTableAdapters
                 "al_th`, `total_th_g`, `total_pr`, `total_pr_g`, `total`, `percentage`, `grade_po"& _ 
                 "int`, `grade`, `opt1`, `opt2`, `rank`, `attendance`, `class_teacher`, `school_fu"& _ 
                 "ll_name`, `school_address`, `adm_year`, `dob`, `father_name`, `gender`, `mother_"& _ 
-                "name`, `p_address`, `class_full_name`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, "& _ 
+                "name`, `p_address`, `class_full_name`, `school_estd`) VALUES (?, ?, ?, ?, ?, ?, "& _ 
                 "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"& _ 
                 " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"& _ 
-                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+                ", ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_number", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_number", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -17419,6 +17644,7 @@ Namespace printDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mother_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `printResultsSec` SET `student_id` = ?, `reg_number` = ?, `full_name` = ?,"& _ 
@@ -17437,62 +17663,63 @@ Namespace printDataSetTableAdapters
                 "point` = ?, `grade` = ?, `opt1` = ?, `opt2` = ?, `rank` = ?, `attendance` = ?, `"& _ 
                 "class_teacher` = ?, `school_full_name` = ?, `school_address` = ?, `adm_year` = ?"& _ 
                 ", `dob` = ?, `father_name` = ?, `gender` = ?, `mother_name` = ?, `p_address` = ?"& _ 
-                ", `class_full_name` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `student_id` IS NULL) "& _ 
-                "OR (`student_id` = ?)) AND ((? = 1 AND `reg_number` IS NULL) OR (`reg_number` = "& _ 
-                "?)) AND ((? = 1 AND `full_name` IS NULL) OR (`full_name` = ?)) AND ((? = 1 AND `"& _ 
-                "class` IS NULL) OR (`class` = ?)) AND ((? = 1 AND `school_year` IS NULL) OR (`sc"& _ 
-                "hool_year` = ?)) AND ((? = 1 AND `school_name` IS NULL) OR (`school_name` = ?)) "& _ 
-                "AND ((? = 1 AND `terminal` IS NULL) OR (`terminal` = ?)) AND ((? = 1 AND `eng_th"& _ 
-                "` IS NULL) OR (`eng_th` = ?)) AND ((? = 1 AND `eng_th_g` IS NULL) OR (`eng_th_g`"& _ 
-                " = ?)) AND ((? = 1 AND `eng_pr` IS NULL) OR (`eng_pr` = ?)) AND ((? = 1 AND `eng"& _ 
-                "_pr_g` IS NULL) OR (`eng_pr_g` = ?)) AND ((? = 1 AND `eng_total` IS NULL) OR (`e"& _ 
-                "ng_total` = ?)) AND ((? = 1 AND `eng_total_g` IS NULL) OR (`eng_total_g` = ?)) A"& _ 
-                "ND ((? = 1 AND `nep_th` IS NULL) OR (`nep_th` = ?)) AND ((? = 1 AND `nep_th_g` I"& _ 
-                "S NULL) OR (`nep_th_g` = ?)) AND ((? = 1 AND `nep_pr` IS NULL) OR (`nep_pr` = ?)"& _ 
-                ") AND ((? = 1 AND `nep_pr_g` IS NULL) OR (`nep_pr_g` = ?)) AND ((? = 1 AND `nep_"& _ 
-                "total` IS NULL) OR (`nep_total` = ?)) AND ((? = 1 AND `nep_total_g` IS NULL) OR "& _ 
-                "(`nep_total_g` = ?)) AND ((? = 1 AND `math_th` IS NULL) OR (`math_th` = ?)) AND "& _ 
-                "((? = 1 AND `math_th_g` IS NULL) OR (`math_th_g` = ?)) AND ((? = 1 AND `math_pr`"& _ 
-                " IS NULL) OR (`math_pr` = ?)) AND ((? = 1 AND `math_pr_g` IS NULL) OR (`math_pr_"& _ 
-                "g` = ?)) AND ((? = 1 AND `math_total` IS NULL) OR (`math_total` = ?)) AND ((? = "& _ 
-                "1 AND `math_total_g` IS NULL) OR (`math_total_g` = ?)) AND ((? = 1 AND `sci_th` "& _ 
-                "IS NULL) OR (`sci_th` = ?)) AND ((? = 1 AND `sci_th_g` IS NULL) OR (`sci_th_g` ="& _ 
-                " ?)) AND ((? = 1 AND `sci_pr` IS NULL) OR (`sci_pr` = ?)) AND ((? = 1 AND `sci_p"& _ 
-                "r_g` IS NULL) OR (`sci_pr_g` = ?)) AND ((? = 1 AND `sci_total` IS NULL) OR (`sci"& _ 
-                "_total` = ?)) AND ((? = 1 AND `sci_total_g` IS NULL) OR (`sci_total_g` = ?)) AND"& _ 
-                " ((? = 1 AND `soc_th` IS NULL) OR (`soc_th` = ?)) AND ((? = 1 AND `soc_th_g` IS "& _ 
-                "NULL) OR (`soc_th_g` = ?)) AND ((? = 1 AND `soc_pr` IS NULL) OR (`soc_pr` = ?)) "& _ 
-                "AND ((? = 1 AND `soc_pr_g` IS NULL) OR (`soc_pr_g` = ?)) AND ((? = 1 AND `soc_to"& _ 
-                "tal` IS NULL) OR (`soc_total` = ?)) AND ((? = 1 AND `soc_total_g` IS NULL) OR (`"& _ 
-                "soc_total_g` = ?)) AND ((? = 1 AND `eph_th` IS NULL) OR (`eph_th` = ?)) AND ((? "& _ 
-                "= 1 AND `eph_th_g` IS NULL) OR (`eph_th_g` = ?)) AND ((? = 1 AND `eph_pr` IS NUL"& _ 
-                "L) OR (`eph_pr` = ?)) AND ((? = 1 AND `eph_pr_g` IS NULL) OR (`eph_pr_g` = ?)) A"& _ 
-                "ND ((? = 1 AND `eph_total` IS NULL) OR (`eph_total` = ?)) AND ((? = 1 AND `eph_t"& _ 
-                "otal_g` IS NULL) OR (`eph_total_g` = ?)) AND ((? = 1 AND `opt1_th` IS NULL) OR ("& _ 
-                "`opt1_th` = ?)) AND ((? = 1 AND `opt1_th_g` IS NULL) OR (`opt1_th_g` = ?)) AND ("& _ 
-                "(? = 1 AND `opt1_pr` IS NULL) OR (`opt1_pr` = ?)) AND ((? = 1 AND `opt1_pr_g` IS"& _ 
-                " NULL) OR (`opt1_pr_g` = ?)) AND ((? = 1 AND `opt1_total` IS NULL) OR (`opt1_tot"& _ 
-                "al` = ?)) AND ((? = 1 AND `opt1_total_g` IS NULL) OR (`opt1_total_g` = ?)) AND ("& _ 
-                "(? = 1 AND `opt2_th` IS NULL) OR (`opt2_th` = ?)) AND ((? = 1 AND `opt2_th_g` IS"& _ 
-                " NULL) OR (`opt2_th_g` = ?)) AND ((? = 1 AND `opt2_pr` IS NULL) OR (`opt2_pr` = "& _ 
-                "?)) AND ((? = 1 AND `opt2_pr_g` IS NULL) OR (`opt2_pr_g` = ?)) AND ((? = 1 AND `"& _ 
-                "opt2_total` IS NULL) OR (`opt2_total` = ?)) AND ((? = 1 AND `opt2_total_g` IS NU"& _ 
-                "LL) OR (`opt2_total_g` = ?)) AND ((? = 1 AND `total_th` IS NULL) OR (`total_th` "& _ 
-                "= ?)) AND ((? = 1 AND `total_th_g` IS NULL) OR (`total_th_g` = ?)) AND ((? = 1 A"& _ 
-                "ND `total_pr` IS NULL) OR (`total_pr` = ?)) AND ((? = 1 AND `total_pr_g` IS NULL"& _ 
-                ") OR (`total_pr_g` = ?)) AND ((? = 1 AND `total` IS NULL) OR (`total` = ?)) AND "& _ 
-                "((? = 1 AND `percentage` IS NULL) OR (`percentage` = ?)) AND ((? = 1 AND `grade_"& _ 
-                "point` IS NULL) OR (`grade_point` = ?)) AND ((? = 1 AND `grade` IS NULL) OR (`gr"& _ 
-                "ade` = ?)) AND ((? = 1 AND `opt1` IS NULL) OR (`opt1` = ?)) AND ((? = 1 AND `opt"& _ 
-                "2` IS NULL) OR (`opt2` = ?)) AND ((? = 1 AND `rank` IS NULL) OR (`rank` = ?)) AN"& _ 
-                "D ((? = 1 AND `attendance` IS NULL) OR (`attendance` = ?)) AND ((? = 1 AND `clas"& _ 
-                "s_teacher` IS NULL) OR (`class_teacher` = ?)) AND ((? = 1 AND `school_full_name`"& _ 
-                " IS NULL) OR (`school_full_name` = ?)) AND ((? = 1 AND `adm_year` IS NULL) OR (`"& _ 
-                "adm_year` = ?)) AND ((? = 1 AND `dob` IS NULL) OR (`dob` = ?)) AND ((? = 1 AND `"& _ 
-                "father_name` IS NULL) OR (`father_name` = ?)) AND ((? = 1 AND `gender` IS NULL) "& _ 
-                "OR (`gender` = ?)) AND ((? = 1 AND `mother_name` IS NULL) OR (`mother_name` = ?)"& _ 
-                ") AND ((? = 1 AND `p_address` IS NULL) OR (`p_address` = ?)) AND ((? = 1 AND `cl"& _ 
-                "ass_full_name` IS NULL) OR (`class_full_name` = ?)))"
+                ", `class_full_name` = ?, `school_estd` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `st"& _ 
+                "udent_id` IS NULL) OR (`student_id` = ?)) AND ((? = 1 AND `reg_number` IS NULL) "& _ 
+                "OR (`reg_number` = ?)) AND ((? = 1 AND `full_name` IS NULL) OR (`full_name` = ?)"& _ 
+                ") AND ((? = 1 AND `class` IS NULL) OR (`class` = ?)) AND ((? = 1 AND `school_yea"& _ 
+                "r` IS NULL) OR (`school_year` = ?)) AND ((? = 1 AND `school_name` IS NULL) OR (`"& _ 
+                "school_name` = ?)) AND ((? = 1 AND `terminal` IS NULL) OR (`terminal` = ?)) AND "& _ 
+                "((? = 1 AND `eng_th` IS NULL) OR (`eng_th` = ?)) AND ((? = 1 AND `eng_th_g` IS N"& _ 
+                "ULL) OR (`eng_th_g` = ?)) AND ((? = 1 AND `eng_pr` IS NULL) OR (`eng_pr` = ?)) A"& _ 
+                "ND ((? = 1 AND `eng_pr_g` IS NULL) OR (`eng_pr_g` = ?)) AND ((? = 1 AND `eng_tot"& _ 
+                "al` IS NULL) OR (`eng_total` = ?)) AND ((? = 1 AND `eng_total_g` IS NULL) OR (`e"& _ 
+                "ng_total_g` = ?)) AND ((? = 1 AND `nep_th` IS NULL) OR (`nep_th` = ?)) AND ((? ="& _ 
+                " 1 AND `nep_th_g` IS NULL) OR (`nep_th_g` = ?)) AND ((? = 1 AND `nep_pr` IS NULL"& _ 
+                ") OR (`nep_pr` = ?)) AND ((? = 1 AND `nep_pr_g` IS NULL) OR (`nep_pr_g` = ?)) AN"& _ 
+                "D ((? = 1 AND `nep_total` IS NULL) OR (`nep_total` = ?)) AND ((? = 1 AND `nep_to"& _ 
+                "tal_g` IS NULL) OR (`nep_total_g` = ?)) AND ((? = 1 AND `math_th` IS NULL) OR (`"& _ 
+                "math_th` = ?)) AND ((? = 1 AND `math_th_g` IS NULL) OR (`math_th_g` = ?)) AND (("& _ 
+                "? = 1 AND `math_pr` IS NULL) OR (`math_pr` = ?)) AND ((? = 1 AND `math_pr_g` IS "& _ 
+                "NULL) OR (`math_pr_g` = ?)) AND ((? = 1 AND `math_total` IS NULL) OR (`math_tota"& _ 
+                "l` = ?)) AND ((? = 1 AND `math_total_g` IS NULL) OR (`math_total_g` = ?)) AND (("& _ 
+                "? = 1 AND `sci_th` IS NULL) OR (`sci_th` = ?)) AND ((? = 1 AND `sci_th_g` IS NUL"& _ 
+                "L) OR (`sci_th_g` = ?)) AND ((? = 1 AND `sci_pr` IS NULL) OR (`sci_pr` = ?)) AND"& _ 
+                " ((? = 1 AND `sci_pr_g` IS NULL) OR (`sci_pr_g` = ?)) AND ((? = 1 AND `sci_total"& _ 
+                "` IS NULL) OR (`sci_total` = ?)) AND ((? = 1 AND `sci_total_g` IS NULL) OR (`sci"& _ 
+                "_total_g` = ?)) AND ((? = 1 AND `soc_th` IS NULL) OR (`soc_th` = ?)) AND ((? = 1"& _ 
+                " AND `soc_th_g` IS NULL) OR (`soc_th_g` = ?)) AND ((? = 1 AND `soc_pr` IS NULL) "& _ 
+                "OR (`soc_pr` = ?)) AND ((? = 1 AND `soc_pr_g` IS NULL) OR (`soc_pr_g` = ?)) AND "& _ 
+                "((? = 1 AND `soc_total` IS NULL) OR (`soc_total` = ?)) AND ((? = 1 AND `soc_tota"& _ 
+                "l_g` IS NULL) OR (`soc_total_g` = ?)) AND ((? = 1 AND `eph_th` IS NULL) OR (`eph"& _ 
+                "_th` = ?)) AND ((? = 1 AND `eph_th_g` IS NULL) OR (`eph_th_g` = ?)) AND ((? = 1 "& _ 
+                "AND `eph_pr` IS NULL) OR (`eph_pr` = ?)) AND ((? = 1 AND `eph_pr_g` IS NULL) OR "& _ 
+                "(`eph_pr_g` = ?)) AND ((? = 1 AND `eph_total` IS NULL) OR (`eph_total` = ?)) AND"& _ 
+                " ((? = 1 AND `eph_total_g` IS NULL) OR (`eph_total_g` = ?)) AND ((? = 1 AND `opt"& _ 
+                "1_th` IS NULL) OR (`opt1_th` = ?)) AND ((? = 1 AND `opt1_th_g` IS NULL) OR (`opt"& _ 
+                "1_th_g` = ?)) AND ((? = 1 AND `opt1_pr` IS NULL) OR (`opt1_pr` = ?)) AND ((? = 1"& _ 
+                " AND `opt1_pr_g` IS NULL) OR (`opt1_pr_g` = ?)) AND ((? = 1 AND `opt1_total` IS "& _ 
+                "NULL) OR (`opt1_total` = ?)) AND ((? = 1 AND `opt1_total_g` IS NULL) OR (`opt1_t"& _ 
+                "otal_g` = ?)) AND ((? = 1 AND `opt2_th` IS NULL) OR (`opt2_th` = ?)) AND ((? = 1"& _ 
+                " AND `opt2_th_g` IS NULL) OR (`opt2_th_g` = ?)) AND ((? = 1 AND `opt2_pr` IS NUL"& _ 
+                "L) OR (`opt2_pr` = ?)) AND ((? = 1 AND `opt2_pr_g` IS NULL) OR (`opt2_pr_g` = ?)"& _ 
+                ") AND ((? = 1 AND `opt2_total` IS NULL) OR (`opt2_total` = ?)) AND ((? = 1 AND `"& _ 
+                "opt2_total_g` IS NULL) OR (`opt2_total_g` = ?)) AND ((? = 1 AND `total_th` IS NU"& _ 
+                "LL) OR (`total_th` = ?)) AND ((? = 1 AND `total_th_g` IS NULL) OR (`total_th_g` "& _ 
+                "= ?)) AND ((? = 1 AND `total_pr` IS NULL) OR (`total_pr` = ?)) AND ((? = 1 AND `"& _ 
+                "total_pr_g` IS NULL) OR (`total_pr_g` = ?)) AND ((? = 1 AND `total` IS NULL) OR "& _ 
+                "(`total` = ?)) AND ((? = 1 AND `percentage` IS NULL) OR (`percentage` = ?)) AND "& _ 
+                "((? = 1 AND `grade_point` IS NULL) OR (`grade_point` = ?)) AND ((? = 1 AND `grad"& _ 
+                "e` IS NULL) OR (`grade` = ?)) AND ((? = 1 AND `opt1` IS NULL) OR (`opt1` = ?)) A"& _ 
+                "ND ((? = 1 AND `opt2` IS NULL) OR (`opt2` = ?)) AND ((? = 1 AND `rank` IS NULL) "& _ 
+                "OR (`rank` = ?)) AND ((? = 1 AND `attendance` IS NULL) OR (`attendance` = ?)) AN"& _ 
+                "D ((? = 1 AND `class_teacher` IS NULL) OR (`class_teacher` = ?)) AND ((? = 1 AND"& _ 
+                " `school_full_name` IS NULL) OR (`school_full_name` = ?)) AND ((? = 1 AND `adm_y"& _ 
+                "ear` IS NULL) OR (`adm_year` = ?)) AND ((? = 1 AND `dob` IS NULL) OR (`dob` = ?)"& _ 
+                ") AND ((? = 1 AND `father_name` IS NULL) OR (`father_name` = ?)) AND ((? = 1 AND"& _ 
+                " `gender` IS NULL) OR (`gender` = ?)) AND ((? = 1 AND `mother_name` IS NULL) OR "& _ 
+                "(`mother_name` = ?)) AND ((? = 1 AND `p_address` IS NULL) OR (`p_address` = ?)) "& _ 
+                "AND ((? = 1 AND `class_full_name` IS NULL) OR (`class_full_name` = ?)) AND ((? ="& _ 
+                " 1 AND `school_estd` IS NULL) OR (`school_estd` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("student_id", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("reg_number", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "reg_number", Global.System.Data.DataRowVersion.Current, false, Nothing))
@@ -17571,6 +17798,7 @@ Namespace printDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("mother_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "mother_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_student_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_student_id", Global.System.Data.OleDb.OleDbType.[Double], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "student_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -17724,6 +17952,8 @@ Namespace printDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_p_address", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "p_address", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_class_full_name", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_class_full_name", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "class_full_name", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_school_estd", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_school_estd", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "school_estd", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -17749,7 +17979,7 @@ Namespace printDataSetTableAdapters
                 "opt2_total, opt2_total_g, total_th, total_th_g, total_pr, total_pr_g, total, per"& _ 
                 "centage, grade_point, grade, opt1, opt2, rank, attendance, class_teacher, school"& _ 
                 "_full_name, school_address, adm_year, dob, father_name, gender, mother_name, p_a"& _ 
-                "ddress, class_full_name FROM printResultsSec"
+                "ddress, class_full_name, school_estd FROM printResultsSec"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -17886,7 +18116,8 @@ Namespace printDataSetTableAdapters
                     ByVal Original_gender As String,  _
                     ByVal Original_mother_name As String,  _
                     ByVal Original_p_address As String,  _
-                    ByVal Original_class_full_name As String) As Integer
+                    ByVal Original_class_full_name As String,  _
+                    ByVal Original_school_estd As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
             If (Original_student_id.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
@@ -18420,6 +18651,13 @@ Namespace printDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(151).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(152).Value = CType(Original_class_full_name,String)
             End If
+            If (Original_school_estd Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(153).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(154).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(153).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(154).Value = CType(Original_school_estd,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -18516,7 +18754,8 @@ Namespace printDataSetTableAdapters
                     ByVal gender As String,  _
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
-                    ByVal class_full_name As String) As Integer
+                    ByVal class_full_name As String,  _
+                    ByVal school_estd As String) As Integer
             If (student_id.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(student_id.Value,Double)
             Else
@@ -18902,6 +19141,11 @@ Namespace printDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(76).Value = CType(class_full_name,String)
             End If
+            If (school_estd Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(77).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(77).Value = CType(school_estd,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -18999,6 +19243,7 @@ Namespace printDataSetTableAdapters
                     ByVal mother_name As String,  _
                     ByVal p_address As String,  _
                     ByVal class_full_name As String,  _
+                    ByVal school_estd As String,  _
                     ByVal Original_ID As Integer,  _
                     ByVal Original_student_id As Global.System.Nullable(Of Double),  _
                     ByVal Original_reg_number As String,  _
@@ -19075,7 +19320,8 @@ Namespace printDataSetTableAdapters
                     ByVal Original_gender As String,  _
                     ByVal Original_mother_name As String,  _
                     ByVal Original_p_address As String,  _
-                    ByVal Original_class_full_name As String) As Integer
+                    ByVal Original_class_full_name As String,  _
+                    ByVal Original_school_estd As String) As Integer
             If (student_id.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(student_id.Value,Double)
             Else
@@ -19461,538 +19707,550 @@ Namespace printDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(76).Value = CType(class_full_name,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(77).Value = CType(Original_ID,Integer)
-            If (Original_student_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(Original_student_id.Value,Double)
+            If (school_estd Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(77).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(78).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(79).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(77).Value = CType(school_estd,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(78).Value = CType(Original_ID,Integer)
+            If (Original_student_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(Original_student_id.Value,Double)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(79).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(80).Value = Global.System.DBNull.Value
             End If
             If (Original_reg_number Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(81).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(82).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(80).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(Original_reg_number,String)
+                Me.Adapter.UpdateCommand.Parameters(81).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(Original_reg_number,String)
             End If
             If (Original_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(83).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(82).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(Original_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(83).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(Original_full_name,String)
             End If
             If (Original_class Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(85).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(84).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(Original_class,String)
+                Me.Adapter.UpdateCommand.Parameters(85).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(Original_class,String)
             End If
             If (Original_school_year Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(87).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(86).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(Original_school_year,String)
+                Me.Adapter.UpdateCommand.Parameters(87).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(Original_school_year,String)
             End If
             If (Original_school_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(89).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(88).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(Original_school_name,String)
+                Me.Adapter.UpdateCommand.Parameters(89).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(Original_school_name,String)
             End If
             If (Original_terminal Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(91).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(90).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(Original_terminal,String)
+                Me.Adapter.UpdateCommand.Parameters(91).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(Original_terminal,String)
             End If
             If (Original_eng_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(Original_eng_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(Original_eng_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(92).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(93).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(93).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(94).Value = Global.System.DBNull.Value
             End If
             If (Original_eng_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(95).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(94).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(Original_eng_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(95).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(Original_eng_th_g,String)
             End If
             If (Original_eng_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(Original_eng_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(Original_eng_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(96).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(97).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(97).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(98).Value = Global.System.DBNull.Value
             End If
             If (Original_eng_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(99).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(98).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(Original_eng_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(99).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(Original_eng_pr_g,String)
             End If
             If (Original_eng_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(Original_eng_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(Original_eng_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(100).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(101).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(101).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(102).Value = Global.System.DBNull.Value
             End If
             If (Original_eng_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(103).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(102).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(Original_eng_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(103).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(Original_eng_total_g,String)
             End If
             If (Original_nep_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(105).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(104).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(Original_nep_th,String)
+                Me.Adapter.UpdateCommand.Parameters(105).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(Original_nep_th,String)
             End If
             If (Original_nep_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(107).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(106).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(Original_nep_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(107).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(Original_nep_th_g,String)
             End If
             If (Original_nep_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(109).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(108).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(Original_nep_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(109).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(Original_nep_pr,String)
             End If
             If (Original_nep_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(111).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(110).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(Original_nep_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(111).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(Original_nep_pr_g,String)
             End If
             If (Original_nep_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(Original_nep_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(Original_nep_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(112).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(113).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(113).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(114).Value = Global.System.DBNull.Value
             End If
             If (Original_nep_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(115).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(114).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(Original_nep_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(115).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(Original_nep_total_g,String)
             End If
             If (Original_math_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(117).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(116).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(Original_math_th,String)
+                Me.Adapter.UpdateCommand.Parameters(117).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(Original_math_th,String)
             End If
             If (Original_math_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(119).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(118).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(Original_math_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(119).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(Original_math_th_g,String)
             End If
             If (Original_math_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(121).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(122).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(120).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(Original_math_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(121).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(Original_math_pr,String)
             End If
             If (Original_math_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(123).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(124).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(122).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(Original_math_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(123).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(Original_math_pr_g,String)
             End If
             If (Original_math_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(Original_math_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(Original_math_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(124).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(125).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(125).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(126).Value = Global.System.DBNull.Value
             End If
             If (Original_math_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(127).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(128).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(126).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(Original_math_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(127).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(Original_math_total_g,String)
             End If
             If (Original_sci_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(Original_sci_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(Original_sci_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(128).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(129).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(129).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(130).Value = Global.System.DBNull.Value
             End If
             If (Original_sci_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(131).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(132).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(130).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(Original_sci_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(131).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(Original_sci_th_g,String)
             End If
             If (Original_sci_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(Original_sci_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(Original_sci_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(132).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(133).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(133).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(134).Value = Global.System.DBNull.Value
             End If
             If (Original_sci_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(135).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(136).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(134).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(Original_sci_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(135).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(Original_sci_pr_g,String)
             End If
             If (Original_sci_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(Original_sci_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(Original_sci_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(136).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(137).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(137).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(138).Value = Global.System.DBNull.Value
             End If
             If (Original_sci_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(139).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(140).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(138).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(Original_sci_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(139).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(Original_sci_total_g,String)
             End If
             If (Original_soc_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(141).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(142).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(140).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(Original_soc_th,String)
+                Me.Adapter.UpdateCommand.Parameters(141).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(Original_soc_th,String)
             End If
             If (Original_soc_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(143).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(144).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(142).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(Original_soc_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(143).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(Original_soc_th_g,String)
             End If
             If (Original_soc_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(145).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(146).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(144).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(Original_soc_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(145).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(Original_soc_pr,String)
             End If
             If (Original_soc_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(147).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(148).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(146).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(Original_soc_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(147).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(Original_soc_pr_g,String)
             End If
             If (Original_soc_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(Original_soc_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(Original_soc_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(148).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(149).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(149).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(150).Value = Global.System.DBNull.Value
             End If
             If (Original_soc_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(151).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(152).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(150).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(Original_soc_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(151).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(Original_soc_total_g,String)
             End If
             If (Original_eph_th.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(Original_eph_th.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(Original_eph_th.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(152).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(153).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(153).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(154).Value = Global.System.DBNull.Value
             End If
             If (Original_eph_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(155).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(156).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(154).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(Original_eph_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(155).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(Original_eph_th_g,String)
             End If
             If (Original_eph_pr.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(Original_eph_pr.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(Original_eph_pr.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(156).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(157).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(157).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(158).Value = Global.System.DBNull.Value
             End If
             If (Original_eph_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(159).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(160).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(158).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(Original_eph_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(159).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(Original_eph_pr_g,String)
             End If
             If (Original_eph_total.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(Original_eph_total.Value,Double)
+                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(Original_eph_total.Value,Double)
             Else
-                Me.Adapter.UpdateCommand.Parameters(160).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(161).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(161).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(162).Value = Global.System.DBNull.Value
             End If
             If (Original_eph_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(163).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(164).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(162).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(Original_eph_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(163).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(Original_eph_total_g,String)
             End If
             If (Original_opt1_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(165).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(166).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(164).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(Original_opt1_th,String)
+                Me.Adapter.UpdateCommand.Parameters(165).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(Original_opt1_th,String)
             End If
             If (Original_opt1_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(167).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(168).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(166).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(Original_opt1_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(167).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(Original_opt1_th_g,String)
             End If
             If (Original_opt1_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(169).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(170).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(168).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(Original_opt1_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(169).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(Original_opt1_pr,String)
             End If
             If (Original_opt1_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(171).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(172).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(170).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(Original_opt1_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(171).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(Original_opt1_pr_g,String)
             End If
             If (Original_opt1_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(173).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(174).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(172).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(Original_opt1_total,String)
+                Me.Adapter.UpdateCommand.Parameters(173).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(Original_opt1_total,String)
             End If
             If (Original_opt1_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(175).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(176).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(174).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(Original_opt1_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(175).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(Original_opt1_total_g,String)
             End If
             If (Original_opt2_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(177).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(178).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(176).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(Original_opt2_th,String)
+                Me.Adapter.UpdateCommand.Parameters(177).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(Original_opt2_th,String)
             End If
             If (Original_opt2_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(179).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(180).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(178).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(Original_opt2_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(179).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(Original_opt2_th_g,String)
             End If
             If (Original_opt2_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(181).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(182).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(180).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(Original_opt2_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(181).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(Original_opt2_pr,String)
             End If
             If (Original_opt2_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(183).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(184).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(182).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(Original_opt2_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(183).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(Original_opt2_pr_g,String)
             End If
             If (Original_opt2_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(185).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(186).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(184).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(Original_opt2_total,String)
+                Me.Adapter.UpdateCommand.Parameters(185).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(Original_opt2_total,String)
             End If
             If (Original_opt2_total_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(187).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(188).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(186).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(Original_opt2_total_g,String)
+                Me.Adapter.UpdateCommand.Parameters(187).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(Original_opt2_total_g,String)
             End If
             If (Original_total_th Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(189).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(190).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(188).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(Original_total_th,String)
+                Me.Adapter.UpdateCommand.Parameters(189).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(Original_total_th,String)
             End If
             If (Original_total_th_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(191).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(192).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(190).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(Original_total_th_g,String)
+                Me.Adapter.UpdateCommand.Parameters(191).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(Original_total_th_g,String)
             End If
             If (Original_total_pr Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(193).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(194).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(192).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(Original_total_pr,String)
+                Me.Adapter.UpdateCommand.Parameters(193).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(Original_total_pr,String)
             End If
             If (Original_total_pr_g Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(195).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(196).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(194).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(Original_total_pr_g,String)
+                Me.Adapter.UpdateCommand.Parameters(195).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(Original_total_pr_g,String)
             End If
             If (Original_total Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(197).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(198).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(196).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(Original_total,String)
+                Me.Adapter.UpdateCommand.Parameters(197).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(Original_total,String)
             End If
             If (Original_percentage Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(199).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(200).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(198).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(Original_percentage,String)
+                Me.Adapter.UpdateCommand.Parameters(199).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(Original_percentage,String)
             End If
             If (Original_grade_point Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(201).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(202).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(200).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(Original_grade_point,String)
+                Me.Adapter.UpdateCommand.Parameters(201).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(Original_grade_point,String)
             End If
             If (Original_grade Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(203).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(204).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(202).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(Original_grade,String)
+                Me.Adapter.UpdateCommand.Parameters(203).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(204).Value = CType(Original_grade,String)
             End If
             If (Original_opt1 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(204).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(205).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(205).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(206).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(204).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(205).Value = CType(Original_opt1,String)
+                Me.Adapter.UpdateCommand.Parameters(205).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(206).Value = CType(Original_opt1,String)
             End If
             If (Original_opt2 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(206).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(207).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(207).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(208).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(206).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(207).Value = CType(Original_opt2,String)
+                Me.Adapter.UpdateCommand.Parameters(207).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(208).Value = CType(Original_opt2,String)
             End If
             If (Original_rank Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(208).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(209).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(209).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(210).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(208).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(209).Value = CType(Original_rank,String)
+                Me.Adapter.UpdateCommand.Parameters(209).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(210).Value = CType(Original_rank,String)
             End If
             If (Original_attendance Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(210).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(211).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(211).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(212).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(210).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(211).Value = CType(Original_attendance,String)
+                Me.Adapter.UpdateCommand.Parameters(211).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(212).Value = CType(Original_attendance,String)
             End If
             If (Original_class_teacher Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(212).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(213).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(213).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(214).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(212).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(213).Value = CType(Original_class_teacher,String)
+                Me.Adapter.UpdateCommand.Parameters(213).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(214).Value = CType(Original_class_teacher,String)
             End If
             If (Original_school_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(214).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(215).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(215).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(216).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(214).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(215).Value = CType(Original_school_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(215).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(216).Value = CType(Original_school_full_name,String)
             End If
             If (Original_adm_year Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(216).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(217).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(217).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(218).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(216).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(217).Value = CType(Original_adm_year,String)
+                Me.Adapter.UpdateCommand.Parameters(217).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(218).Value = CType(Original_adm_year,String)
             End If
             If (Original_dob Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(218).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(219).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(219).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(220).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(218).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(219).Value = CType(Original_dob,String)
+                Me.Adapter.UpdateCommand.Parameters(219).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(220).Value = CType(Original_dob,String)
             End If
             If (Original_father_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(220).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(221).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(221).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(222).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(220).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(221).Value = CType(Original_father_name,String)
+                Me.Adapter.UpdateCommand.Parameters(221).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(222).Value = CType(Original_father_name,String)
             End If
             If (Original_gender Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(222).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(223).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(223).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(224).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(222).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(223).Value = CType(Original_gender,String)
+                Me.Adapter.UpdateCommand.Parameters(223).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(224).Value = CType(Original_gender,String)
             End If
             If (Original_mother_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(224).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(225).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(225).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(226).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(224).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(225).Value = CType(Original_mother_name,String)
+                Me.Adapter.UpdateCommand.Parameters(225).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(226).Value = CType(Original_mother_name,String)
             End If
             If (Original_p_address Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(226).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(227).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(227).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(228).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(226).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(227).Value = CType(Original_p_address,String)
+                Me.Adapter.UpdateCommand.Parameters(227).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(228).Value = CType(Original_p_address,String)
             End If
             If (Original_class_full_name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(228).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(229).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(229).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(230).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(228).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(229).Value = CType(Original_class_full_name,String)
+                Me.Adapter.UpdateCommand.Parameters(229).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(230).Value = CType(Original_class_full_name,String)
+            End If
+            If (Original_school_estd Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(231).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(232).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(231).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(232).Value = CType(Original_school_estd,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _

@@ -184,7 +184,7 @@ Public Class classResults
         Dim school_name = contents(2)
 
         Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
-        Dim school_info = myFunctions.getSchoolNameAddress(school_name)
+        Dim school_info = myFunctions.getSchoolInfo(school_name)
         If primary.Contains(class_name) Then
             Dim printForm As New printResultsPrimaryForm(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
@@ -242,15 +242,15 @@ Public Class classResults
         Dim school_name = contents(2)
 
         Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
-        Dim school_info = myFunctions.getSchoolNameAddress(school_name)
+        Dim school_info = myFunctions.getSchoolInfo(school_name) 'full_name, address, estd_date
         If primary.Contains(class_name) Then
-            Dim printForm As New printResultsPrimaryForm(tempDS, index, class_name, class_teacher, school_info, class_id)
+            Dim printForm As New printCertificatePrimary(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         ElseIf lowSec.Contains(class_name) Then
             Dim printForm As New printCertificateLowSec(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         ElseIf sec.Contains(class_name) Then
-            Dim printForm As New printResultSecForm(tempDS, index, class_name, class_teacher, school_info, class_id)
+            Dim printForm As New printCertificateSec(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         End If
     End Sub

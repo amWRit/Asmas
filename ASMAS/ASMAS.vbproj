@@ -177,10 +177,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>printDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Print\printCertificateLowSec.Designer.vb">
+    <Compile Include="Print\Certificate\printCertificateLowSec.Designer.vb">
       <DependentUpon>printCertificateLowSec.vb</DependentUpon>
     </Compile>
-    <Compile Include="Print\printCertificateLowSec.vb">
+    <Compile Include="Print\Certificate\printCertificateLowSec.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print\Certificate\printCertificatePrimary.Designer.vb">
+      <DependentUpon>printCertificatePrimary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Certificate\printCertificatePrimary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print\Certificate\printCertificateSec.Designer.vb">
+      <DependentUpon>printCertificateSec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Certificate\printCertificateSec.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Result\addAttendance.Designer.vb">
@@ -271,22 +283,22 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Functions\myFunctions.vb" />
-    <Compile Include="Print\printResultLowSecForm.Designer.vb">
+    <Compile Include="Print\Result\printResultLowSecForm.Designer.vb">
       <DependentUpon>printResultLowSecForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Print\printResultLowSecForm.vb">
+    <Compile Include="Print\Result\printResultLowSecForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Print\printResultSecForm.Designer.vb">
+    <Compile Include="Print\Result\printResultSecForm.Designer.vb">
       <DependentUpon>printResultSecForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Print\printResultSecForm.vb">
+    <Compile Include="Print\Result\printResultSecForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Print\printResultsPrimaryForm.Designer.vb">
+    <Compile Include="Print\Result\printResultsPrimaryForm.Designer.vb">
       <DependentUpon>printResultsPrimaryForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Print\printResultsPrimaryForm.vb">
+    <Compile Include="Print\Result\printResultsPrimaryForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Result\mySubjectAnalysisForm.Designer.vb">
@@ -416,10 +428,18 @@
     <EmbeddedResource Include="createAdminForm.resx">
       <DependentUpon>createAdminForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\printCertificateLowSec.resx">
+    <EmbeddedResource Include="Print\Certificate\printCertificateLowSec.resx">
       <DependentUpon>printCertificateLowSec.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\printCertificateLowSec.rdlc" />
+    <EmbeddedResource Include="Print\Certificate\printCertificateLowSec.rdlc" />
+    <EmbeddedResource Include="Print\Certificate\printCertificatePrimary.resx">
+      <DependentUpon>printCertificatePrimary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Certificate\printCertificatePrimary.rdlc" />
+    <EmbeddedResource Include="Print\Certificate\printCertificateSec.resx">
+      <DependentUpon>printCertificateSec.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Certificate\printCertificateSec.rdlc" />
     <EmbeddedResource Include="Result\addAttendance.resx">
       <DependentUpon>addAttendance.vb</DependentUpon>
     </EmbeddedResource>
@@ -462,19 +482,19 @@
     <EmbeddedResource Include="myStudents.resx">
       <DependentUpon>myStudents.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\printResultLowSecForm.resx">
+    <EmbeddedResource Include="Print\Result\printResultLowSecForm.resx">
       <DependentUpon>printResultLowSecForm.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\printResultSecForm.resx">
+    <EmbeddedResource Include="Print\Result\printResultSecForm.resx">
       <DependentUpon>printResultSecForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\printResultsPrimaryForm.resx">
+    <EmbeddedResource Include="Print\Result\printResultsPrimaryForm.resx">
       <DependentUpon>printResultsPrimaryForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Print\resultSec.rdlc" />
-    <EmbeddedResource Include="Print\resultPrimary.rdlc" />
-    <EmbeddedResource Include="Print\resultLowSec.rdlc" />
+    <EmbeddedResource Include="Print\Result\resultSec.rdlc" />
+    <EmbeddedResource Include="Print\Result\resultPrimary.rdlc" />
+    <EmbeddedResource Include="Print\Result\resultLowSec.rdlc" />
     <EmbeddedResource Include="Result\mySubjectAnalysisForm.resx">
       <DependentUpon>mySubjectAnalysisForm.vb</DependentUpon>
     </EmbeddedResource>

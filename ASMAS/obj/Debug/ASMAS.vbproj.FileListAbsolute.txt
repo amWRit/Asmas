@@ -56,3 +56,5 @@ C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMA
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.addAttendance.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.mySubjectAnalysisForm.resources
 C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.printCertificateLowSec.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.printCertificatePrimary.resources
+C:\Users\amWRit\Documents\Visual Studio 2015\Projects\ASMAS\ASMAS\obj\Debug\ASMAS.printCertificateSec.resources
