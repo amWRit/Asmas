@@ -7825,9 +7825,9 @@ Point</Value>
           </Border>
         </Style>
       </Tablix>
-      <Image Name="Image2">
-        <Source>Embedded</Source>
-        <Value>photo_not_available</Value>
+      <Image Name="studentPhoto">
+        <Source>External</Source>
+        <Value>=Parameters!studentPhotoParam.Value</Value>
         <Sizing>FitProportional</Sizing>
         <Top>1.80435in</Top>
         <Left>5.74722in</Left>
@@ -7836,7 +7836,7 @@ Point</Value>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
         </Style>
       </Image>
@@ -9889,6 +9889,12 @@ Point</Value>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="studentPhotoParam">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <EmbeddedImages>
     <EmbeddedImage Name="LogoTerse">
       <MIMEType>image/jpeg</MIMEType>

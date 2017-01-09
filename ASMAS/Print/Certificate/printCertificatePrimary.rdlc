@@ -424,9 +424,9 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Image Name="Image2">
-        <Source>Embedded</Source>
-        <Value>photo_not_available</Value>
+      <Image Name="studentPhoto">
+        <Source>External</Source>
+        <Value>=Parameters!studentPhotoParam.Value</Value>
         <Sizing>FitProportional</Sizing>
         <Top>2.01802in</Top>
         <Left>6.16761in</Left>
@@ -435,7 +435,7 @@
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
-            <Style>Solid</Style>
+            <Style>None</Style>
           </Border>
         </Style>
       </Image>
@@ -1203,6 +1203,12 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="studentPhotoParam">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <EmbeddedImages>
     <EmbeddedImage Name="LogoTerse1">
       <MIMEType>image/png</MIMEType>

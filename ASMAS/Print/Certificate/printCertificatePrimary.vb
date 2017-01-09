@@ -13,6 +13,7 @@ Public Class printCertificatePrimary
     Public _class_teacher As String
     Public _school_info As String()
     Public _class_id As String
+    Public _student_info As String()
 
     Private Sub printCertificatePrimary_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'printDataSet.printResultsPrimary' table. You can move, or remove it, as needed.
@@ -33,6 +34,7 @@ Public Class printCertificatePrimary
         _school_info = school_info
         Dim student_id = tempDS.Tables(0).Rows(index)("student_id")
         Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
+        _student_info = student_info
         myFunctions.prepareTempTable(resultDS, _index, class_name, class_teacher, _school_info, student_info, _class_id)
         If resultDS.Tables(0).Rows.Count = 1 Then nextBtn.Enabled = False
         prepareReport()
@@ -44,6 +46,7 @@ Public Class printCertificatePrimary
         If _index = resultDS.Tables(0).Rows.Count - 1 Then nextBtn.Enabled = False
         Dim student_id = resultDS.Tables(0).Rows(_index)("student_id")
         Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
+        _student_info = student_info
         myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info, student_info, _class_id)
         prepareReport()
     End Sub
@@ -54,6 +57,7 @@ Public Class printCertificatePrimary
         If _index = 0 Then previousBtn.Enabled = False
         Dim student_id = resultDS.Tables(0).Rows(_index)("student_id")
         Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
+        _student_info = student_info
         myFunctions.prepareTempTable(resultDS, _index, _class_name, _class_teacher, _school_info, student_info, _class_id)
         prepareReport()
     End Sub
@@ -63,6 +67,27 @@ Public Class printCertificatePrimary
         Me.printResultsPrimaryBindingSource.EndEdit()
         Me.printResultsPrimaryBindingSource.DataSource = myFunctions.getResultDataTable(_class_name)
         Me.printResultsPrimaryTableAdapter.Update(Me.printDataSet.printResultsPrimary)
+        loadStudentPhoto()
         Me.ReportViewer1.RefreshReport()
+    End Sub
+
+    Public Sub loadStudentPhoto()
+        Me.ReportViewer1.LocalReport.EnableExternalImages = True
+        Dim student_reg = _student_info(0)
+        Dim student_name = _student_info(1).Replace(" ", "")
+        Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
+        Dim imageName = student_name & "" & student_reg & ".jpg"
+        Dim imagePath = strBasePath & imageName
+
+        If imagePath = "" Or Not System.IO.File.Exists(imagePath) Then
+            imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+        End If
+
+        Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
+        Try
+            ReportViewer1.LocalReport.SetParameters(New ReportParameter("studentPhotoParam", templateImage))
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class
