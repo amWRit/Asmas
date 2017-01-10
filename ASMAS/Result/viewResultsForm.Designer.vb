@@ -44,6 +44,7 @@ Partial Class viewResultsForm
         Me.viewResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.updateCalcBtn = New System.Windows.Forms.Button()
+        Me.PrintCertificateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.viewResultsContextMenu.SuspendLayout()
@@ -198,15 +199,15 @@ Partial Class viewResultsForm
         '
         'viewResultsContextMenu
         '
-        Me.viewResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrintToolStripMenuItem})
+        Me.viewResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrintToolStripMenuItem, Me.PrintCertificateToolStripMenuItem})
         Me.viewResultsContextMenu.Name = "searchResultContextMenu"
-        Me.viewResultsContextMenu.Size = New System.Drawing.Size(100, 26)
+        Me.viewResultsContextMenu.Size = New System.Drawing.Size(157, 70)
         '
         'PrintToolStripMenuItem
         '
         Me.PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
-        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(99, 22)
-        Me.PrintToolStripMenuItem.Text = "Print"
+        Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.PrintToolStripMenuItem.Text = "Print Result"
         '
         'updateCalcBtn
         '
@@ -217,6 +218,12 @@ Partial Class viewResultsForm
         Me.updateCalcBtn.TabIndex = 27
         Me.updateCalcBtn.Text = "Update Calc."
         Me.updateCalcBtn.UseVisualStyleBackColor = True
+        '
+        'PrintCertificateToolStripMenuItem
+        '
+        Me.PrintCertificateToolStripMenuItem.Name = "PrintCertificateToolStripMenuItem"
+        Me.PrintCertificateToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.PrintCertificateToolStripMenuItem.Text = "Print Certificate"
         '
         'viewResultsForm
         '
@@ -270,4 +277,5 @@ Partial Class viewResultsForm
     Friend WithEvents viewResultsContextMenu As ContextMenuStrip
     Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents updateCalcBtn As Button
+    Friend WithEvents PrintCertificateToolStripMenuItem As ToolStripMenuItem
 End Class

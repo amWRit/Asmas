@@ -7186,8 +7186,8 @@ Point</Value>
         </Style>
       </Textbox>
       <Image Name="Image1">
-        <Source>Embedded</Source>
-        <Value>LogoTerse1</Value>
+        <Source>External</Source>
+        <Value>=Parameters!schoolLogoParam.Value</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0.31729in</Top>
         <Left>0.33286in</Left>
@@ -7322,7 +7322,7 @@ Point</Value>
               <Width>1.23527in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.40244in</Width>
+              <Width>4.06911in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -7817,7 +7817,7 @@ Point</Value>
         <Top>1.42935in</Top>
         <Left>0.34316in</Left>
         <Height>1.75in</Height>
-        <Width>4.63771in</Width>
+        <Width>5.30438in</Width>
         <ZIndex>15</ZIndex>
         <Style>
           <Border>
@@ -9891,6 +9891,10 @@ Point</Value>
   </DataSets>
   <ReportParameters>
     <ReportParameter Name="studentPhotoParam">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="schoolLogoParam">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

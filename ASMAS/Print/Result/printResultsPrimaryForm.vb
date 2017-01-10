@@ -67,6 +67,7 @@ Public Class printResultsPrimaryForm
         Me.printResultsPrimaryBindingSource.DataSource = myFunctions.getResultDataTable(_class_name)
         Me.PrintResultsPrimaryTableAdapter.Update(Me.PrintDataSet.printResultsPrimary)
         loadStudentPhoto()
+        loadSchoolLogo()
         Me.primaryReportViewer.RefreshReport()
     End Sub
 
@@ -85,6 +86,25 @@ Public Class printResultsPrimaryForm
         Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
         Try
             primaryReportViewer.LocalReport.SetParameters(New ReportParameter("studentPhotoParam", templateImage))
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub loadSchoolLogo()
+        Me.primaryReportViewer.LocalReport.EnableExternalImages = True
+
+        Dim strBasePath = Application.StartupPath & "\logo\"
+        Dim imageName = _school_info(3) & ".png" 'school short name 
+        Dim imagePath = strBasePath & imageName
+
+        If imagePath = "" Or Not System.IO.File.Exists(imagePath) Then
+            imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+        End If
+
+        Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
+        Try
+            primaryReportViewer.LocalReport.SetParameters(New ReportParameter("schoolLogoParam", templateImage))
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

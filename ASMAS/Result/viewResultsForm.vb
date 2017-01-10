@@ -230,4 +230,36 @@ Public Class viewResultsForm
         resultFunctions.updateCalculations(tempDS, school_name, year_num, class_name)
         refreshLV()
     End Sub
+
+    Private Sub PrintCertificateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintCertificateToolStripMenuItem.Click
+        Dim ItemIndex As Integer = databaseResultListView.SelectedIndices(0) 'Grab the selected Index
+        letsPrintCertificate(ItemIndex) 'index = 0; start from beginning
+    End Sub
+
+    Private Sub letsPrintCertificate(index As Integer)
+        Dim primary As String() = TheClass.primaryShortNames
+        Dim lowSec As String() = TheClass.lowSecShortNames
+        Dim sec As String() = TheClass.secShortNames
+
+
+        Dim school_name = schoolName.Text
+        Dim year_num = yearName.Text
+
+        Dim school_id = School.schoolId(school_name)
+        Dim year_id = Year.getYearID(school_id.ToString, year_num)
+        Dim class_id = myFunctions.getClassIdOf(school_id.ToString, year_id, class_name)
+
+        Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
+        Dim school_info = myFunctions.getSchoolInfo(school_name) 'full_name, address, estd_date
+        If primary.Contains(class_name) Then
+            Dim printForm As New printCertificatePrimary(tempDS, index, class_name, class_teacher, school_info, class_id)
+            printForm.Show()
+        ElseIf lowSec.Contains(class_name) Then
+            Dim printForm As New printCertificateLowSec(tempDS, index, class_name, class_teacher, school_info, class_id)
+            printForm.Show()
+        ElseIf sec.Contains(class_name) Then
+            Dim printForm As New printCertificateSec(tempDS, index, class_name, class_teacher, school_info, class_id)
+            printForm.Show()
+        End If
+    End Sub
 End Class

@@ -67,6 +67,7 @@ Public Class printResultSecForm
         Me.printResultsSecBindingSource.DataSource = myFunctions.getResultDataTable(_class_name)
         Me.PrintResultsSecTableAdapter.Update(Me.PrintDataSet.printResultsSec)
         loadStudentPhoto()
+        loadSchoolLogo()
         Me.secReportViewer.RefreshReport()
     End Sub
 
@@ -90,4 +91,22 @@ Public Class printResultSecForm
         End Try
     End Sub
 
+    Public Sub loadSchoolLogo()
+        Me.secReportViewer.LocalReport.EnableExternalImages = True
+
+        Dim strBasePath = Application.StartupPath & "\logo\"
+        Dim imageName = _school_info(3) & ".png" 'school short name 
+        Dim imagePath = strBasePath & imageName
+
+        If imagePath = "" Or Not System.IO.File.Exists(imagePath) Then
+            imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+        End If
+
+        Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
+        Try
+            secReportViewer.LocalReport.SetParameters(New ReportParameter("schoolLogoParam", templateImage))
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

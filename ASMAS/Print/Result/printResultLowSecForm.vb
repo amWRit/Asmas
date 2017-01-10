@@ -68,6 +68,7 @@ Public Class printResultLowSecForm
         Me.printResultsLowSecBindingSource.DataSource = myFunctions.getResultDataTable(_class_name)
         Me.PrintResultsLowSecTableAdapter.Update(Me.printDataSet.printResultsLowSec)
         loadStudentPhoto()
+        loadSchoolLogo()
         Me.ReportViewer1.RefreshReport()
     End Sub
 
@@ -86,6 +87,25 @@ Public Class printResultLowSecForm
         Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
         Try
             ReportViewer1.LocalReport.SetParameters(New ReportParameter("studentPhotoParam", templateImage))
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Public Sub loadSchoolLogo()
+        Me.ReportViewer1.LocalReport.EnableExternalImages = True
+
+        Dim strBasePath = Application.StartupPath & "\logo\"
+        Dim imageName = _school_info(3) & ".png" 'school short name 
+        Dim imagePath = strBasePath & imageName
+
+        If imagePath = "" Or Not System.IO.File.Exists(imagePath) Then
+            imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+        End If
+
+        Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
+        Try
+            ReportViewer1.LocalReport.SetParameters(New ReportParameter("schoolLogoParam", templateImage))
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

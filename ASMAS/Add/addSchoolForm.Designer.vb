@@ -41,19 +41,25 @@ Partial Class addSchoolForm
         Me.cancelBtn = New System.Windows.Forms.Button()
         Me.descLabel = New System.Windows.Forms.Label()
         Me.descTextBox = New System.Windows.Forms.RichTextBox()
+        Me.filepathTextBox = New System.Windows.Forms.TextBox()
+        Me.browsePhotoBtn = New System.Windows.Forms.Button()
+        Me.schoolLogo = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        CType(Me.schoolLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'shortnameTextBox
         '
-        Me.shortnameTextBox.Location = New System.Drawing.Point(108, 36)
+        Me.shortnameTextBox.Location = New System.Drawing.Point(116, 56)
         Me.shortnameTextBox.Name = "shortnameTextBox"
         Me.shortnameTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.shortnameTextBox.TabIndex = 0
+        Me.shortnameTextBox.TabIndex = 1
         '
         'shortnameLabel
         '
         Me.shortnameLabel.AutoSize = True
-        Me.shortnameLabel.Location = New System.Drawing.Point(14, 39)
+        Me.shortnameLabel.Location = New System.Drawing.Point(22, 59)
         Me.shortnameLabel.Name = "shortnameLabel"
         Me.shortnameLabel.Size = New System.Drawing.Size(63, 13)
         Me.shortnameLabel.TabIndex = 55
@@ -71,15 +77,15 @@ Partial Class addSchoolForm
         '
         'fullnameTextBox
         '
-        Me.fullnameTextBox.Location = New System.Drawing.Point(108, 78)
+        Me.fullnameTextBox.Location = New System.Drawing.Point(116, 98)
         Me.fullnameTextBox.Name = "fullnameTextBox"
         Me.fullnameTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.fullnameTextBox.TabIndex = 2
+        Me.fullnameTextBox.TabIndex = 3
         '
         'fullnameLabel
         '
         Me.fullnameLabel.AutoSize = True
-        Me.fullnameLabel.Location = New System.Drawing.Point(14, 81)
+        Me.fullnameLabel.Location = New System.Drawing.Point(22, 101)
         Me.fullnameLabel.Name = "fullnameLabel"
         Me.fullnameLabel.Size = New System.Drawing.Size(54, 13)
         Me.fullnameLabel.TabIndex = 59
@@ -87,15 +93,15 @@ Partial Class addSchoolForm
         '
         'addressTextBox
         '
-        Me.addressTextBox.Location = New System.Drawing.Point(108, 120)
+        Me.addressTextBox.Location = New System.Drawing.Point(116, 140)
         Me.addressTextBox.Name = "addressTextBox"
         Me.addressTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.addressTextBox.TabIndex = 4
+        Me.addressTextBox.TabIndex = 5
         '
         'addressLabel
         '
         Me.addressLabel.AutoSize = True
-        Me.addressLabel.Location = New System.Drawing.Point(14, 123)
+        Me.addressLabel.Location = New System.Drawing.Point(22, 143)
         Me.addressLabel.Name = "addressLabel"
         Me.addressLabel.Size = New System.Drawing.Size(45, 13)
         Me.addressLabel.TabIndex = 61
@@ -103,15 +109,15 @@ Partial Class addSchoolForm
         '
         'estdTextBox
         '
-        Me.estdTextBox.Location = New System.Drawing.Point(108, 160)
+        Me.estdTextBox.Location = New System.Drawing.Point(116, 180)
         Me.estdTextBox.Name = "estdTextBox"
         Me.estdTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.estdTextBox.TabIndex = 6
+        Me.estdTextBox.TabIndex = 7
         '
         'estdLabel
         '
         Me.estdLabel.AutoSize = True
-        Me.estdLabel.Location = New System.Drawing.Point(14, 163)
+        Me.estdLabel.Location = New System.Drawing.Point(22, 183)
         Me.estdLabel.Name = "estdLabel"
         Me.estdLabel.Size = New System.Drawing.Size(59, 13)
         Me.estdLabel.TabIndex = 63
@@ -119,15 +125,15 @@ Partial Class addSchoolForm
         '
         'phoneTextBox
         '
-        Me.phoneTextBox.Location = New System.Drawing.Point(341, 36)
+        Me.phoneTextBox.Location = New System.Drawing.Point(349, 56)
         Me.phoneTextBox.Name = "phoneTextBox"
         Me.phoneTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.phoneTextBox.TabIndex = 1
+        Me.phoneTextBox.TabIndex = 2
         '
         'phoneLabel
         '
         Me.phoneLabel.AutoSize = True
-        Me.phoneLabel.Location = New System.Drawing.Point(247, 39)
+        Me.phoneLabel.Location = New System.Drawing.Point(255, 59)
         Me.phoneLabel.Name = "phoneLabel"
         Me.phoneLabel.Size = New System.Drawing.Size(38, 13)
         Me.phoneLabel.TabIndex = 65
@@ -135,15 +141,15 @@ Partial Class addSchoolForm
         '
         'emailTextBox
         '
-        Me.emailTextBox.Location = New System.Drawing.Point(341, 78)
+        Me.emailTextBox.Location = New System.Drawing.Point(349, 98)
         Me.emailTextBox.Name = "emailTextBox"
         Me.emailTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.emailTextBox.TabIndex = 3
+        Me.emailTextBox.TabIndex = 4
         '
         'emailLabel
         '
         Me.emailLabel.AutoSize = True
-        Me.emailLabel.Location = New System.Drawing.Point(247, 81)
+        Me.emailLabel.Location = New System.Drawing.Point(255, 101)
         Me.emailLabel.Name = "emailLabel"
         Me.emailLabel.Size = New System.Drawing.Size(32, 13)
         Me.emailLabel.TabIndex = 67
@@ -151,15 +157,15 @@ Partial Class addSchoolForm
         '
         'websiteTextBox
         '
-        Me.websiteTextBox.Location = New System.Drawing.Point(341, 121)
+        Me.websiteTextBox.Location = New System.Drawing.Point(349, 141)
         Me.websiteTextBox.Name = "websiteTextBox"
         Me.websiteTextBox.Size = New System.Drawing.Size(121, 20)
-        Me.websiteTextBox.TabIndex = 5
+        Me.websiteTextBox.TabIndex = 6
         '
         'websiteLabel
         '
         Me.websiteLabel.AutoSize = True
-        Me.websiteLabel.Location = New System.Drawing.Point(247, 124)
+        Me.websiteLabel.Location = New System.Drawing.Point(255, 144)
         Me.websiteLabel.Name = "websiteLabel"
         Me.websiteLabel.Size = New System.Drawing.Size(46, 13)
         Me.websiteLabel.TabIndex = 69
@@ -167,26 +173,26 @@ Partial Class addSchoolForm
         '
         'saveBtn
         '
-        Me.saveBtn.Location = New System.Drawing.Point(292, 326)
+        Me.saveBtn.Location = New System.Drawing.Point(304, 495)
         Me.saveBtn.Name = "saveBtn"
         Me.saveBtn.Size = New System.Drawing.Size(75, 23)
-        Me.saveBtn.TabIndex = 8
+        Me.saveBtn.TabIndex = 9
         Me.saveBtn.Text = "Save"
         Me.saveBtn.UseVisualStyleBackColor = True
         '
         'cancelBtn
         '
-        Me.cancelBtn.Location = New System.Drawing.Point(384, 326)
+        Me.cancelBtn.Location = New System.Drawing.Point(396, 495)
         Me.cancelBtn.Name = "cancelBtn"
         Me.cancelBtn.Size = New System.Drawing.Size(75, 23)
-        Me.cancelBtn.TabIndex = 9
+        Me.cancelBtn.TabIndex = 10
         Me.cancelBtn.Text = "Cancel"
         Me.cancelBtn.UseVisualStyleBackColor = True
         '
         'descLabel
         '
         Me.descLabel.AutoSize = True
-        Me.descLabel.Location = New System.Drawing.Point(13, 201)
+        Me.descLabel.Location = New System.Drawing.Point(22, 383)
         Me.descLabel.Name = "descLabel"
         Me.descLabel.Size = New System.Drawing.Size(60, 13)
         Me.descLabel.TabIndex = 74
@@ -195,18 +201,69 @@ Partial Class addSchoolForm
         'descTextBox
         '
         Me.descTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.descTextBox.Location = New System.Drawing.Point(108, 198)
+        Me.descTextBox.Location = New System.Drawing.Point(117, 380)
         Me.descTextBox.MaxLength = 255
         Me.descTextBox.Name = "descTextBox"
         Me.descTextBox.Size = New System.Drawing.Size(354, 96)
-        Me.descTextBox.TabIndex = 7
+        Me.descTextBox.TabIndex = 9
         Me.descTextBox.Text = ""
+        '
+        'filepathTextBox
+        '
+        Me.filepathTextBox.Location = New System.Drawing.Point(162, 261)
+        Me.filepathTextBox.Name = "filepathTextBox"
+        Me.filepathTextBox.Size = New System.Drawing.Size(311, 20)
+        Me.filepathTextBox.TabIndex = 92
+        '
+        'browsePhotoBtn
+        '
+        Me.browsePhotoBtn.Location = New System.Drawing.Point(162, 232)
+        Me.browsePhotoBtn.Name = "browsePhotoBtn"
+        Me.browsePhotoBtn.Size = New System.Drawing.Size(75, 23)
+        Me.browsePhotoBtn.TabIndex = 8
+        Me.browsePhotoBtn.Text = "Browse"
+        Me.browsePhotoBtn.UseVisualStyleBackColor = True
+        '
+        'schoolLogo
+        '
+        Me.schoolLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.schoolLogo.Location = New System.Drawing.Point(21, 232)
+        Me.schoolLogo.Name = "schoolLogo"
+        Me.schoolLogo.Size = New System.Drawing.Size(124, 130)
+        Me.schoolLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.schoolLogo.TabIndex = 90
+        Me.schoolLogo.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(22, 216)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 13)
+        Me.Label2.TabIndex = 93
+        Me.Label2.Text = "School Logo"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.Maroon
+        Me.Label3.Location = New System.Drawing.Point(22, 35)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(297, 13)
+        Me.Label3.TabIndex = 94
+        Me.Label3.Text = "* Please enter all the information carefully. You can't edit later."
         '
         'addSchoolForm
         '
+        Me.AcceptButton = Me.saveBtn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(483, 377)
+        Me.ClientSize = New System.Drawing.Size(500, 528)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.filepathTextBox)
+        Me.Controls.Add(Me.browsePhotoBtn)
+        Me.Controls.Add(Me.schoolLogo)
         Me.Controls.Add(Me.descTextBox)
         Me.Controls.Add(Me.descLabel)
         Me.Controls.Add(Me.saveBtn)
@@ -230,6 +287,7 @@ Partial Class addSchoolForm
         Me.Name = "addSchoolForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add School"
+        CType(Me.schoolLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -254,4 +312,9 @@ Partial Class addSchoolForm
     Friend WithEvents cancelBtn As Button
     Friend WithEvents descLabel As Label
     Friend WithEvents descTextBox As RichTextBox
+    Friend WithEvents filepathTextBox As TextBox
+    Friend WithEvents browsePhotoBtn As Button
+    Friend WithEvents schoolLogo As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

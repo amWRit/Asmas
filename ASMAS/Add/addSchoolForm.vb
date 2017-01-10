@@ -1,5 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+Imports System.IO
 Public Class addSchoolForm
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
@@ -22,7 +23,7 @@ Public Class addSchoolForm
         present = checkIfPresent(shortName)
 
         If present = True Then
-            MessageBox.Show("A school with same short_name is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBox.Show("A school with same short name is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
 
@@ -97,6 +98,61 @@ Public Class addSchoolForm
             e.Cancel = True
             Me.Hide()
             HomeForm.Show()
+        End If
+    End Sub
+
+    Private Sub browsePhotoBtn_Click(sender As Object, e As EventArgs) Handles browsePhotoBtn.Click
+        If shortnameTextBox.Text = "" Then
+            MessageBox.Show("Please enter the short name first.", "Incomplete input", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+
+        If schoolLogo.Image IsNot Nothing Then
+            schoolLogo.Image.Dispose()
+        End If
+        Dim myStream As Stream = Nothing
+        Dim dialog As New OpenFileDialog()
+        dialog.Title = "Browse Picture"
+        dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        'dialog.InitialDirectory = "c:\"
+        dialog.FilterIndex = 2
+        dialog.RestoreDirectory = True
+        dialog.FileName = ""
+
+        If dialog.ShowDialog() = DialogResult.OK Then
+            Try
+                myStream = dialog.OpenFile()
+                If (myStream IsNot Nothing) Then
+                    Dim strBasePath = Application.StartupPath & "\logo\"
+                    Dim imageName = shortnameTextBox.Text & ".png"
+                    Dim imagePath = strBasePath & imageName
+
+                    If System.IO.File.Exists(imagePath) Then
+                        Dim I As Integer = MessageBox.Show("Photo already exists for the student. Are you sure you want to replace the file?", "File exists.", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+                        If I = MsgBoxResult.Ok Then
+                            System.IO.File.Delete(imagePath)
+                        End If
+                    End If
+
+                    schoolLogo.Image = FileHandler.RotateImage(Image.FromFile(dialog.FileName))
+                    schoolLogo.Image = FileHandler.ResizeImage(schoolLogo.Image, 200, 200)
+                    'save resized image to folder
+                    'create folder if doesn't exist
+                    If (Not System.IO.Directory.Exists(strBasePath)) Then
+                        System.IO.Directory.CreateDirectory(strBasePath)
+                    End If
+                    schoolLogo.Image.Save(imagePath, System.Drawing.Imaging.ImageFormat.Jpeg)
+                    filepathTextBox.Text = imagePath
+                End If
+            Catch Ex As Exception
+                MessageBox.Show("Cannot read file from disk. Original error: " & Ex.Message)
+            Finally
+                If (myStream IsNot Nothing) Then
+                    myStream.Close()
+                End If
+                'studentPhoto.Image.Dispose()
+            End Try
         End If
     End Sub
 End Class

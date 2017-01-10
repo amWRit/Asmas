@@ -202,7 +202,7 @@ VALUES
     End Function
 
     Public Shared Function getSchoolInfo(short_name As String) As String()
-        Dim school_info As String() = {"", "", ""}
+        Dim school_info As String() = {"", "", "", ""}
         Dim Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
@@ -222,6 +222,7 @@ VALUES
             school_info(0) = DS.Tables(0).Rows(0)(0).ToString
             school_info(1) = DS.Tables(0).Rows(0)(1).ToString
             school_info(2) = DS.Tables(0).Rows(0)(2).ToString
+            school_info(3) = short_name
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
