@@ -154,18 +154,7 @@ Public Class sendUpResult
         inputHash = resultFunctions.addMoreInputs(inputHash, class_name) 'total_th_perc, total_pr_perc, percentage
         inputHash("attendance") = 0  'dummy - has to be updated manually
 
-        Dim cnt = 0
-        Dim attPerc As Double = 0
-        For i As Integer = 0 To resultDataRows.Count - 1
-            Dim att = resultDataRows(i).Item("attendance").ToString
-            If att = "" Then att = "0"
-            If att <> "0" Then
-                attPerc += CDbl(resultDataRows(i).Item("attendance").ToString)
-                cnt += 1
-            End If
-        Next
-        If attPerc = 0 Then cnt = 1 'to prevent 0/0 error
-        inputHash("attendance") = attPerc / cnt
+        inputHash("attendance") = resultDataRows.Last.Item("attendance")
 
         'inputHash("rank") = 0 'dummy - separate method/button for updating rank, which will run at end
         Return inputHash
