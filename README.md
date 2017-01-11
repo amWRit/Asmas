@@ -16,6 +16,7 @@ __ADMIN__ can:
 * Assign class teacher to class
 * View Results
 * Print Results
+* Print Character Certificate of a student
 * View the student database
 * Search the database
   * class, by ID/name
@@ -28,10 +29,12 @@ __Class Teacher__ can:
 * Add/Edit/Delete Results of his/her classes
 * View Results of his/her classes
 * Print Results of his/her classes
+* Print Character Certificate of a student
 * View the student database
 * Search the database
   * class, by ID/name; only his/her assigned classes are available
   * student, by ID/name
+* View result analysis of all the subjects that he/she teachers
 
 __Viewer__ can:
 * Search the database
