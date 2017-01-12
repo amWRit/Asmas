@@ -34,6 +34,7 @@ Partial Class myStudents
         Me.UpgradeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.refreshBtn = New System.Windows.Forms.Button()
+        Me.sortBtn = New System.Windows.Forms.Button()
         Me.myStudentsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -119,11 +120,21 @@ Partial Class myStudents
         Me.refreshBtn.Text = "Refresh"
         Me.refreshBtn.UseVisualStyleBackColor = True
         '
+        'sortBtn
+        '
+        Me.sortBtn.Location = New System.Drawing.Point(248, 14)
+        Me.sortBtn.Name = "sortBtn"
+        Me.sortBtn.Size = New System.Drawing.Size(125, 23)
+        Me.sortBtn.TabIndex = 170
+        Me.sortBtn.Text = "Sort by SendUp Rank"
+        Me.sortBtn.UseVisualStyleBackColor = True
+        '
         'myStudents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.sortBtn)
         Me.Controls.Add(Me.refreshBtn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.titleLabel)
@@ -149,4 +160,5 @@ Partial Class myStudents
     Friend WithEvents UpgradeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents refreshBtn As Button
+    Friend WithEvents sortBtn As Button
 End Class
