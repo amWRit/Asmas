@@ -11,14 +11,55 @@ Public Class upgradeStudentForm
     Public school_id As String
 
     Private Sub upgradeStudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim next_year = Year.nextYear.ToString
-        yearLabel.Text = next_year
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
 
         Dim DS As DataSet 'Object to store data in
         DS = New DataSet 'Declare a new instance, or we get Null Reference Error
-        Dim classSQL As String = "SELECT distinct short_name, school_id from CLASS where year_id = (SELECT year_id from school_year where year_num='" & next_year & "' and school_id=(SELECT school_id from class where class_id=" & prev_class_id & "))"
+        Dim yearSQL As String = "SELECT distinct year_num from school_year"
+
+        Try
+            Con.Open() 'Open connection
+            DS.Tables.Clear()
+            'YEAR COMBOBOX
+            Dim yearData As OleDbDataAdapter
+            yearData = New OleDbDataAdapter(yearSQL, Con)
+            Con.Close()
+            yearData.Fill(DS)
+            Dim rowCount = DS.Tables(0).Rows.Count
+
+            For i As Integer = 0 To rowCount - 1
+                Dim Val = DS.Tables(0).Rows(i)(0).ToString
+                yearName.Items.Add(Val)
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Con.Close()
+        End Try
+
+    End Sub
+
+    Public Sub New(ids As String(), class_id As String)
+        MyBase.New
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        student_ids = ids
+        prev_class_id = class_id
+    End Sub
+
+    Private Sub yearName_SelectedIndexChanged(sender As Object, e As EventArgs) Handles yearName.SelectedIndexChanged
+        loadClasses()
+    End Sub
+
+    Public Sub loadClasses()
+        yearLabel.Text = yearName.Text
+        classCombo.Items.Clear()
+        Dim DS As DataSet 'Object to store data in
+        DS = New DataSet 'Declare a new instance, or we get Null Reference Error
+        Dim classSQL As String = "SELECT distinct short_name, school_id from CLASS where year_id = (SELECT year_id from school_year where year_num='" & yearName.Text & "' and school_id=(SELECT school_id from class where class_id=" & prev_class_id & "))"
 
         Try
             Con.Open() 'Open connection
@@ -45,16 +86,6 @@ Public Class upgradeStudentForm
             Con.Close()
         End Try
 
-    End Sub
-
-    Public Sub New(ids As String(), class_id As String)
-        MyBase.New
-        ' This call is required by the designer.
-        InitializeComponent()
-
-        ' Add any initialization after the InitializeComponent() call.
-        student_ids = ids
-        prev_class_id = class_id
     End Sub
 
     Private Sub upgradeBtn_Click(sender As Object, e As EventArgs) Handles upgradeBtn.Click

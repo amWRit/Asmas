@@ -27,6 +27,8 @@ Partial Class upgradeStudentForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.classCombo = New System.Windows.Forms.ComboBox()
         Me.upgradeBtn = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.yearName = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -45,15 +47,15 @@ Partial Class upgradeStudentForm
         Me.yearLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.yearLabel.Location = New System.Drawing.Point(57, 9)
         Me.yearLabel.Name = "yearLabel"
-        Me.yearLabel.Size = New System.Drawing.Size(57, 17)
+        Me.yearLabel.Size = New System.Drawing.Size(14, 17)
         Me.yearLabel.TabIndex = 1
-        Me.yearLabel.Text = "Label2"
+        Me.yearLabel.Text = "-"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 47)
+        Me.Label2.Location = New System.Drawing.Point(19, 91)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(103, 15)
         Me.Label2.TabIndex = 3
@@ -62,7 +64,7 @@ Partial Class upgradeStudentForm
         'classCombo
         '
         Me.classCombo.FormattingEnabled = True
-        Me.classCombo.Location = New System.Drawing.Point(121, 41)
+        Me.classCombo.Location = New System.Drawing.Point(128, 85)
         Me.classCombo.Name = "classCombo"
         Me.classCombo.Size = New System.Drawing.Size(121, 21)
         Me.classCombo.TabIndex = 0
@@ -70,18 +72,38 @@ Partial Class upgradeStudentForm
         '
         'upgradeBtn
         '
-        Me.upgradeBtn.Location = New System.Drawing.Point(167, 86)
+        Me.upgradeBtn.Location = New System.Drawing.Point(174, 130)
         Me.upgradeBtn.Name = "upgradeBtn"
         Me.upgradeBtn.Size = New System.Drawing.Size(75, 23)
         Me.upgradeBtn.TabIndex = 5
         Me.upgradeBtn.Text = "Promote"
         Me.upgradeBtn.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(93, 50)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(29, 13)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "Year"
+        '
+        'yearName
+        '
+        Me.yearName.FormattingEnabled = True
+        Me.yearName.Location = New System.Drawing.Point(128, 47)
+        Me.yearName.Name = "yearName"
+        Me.yearName.Size = New System.Drawing.Size(121, 21)
+        Me.yearName.TabIndex = 19
+        Me.yearName.Text = "Choose year..."
+        '
         'upgradeStudentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 136)
+        Me.ClientSize = New System.Drawing.Size(276, 175)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.yearName)
         Me.Controls.Add(Me.upgradeBtn)
         Me.Controls.Add(Me.classCombo)
         Me.Controls.Add(Me.Label2)
@@ -100,4 +122,6 @@ Partial Class upgradeStudentForm
     Friend WithEvents Label2 As Label
     Friend WithEvents classCombo As ComboBox
     Friend WithEvents upgradeBtn As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents yearName As ComboBox
 End Class

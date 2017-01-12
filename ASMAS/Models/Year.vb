@@ -33,7 +33,11 @@ Public Class Year
             oData = New OleDbDataAdapter(SQL, Con)
             Con.Close()
             oData.Fill(DS)
-            current_year_id = DS.Tables(0).Rows(0)(0).ToString
+            If DS.Tables(0).Rows.Count > 0 Then
+                current_year_id = DS.Tables(0).Rows(0)(0).ToString
+            Else
+                current_year_id = "0" 'to prevent out of index error
+            End If
             Return current_year_id
         End Get
         Set(value As String)
