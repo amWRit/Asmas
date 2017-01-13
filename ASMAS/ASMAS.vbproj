@@ -195,6 +195,7 @@
     <Compile Include="Print\Certificate\printCertificateSec.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Print\directPrint.vb" />
     <Compile Include="Result\addAttendance.Designer.vb">
       <DependentUpon>addAttendance.vb</DependentUpon>
     </Compile>
