@@ -177,7 +177,7 @@ Public Class viewResultsForm
         End If
     End Sub
 
-    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+    Private Sub printBtn_Click(sender As Object, e As EventArgs)
         letsPrint(0) ' index = 0; print from beginning
     End Sub
 
@@ -241,10 +241,8 @@ Public Class viewResultsForm
         Dim lowSec As String() = TheClass.lowSecShortNames
         Dim sec As String() = TheClass.secShortNames
 
-
         Dim school_name = schoolName.Text
         Dim year_num = yearName.Text
-
         Dim school_id = School.schoolId(school_name)
         Dim year_id = Year.getYearID(school_id.ToString, year_num)
         Dim class_id = myFunctions.getClassIdOf(school_id.ToString, year_id, class_name)
@@ -261,5 +259,28 @@ Public Class viewResultsForm
             Dim printForm As New printCertificateSec(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        Dim year_num = yearName.Text
+        Dim school_name = schoolName.Text
+        Dim school_id = School.schoolId(school_name)
+        Dim year_id = Year.getYearID(school_id.ToString, year_num)
+        Dim class_id = myFunctions.getClassIdOf(school_id.ToString, year_id, class_name)
+        Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
+        Dim school_info = myFunctions.getSchoolInfo(school_name)
+
+        Dim pageFrom = CInt(pageFromTextBox.Text)
+        Dim rowCount = tempDS.Tables(0).Rows.Count
+        If pageFrom > rowCount Then
+            MsgBox("Page starting number is greater than total pages. Please check", MsgBoxStyle.Exclamation, "ERROR")
+            Exit Sub
+        End If
+        Dim pageTo = rowCount
+        If pageToTextBox.Text <> "" And CInt(pageToTextBox.Text) < rowCount Then pageTo = CInt(pageToTextBox.Text)
+
+        For i As Integer = pageFrom - 1 To pageTo - 1
+            printReport.batch_print(tempDS, i, class_name, class_teacher, school_info, class_id)
+        Next
     End Sub
 End Class

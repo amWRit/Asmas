@@ -12,6 +12,10 @@ Public Class classResults
     Public contents As String()
     Public tempDS As DataSet
 
+    Public Shared primary As String() = TheClass.primaryShortNames
+    Public Shared lowSec As String() = TheClass.lowSecShortNames
+    Public Shared sec As String() = TheClass.secShortNames
+
     '{itemID, yearnum, schoolname, classname}
     Public Sub New(ByVal params As String())
         MyBase.New
@@ -149,10 +153,6 @@ Public Class classResults
         Dim ItemIndex As Integer = classResultListView.SelectedIndices(0) 'Grab the selected Index
         Dim studentID = classResultListView.Items(ItemIndex).SubItems(1).Text
 
-        Dim primary As String() = TheClass.primaryShortNames
-        Dim lowSec As String() = TheClass.lowSecShortNames
-        Dim sec As String() = TheClass.secShortNames
-
         Dim className = contents(3)
         Dim year_num = classResultListView.Items(ItemIndex).SubItems(4).Text
         Dim school_name = classResultListView.Items(ItemIndex).SubItems(5).Text
@@ -174,10 +174,6 @@ Public Class classResults
     End Sub
 
     Private Sub letsPrint(index As Integer)
-        Dim primary As String() = TheClass.primaryShortNames
-        Dim lowSec As String() = TheClass.lowSecShortNames
-        Dim sec As String() = TheClass.secShortNames
-
         Dim class_id = contents(0)
         Dim class_name = contents(3)
         Dim year_num = contents(1)
@@ -216,30 +212,10 @@ Public Class classResults
         If pageToTextBox.Text <> "" And CInt(pageToTextBox.Text) < rowCount Then pageTo = CInt(pageToTextBox.Text)
 
         For i As Integer = pageFrom - 1 To pageTo - 1
-            batch_print(tempDS, i, class_name, class_teacher, school_info, class_id)
+            printReport.batch_print(tempDS, i, class_name, class_teacher, school_info, class_id)
         Next
     End Sub
 
-    Public Sub batch_print(ByVal tempDS As DataSet, ByVal index As Integer, ByVal class_name As String, ByVal class_teacher As String, school_info As String(), class_id As String)
-        Dim student_id = tempDS.Tables(0).Rows(index)("student_id")
-        Dim student_info = myFunctions.getStudentInfoOf(CInt(student_id))
-
-        myFunctions.prepareTempTable(tempDS, index, class_name, class_teacher, school_info, student_info, class_id)
-        Dim report As New LocalReport()
-        report.ReportPath = "resultLowSec.rdlc"
-        report.EnableExternalImages = True
-
-        Dim imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-        Dim studentPhoto = getStudentPhoto(student_info)
-        Dim schoolLogo = getSchoolLogo(school_info)
-        report.SetParameters(New ReportParameter("studentPhotoParam", studentPhoto))
-        report.SetParameters(New ReportParameter("schoolLogoParam", schoolLogo))
-
-        report.DataSources.Add(New ReportDataSource("resultLowSec", myFunctions.getResultDataTable(class_name)))
-        report.Refresh 
-        Dim dp As directPrint = New directPrint()
-        dp.Export(report)
-    End Sub
 
     Private Sub updateCalcBtn_Click(sender As Object, e As EventArgs) Handles updateCalcBtn.Click
         If termCombo.SelectedIndex = -1 Then
@@ -275,10 +251,6 @@ Public Class classResults
     End Sub
 
     Private Sub letsPrintCertificate(index As Integer)
-        Dim primary As String() = TheClass.primaryShortNames
-        Dim lowSec As String() = TheClass.lowSecShortNames
-        Dim sec As String() = TheClass.secShortNames
-
         Dim class_id = contents(0)
         Dim class_name = contents(3)
         Dim year_num = contents(1)
@@ -298,27 +270,4 @@ Public Class classResults
         End If
     End Sub
 
-    Public Function getStudentPhoto(student_info As String()) As String
-        Dim student_reg = student_info(0)
-        Dim student_name = student_info(1).Replace(" ", "")
-        Dim strBasePath = Application.StartupPath & "\StudentPhotos\"
-        Dim imageName = student_name & "" & student_reg & ".jpg"
-        Dim imagePath = strBasePath & imageName
-        If imagePath = "" Or Not System.IO.File.Exists(imagePath) Then
-            imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-        End If
-        Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
-        Return templateImage
-    End Function
-
-    Public Function getSchoolLogo(school_info As String()) As String
-        Dim strBasePath = Application.StartupPath & "\logo\"
-        Dim imageName = school_info(3) & ".png" 'school short name 
-        Dim imagePath = strBasePath & imageName
-        If imagePath = "" Or Not System.IO.File.Exists(imagePath) Then
-            imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
-        End If
-        Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
-        Return templateImage
-    End Function
 End Class

@@ -40,11 +40,15 @@ Partial Class viewResultsForm
         Me.termLabel = New System.Windows.Forms.Label()
         Me.exportBtn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.printBtn = New System.Windows.Forms.Button()
         Me.viewResultsContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.updateCalcBtn = New System.Windows.Forms.Button()
         Me.PrintCertificateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.updateCalcBtn = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.pageToTextBox = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.pageFromTextBox = New System.Windows.Forms.TextBox()
+        Me.printBtn = New System.Windows.Forms.Button()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.viewResultsContextMenu.SuspendLayout()
@@ -172,7 +176,7 @@ Partial Class viewResultsForm
         Me.exportBtn.BackgroundImage = CType(resources.GetObject("exportBtn.BackgroundImage"), System.Drawing.Image)
         Me.exportBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.exportBtn.Enabled = False
-        Me.exportBtn.Location = New System.Drawing.Point(974, 18)
+        Me.exportBtn.Location = New System.Drawing.Point(861, 19)
         Me.exportBtn.Name = "exportBtn"
         Me.exportBtn.Size = New System.Drawing.Size(27, 23)
         Me.exportBtn.TabIndex = 25
@@ -181,27 +185,17 @@ Partial Class viewResultsForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(971, 44)
+        Me.Label1.Location = New System.Drawing.Point(888, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(77, 13)
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "Export to excel"
         '
-        'printBtn
-        '
-        Me.printBtn.Enabled = False
-        Me.printBtn.Location = New System.Drawing.Point(754, 18)
-        Me.printBtn.Name = "printBtn"
-        Me.printBtn.Size = New System.Drawing.Size(101, 23)
-        Me.printBtn.TabIndex = 24
-        Me.printBtn.Text = "Print Report Card"
-        Me.printBtn.UseVisualStyleBackColor = True
-        '
         'viewResultsContextMenu
         '
         Me.viewResultsContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrintToolStripMenuItem, Me.PrintCertificateToolStripMenuItem})
         Me.viewResultsContextMenu.Name = "searchResultContextMenu"
-        Me.viewResultsContextMenu.Size = New System.Drawing.Size(157, 70)
+        Me.viewResultsContextMenu.Size = New System.Drawing.Size(157, 48)
         '
         'PrintToolStripMenuItem
         '
@@ -209,21 +203,64 @@ Partial Class viewResultsForm
         Me.PrintToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.PrintToolStripMenuItem.Text = "Print Result"
         '
+        'PrintCertificateToolStripMenuItem
+        '
+        Me.PrintCertificateToolStripMenuItem.Name = "PrintCertificateToolStripMenuItem"
+        Me.PrintCertificateToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.PrintCertificateToolStripMenuItem.Text = "Print Certificate"
+        '
         'updateCalcBtn
         '
         Me.updateCalcBtn.Enabled = False
-        Me.updateCalcBtn.Location = New System.Drawing.Point(861, 18)
+        Me.updateCalcBtn.Location = New System.Drawing.Point(748, 19)
         Me.updateCalcBtn.Name = "updateCalcBtn"
         Me.updateCalcBtn.Size = New System.Drawing.Size(101, 23)
         Me.updateCalcBtn.TabIndex = 27
         Me.updateCalcBtn.Text = "Update Calc."
         Me.updateCalcBtn.UseVisualStyleBackColor = True
         '
-        'PrintCertificateToolStripMenuItem
+        'Label2
         '
-        Me.PrintCertificateToolStripMenuItem.Name = "PrintCertificateToolStripMenuItem"
-        Me.PrintCertificateToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.PrintCertificateToolStripMenuItem.Text = "Print Certificate"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(721, 63)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
+        Me.Label2.TabIndex = 181
+        Me.Label2.Text = "Pages"
+        '
+        'pageToTextBox
+        '
+        Me.pageToTextBox.Location = New System.Drawing.Point(825, 58)
+        Me.pageToTextBox.Name = "pageToTextBox"
+        Me.pageToTextBox.Size = New System.Drawing.Size(30, 20)
+        Me.pageToTextBox.TabIndex = 180
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(800, 63)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(16, 13)
+        Me.Label3.TabIndex = 179
+        Me.Label3.Text = "to"
+        '
+        'pageFromTextBox
+        '
+        Me.pageFromTextBox.Location = New System.Drawing.Point(764, 58)
+        Me.pageFromTextBox.Name = "pageFromTextBox"
+        Me.pageFromTextBox.Size = New System.Drawing.Size(30, 20)
+        Me.pageFromTextBox.TabIndex = 178
+        Me.pageFromTextBox.Text = "1"
+        '
+        'printBtn
+        '
+        Me.printBtn.Enabled = False
+        Me.printBtn.Location = New System.Drawing.Point(861, 56)
+        Me.printBtn.Name = "printBtn"
+        Me.printBtn.Size = New System.Drawing.Size(101, 23)
+        Me.printBtn.TabIndex = 177
+        Me.printBtn.Text = "Print Report Card"
+        Me.printBtn.UseVisualStyleBackColor = True
         '
         'viewResultsForm
         '
@@ -231,8 +268,12 @@ Partial Class viewResultsForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
-        Me.Controls.Add(Me.updateCalcBtn)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.pageToTextBox)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.pageFromTextBox)
         Me.Controls.Add(Me.printBtn)
+        Me.Controls.Add(Me.updateCalcBtn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.exportBtn)
         Me.Controls.Add(Me.termCombo)
@@ -273,9 +314,13 @@ Partial Class viewResultsForm
     Friend WithEvents termLabel As Label
     Friend WithEvents exportBtn As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents printBtn As Button
     Friend WithEvents viewResultsContextMenu As ContextMenuStrip
     Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents updateCalcBtn As Button
     Friend WithEvents PrintCertificateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label2 As Label
+    Friend WithEvents pageToTextBox As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents pageFromTextBox As TextBox
+    Friend WithEvents printBtn As Button
 End Class

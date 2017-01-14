@@ -83,7 +83,7 @@ Partial Class classResults
         '
         Me.termCombo.FormattingEnabled = True
         Me.termCombo.Items.AddRange(New Object() {"First", "Second", "Third", "SendUp"})
-        Me.termCombo.Location = New System.Drawing.Point(175, 10)
+        Me.termCombo.Location = New System.Drawing.Point(208, 10)
         Me.termCombo.Name = "termCombo"
         Me.termCombo.Size = New System.Drawing.Size(121, 21)
         Me.termCombo.TabIndex = 1
@@ -92,7 +92,7 @@ Partial Class classResults
         'termLabel
         '
         Me.termLabel.AutoSize = True
-        Me.termLabel.Location = New System.Drawing.Point(137, 15)
+        Me.termLabel.Location = New System.Drawing.Point(170, 15)
         Me.termLabel.Name = "termLabel"
         Me.termLabel.Size = New System.Drawing.Size(31, 13)
         Me.termLabel.TabIndex = 172
@@ -100,7 +100,7 @@ Partial Class classResults
         '
         'viewBtn
         '
-        Me.viewBtn.Location = New System.Drawing.Point(302, 10)
+        Me.viewBtn.Location = New System.Drawing.Point(335, 10)
         Me.viewBtn.Name = "viewBtn"
         Me.viewBtn.Size = New System.Drawing.Size(75, 23)
         Me.viewBtn.TabIndex = 2
