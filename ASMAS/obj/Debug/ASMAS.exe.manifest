@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="14811624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="14884328">
       <assemblyIdentity name="ASMAS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nAZBNlHSJROGz+599beakG0UfuIe7R7P3362AzVaNZc=</dsig:DigestValue>
+        <dsig:DigestValue>1SHdiktnB1tKzFhmy4Lv9ZUvcB3EkpZ/VtWAQ6FvjUg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -147,7 +147,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tr9phXorVJhzXJbjH2qHSVDX+reZgl9Zc5B1ziLib5U=</dsig:DigestValue>
+      <dsig:DigestValue>NPFiVr2iz20IAuFezQm9KIs1nyVLNXRLG/ViRuN/lS8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Terse1.accdb" size="438272">

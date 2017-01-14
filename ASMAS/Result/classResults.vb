@@ -1,5 +1,9 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+
+Imports System.Drawing.Printing
+Imports Microsoft.Reporting.WinForms
+
 Public Class classResults
     Dim Con As System.Data.OleDb.OleDbConnection
     Private pwd As String
@@ -7,6 +11,10 @@ Public Class classResults
 
     Public contents As String()
     Public tempDS As DataSet
+
+    Public Shared primary As String() = TheClass.primaryShortNames
+    Public Shared lowSec As String() = TheClass.lowSecShortNames
+    Public Shared sec As String() = TheClass.secShortNames
 
     '{itemID, yearnum, schoolname, classname}
     Public Sub New(ByVal params As String())
@@ -145,10 +153,6 @@ Public Class classResults
         Dim ItemIndex As Integer = classResultListView.SelectedIndices(0) 'Grab the selected Index
         Dim studentID = classResultListView.Items(ItemIndex).SubItems(1).Text
 
-        Dim primary As String() = TheClass.primaryShortNames
-        Dim lowSec As String() = TheClass.lowSecShortNames
-        Dim sec As String() = TheClass.secShortNames
-
         Dim className = contents(3)
         Dim year_num = classResultListView.Items(ItemIndex).SubItems(4).Text
         Dim school_name = classResultListView.Items(ItemIndex).SubItems(5).Text
@@ -169,15 +173,7 @@ Public Class classResults
         End If
     End Sub
 
-    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
-        letsPrint(0) 'index = 0; start from beginning
-    End Sub
-
     Private Sub letsPrint(index As Integer)
-        Dim primary As String() = TheClass.primaryShortNames
-        Dim lowSec As String() = TheClass.lowSecShortNames
-        Dim sec As String() = TheClass.secShortNames
-
         Dim class_id = contents(0)
         Dim class_name = contents(3)
         Dim year_num = contents(1)
@@ -194,6 +190,30 @@ Public Class classResults
         ElseIf sec.Contains(class_name) Then
             Dim printForm As New printResultSecForm(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
+        End If
+    End Sub
+
+    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        Dim class_id = contents(0)
+        Dim class_name = contents(3)
+        Dim year_num = contents(1)
+        Dim school_name = contents(2)
+
+        Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
+        Dim school_info = myFunctions.getSchoolInfo(school_name)
+
+        Dim pageFrom = 0
+        Dim pageTo = 0
+        Dim rowCount = tempDS.Tables(0).Rows.Count
+        If pageToTextBox.Text = "" Then pageTo = rowCount Else pageTo = CInt(pageToTextBox.Text)
+        If pageFromTextBox.Text = "" Then pageFrom = 1 Else pageFrom = CInt(pageFromTextBox.Text)
+        Dim _exit = printReport.checkInput(pageFrom, pageTo, rowCount)
+        If _exit = True Then
+            Exit Sub
+        Else
+            For i As Integer = pageFrom - 1 To pageTo - 1
+                printReport.batch_print(tempDS, i, class_name, class_teacher, school_info, class_id)
+            Next
         End If
     End Sub
 
@@ -232,10 +252,6 @@ Public Class classResults
     End Sub
 
     Private Sub letsPrintCertificate(index As Integer)
-        Dim primary As String() = TheClass.primaryShortNames
-        Dim lowSec As String() = TheClass.lowSecShortNames
-        Dim sec As String() = TheClass.secShortNames
-
         Dim class_id = contents(0)
         Dim class_name = contents(3)
         Dim year_num = contents(1)
@@ -253,5 +269,9 @@ Public Class classResults
             Dim printForm As New printCertificateSec(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        printHelpForm.show()
     End Sub
 End Class

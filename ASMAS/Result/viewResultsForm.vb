@@ -177,7 +177,7 @@ Public Class viewResultsForm
         End If
     End Sub
 
-    Private Sub printBtn_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+    Private Sub printBtn_Click(sender As Object, e As EventArgs)
         letsPrint(0) ' index = 0; print from beginning
     End Sub
 
@@ -241,10 +241,8 @@ Public Class viewResultsForm
         Dim lowSec As String() = TheClass.lowSecShortNames
         Dim sec As String() = TheClass.secShortNames
 
-
         Dim school_name = schoolName.Text
         Dim year_num = yearName.Text
-
         Dim school_id = School.schoolId(school_name)
         Dim year_id = Year.getYearID(school_id.ToString, year_num)
         Dim class_id = myFunctions.getClassIdOf(school_id.ToString, year_id, class_name)
@@ -261,5 +259,34 @@ Public Class viewResultsForm
             Dim printForm As New printCertificateSec(tempDS, index, class_name, class_teacher, school_info, class_id)
             printForm.Show()
         End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles printBtn.Click
+        Dim year_num = yearName.Text
+        Dim school_name = schoolName.Text
+        Dim school_id = School.schoolId(school_name)
+        Dim year_id = Year.getYearID(school_id.ToString, year_num)
+        Dim class_id = myFunctions.getClassIdOf(school_id.ToString, year_id, class_name)
+        Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
+        Dim school_info = myFunctions.getSchoolInfo(school_name)
+
+        Dim pageFrom = 0
+        Dim pageTo = 0
+        Dim rowCount = tempDS.Tables(0).Rows.Count
+        If pageToTextBox.Text = "" Then pageTo = rowCount Else pageTo = CInt(pageToTextBox.Text)
+        If pageFromTextBox.Text = "" Then pageFrom = 1 Else pageFrom = CInt(pageFromTextBox.Text)
+
+        Dim _exit = printReport.checkInput(pageFrom, pageTo, rowCount)
+        If _exit = True Then
+            Exit Sub
+        Else
+            For i As Integer = pageFrom - 1 To pageTo - 1
+                printReport.batch_print(tempDS, i, class_name, class_teacher, school_info, class_id)
+            Next
+        End If
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        printHelpForm.Show()
     End Sub
 End Class
