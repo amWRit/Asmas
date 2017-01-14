@@ -202,18 +202,19 @@ Public Class classResults
         Dim class_teacher = myFunctions.getClassTeacherName(school_name, year_num, class_name)
         Dim school_info = myFunctions.getSchoolInfo(school_name)
 
-        Dim pageFrom = CInt(pageFromTextBox.Text)
+        Dim pageFrom = 0
+        Dim pageTo = 0
         Dim rowCount = tempDS.Tables(0).Rows.Count
-        If pageFrom > rowCount Then
-            MsgBox("Page starting number is greater than total pages. Please check", MsgBoxStyle.Exclamation, "ERROR")
+        If pageToTextBox.Text = "" Then pageTo = rowCount Else pageTo = CInt(pageToTextBox.Text)
+        If pageFromTextBox.Text = "" Then pageFrom = 1 Else pageFrom = CInt(pageFromTextBox.Text)
+        Dim _exit = printReport.checkInput(pageFrom, pageTo, rowCount)
+        If _exit = True Then
             Exit Sub
+        Else
+            For i As Integer = pageFrom - 1 To pageTo - 1
+                printReport.batch_print(tempDS, i, class_name, class_teacher, school_info, class_id)
+            Next
         End If
-        Dim pageTo = rowCount
-        If pageToTextBox.Text <> "" And CInt(pageToTextBox.Text) < rowCount Then pageTo = CInt(pageToTextBox.Text)
-
-        For i As Integer = pageFrom - 1 To pageTo - 1
-            printReport.batch_print(tempDS, i, class_name, class_teacher, school_info, class_id)
-        Next
     End Sub
 
 
@@ -270,4 +271,7 @@ Public Class classResults
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        printHelpForm.show()
+    End Sub
 End Class

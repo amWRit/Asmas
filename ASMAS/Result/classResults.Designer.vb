@@ -41,6 +41,7 @@ Partial Class classResults
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pageToTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.classResultsContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -143,7 +144,7 @@ Partial Class classResults
         'printBtn
         '
         Me.printBtn.Enabled = False
-        Me.printBtn.Location = New System.Drawing.Point(882, 8)
+        Me.printBtn.Location = New System.Drawing.Point(842, 10)
         Me.printBtn.Name = "printBtn"
         Me.printBtn.Size = New System.Drawing.Size(101, 23)
         Me.printBtn.TabIndex = 4
@@ -161,7 +162,7 @@ Partial Class classResults
         '
         'pageFromTextBox
         '
-        Me.pageFromTextBox.Location = New System.Drawing.Point(785, 10)
+        Me.pageFromTextBox.Location = New System.Drawing.Point(745, 12)
         Me.pageFromTextBox.Name = "pageFromTextBox"
         Me.pageFromTextBox.Size = New System.Drawing.Size(30, 20)
         Me.pageFromTextBox.TabIndex = 173
@@ -170,7 +171,7 @@ Partial Class classResults
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(821, 15)
+        Me.Label1.Location = New System.Drawing.Point(781, 17)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(16, 13)
         Me.Label1.TabIndex = 174
@@ -178,7 +179,7 @@ Partial Class classResults
         '
         'pageToTextBox
         '
-        Me.pageToTextBox.Location = New System.Drawing.Point(846, 10)
+        Me.pageToTextBox.Location = New System.Drawing.Point(806, 12)
         Me.pageToTextBox.Name = "pageToTextBox"
         Me.pageToTextBox.Size = New System.Drawing.Size(30, 20)
         Me.pageToTextBox.TabIndex = 175
@@ -186,11 +187,20 @@ Partial Class classResults
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(742, 15)
+        Me.Label2.Location = New System.Drawing.Point(702, 17)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 176
         Me.Label2.Text = "Pages"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(949, 10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(38, 23)
+        Me.Button1.TabIndex = 177
+        Me.Button1.Text = "Help"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'classResults
         '
@@ -198,6 +208,7 @@ Partial Class classResults
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.pageToTextBox)
         Me.Controls.Add(Me.Label1)
@@ -238,4 +249,5 @@ Partial Class classResults
     Friend WithEvents Label1 As Label
     Friend WithEvents pageToTextBox As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Button1 As Button
 End Class

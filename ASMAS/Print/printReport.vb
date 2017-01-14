@@ -67,4 +67,39 @@ Public Class printReport
         Dim templateImage = New Uri("file:\" & imagePath).AbsoluteUri
         Return templateImage
     End Function
+
+    Public Shared Function checkInput(pagefrom As Integer, pageto As Integer, rowcount As Integer) As Boolean
+        Dim _exit As Boolean = False
+        If pagefrom > rowcount Or pageto > rowcount Then
+            MsgBox("Page Start/End number is greater than total pages. Please check", MsgBoxStyle.Exclamation, "ERROR")
+            _exit = True
+            Return _exit
+        End If
+        If pagefrom < 1 Or pageto < 1 Then
+            MsgBox("Page number can't be less than 1. Please check", MsgBoxStyle.Exclamation, "ERROR")
+            _exit = True
+            Return _exit
+        End If
+        If pagefrom > pageto Then
+            MsgBox("Wrong Page Number input. Please check", MsgBoxStyle.Exclamation, "ERROR")
+            _exit = True
+            Return _exit
+        End If
+
+        If pagefrom = 1 And pageto = rowcount Then
+            Dim I As Integer = MsgBox("You are going to print all the pages. ARE YOU SURE?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Warning")
+            If I = MsgBoxResult.No Then
+                _exit = True
+                Return _exit
+            End If
+        End If
+        If (pageto - pagefrom) > 10 Then
+            Dim I As Integer = MsgBox("You are going to print a lot of pages. ARE YOU SURE?", CType(MsgBoxStyle.Exclamation + MsgBoxStyle.YesNo, MsgBoxStyle), "Warning")
+            If I = MsgBoxResult.No Then
+                _exit = True
+                Return _exit
+            End If
+        End If
+        Return _exit
+    End Function
 End Class

@@ -49,6 +49,7 @@ Partial Class viewResultsForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.pageFromTextBox = New System.Windows.Forms.TextBox()
         Me.printBtn = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.TerseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.viewResultsContextMenu.SuspendLayout()
@@ -262,12 +263,22 @@ Partial Class viewResultsForm
         Me.printBtn.Text = "Print Report Card"
         Me.printBtn.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(968, 56)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(38, 23)
+        Me.Button1.TabIndex = 182
+        Me.Button1.Text = "Help"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'viewResultsForm
         '
         Me.AcceptButton = Me.viewBtn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.pageToTextBox)
         Me.Controls.Add(Me.Label3)
@@ -323,4 +334,5 @@ Partial Class viewResultsForm
     Friend WithEvents Label3 As Label
     Friend WithEvents pageFromTextBox As TextBox
     Friend WithEvents printBtn As Button
+    Friend WithEvents Button1 As Button
 End Class

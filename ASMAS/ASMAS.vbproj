@@ -196,6 +196,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Print\directPrint.vb" />
+    <Compile Include="Print\printHelpForm.Designer.vb">
+      <DependentUpon>printHelpForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Print\printHelpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Print\printReport.vb" />
     <Compile Include="Result\addAttendance.Designer.vb">
       <DependentUpon>addAttendance.vb</DependentUpon>
@@ -442,6 +448,9 @@
       <DependentUpon>printCertificateSec.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print\Certificate\printCertificateSec.rdlc" />
+    <EmbeddedResource Include="Print\printHelpForm.resx">
+      <DependentUpon>printHelpForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Result\addAttendance.resx">
       <DependentUpon>addAttendance.vb</DependentUpon>
     </EmbeddedResource>
