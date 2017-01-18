@@ -53,3 +53,8 @@ __Result features__
   * Low
   * LOCOS (Lowest Cutoff Score)
     *Students under the LOCOS can be obtained
+    
+__Result Printing features__
+* Result can be printed
+  * of a specific student
+  * in Batch (start and end page numbers can be provided)
