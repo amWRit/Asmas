@@ -63,7 +63,7 @@ Partial Class studentDetails
         '
         Me._email.AutoSize = True
         Me._email.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me._email.Location = New System.Drawing.Point(507, 275)
+        Me._email.Location = New System.Drawing.Point(343, 373)
         Me._email.Name = "_email"
         Me._email.Size = New System.Drawing.Size(10, 15)
         Me._email.TabIndex = 168
@@ -73,7 +73,7 @@ Partial Class studentDetails
         '
         Me._phone.AutoSize = True
         Me._phone.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me._phone.Location = New System.Drawing.Point(331, 276)
+        Me._phone.Location = New System.Drawing.Point(343, 342)
         Me._phone.Name = "_phone"
         Me._phone.Size = New System.Drawing.Size(10, 15)
         Me._phone.TabIndex = 167
@@ -83,7 +83,7 @@ Partial Class studentDetails
         '
         Me.permAdd.AutoSize = True
         Me.permAdd.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.permAdd.Location = New System.Drawing.Point(330, 241)
+        Me.permAdd.Location = New System.Drawing.Point(343, 307)
         Me.permAdd.Name = "permAdd"
         Me.permAdd.Size = New System.Drawing.Size(10, 15)
         Me.permAdd.TabIndex = 166
@@ -93,7 +93,7 @@ Partial Class studentDetails
         '
         Me.tempAdd.AutoSize = True
         Me.tempAdd.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tempAdd.Location = New System.Drawing.Point(331, 205)
+        Me.tempAdd.Location = New System.Drawing.Point(344, 271)
         Me.tempAdd.Name = "tempAdd"
         Me.tempAdd.Size = New System.Drawing.Size(10, 15)
         Me.tempAdd.TabIndex = 165
@@ -103,7 +103,7 @@ Partial Class studentDetails
         '
         Me.guardianName.AutoSize = True
         Me.guardianName.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.guardianName.Location = New System.Drawing.Point(650, 169)
+        Me.guardianName.Location = New System.Drawing.Point(330, 235)
         Me.guardianName.Name = "guardianName"
         Me.guardianName.Size = New System.Drawing.Size(10, 15)
         Me.guardianName.TabIndex = 164
@@ -113,7 +113,7 @@ Partial Class studentDetails
         '
         Me.mother.AutoSize = True
         Me.mother.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mother.Location = New System.Drawing.Point(507, 168)
+        Me.mother.Location = New System.Drawing.Point(331, 203)
         Me.mother.Name = "mother"
         Me.mother.Size = New System.Drawing.Size(10, 15)
         Me.mother.TabIndex = 163
@@ -133,7 +133,7 @@ Partial Class studentDetails
         '
         Me._dob.AutoSize = True
         Me._dob.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me._dob.Location = New System.Drawing.Point(507, 128)
+        Me._dob.Location = New System.Drawing.Point(509, 130)
         Me._dob.Name = "_dob"
         Me._dob.Size = New System.Drawing.Size(10, 15)
         Me._dob.TabIndex = 161
@@ -143,7 +143,7 @@ Partial Class studentDetails
         '
         Me._gender.AutoSize = True
         Me._gender.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me._gender.Location = New System.Drawing.Point(331, 129)
+        Me._gender.Location = New System.Drawing.Point(331, 130)
         Me._gender.Name = "_gender"
         Me._gender.Size = New System.Drawing.Size(10, 15)
         Me._gender.TabIndex = 160
@@ -173,7 +173,7 @@ Partial Class studentDetails
         '
         Me.firstName.AutoSize = True
         Me.firstName.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstName.Location = New System.Drawing.Point(331, 89)
+        Me.firstName.Location = New System.Drawing.Point(331, 90)
         Me.firstName.Name = "firstName"
         Me.firstName.Size = New System.Drawing.Size(10, 15)
         Me.firstName.TabIndex = 157
@@ -183,7 +183,7 @@ Partial Class studentDetails
         '
         Me.admissionYear.AutoSize = True
         Me.admissionYear.Font = New System.Drawing.Font("Adobe Fangsong Std R", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.admissionYear.Location = New System.Drawing.Point(507, 49)
+        Me.admissionYear.Location = New System.Drawing.Point(539, 50)
         Me.admissionYear.Name = "admissionYear"
         Me.admissionYear.Size = New System.Drawing.Size(10, 15)
         Me.admissionYear.TabIndex = 156
@@ -202,7 +202,7 @@ Partial Class studentDetails
         '_info
         '
         Me._info.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me._info.Location = New System.Drawing.Point(360, 311)
+        Me._info.Location = New System.Drawing.Point(360, 408)
         Me._info.Name = "_info"
         Me._info.Size = New System.Drawing.Size(385, 71)
         Me._info.TabIndex = 154
@@ -211,152 +211,152 @@ Partial Class studentDetails
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(242, 311)
+        Me.Label6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(240, 408)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(102, 15)
+        Me.Label6.Size = New System.Drawing.Size(114, 15)
         Me.Label6.TabIndex = 153
-        Me.Label6.Text = "Other Information"
+        Me.Label6.Text = "Other Information :"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(422, 277)
+        Me.Label14.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(242, 372)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(39, 15)
+        Me.Label14.Size = New System.Drawing.Size(45, 15)
         Me.Label14.TabIndex = 152
-        Me.Label14.Text = "Email"
+        Me.Label14.Text = "Email :"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(242, 277)
+        Me.Label15.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(242, 342)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(43, 15)
+        Me.Label15.Size = New System.Drawing.Size(48, 15)
         Me.Label15.TabIndex = 151
-        Me.Label15.Text = "Phone"
+        Me.Label15.Text = "Phone :"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(242, 243)
+        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(242, 308)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(87, 15)
+        Me.Label12.Size = New System.Drawing.Size(92, 15)
         Me.Label12.TabIndex = 150
-        Me.Label12.Text = "Perm. address"
+        Me.Label12.Text = "Perm. address :"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(242, 206)
+        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(242, 271)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(89, 15)
+        Me.Label13.Size = New System.Drawing.Size(93, 15)
         Me.Label13.TabIndex = 149
-        Me.Label13.Text = "Temp. Address"
+        Me.Label13.Text = "Temp. Address :"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(594, 169)
+        Me.Label9.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(246, 235)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(58, 15)
+        Me.Label9.Size = New System.Drawing.Size(65, 15)
         Me.Label9.TabIndex = 148
-        Me.Label9.Text = "Guardian"
+        Me.Label9.Text = "Guardian :"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(422, 169)
+        Me.Label10.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(246, 204)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(46, 15)
+        Me.Label10.Size = New System.Drawing.Size(54, 15)
         Me.Label10.TabIndex = 147
-        Me.Label10.Text = "Mother"
+        Me.Label10.Text = "Mother :"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(246, 169)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(42, 15)
+        Me.Label11.Size = New System.Drawing.Size(50, 15)
         Me.Label11.TabIndex = 146
-        Me.Label11.Text = "Father"
+        Me.Label11.Text = "Father :"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(422, 129)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(60, 15)
+        Me.Label8.Size = New System.Drawing.Size(70, 15)
         Me.Label8.TabIndex = 145
-        Me.Label8.Text = "DOB (BS)"
+        Me.Label8.Text = "DOB (BS) :"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(246, 130)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(48, 15)
+        Me.Label7.Size = New System.Drawing.Size(54, 15)
         Me.Label7.TabIndex = 144
-        Me.Label7.Text = "Gender"
+        Me.Label7.Text = "Gender :"
         '
         'lnameLabel
         '
         Me.lnameLabel.AutoSize = True
-        Me.lnameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lnameLabel.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lnameLabel.Location = New System.Drawing.Point(594, 90)
         Me.lnameLabel.Name = "lnameLabel"
-        Me.lnameLabel.Size = New System.Drawing.Size(30, 15)
+        Me.lnameLabel.Size = New System.Drawing.Size(38, 15)
         Me.lnameLabel.TabIndex = 143
-        Me.lnameLabel.Text = "Last"
+        Me.lnameLabel.Text = "Last :"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(424, 90)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 15)
+        Me.Label5.Size = New System.Drawing.Size(51, 15)
         Me.Label5.TabIndex = 142
-        Me.Label5.Text = "Middle"
+        Me.Label5.Text = "Middle :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(246, 90)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 15)
+        Me.Label4.Size = New System.Drawing.Size(73, 15)
         Me.Label4.TabIndex = 141
-        Me.Label4.Text = "First name"
+        Me.Label4.Text = "First name :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(418, 50)
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(424, 50)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(90, 15)
+        Me.Label3.Size = New System.Drawing.Size(99, 15)
         Me.Label3.TabIndex = 140
-        Me.Label3.Text = "Admission year"
+        Me.Label3.Text = "Admission year :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.3!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(246, 51)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 15)
+        Me.Label2.Size = New System.Drawing.Size(51, 15)
         Me.Label2.TabIndex = 139
-        Me.Label2.Text = "School"
+        Me.Label2.Text = "School :"
         '
         'titleLabel
         '
@@ -401,7 +401,7 @@ Partial Class studentDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(780, 400)
+        Me.ClientSize = New System.Drawing.Size(780, 486)
         Me.Controls.Add(Me.classLabel)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me._email)

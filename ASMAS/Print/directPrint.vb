@@ -35,7 +35,7 @@ Public Class directPrint
         Dim deviceInfo As String = "<DeviceInfo>" &
             "<OutputFormat>EMF</OutputFormat>" &
             "<PageWidth>7.7in</PageWidth>" &
-            "<PageHeight>11in</PageHeight>" &
+            "<PageHeight>11.2in</PageHeight>" &
             "<MarginTop>0in</MarginTop>" &
             "<MarginLeft>0in</MarginLeft>" &
             "<MarginRight>0in</MarginRight>" &

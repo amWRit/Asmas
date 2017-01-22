@@ -6222,7 +6222,7 @@ Point</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <Top>3.67427in</Top>
-        <Left>0.34316in</Left>
+        <Left>0.52597in</Left>
         <Height>2.75in</Height>
         <Width>6.66679in</Width>
         <Style>
@@ -6735,7 +6735,7 @@ Point</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <Top>6.48654in</Top>
-        <Left>0.34316in</Left>
+        <Left>0.52597in</Left>
         <Height>0.5in</Height>
         <Width>6.66679in</Width>
         <ZIndex>1</ZIndex>
@@ -7031,7 +7031,7 @@ Point</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <Top>3.42019in</Top>
-        <Left>0.34316in</Left>
+        <Left>0.52597in</Left>
         <Height>0.25in</Height>
         <Width>6.66679in</Width>
         <ZIndex>2</ZIndex>
@@ -7043,7 +7043,7 @@ Point</Value>
       </Tablix>
       <Line Name="Line1">
         <Top>0.22528in</Top>
-        <Left>0.21593in</Left>
+        <Left>0.39874in</Left>
         <Height>0in</Height>
         <Width>6.86813in</Width>
         <ZIndex>3</ZIndex>
@@ -7055,7 +7055,7 @@ Point</Value>
       </Line>
       <Line Name="Line2">
         <Top>10.57806in</Top>
-        <Left>0.21593in</Left>
+        <Left>0.39874in</Left>
         <Height>0in</Height>
         <Width>6.86813in</Width>
         <ZIndex>4</ZIndex>
@@ -7067,7 +7067,7 @@ Point</Value>
       </Line>
       <Line Name="Line4">
         <Top>0.21139in</Top>
-        <Left>0.21593in</Left>
+        <Left>0.39874in</Left>
         <Height>10.67917in</Height>
         <Width>0in</Width>
         <ZIndex>5</ZIndex>
@@ -7079,7 +7079,7 @@ Point</Value>
       </Line>
       <Line Name="Line5">
         <Top>0.23596in</Top>
-        <Left>7.08406in</Left>
+        <Left>7.26687in</Left>
         <Height>10.6546in</Height>
         <Width>0in</Width>
         <ZIndex>6</ZIndex>
@@ -7107,7 +7107,7 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>1.10022in</Top>
-        <Left>4.8366in</Left>
+        <Left>5.01941in</Left>
         <Height>0.25in</Height>
         <Width>0.71226in</Width>
         <ZIndex>7</ZIndex>
@@ -7139,7 +7139,7 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
         <Top>1.10022in</Top>
-        <Left>2.41741in</Left>
+        <Left>2.60022in</Left>
         <Height>0.25in</Height>
         <Width>0.78575in</Width>
         <ZIndex>8</ZIndex>
@@ -7171,7 +7171,7 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>1.10022in</Top>
-        <Left>3.24483in</Left>
+        <Left>3.42764in</Left>
         <Height>0.25in</Height>
         <Width>1.57788in</Width>
         <ZIndex>9</ZIndex>
@@ -7190,7 +7190,7 @@ Point</Value>
         <Value>=Parameters!schoolLogoParam.Value</Value>
         <Sizing>FitProportional</Sizing>
         <Top>0.31729in</Top>
-        <Left>0.33286in</Left>
+        <Left>0.51567in</Left>
         <Height>1.03293in</Height>
         <Width>1.19001in</Width>
         <ZIndex>10</ZIndex>
@@ -7218,7 +7218,7 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
         <Top>0.60898in</Top>
-        <Left>1.57843in</Left>
+        <Left>1.76124in</Left>
         <Height>0.25in</Height>
         <Width>4.93241in</Width>
         <ZIndex>11</ZIndex>
@@ -7253,7 +7253,7 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>0.79466in</Top>
-        <Left>2.68582in</Left>
+        <Left>2.86863in</Left>
         <Height>0.25in</Height>
         <Width>2.64713in</Width>
         <ZIndex>12</ZIndex>
@@ -7269,7 +7269,7 @@ Point</Value>
       </Textbox>
       <Line Name="Line3">
         <Top>1.39188in</Top>
-        <Left>0.20563in</Left>
+        <Left>0.38844in</Left>
         <Height>0in</Height>
         <Width>6.86813in</Width>
         <ZIndex>13</ZIndex>
@@ -7301,7 +7301,7 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
         <Top>0.28084in</Top>
-        <Left>1.45709in</Left>
+        <Left>1.6399in</Left>
         <Height>0.30036in</Height>
         <Width>5.39509in</Width>
         <ZIndex>14</ZIndex>
@@ -7815,7 +7815,7 @@ Point</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <Top>1.42935in</Top>
-        <Left>0.34316in</Left>
+        <Left>0.52597in</Left>
         <Height>1.75in</Height>
         <Width>5.30438in</Width>
         <ZIndex>15</ZIndex>
@@ -7830,7 +7830,7 @@ Point</Value>
         <Value>=Parameters!studentPhotoParam.Value</Value>
         <Sizing>FitProportional</Sizing>
         <Top>1.80435in</Top>
-        <Left>5.74722in</Left>
+        <Left>5.93003in</Left>
         <Height>1in</Height>
         <Width>1.10496in</Width>
         <ZIndex>16</ZIndex>
@@ -7859,78 +7859,10 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox31</rd:DefaultName>
         <Top>3.02669in</Top>
-        <Left>3.22247in</Left>
+        <Left>3.40528in</Left>
         <Height>0.25in</Height>
         <Width>1.35363in</Width>
         <ZIndex>17</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox179">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Class Teacher:</Value>
-                <Style>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>10.32806in</Top>
-        <Left>4.14698in</Left>
-        <Height>0.25in</Height>
-        <Width>1.10259in</Width>
-        <ZIndex>18</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox180">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!class_teacher.Value, "resultsSec")</Value>
-                <Style>
-                  <FontWeight>Normal</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Left</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>10.32806in</Top>
-        <Left>5.26346in</Left>
-        <Height>0.25in</Height>
-        <Width>1.73804in</Width>
-        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -9324,10 +9256,10 @@ Point</Value>
           </TablixMembers>
         </TablixRowHierarchy>
         <Top>7.11639in</Top>
-        <Left>0.33471in</Left>
+        <Left>0.51752in</Left>
         <Height>2.45834in</Height>
         <Width>6.6668in</Width>
-        <ZIndex>20</ZIndex>
+        <ZIndex>18</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -9336,10 +9268,10 @@ Point</Value>
       </Tablix>
       <Line Name="Line6">
         <Top>10.06083in</Top>
-        <Left>3.57795in</Left>
+        <Left>3.76076in</Left>
         <Height>0in</Height>
         <Width>1in</Width>
-        <ZIndex>21</ZIndex>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -9366,10 +9298,10 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox144</rd:DefaultName>
         <Top>10.04861in</Top>
-        <Left>3.57795in</Left>
+        <Left>3.76076in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
-        <ZIndex>22</ZIndex>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -9382,10 +9314,10 @@ Point</Value>
       </Textbox>
       <Line Name="Line7">
         <Top>10.06083in</Top>
-        <Left>5.74907in</Left>
+        <Left>5.93188in</Left>
         <Height>0in</Height>
         <Width>1in</Width>
-        <ZIndex>23</ZIndex>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -9412,10 +9344,10 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox144</rd:DefaultName>
         <Top>10.04861in</Top>
-        <Left>5.74907in</Left>
+        <Left>5.93188in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
-        <ZIndex>24</ZIndex>
+        <ZIndex>22</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -9444,9 +9376,55 @@ Point</Value>
         </Paragraphs>
         <rd:DefaultName>Textbox146</rd:DefaultName>
         <Top>10.04861in</Top>
-        <Left>0.43324in</Left>
+        <Left>0.61605in</Left>
         <Height>0.25in</Height>
         <Width>2.05891in</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line8">
+        <Top>10.06083in</Top>
+        <Left>0.60092in</Left>
+        <Height>0in</Height>
+        <Width>1.78032in</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox168">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Class Teacher:</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>10.30028in</Top>
+        <Left>0.61605in</Left>
+        <Height>0.25in</Height>
+        <Width>1.10259in</Width>
         <ZIndex>25</ZIndex>
         <Style>
           <Border>
@@ -9458,7 +9436,41 @@ Point</Value>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox162">
+      <Textbox Name="Textbox169">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!class_teacher.Value, "resultsSec")</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>10.30028in</Top>
+        <Left>1.73253in</Left>
+        <Height>0.25in</Height>
+        <Width>2.04336in</Width>
+        <ZIndex>26</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox147">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -9475,11 +9487,11 @@ Point</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox146</rd:DefaultName>
-        <Top>10.32806in</Top>
-        <Left>0.41811in</Left>
+        <Top>10.2864in</Top>
+        <Left>4.94785in</Left>
         <Height>0.25in</Height>
         <Width>0.98527in</Width>
-        <ZIndex>26</ZIndex>
+        <ZIndex>27</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -9490,7 +9502,7 @@ Point</Value>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox181">
+      <Textbox Name="Textbox148">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -9509,11 +9521,11 @@ Point</Value>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox144</rd:DefaultName>
-        <Top>10.32806in</Top>
-        <Left>1.45894in</Left>
+        <Top>10.2864in</Top>
+        <Left>5.94701in</Left>
         <Height>0.25in</Height>
-        <Width>1.80675in</Width>
-        <ZIndex>27</ZIndex>
+        <Width>1.25243in</Width>
+        <ZIndex>28</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -9524,18 +9536,6 @@ Point</Value>
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Line Name="Line8">
-        <Top>10.06083in</Top>
-        <Left>0.41811in</Left>
-        <Height>0in</Height>
-        <Width>1.78032in</Width>
-        <ZIndex>28</ZIndex>
-        <Style>
-          <Border>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
     </ReportItems>
     <Height>11in</Height>
     <Style />

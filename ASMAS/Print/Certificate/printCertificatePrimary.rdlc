@@ -220,21 +220,21 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>This is to certify that Mr./Mrs./Miss    </Value>
+                <Value>This is to certify that Mr./Mrs./Miss   </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>16pt</FontSize>
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=First(Fields!full_name.Value, "printCertificatePrimary")</Value>
+                <Value>=First(Fields!full_name.Value, "printCertificatePrimary")+" ,"</Value>
                 <Style>
                   <FontFamily>arial</FontFamily>
                   <FontSize>16pt</FontSize>
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>    ,son/daughter of Mr.  </Value>
+                <Value>  son/daughter of Mr.  </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>16pt</FontSize>
@@ -262,7 +262,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=First(Fields!mother_name.Value, "printCertificatePrimary")</Value>
+                <Value>=First(Fields!mother_name.Value, "printCertificatePrimary")+" ,"</Value>
                 <Style>
                   <FontFamily>arial</FontFamily>
                   <FontSize>16pt</FontSize>
@@ -276,7 +276,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value> , inhabitant of  </Value>
+                <Value> inhabitant of  </Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>16pt</FontSize>
@@ -593,8 +593,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>1.90554in</Top>
-        <Left>3.78416in</Left>
+        <Top>1.93332in</Top>
+        <Left>4.06193in</Left>
         <Height>0.22222in</Height>
         <Width>0.62202in</Width>
         <ZIndex>13</ZIndex>
@@ -626,9 +626,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>1.90554in</Top>
-        <Left>4.47562in</Left>
-        <Height>0.25in</Height>
+        <Top>1.93332in</Top>
+        <Left>4.68395in</Left>
+        <Height>0.22222in</Height>
         <Width>1in</Width>
         <ZIndex>14</ZIndex>
         <Style>
