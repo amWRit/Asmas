@@ -41,12 +41,13 @@ Partial Class HomeForm
         Me.MyClassesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentDatabaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResultsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MySubjectAnalysisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MySubjectAnalysisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewSchoolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -74,7 +75,7 @@ Partial Class HomeForm
         '
         'AdminToolsToolStripMenuItem
         '
-        Me.AdminToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewUsersToolStripMenuItem, Me.ImportDatabaseToolStripMenuItem1, Me.AddToolStripMenuItem})
+        Me.AdminToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewUsersToolStripMenuItem, Me.ImportDatabaseToolStripMenuItem1, Me.AddToolStripMenuItem, Me.ViewSchoolsToolStripMenuItem})
         Me.AdminToolsToolStripMenuItem.Name = "AdminToolsToolStripMenuItem"
         Me.AdminToolsToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
         Me.AdminToolsToolStripMenuItem.Text = "Admin Tools"
@@ -82,14 +83,14 @@ Partial Class HomeForm
         'ViewUsersToolStripMenuItem
         '
         Me.ViewUsersToolStripMenuItem.Name = "ViewUsersToolStripMenuItem"
-        Me.ViewUsersToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.ViewUsersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ViewUsersToolStripMenuItem.Text = "View users"
         '
         'ImportDatabaseToolStripMenuItem1
         '
         Me.ImportDatabaseToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportToolStripMenuItem, Me.ExportToolStripMenuItem})
         Me.ImportDatabaseToolStripMenuItem1.Name = "ImportDatabaseToolStripMenuItem1"
-        Me.ImportDatabaseToolStripMenuItem1.Size = New System.Drawing.Size(129, 22)
+        Me.ImportDatabaseToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.ImportDatabaseToolStripMenuItem1.Text = "Database"
         '
         'ImportToolStripMenuItem
@@ -108,7 +109,7 @@ Partial Class HomeForm
         '
         Me.AddToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.YearToolStripMenuItem, Me.SchoolToolStripMenuItem, Me.ClassToolStripMenuItem, Me.UserToolStripMenuItem, Me.StudentToolStripMenuItem})
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'YearToolStripMenuItem
@@ -173,6 +174,12 @@ Partial Class HomeForm
         Me.ResultsToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
         Me.ResultsToolStripMenuItem.Text = "Results"
         '
+        'MySubjectAnalysisToolStripMenuItem
+        '
+        Me.MySubjectAnalysisToolStripMenuItem.Name = "MySubjectAnalysisToolStripMenuItem"
+        Me.MySubjectAnalysisToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.MySubjectAnalysisToolStripMenuItem.Text = "My Subject Analysis"
+        '
         'SearchToolStripMenuItem
         '
         Me.SearchToolStripMenuItem.Name = "SearchToolStripMenuItem"
@@ -210,11 +217,11 @@ Partial Class HomeForm
         Me.Label1.Text = "WELCOME"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'MySubjectAnalysisToolStripMenuItem
+        'ViewSchoolsToolStripMenuItem
         '
-        Me.MySubjectAnalysisToolStripMenuItem.Name = "MySubjectAnalysisToolStripMenuItem"
-        Me.MySubjectAnalysisToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.MySubjectAnalysisToolStripMenuItem.Text = "My Subject Analysis"
+        Me.ViewSchoolsToolStripMenuItem.Name = "ViewSchoolsToolStripMenuItem"
+        Me.ViewSchoolsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ViewSchoolsToolStripMenuItem.Text = "View Schools"
         '
         'HomeForm
         '
@@ -264,4 +271,5 @@ Partial Class HomeForm
     Friend WithEvents SearchToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents MySubjectAnalysisToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ViewSchoolsToolStripMenuItem As ToolStripMenuItem
 End Class

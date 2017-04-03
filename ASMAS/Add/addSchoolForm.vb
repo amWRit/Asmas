@@ -6,6 +6,75 @@ Public Class addSchoolForm
     Private pwd As String
     Private data_source_path As String = DBConnection.data_source_path
 
+
+    Public edit As String = ""
+    Public school_id As String = ""
+
+    Public Sub New(params As String())
+        MyBase.New
+        ' This call is required by the designer.
+        InitializeComponent()
+        school_id = params(0)
+        edit = params(1)
+        If edit = "TRUE" Then
+            editInfoLabel.Text = "You can't edit the SHORT NAME."
+            shortnameTextBox.Enabled = False
+            loadSchoolInfo(school_id)
+        End If
+    End Sub
+
+    Public Sub loadSchoolInfo(school_id As String)
+
+        Con = New OleDbConnection
+        Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
+
+        Dim DS = New DataSet
+        Dim SQL As String = ""
+
+        Try
+            Dim oData As OleDbDataAdapter
+
+            SQL = "SELECT * from [school] where school_id=" & school_id
+            Con.Open() 'Open connection
+            oData = New OleDbDataAdapter(SQL, Con)
+            Con.Close()
+            DS.Tables.Clear()
+            oData.Fill(DS)
+
+            Dim rowCount = DS.Tables(0).Rows.Count
+            shortnameTextBox.Text = DS.Tables(0).Rows(0).Item("short_name").ToString
+            fullnameTextBox.Text = DS.Tables(0).Rows(0).Item("full_name").ToString
+            addressTextBox.Text = DS.Tables(0).Rows(0).Item("address").ToString
+            estdTextBox.Text = DS.Tables(0).Rows(0).Item("estd_date").ToString
+            emailTextBox.Text = DS.Tables(0).Rows(0).Item("email").ToString
+            phoneTextBox.Text = DS.Tables(0).Rows(0).Item("phone").ToString
+            websiteTextBox.Text = DS.Tables(0).Rows(0).Item("website").ToString
+            descTextBox.Text = DS.Tables(0).Rows(0).Item("description").ToString
+
+            Dim strBasePath = Application.StartupPath & "\logo\"
+            Dim imageName = shortnameTextBox.Text & ".png"
+            Dim imagePath = strBasePath & imageName
+            If Not System.IO.File.Exists(imagePath) Then
+                imagePath = Application.StartupPath & "\StudentPhotos\photo_not_available.png"
+            End If
+
+            Try
+                schoolLogo.Image = Image.FromFile(imagePath)
+                schoolLogo.Image = FileHandler.ResizeImage(schoolLogo.Image, 124, 130)
+            Catch ex As Exception
+                MsgBox("Couldn't find file" & ex.Message)
+            Finally
+            End Try
+        Catch ex As Exception
+            MsgBox(ex.Message)
+
+        Finally
+            'This code gets called regardless of there being errors
+            'This ensures that you close the Database and avoid corrupted data
+            Con.Close()
+        End Try
+    End Sub
+
     Private Sub saveBtn_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
         Con = New OleDbConnection
         Con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & data_source_path & " ;Jet OLEDB:Database Password= & mypassword"
@@ -20,8 +89,9 @@ Public Class addSchoolForm
         Dim desc = descTextBox.Text
 
         Dim present As Boolean
-        present = checkIfPresent(shortName)
-
+        If edit = "FALSE" Then present = checkIfPresent(shortName)
+        Dim command = "added"
+        Dim roleSQL = ""
         If present = True Then
             MessageBox.Show("A school with same short name is already present. Please check.", "Duplicate record!", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
@@ -30,12 +100,18 @@ Public Class addSchoolForm
         Dim DS = New DataSet
 
         Try
-            Dim roleSQL = "INSERT INTO [school] ([short_name],[full_name],[address],[estd_date],[email],[phone],[website],[description]) 
+            If edit = "TRUE" Then
+                command = "updated"
+                roleSQL = "UPDATE [school] SET [full_name] = @fullName, [address] = @address, [estd_date] = @estd, [email] = @email, [phone] = @phone, [website] = @website, [description] = @desc where school_id=" & school_id
+            Else
+
+                roleSQL = "INSERT INTO [school] ([short_name],[full_name],[address],[estd_date],[email],[phone],[website],[description]) 
                             VALUES 
                             (@shortName, @fullName, @address, @estd, @email, @phone, @website, @desc)"
+            End If
             Con.Open()
             Dim cmd As New OleDbCommand(roleSQL, Con)
-            cmd.Parameters.AddWithValue("@shortName", shortName)
+            If edit = "False" Then cmd.Parameters.AddWithValue("@shortName", shortName)
             cmd.Parameters.AddWithValue("@fullName", fullName)
             cmd.Parameters.AddWithValue("@address", address)
             cmd.Parameters.AddWithValue("@estd", estd)
@@ -45,7 +121,7 @@ Public Class addSchoolForm
             cmd.Parameters.AddWithValue("@desc", desc)
             cmd.ExecuteNonQuery()
 
-            MsgBox("School successfully added.", MsgBoxStyle.Information, "ADDED")
+            MsgBox("School successfully " & command & " .", MsgBoxStyle.Information, command)
             Dim textboxes = myFunctions.getTextBoxes(Me)
             myFunctions.clearTextBoxes(textboxes)
         Catch ex As Exception
@@ -129,12 +205,14 @@ Public Class addSchoolForm
                     Dim imagePath = strBasePath & imageName
 
                     If System.IO.File.Exists(imagePath) Then
-                        Dim I As Integer = MessageBox.Show("Photo already exists for the student. Are you sure you want to replace the file?", "File exists.", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+                        Dim I As Integer = MessageBox.Show("Logo already exists for the school. Are you sure you want to replace the file?", "File exists.", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
                         If I = MsgBoxResult.Ok Then
                             System.IO.File.Delete(imagePath)
                         End If
                     End If
-
+                    If schoolLogo.Image IsNot Nothing Then
+                        schoolLogo.Image.Dispose()
+                    End If
                     schoolLogo.Image = FileHandler.RotateImage(Image.FromFile(dialog.FileName))
                     schoolLogo.Image = FileHandler.ResizeImage(schoolLogo.Image, 200, 200)
                     'save resized image to folder
