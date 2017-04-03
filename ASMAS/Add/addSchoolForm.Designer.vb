@@ -43,9 +43,9 @@ Partial Class addSchoolForm
         Me.descTextBox = New System.Windows.Forms.RichTextBox()
         Me.filepathTextBox = New System.Windows.Forms.TextBox()
         Me.browsePhotoBtn = New System.Windows.Forms.Button()
-        Me.schoolLogo = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.editInfoLabel = New System.Windows.Forms.Label()
+        Me.schoolLogo = New System.Windows.Forms.PictureBox()
         CType(Me.schoolLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -224,6 +224,25 @@ Partial Class addSchoolForm
         Me.browsePhotoBtn.Text = "Browse"
         Me.browsePhotoBtn.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(22, 216)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 13)
+        Me.Label2.TabIndex = 93
+        Me.Label2.Text = "School Logo"
+        '
+        'editInfoLabel
+        '
+        Me.editInfoLabel.AutoSize = True
+        Me.editInfoLabel.ForeColor = System.Drawing.Color.Maroon
+        Me.editInfoLabel.Location = New System.Drawing.Point(22, 35)
+        Me.editInfoLabel.Name = "editInfoLabel"
+        Me.editInfoLabel.Size = New System.Drawing.Size(305, 13)
+        Me.editInfoLabel.TabIndex = 94
+        Me.editInfoLabel.Text = "* Please enter the SHORT NAME carefully. You can't edit later."
+        '
         'schoolLogo
         '
         Me.schoolLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -234,32 +253,13 @@ Partial Class addSchoolForm
         Me.schoolLogo.TabIndex = 90
         Me.schoolLogo.TabStop = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 216)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 13)
-        Me.Label2.TabIndex = 93
-        Me.Label2.Text = "School Logo"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.Color.Maroon
-        Me.Label3.Location = New System.Drawing.Point(22, 35)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(297, 13)
-        Me.Label3.TabIndex = 94
-        Me.Label3.Text = "* Please enter all the information carefully. You can't edit later."
-        '
         'addSchoolForm
         '
         Me.AcceptButton = Me.saveBtn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(500, 528)
-        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.editInfoLabel)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.filepathTextBox)
         Me.Controls.Add(Me.browsePhotoBtn)
@@ -316,5 +316,5 @@ Partial Class addSchoolForm
     Friend WithEvents browsePhotoBtn As Button
     Friend WithEvents schoolLogo As PictureBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents editInfoLabel As Label
 End Class

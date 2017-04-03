@@ -27,7 +27,8 @@
 
     Private Sub SchoolToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SchoolToolStripMenuItem.Click
         Me.Hide()
-        addSchoolForm.Show()
+        Dim _addSchoolForm As New addSchoolForm({"", "False"})
+        _addSchoolForm.Show()
     End Sub
 
     Private Sub ClassToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ClassToolStripMenuItem.Click
@@ -149,5 +150,9 @@
 
     Private Sub MySubjectAnalysisToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MySubjectAnalysisToolStripMenuItem.Click
         mySubjectAnalysisForm.Show()
+    End Sub
+
+    Private Sub ViewSchoolsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewSchoolsToolStripMenuItem.Click
+        viewSchoolsForm.show()
     End Sub
 End Class
