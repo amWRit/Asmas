@@ -14,18 +14,8 @@ Public Class Registration
     ' Return true if the program is properly registered.
     Public Shared Function IsRegistered(ByVal program_id As UInt32,
         ByVal default_value As Boolean) As Boolean
-        Dim volume_name As New StringBuilder(1024)
-        Dim file_system_name As New StringBuilder(1024)
+
         Dim serial_number As Long
-        Dim max_component_length As Integer
-        Dim file_system_flags As Integer
-
-        ' Get the startup directory's drive letter.
-        ' Get the drive where the program is running.
-        Dim file_info As New FileInfo(Application.StartupPath)
-        Dim drive_letter As String =
-            file_info.Directory.Root.Name
-
         ' Get the information. If we fail, return the default
         ' value.
         serial_number = GetDriveSerialNumber()
