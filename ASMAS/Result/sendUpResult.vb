@@ -122,8 +122,9 @@ Public Class sendUpResult
                 Dim val = DR.Item(key).ToString
                 If val = "" Then val = "0"
                 totVal += CDbl(val)
+
             Next
-            inputHash(key) = totVal / resultDataRows.Count
+            inputHash(key) = Math.Round(totVal / resultDataRows.Count, 2)
             total_th += CDbl(inputHash(key))
         Next
         For Each key As String In pracSub
@@ -133,7 +134,7 @@ Public Class sendUpResult
                 If val = "" Then val = "0"
                 totVal += CDbl(val)
             Next
-            inputHash(key) = totVal / resultDataRows.Count
+            inputHash(key) = Math.Round(totVal / resultDataRows.Count, 2)
             total_pr += CDbl(inputHash(key))
         Next
         For i As Integer = 0 To theorySub.Count - 1
