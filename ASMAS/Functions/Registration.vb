@@ -51,9 +51,9 @@ Public Class Registration
             False
 
         ' See if the product key matches.
-        Dim entered_key As UInt32 = 0
+        Dim entered_key As String = ""
         Try
-            entered_key = UInt32.Parse(frm.productCode.Text)
+            entered_key = frm.productCode.Text
         Catch
         End Try
         If (entered_key = product_key) Then
