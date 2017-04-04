@@ -25,6 +25,12 @@ Public Class splash
         If ProgressBar1.Value = ProgressBar1.Maximum Then
             Timer1.Enabled = False
             Me.Hide()
+
+            ' An arbitrary number to identify this program.
+            Const program_id As UInt32 = 2267918298
+            'check registration
+            If (Not Registration.IsRegistered(program_id, False)) Then Me.Close()
+
             Dim firstTime As String = ""
             firstTime = checkIfFirstTime()
             If firstTime = "Yes" Then
