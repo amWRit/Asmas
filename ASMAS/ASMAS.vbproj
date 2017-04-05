@@ -170,6 +170,13 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBConnection.vb" />
+    <Compile Include="RegistrationForm.Designer.vb">
+      <DependentUpon>RegistrationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\Registration.vb" />
     <Compile Include="Models\MyClass.vb" />
     <Compile Include="Models\School.vb" />
     <Compile Include="printDataSet1.Designer.vb">
@@ -441,6 +448,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="createAdminForm.resx">
       <DependentUpon>createAdminForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print\Certificate\printCertificateLowSec.resx">
       <DependentUpon>printCertificateLowSec.vb</DependentUpon>
