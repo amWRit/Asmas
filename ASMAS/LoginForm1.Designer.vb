@@ -44,6 +44,8 @@ Partial Class LoginForm1
         Me.UserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TerseDataSet1 = New ASMAS.TerseDataSet()
         Me.UserBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.attemptLabel = New System.Windows.Forms.Label()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TerseDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,6 +145,24 @@ Partial Class LoginForm1
         Me.UserBindingSource1.DataMember = "user"
         Me.UserBindingSource1.DataSource = Me.TerseDataSet1
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(172, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(103, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Login Attempts left : "
+        '
+        'attemptLabel
+        '
+        Me.attemptLabel.AutoSize = True
+        Me.attemptLabel.Location = New System.Drawing.Point(282, 8)
+        Me.attemptLabel.Name = "attemptLabel"
+        Me.attemptLabel.Size = New System.Drawing.Size(39, 13)
+        Me.attemptLabel.TabIndex = 9
+        Me.attemptLabel.Text = "Label2"
+        '
         'LoginForm1
         '
         Me.AcceptButton = Me.OK
@@ -150,6 +170,8 @@ Partial Class LoginForm1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(401, 192)
+        Me.Controls.Add(Me.attemptLabel)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.passwordError)
         Me.Controls.Add(Me.usernameError)
         Me.Controls.Add(Me.Cancel)
@@ -180,4 +202,6 @@ Partial Class LoginForm1
     Friend WithEvents TerseDataSet1 As TerseDataSet
     Friend WithEvents UserBindingSource As BindingSource
     Friend WithEvents UserBindingSource1 As BindingSource
+    Friend WithEvents Label1 As Label
+    Friend WithEvents attemptLabel As Label
 End Class

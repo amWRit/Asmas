@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="14898152">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ASMAS.exe" size="14899176">
       <assemblyIdentity name="ASMAS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>x243WhRTYCa2t/E2csirK2YQNKpAtyNVdYFBlnsie/o=</dsig:DigestValue>
+        <dsig:DigestValue>zNXCC0MpAKdk2iHOEBLAEzl+5u+422ZZ6zZqQ2ORqHY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,13 +114,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ASMAS.exe.config" size="1140">
+  <file name="ASMAS.exe.config" size="1262">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>IAfbJAX6XUlV5mvUy0/bUVva5+DTDyHjLIaJ88Oj8Pg=</dsig:DigestValue>
+      <dsig:DigestValue>yv1UNBnb4sV90No/2PEmAu3ejdLZBJbn28m4P0rmRiU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="asmas_CiZ_icon.ico" size="59198">

@@ -75,6 +75,18 @@ Namespace My
                 Me("ProductKey") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property loginAttempt() As Integer
+            Get
+                Return CType(Me("loginAttempt"),Integer)
+            End Get
+            Set
+                Me("loginAttempt") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

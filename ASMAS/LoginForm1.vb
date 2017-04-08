@@ -6,6 +6,7 @@ Public Class LoginForm1
     Private user_name As String
     Dim mypassword As String = ""
     Private pwd As String
+    Private MaxLogin As Integer = 10
 
     Private data_source_path As String = DBConnection.data_source_path
     Dim connectionString As String = DBConnection.connectionString
@@ -61,6 +62,16 @@ Public Class LoginForm1
                 oData.Fill(DS)
 
                 User.user = DS
+                con.Close()
+
+                'control login attempts
+                My.Settings.loginAttempt += 1
+                My.Settings.Save()
+                If My.Settings.loginAttempt > MaxLogin Then
+                    MessageBox.Show("Your login attempts have finished. Please contact tech support.", "Trial Attempts Finished", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Me.Close()
+                    Exit Sub
+                End If
                 HomeForm.Show()
             End If
         Catch ex As Exception
@@ -81,5 +92,10 @@ Public Class LoginForm1
             Me.Hide()
             Application.Exit()
         End If
+    End Sub
+
+    Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim attemptsLeft = MaxLogin - My.Settings.loginAttempt
+        attemptLabel.Text = attemptsLeft.ToString
     End Sub
 End Class

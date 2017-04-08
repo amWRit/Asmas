@@ -29,7 +29,9 @@ Public Class splash
             ' An arbitrary number to identify this program.
             Const program_id As UInt32 = 2267918298
             'check registration
-            If (Not Registration.IsRegistered(program_id, False)) Then Me.Close()
+            'If (Not Registration.IsRegistered(program_id, False)) Then Me.Close()
+
+
 
             Dim firstTime As String = ""
             firstTime = checkIfFirstTime()
@@ -40,6 +42,7 @@ Public Class splash
             Else
                 LoginForm1.Show()
             End If
+
 
         End If
     End Sub
