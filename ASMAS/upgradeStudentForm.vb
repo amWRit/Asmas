@@ -106,9 +106,10 @@ Public Class upgradeStudentForm
                 Exit Sub
             End If
         End If
-        Dim next_year = Year.nextYear.ToString
+        'Dim next_year = Year.nextYear.ToString
+        Dim _year = yearName.Text
 
-        Dim year_id = Year.getYearID(school_id, next_year)
+        Dim year_id = Year.getYearID(school_id, _year)
         Dim new_class_id = myFunctions.getClassIdOf(school_id, year_id, class_name)
 
         myFunctions.upgradeClass(student_ids, new_class_id, year_id)
