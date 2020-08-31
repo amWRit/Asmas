@@ -1,6 +1,9 @@
 # __Asmas__
-##Student Information System 
+## Student Information System 
 ### Windows Desktop Software (Vb.net)
+
+This repo contains the full source code. Find the setup file here. 
+https://github.com/amWRit/AsmasSetup
 
 Three roles: 
 * Admin
@@ -58,3 +61,13 @@ __Result Printing features__
 * Result can be printed
   * of a specific student
   * in Batch (start and end page numbers can be provided)
+  
+__Setting up New Database__
+
+To set up a completely fresh new database, you will need to import a blank Database file. You will see a file named "Database - blank.accdb" inside the original folder of the software; not in the installed path.
+
+* Log in as Admin.
+* Go to- Admin Tools > Database > Import > Select the "Database - blank.accdb" file from that original folder.
+
+
+PS: This will completely renew your database. So be careful before using the Database Import/Export feature. A backup of the current database will be created nevertheless.
